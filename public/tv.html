@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Чужой — экран ТВ</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="tv">
+  <div class="tv-app">
+    <header class="tv-head">
+      <div class="brand"><span class="ufo">👽</span> <span id="brandName"></span></div>
+      <div class="phase-box">
+        <div class="phase-title" id="phaseTitle"></div>
+        <div class="phase-sub" id="phaseSub"></div>
+      </div>
+      <div class="timer js-timer" id="timer"></div>
+      <div class="room-chip" id="roomChip"></div>
+    </header>
+    <main class="tv-main" id="main"></main>
+    <footer class="strip" id="strip"></footer>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/art.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/tv.js"></script>
+</body>
+</html>

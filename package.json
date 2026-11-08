@@ -1,0 +1,16 @@
+{
+  "name": "alien-party-game",
+  "version": "0.1.0",
+  "description": "«Чужой» — локальная party-игра: ТВ + телефоны в одной Wi-Fi сети",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node scripts/check-scenes.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.1"
+  }
+}
