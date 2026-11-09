@@ -13,7 +13,7 @@ const { Server } = require('socket.io');
 const QRCode = require('qrcode');
 
 const PORT = Number(process.env.PORT) || 3000;
-const MIN_PLAYERS = Number(process.env.MIN_PLAYERS) || 4;
+const MIN_PLAYERS = Number(process.env.MIN_PLAYERS) || 3;
 const MAX_PLAYERS = 10;
 // Для отладки: TIME_SCALE=0.2 ускорит все таймеры в 5 раз
 const TIME_SCALE = Number(process.env.TIME_SCALE) || 1;
