@@ -7,8 +7,8 @@
   var active = null, screenKey = null, hostKey = null, hostPhase = null, lang = null;
   var kicked = false, joining = false;
   var $ = function (id) { return document.getElementById(id); };
-  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc' };
-  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️' };
+  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy' };
+  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮' };
 
   var params = new URLSearchParams(location.search);
   var ls = {
@@ -70,6 +70,7 @@
   socket.on('state', function (s) { if (kicked) return; P = s; render(); });
   socket.on('timer', U.onTimer);
   socket.on('sfx', function (k) { SFX.play(k); });
+  socket.on('avatars', function (m) { U.setAvatars(m); screenKey = null; hostKey = null; if (P) render(); });
   socket.on('ping2', function (t0, ack) { if (ack) ack(); });
   socket.onAny(function (ev, data) {
     var i = ev.indexOf(':');
@@ -82,7 +83,8 @@
   function doJoin(name) {
     if (joining) return;
     joining = true;
-    socket.emit('player:join', { room: roomCode, name: name, token: token });
+    var av = ls.get('avatar');
+    socket.emit('player:join', { room: roomCode, name: name, token: token, avatar: av || undefined });
     setTimeout(function () { joining = false; }, 3000);
   }
 
@@ -96,17 +98,83 @@
       '<input class="t" id="nm" maxlength="16" autocomplete="nickname" value="' + esc(ls.get('name') || '') + '">' +
       '<label class="f" for="rc">' + esc(t('play.room')) + '</label>' +
       '<input class="t code" id="rc" maxlength="4" autocapitalize="characters" value="' + esc(roomCode) + '">' +
+      avatarEditorHtml() +
       '<button class="btn" id="go">' + esc(t('play.enter')) + '</button></div>';
     var go = function () {
       var name = $('nm').value.trim();
       roomCode = $('rc').value.trim().toUpperCase();
       if (!name) return showErr(t('err.badName'));
       ls.set('name', name);
+      saveAvatar();
       doJoin(name);
     };
+    bindAvatarEditor();
     $('go').onclick = go;
     $('nm').onkeydown = $('rc').onkeydown = function (e) { if (e.key === 'Enter') go(); };
     if (!$('nm').value) $('nm').focus();
+  }
+
+  /* ------------------------------ аватар: нарисуй себя ------------------------------ */
+  var avPad = null, avTool = 0, avDrawn = false;
+  function avatarEditorHtml() {
+    return '<label class="f">' + esc(t('avatar.draw')) + '</label><div class="av-edit"><div class="av-box"><canvas id="avCv"></canvas></div>' +
+      '<div class="av-tools">' + CANVAS.COLORS.map(function (c, i) { return '<button class="cr-col' + (i === 0 ? ' sel' : '') + '" data-avc="' + i + '" style="background:' + c + '"></button>'; }).join('') +
+      '<button class="cr-tool" id="avClr">🗑</button></div></div>';
+  }
+  function bindAvatarEditor() {
+    if (avPad) avPad.destroy();
+    avDrawn = false;
+    avPad = new CANVAS.Pad($('avCv'), { send: function (ops) { if (ops.some(function (o) { return o.o === 's'; })) avDrawn = true; }, tool: function () { return { c: avTool, w: 1, e: false }; } });
+    var old = ls.get('avatar');
+    if (old) {
+      var img = new Image();
+      img.onload = function () { var c = avPad.board.ctx, sz = avPad.board.size; c.drawImage(img, 0, 0, sz, sz); avPad.board.strokes = []; avDrawn = 'old'; };
+      img.src = old;
+      avPad.board.redraw = (function (orig) { return function () { orig.call(this); if (avDrawn === 'old' && img.complete) this.ctx.drawImage(img, 0, 0, this.size, this.size); }; })(avPad.board.redraw);
+    }
+    document.querySelectorAll('[data-avc]').forEach(function (b) {
+      b.onclick = function () { avTool = +b.dataset.avc; document.querySelectorAll('[data-avc]').forEach(function (x) { x.classList.toggle('sel', x === b); }); };
+    });
+    $('avClr').onclick = function () { avPad.clear(); avDrawn = false; ls.set('avatar', ''); };
+  }
+  /** Уменьшаем рисунок до 128×128 и сохраняем как PNG (data:URL) */
+  function saveAvatar() {
+    if (!avPad) return null;
+    if (avDrawn === true) {
+      var c = document.createElement('canvas');
+      c.width = c.height = 128;
+      c.getContext('2d').drawImage(avPad.board.canvas, 0, 0, 128, 128);
+      ls.set('avatar', c.toDataURL('image/png'));
+    }
+    avPad.destroy(); avPad = null;
+    return ls.get('avatar');
+  }
+  function openAvatarModal() {
+    var m = $('modal');
+    m.classList.remove('hidden');
+    m.innerHTML = '<div class="card modal-card"><h2>🎨 ' + esc(t('avatar.change')) + '</h2>' + avatarEditorHtml() +
+      '<div class="host-row"><button class="btn" id="avSave">' + esc(t('avatar.save')) + '</button><button class="btn sec" id="avCancel">' + esc(t('avatar.cancel')) + '</button></div></div>';
+    bindAvatarEditor();
+    $('avSave').onclick = function () { var a = saveAvatar(); socket.emit('avatar', { avatar: a || null }); m.classList.add('hidden'); m.innerHTML = ''; };
+    $('avCancel').onclick = function () { if (avPad) { avPad.destroy(); avPad = null; } m.classList.add('hidden'); m.innerHTML = ''; };
+  }
+
+  /* ------------------------------ реакции ------------------------------ */
+  var reactKey = null;
+  function renderReactions() {
+    var bar = $('reactBar');
+    var show = P && P.me && P.phase !== 'menu';
+    if (show && P.phase === 'game' && active && window.GAMES[active].play.hideReactions) show = !window.GAMES[active].play.hideReactions(P);
+    bar.classList.toggle('hidden', !show);
+    document.body.classList.toggle('has-react', !!show);
+    if (!show) return;
+    var k = P.reactions.join('');
+    if (k === reactKey) return;
+    reactKey = k;
+    bar.innerHTML = P.reactions.map(function (e) { return '<button data-re="' + e + '">' + e + '</button>'; }).join('');
+    bar.querySelectorAll('[data-re]').forEach(function (b) {
+      b.onclick = function () { socket.emit('react', { e: b.dataset.re }); b.classList.remove('pulse'); void b.offsetWidth; b.classList.add('pulse'); };
+    });
   }
 
   function msg(emoji, title, sub) {
@@ -135,6 +203,7 @@
       renderShellScreen();
     }
     renderHost();
+    renderReactions();
   }
 
   function renderTop() {
@@ -149,7 +218,10 @@
 
   function renderShellScreen() {
     var key, html;
-    if (P.phase === 'podium') {
+    if (P.phase === 'rules') {
+      key = 'rules:' + P.rulesFor + lang;
+      html = msg(EMOJI[P.rulesFor] || '📖', t('rules.phone'), t('game.' + P.rulesFor) + ' · ' + t('rules.phoneSub'));
+    } else if (P.phase === 'podium') {
       var R = P.result, place = null;
       R.places.forEach(function (s) { if (s.ids.indexOf(P.me.id) >= 0) place = s.place; });
       var pts = R.cupDelta[P.me.id] || 0;
@@ -165,19 +237,26 @@
       key = 'evening:' + JSON.stringify(P.cup) + lang;
       html = msg('👑', champ ? t('evening.champion', { name: champ.name }) : t('evening.empty'), t('play.lookTv'));
     } else {
-      key = 'menu:' + P.selected + ':' + P.me.isHost + lang;
-      html = P.me.isHost ? msg(EMOJI[P.selected] || '🎉', t('menu.youPick'), t('menu.youPickSub'))
-        : msg(EMOJI[P.selected] || '🎉', t('menu.waitHost'), t('game.' + P.selected));
+      key = 'menu:' + P.selected + ':' + P.me.isHost + lang + ':' + !!U.AVATARS[P.me.id];
+      html = (P.me.isHost ? msg(EMOJI[P.selected] || '🎉', t('menu.youPick'), t('menu.youPickSub'))
+        : msg(EMOJI[P.selected] || '🎉', t('menu.waitHost'), t('game.' + P.selected))) +
+        '<button class="btn sec" id="avBtn">🎨 ' + esc(t('avatar.change')) + '</button>';
     }
     if (key === screenKey) return;
     screenKey = key;
     $('screen').innerHTML = html;
+    if ($('avBtn')) $('avBtn').onclick = openAvatarModal;
   }
 
   /* ------------------------------ панель хоста ------------------------------ */
   function renderHost() {
     var panel = $('host');
     if (!P.me.isHost) { panel.classList.add('hidden'); hostKey = null; return; }
+    var focused = document.activeElement;
+    if (focused && panel.contains(focused) && /TEXTAREA|INPUT/.test(focused.tagName)) {
+      if (!focused._waitBlur) { focused._waitBlur = true; focused.addEventListener('blur', function () { hostKey = null; if (P) renderHost(); }, { once: true }); }
+      return;
+    }
     panel.classList.remove('hidden');
     var ph = P.phase;
     var gameButtons = [];
@@ -202,12 +281,15 @@
       }).join('') + '</div>';
       var ok = connected >= sel.min && connected <= sel.max;
       rows += btn('hStart', '▶ ' + t('host.start') + ': ' + t('game.' + sel.id), '', !ok);
+      rows += btn('hRules', '📖 ' + t('host.rules') + ': ' + t('game.' + sel.id), 'sec', !ok);
       if (!ok) rows += '<p>' + esc(t('host.needRange', { min: sel.min, max: sel.max, n: connected })) + '</p>';
       if (P.cup.length) rows += btn('hEvening', '🏆 ' + t('host.evening'), 'sec');
     } else if (ph === 'game') {
       rows += '<div class="host-row">' + btn('hPause', P.paused ? '▶ ' + t('host.resume') : '⏸ ' + t('host.pause'), 'warn') +
         gameButtons.map(function (b, i) { return btn(null, b.label, b.cls || '', b.disabled, 'data-gb="' + i + '"'); }).join('') +
         btn('hMenu', t('host.toMenu'), 'sec') + '</div>';
+    } else if (ph === 'rules') {
+      rows += '<div class="host-row">' + btn('hSkip', '⏭ ' + t('rules.skip'), '') + btn('hMenu', t('host.toMenu'), 'sec') + '</div>';
     } else if (ph === 'podium') {
       rows += '<div class="host-row">' + btn('hAgain', '🔁 ' + t('host.again'), '') + btn('hMenu', '🎲 ' + t('host.otherGame'), 'sec') +
         btn('hEvening', '🏆 ' + t('host.evening'), 'warn') + '</div>';
@@ -224,13 +306,19 @@
       '<label class="f">' + esc(t('host.pace')) + '</label><select class="t" id="hPace">' +
       opt('fast', P.settings.pace, t('pace.fast')) + opt('normal', P.settings.pace, t('pace.normal')) + opt('long', P.settings.pace, t('pace.long')) + '</select>' +
       '<label class="f">' + esc(t('host.duelTarget')) + '</label><select class="t" id="hDuel">' +
-      [10, 15, 20].map(function (n) { return opt(n, P.settings.duelTarget, n); }).join('') + '</select>';
+      [10, 15, 20].map(function (n) { return opt(n, P.settings.duelTarget, n); }).join('') + '</select>' +
+      '<label class="chk"><input type="checkbox" id="hBig"' + (P.settings.big ? ' checked' : '') + '> ' + esc(t('host.big')) + '</label>' +
+      '<label class="chk"><input type="checkbox" id="hContrast"' + (P.settings.contrast ? ' checked' : '') + '> ' + esc(t('host.contrast')) + '</label>' +
+      '<label class="f">🐊 ' + esc(t('host.customWords')) + '</label>' +
+      '<textarea class="t" id="hWords" rows="3" placeholder="' + esc(t('host.customHint')) + '">' + esc((P.settings.customWords || []).join(', ')) + '</textarea>' +
+      '<select class="t" id="hWMode">' + opt('mix', P.settings.customMode, t('mode.mix')) + opt('only', P.settings.customMode, t('mode.only')) + '</select>' +
+      btn('hWSave', t('host.saveWords') + ((P.settings.customWords || []).length ? ' · ' + t('host.wordsSaved', { n: P.settings.customWords.length }) : ''), 'sec small-full');
     panel.innerHTML = '<summary>👑 ' + esc(t('host.panel')) + '</summary>' + rows + kick +
       (ph === 'menu' ? btn('hBot', '🤖 ' + t('host.addBot'), 'sec small-full') : '') +
       '<label class="f">⚙️ ' + esc(t('host.settings')) + '</label>' + settings;
 
     var on = function (id, type) { var e = $(id); if (e) e.onclick = function () { ctx.host(type); }; };
-    on('hStart', 'start'); on('hPause', 'pause'); on('hMenu', 'menu'); on('hAgain', 'again'); on('hEvening', 'evening'); on('hBot', 'addBot');
+    on('hStart', 'start'); on('hRules', 'rules'); on('hSkip', 'skipRules'); on('hPause', 'pause'); on('hMenu', 'menu'); on('hAgain', 'again'); on('hEvening', 'evening'); on('hBot', 'addBot');
     panel.querySelectorAll('[data-pick]').forEach(function (b) { b.onclick = function () { ctx.host('select', { gameId: b.dataset.pick }); }; });
     panel.querySelectorAll('[data-gb]').forEach(function (b) {
       b.onclick = function () { var g = gameButtons[+b.dataset.gb]; ctx.host(g.action, g.data); };
@@ -244,6 +332,10 @@
     $('hLang').onchange = function () { ctx.host('settings', { lang: this.value }); };
     $('hPace').onchange = function () { ctx.host('settings', { pace: this.value }); };
     $('hDuel').onchange = function () { ctx.host('settings', { duelTarget: this.value }); };
+    $('hBig').onchange = function () { ctx.host('settings', { big: this.checked }); };
+    $('hContrast').onchange = function () { ctx.host('settings', { contrast: this.checked }); };
+    $('hWMode').onchange = function () { ctx.host('settings', { customMode: this.value }); };
+    $('hWSave').onclick = function () { ctx.host('settings', { customWords: $('hWords').value }); };
   }
 
   if (!(ls.get('joined') === roomCode && roomCode)) renderJoin();

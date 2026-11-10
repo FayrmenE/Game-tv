@@ -619,7 +619,9 @@
     return out + '</svg>';
   }
 
-  var api = { ITEMS: ITEMS, BACKGROUNDS: BACKGROUNDS, itemInner: itemInner, itemSvg: itemSvg, sceneSvg: sceneSvg };
+  var api = { ITEMS: ITEMS, BACKGROUNDS: BACKGROUNDS, itemInner: itemInner, itemSvg: itemSvg, sceneSvg: sceneSvg,
+    // помощники рисования — для дополнительных наборов предметов (art2.js)
+    h: { D: D, st: st, line: line, tube: tube, pt: pt, sectors: sectors, star: star, dots: dots, shine: shine } };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.ART = api;
 })(this);

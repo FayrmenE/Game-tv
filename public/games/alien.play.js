@@ -181,5 +181,6 @@
   function unmount() { screenKey = null; guessSel = null; S = null; el = null; lang = null; }
 
   window.GAMES = window.GAMES || {};
-  (window.GAMES.alien = window.GAMES.alien || {}).play = { render: render, unmount: unmount, hostButtons: hostButtons };
+  (window.GAMES.alien = window.GAMES.alien || {}).play = { render: render, unmount: unmount, hostButtons: hostButtons,
+    hideReactions: function (p) { var g = p.game || {}; return g.phase === 'look' || (g.priv && g.priv.guessing); } };
 })();

@@ -9,6 +9,7 @@ const path = require('path');
 const fs = require('fs');
 const { pick, shuffle, rankByScore, randInt } = require('../lib/util');
 
+const HINTS = require('../data/hints');
 const SCENES = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'scenes.json'), 'utf8')).scenes;
 const MIN_PLAYERS = Number(process.env.MIN_PLAYERS) || 3;
 const MAX_PLAYERS = 10;
@@ -350,7 +351,24 @@ function create(api) {
     });
   }
 
-  const BOT_WORDS = ['круглый', 'большой', 'яркий', 'вкусно', 'утро', 'дом', 'летом', 'гладкий', 'тёплый', 'шумный', 'лёгкий', 'полезный'];
+  const BOT_WORDS = { ru: ['круглый', 'большой', 'яркий', 'полезный'], en: ['round', 'big', 'bright', 'useful'] };
+  // Бот играет честно: знает только свой предмет (Чужой-бот — свой «чужой»)
+  const botItem = (p, r) => (p.id === r.alienId ? r.itemB : r.itemA);
+  function botWord(p, r, c) {
+    const lang = api.settings.lang === 'en' ? 'en' : 'ru';
+    const list = (HINTS[botItem(p, r)] || {})[lang] || BOT_WORDS[lang];
+    return list[(c + (p.id.charCodeAt(1) || 0)) % list.length];
+  }
+  // Голосует за того, чьи слова хуже всего подходят к его предмету
+  function botSuspect(p, r, cands) {
+    const lang = api.settings.lang === 'en' ? 'en' : 'ru';
+    const mine = ((HINTS[botItem(p, r)] || {})[lang] || []).map((w) => w.toLowerCase());
+    const scored = cands.map((id) => {
+      const ws = (r.words[id] || []).filter((w) => typeof w === 'string').map((w) => w.toLowerCase());
+      return { id, s: ws.filter((w) => mine.includes(w)).length - (r.words[id] || []).filter((w) => w === false).length * 0.5 + Math.random() * 0.4 };
+    }).sort((a, b) => a.s - b.s);
+    return scored[0].id;
+  }
 
   const game = {
     start() { if (!startRound(room)) sync(); },
@@ -434,19 +452,19 @@ function create(api) {
       if (room.phase === 'look') once(key + ':look', randInt(500, 4000), () => api.act(p, 'looked'));
       if (room.phase === 'words' && r.turns[r.turnIdx] && r.turns[r.turnIdx].id === p.id) {
         const t = r.turns[r.turnIdx];
-        once(key + ':w' + t.c, randInt(1500, 6000), () => api.act(p, 'word', { word: pick(BOT_WORDS) }));
+        once(key + ':w' + t.c, randInt(1500, 6000), () => api.act(p, 'word', { word: botWord(p, r, t.c) }));
       }
       if (VOTING_PHASES.includes(room.phase) && !r.frozen) {
         const cands = (r.candidates || r.participants).filter((id) => id !== p.id && getPlayer(room, id));
         if (cands.length) {
-          // мирные боты с шансом 50% «чуют» Чужого, иначе голосуют наугад
-          const smart = p.id !== r.alienId && cands.includes(r.alienId) && Math.random() < 0.5;
-          once(key + ':v', randInt(2000, 9000), () => api.act(p, 'vote', { targetId: smart ? r.alienId : pick(cands) }));
+          once(key + ':v', randInt(2000, 9000), () => api.act(p, 'vote', { targetId: botSuspect(p, r, cands) }));
         }
       }
       if (room.phase === 'lastchance' && p.id === r.alienId) {
         const scene = SCENES.find((s) => s.id === r.sceneId);
-        const guess = Math.random() < 0.3 ? r.itemA : pick(scene.items).id;
+        // Пойманный бот знает лишь свой предмет: ищет похожий (пару) или ошибается
+        const pair = scene.pairs.find((pr) => pr.includes(r.itemB));
+        const guess = pair && Math.random() < 0.5 ? pair.find((x) => x !== r.itemB) : pick(scene.items).id;
         once(key + ':g', randInt(3000, 8000), () => api.act(p, 'guess', { itemId: guess }));
       }
     }

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/games.css">
   <link rel="stylesheet" href="/responsive.css">
+  <link rel="stylesheet" href="/fx.css">
 </head>
 <body class="play">
   <div id="conn" class="conn hidden"></div>
@@ -17,15 +18,19 @@
     <div id="screen"></div>
     <details class="card host-panel hidden" id="host"></details>
   </div>
+  <div class="react-bar hidden" id="reactBar"></div>
+  <div class="modal hidden" id="modal"></div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/js/i18n.js"></script>
   <script src="/js/art.js"></script>
+  <script src="/js/art2.js"></script>
   <script src="/js/common.js"></script>
   <script src="/js/sound.js"></script>
   <script src="/js/canvas.js"></script>
   <script src="/games/alien.play.js"></script>
   <script src="/games/sniper.play.js"></script>
   <script src="/games/croc.play.js"></script>
+  <script src="/games/telepathy.play.js"></script>
   <script src="/js/play.js"></script>
 </body>
 </html>

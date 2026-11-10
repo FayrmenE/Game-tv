@@ -1,0 +1,32 @@
+# Сборка «Вечер-игр.exe» для Windows: один файл, без установки Node.js.
+# Готовый файл — в разделе Actions → последний запуск → Artifacts → Vecher-igr-windows.
+name: Сборка exe для Windows
+on:
+  push:
+    branches: [ 'claude/alien-party-game-prototype-vkcejg', 'main' ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run check
+      - run: npm run build:exe
+      - name: Быстрая проверка запуска
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath dist\Vecher-igr.exe -PassThru -WindowStyle Hidden -ArgumentList '--no-open'
+          Start-Sleep -Seconds 6
+          $r = Invoke-WebRequest -UseBasicParsing http://localhost:3000/api/info
+          Write-Host $r.Content
+          $tv = Invoke-WebRequest -UseBasicParsing http://localhost:3000/tv
+          if ($tv.StatusCode -ne 200) { throw 'TV page failed' }
+          Stop-Process -Id $p.Id
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Vecher-igr-windows
+          path: dist/Vecher-igr.exe

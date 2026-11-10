@@ -121,10 +121,11 @@
       '<div class="reveal-items" id="ri">' +
       itemCard(r.itemA, 'civil', t('reveal.itemCivil')) + itemCard(r.itemB, 'alien', t('reveal.itemAlien')) + '</div>';
     var step = 1200;
+    SFX.play('drum');
     r.revealVotes.forEach(function (v, i) { later(400 + i * step, function () { var c = $('vc' + i); if (c) c.classList.add('flip'); }); });
     var tEnd = 400 + r.revealVotes.length * step;
     later(tEnd, function () { var e = $('rl1'); if (e) e.classList.add('show'); });
-    later(tEnd + 1800, function () { var e = $('rl2'); if (e) e.classList.add('show'); });
+    later(tEnd + 1800, function () { var e = $('rl2'); if (e) e.classList.add('show'); SFX.play(r.caught ? 'win' : 'err'); });
     later(tEnd + 3000, function () {
       var e = $('ri'); if (e) e.classList.add('show');
       if (r.itemA) highlight({ a: r.itemA, b: r.itemB });

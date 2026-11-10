@@ -30,15 +30,15 @@
         {"num":24,"id":"k_dog","nameKey":"item.k_dog","x":1450,"y":772,"size":150}
       ],
       "pairs": [
-        ["k_mug_red","k_mug_blue"],
-        ["k_banana","k_corn"],
-        ["k_cat","k_dog"],
-        ["k_clock","k_pan"],
-        ["k_kettle","k_coffeepot"],
-        ["k_apple","k_tomato"],
-        ["k_salt","k_pepper"],
-        ["k_fork","k_spoon"],
-        ["k_lemon","k_orange"]
+        ["k_mug_red", "k_mug_blue"],
+        ["k_banana", "k_corn"],
+        ["k_cat", "k_dog"],
+        ["k_clock", "k_pan"],
+        ["k_kettle", "k_coffeepot"],
+        ["k_apple", "k_tomato"],
+        ["k_salt", "k_pepper"],
+        ["k_fork", "k_spoon"],
+        ["k_lemon", "k_orange"]
       ]
     },
     {
@@ -71,14 +71,14 @@
         {"num":24,"id":"b_popsicle","nameKey":"item.b_popsicle","x":1450,"y":775,"size":150}
       ],
       "pairs": [
-        ["b_ball","b_ring"],
-        ["b_sunglasses","b_goggles"],
-        ["b_icecream","b_popsicle"],
-        ["b_crab","b_starfish"],
-        ["b_seagull","b_plane"],
-        ["b_flipflop","b_flipper"],
-        ["b_palm","b_pineapple"],
-        ["b_watermelon","b_pizza"]
+        ["b_ball", "b_ring"],
+        ["b_sunglasses", "b_goggles"],
+        ["b_icecream", "b_popsicle"],
+        ["b_crab", "b_starfish"],
+        ["b_seagull", "b_plane"],
+        ["b_flipflop", "b_flipper"],
+        ["b_palm", "b_pineapple"],
+        ["b_watermelon", "b_pizza"]
       ]
     },
     {
@@ -111,14 +111,134 @@
         {"num":24,"id":"s_flowers","nameKey":"item.s_flowers","x":1450,"y":775,"size":150}
       ],
       "pairs": [
-        ["s_suitcase","s_briefcase"],
-        ["s_ticket","s_banknote"],
-        ["s_newspaper","s_book"],
-        ["s_umbrella","s_cane"],
-        ["s_hat","s_cap"],
-        ["s_pigeon","s_crow"],
-        ["s_coffee","s_soda"],
-        ["s_backpack","s_handbag"]
+        ["s_suitcase", "s_briefcase"],
+        ["s_ticket", "s_banknote"],
+        ["s_newspaper", "s_book"],
+        ["s_umbrella", "s_cane"],
+        ["s_hat", "s_cap"],
+        ["s_pigeon", "s_crow"],
+        ["s_coffee", "s_soda"],
+        ["s_backpack", "s_handbag"]
+      ]
+    },
+    {
+      "id": "office",
+      "nameKey": "scene.office",
+      "items": [
+        {"num":1,"id":"o_globe","nameKey":"item.o_globe","x":170,"y":145,"size":150},
+        {"num":2,"id":"o_laptop","nameKey":"item.o_laptop","x":418,"y":145,"size":150},
+        {"num":3,"id":"o_calendar","nameKey":"item.o_calendar","x":666,"y":145,"size":150},
+        {"num":4,"id":"o_sticky","nameKey":"item.o_sticky","x":910,"y":145,"size":150},
+        {"num":5,"id":"o_lamp","nameKey":"item.o_lamp","x":1180,"y":145,"size":150},
+        {"num":6,"id":"o_cactus","nameKey":"item.o_cactus","x":1454,"y":145,"size":150},
+        {"num":7,"id":"o_pen","nameKey":"item.o_pen","x":168,"y":350,"size":150},
+        {"num":8,"id":"o_mug","nameKey":"item.o_mug","x":394,"y":350,"size":150},
+        {"num":9,"id":"o_folder","nameKey":"item.o_folder","x":664,"y":350,"size":150},
+        {"num":10,"id":"o_stapler","nameKey":"item.o_stapler","x":940,"y":350,"size":150},
+        {"num":11,"id":"o_monitor","nameKey":"item.o_monitor","x":1204,"y":350,"size":150},
+        {"num":12,"id":"o_paperclip","nameKey":"item.o_paperclip","x":1466,"y":350,"size":150},
+        {"num":13,"id":"o_calc","nameKey":"item.o_calc","x":130,"y":548,"size":150},
+        {"num":14,"id":"o_envelope","nameKey":"item.o_envelope","x":396,"y":548,"size":150},
+        {"num":15,"id":"o_bonsai","nameKey":"item.o_bonsai","x":676,"y":548,"size":150},
+        {"num":16,"id":"o_pencil","nameKey":"item.o_pencil","x":950,"y":548,"size":150},
+        {"num":17,"id":"o_clipboard","nameKey":"item.o_clipboard","x":1176,"y":548,"size":150},
+        {"num":18,"id":"o_tape","nameKey":"item.o_tape","x":1442,"y":548,"size":150},
+        {"num":19,"id":"o_printer","nameKey":"item.o_printer","x":132,"y":772,"size":150},
+        {"num":20,"id":"o_pencup","nameKey":"item.o_pencup","x":424,"y":772,"size":150},
+        {"num":21,"id":"o_scissors","nameKey":"item.o_scissors","x":680,"y":772,"size":150},
+        {"num":22,"id":"o_deskphone","nameKey":"item.o_deskphone","x":942,"y":772,"size":150},
+        {"num":23,"id":"o_ruler","nameKey":"item.o_ruler","x":1178,"y":772,"size":150},
+        {"num":24,"id":"o_headset","nameKey":"item.o_headset","x":1450,"y":772,"size":150}
+      ],
+      "pairs": [
+        ["o_laptop", "o_monitor"],
+        ["o_pen", "o_pencil"],
+        ["o_stapler", "o_tape"],
+        ["o_sticky", "o_envelope"],
+        ["o_calc", "o_deskphone"],
+        ["o_cactus", "o_bonsai"],
+        ["o_mug", "o_pencup"],
+        ["o_folder", "o_clipboard"]
+      ]
+    },
+    {
+      "id": "park",
+      "nameKey": "scene.park",
+      "items": [
+        {"num":1,"id":"p_cloud","nameKey":"item.p_cloud","x":170,"y":130,"size":150},
+        {"num":2,"id":"p_kite","nameKey":"item.p_kite","x":418,"y":130,"size":150},
+        {"num":3,"id":"p_tree","nameKey":"item.p_tree","x":666,"y":130,"size":150},
+        {"num":4,"id":"p_butterfly","nameKey":"item.p_butterfly","x":910,"y":130,"size":150},
+        {"num":5,"id":"p_balloon","nameKey":"item.p_balloon","x":1180,"y":130,"size":150},
+        {"num":6,"id":"p_pine","nameKey":"item.p_pine","x":1454,"y":130,"size":150},
+        {"num":7,"id":"p_bee","nameKey":"item.p_bee","x":168,"y":340,"size":150},
+        {"num":8,"id":"p_fountain","nameKey":"item.p_fountain","x":394,"y":340,"size":150},
+        {"num":9,"id":"p_tulip","nameKey":"item.p_tulip","x":664,"y":340,"size":150},
+        {"num":10,"id":"p_mailbox","nameKey":"item.p_mailbox","x":940,"y":340,"size":150},
+        {"num":11,"id":"p_squirrel","nameKey":"item.p_squirrel","x":1204,"y":340,"size":150},
+        {"num":12,"id":"p_rose","nameKey":"item.p_rose","x":1466,"y":340,"size":150},
+        {"num":13,"id":"p_duck","nameKey":"item.p_duck","x":130,"y":560,"size":150},
+        {"num":14,"id":"p_bench","nameKey":"item.p_bench","x":396,"y":560,"size":150},
+        {"num":15,"id":"p_soccer","nameKey":"item.p_soccer","x":676,"y":560,"size":150},
+        {"num":16,"id":"p_scooter","nameKey":"item.p_scooter","x":950,"y":560,"size":150},
+        {"num":17,"id":"p_basket","nameKey":"item.p_basket","x":1176,"y":560,"size":150},
+        {"num":18,"id":"p_swan","nameKey":"item.p_swan","x":1442,"y":560,"size":150},
+        {"num":19,"id":"p_bin","nameKey":"item.p_bin","x":132,"y":775,"size":150},
+        {"num":20,"id":"p_hotdog","nameKey":"item.p_hotdog","x":424,"y":775,"size":150},
+        {"num":21,"id":"p_bike","nameKey":"item.p_bike","x":680,"y":775,"size":150},
+        {"num":22,"id":"p_mushroom","nameKey":"item.p_mushroom","x":942,"y":775,"size":150},
+        {"num":23,"id":"p_basketball","nameKey":"item.p_basketball","x":1178,"y":775,"size":150},
+        {"num":24,"id":"p_skateboard","nameKey":"item.p_skateboard","x":1450,"y":775,"size":150}
+      ],
+      "pairs": [
+        ["p_tree", "p_pine"],
+        ["p_duck", "p_swan"],
+        ["p_kite", "p_balloon"],
+        ["p_butterfly", "p_bee"],
+        ["p_soccer", "p_basketball"],
+        ["p_scooter", "p_bike"],
+        ["p_mailbox", "p_bin"],
+        ["p_tulip", "p_rose"]
+      ]
+    },
+    {
+      "id": "space",
+      "nameKey": "scene.space",
+      "items": [
+        {"num":1,"id":"x_saturn","nameKey":"item.x_saturn","x":170,"y":130,"size":150},
+        {"num":2,"id":"x_star","nameKey":"item.x_star","x":418,"y":130,"size":150},
+        {"num":3,"id":"x_comet","nameKey":"item.x_comet","x":666,"y":130,"size":150},
+        {"num":4,"id":"x_moon","nameKey":"item.x_moon","x":910,"y":130,"size":150},
+        {"num":5,"id":"x_ufo","nameKey":"item.x_ufo","x":1180,"y":130,"size":150},
+        {"num":6,"id":"x_jupiter","nameKey":"item.x_jupiter","x":1454,"y":130,"size":150},
+        {"num":7,"id":"x_satellite","nameKey":"item.x_satellite","x":168,"y":340,"size":150},
+        {"num":8,"id":"x_rocket","nameKey":"item.x_rocket","x":394,"y":340,"size":150},
+        {"num":9,"id":"x_earth","nameKey":"item.x_earth","x":664,"y":340,"size":150},
+        {"num":10,"id":"x_astronaut","nameKey":"item.x_astronaut","x":940,"y":340,"size":150},
+        {"num":11,"id":"x_meteor","nameKey":"item.x_meteor","x":1204,"y":340,"size":150},
+        {"num":12,"id":"x_blackhole","nameKey":"item.x_blackhole","x":1466,"y":340,"size":150},
+        {"num":13,"id":"x_alien","nameKey":"item.x_alien","x":130,"y":560,"size":150},
+        {"num":14,"id":"x_cookie","nameKey":"item.x_cookie","x":396,"y":560,"size":150},
+        {"num":15,"id":"x_telescope","nameKey":"item.x_telescope","x":676,"y":560,"size":150},
+        {"num":16,"id":"x_dish","nameKey":"item.x_dish","x":950,"y":560,"size":150},
+        {"num":17,"id":"x_pencil","nameKey":"item.x_pencil","x":1176,"y":560,"size":150},
+        {"num":18,"id":"x_robot","nameKey":"item.x_robot","x":1442,"y":560,"size":150},
+        {"num":19,"id":"x_flag","nameKey":"item.x_flag","x":132,"y":760,"size":150},
+        {"num":20,"id":"x_potato","nameKey":"item.x_potato","x":424,"y":760,"size":150},
+        {"num":21,"id":"x_rover","nameKey":"item.x_rover","x":680,"y":760,"size":150},
+        {"num":22,"id":"x_microscope","nameKey":"item.x_microscope","x":942,"y":760,"size":150},
+        {"num":23,"id":"x_frog","nameKey":"item.x_frog","x":1178,"y":760,"size":150},
+        {"num":24,"id":"x_helmet","nameKey":"item.x_helmet","x":1450,"y":760,"size":150}
+      ],
+      "pairs": [
+        ["x_saturn", "x_jupiter"],
+        ["x_moon", "x_cookie"],
+        ["x_astronaut", "x_robot"],
+        ["x_satellite", "x_dish"],
+        ["x_meteor", "x_potato"],
+        ["x_alien", "x_frog"],
+        ["x_telescope", "x_microscope"],
+        ["x_rocket", "x_pencil"]
       ]
     }
   ]

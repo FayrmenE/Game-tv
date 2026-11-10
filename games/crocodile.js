@@ -65,11 +65,34 @@ function create(api, opts) {
   const alive = (ids) => ids.filter((id) => api.getPlayer(id));
   const scaled = (sec) => sec * 1000 * api.timeScale;
 
+  // Свои слова хоста (настройка «Свои слова для Крокодила»): уровень «своё», множитель ×1.5
+  const custom = (api.settings.customWords || []).slice();
+  const customMode = custom.length ? api.settings.customMode || 'mix' : 'off';
+  const multOf = (level) => LEVEL_MULT[level] || 1.5;
+  const levelKey = (level) => (LEVEL_MULT[level] ? level : 'custom');
+
   function takeWord(level) {
-    const list = dict[level].filter((w) => !usedWords.has(w));
-    const w = pick(list.length ? list : dict[level]);
+    const src = LEVEL_MULT[level] ? dict[level] : custom;
+    const list = src.filter((w) => !usedWords.has(w));
+    const w = pick(list.length ? list : src);
     usedWords.add(w);
     return w;
+  }
+
+  function soloOptions() {
+    if (customMode === 'only') {
+      const o = {};
+      for (let i = 1; i <= Math.min(3, custom.length); i++) o['c' + i] = takeWord('custom');
+      return o;
+    }
+    const o = { easy: takeWord('easy'), medium: takeWord('medium'), hard: takeWord('hard') };
+    if (customMode === 'mix') o.c1 = takeWord('custom');
+    return o;
+  }
+
+  function duelWord() {
+    if (customMode === 'only' || (customMode === 'mix' && Math.random() < 0.5)) return { word: takeWord('custom'), level: 'c1' };
+    return { word: takeWord('medium'), level: 'medium' };
   }
 
   function pickMod(circleLen) {
@@ -100,19 +123,19 @@ function create(api, opts) {
     const artist = G.turns.shift();
     G.turnNo++;
     G.turn = {
-      artist, options: { easy: takeWord('easy'), medium: takeWord('medium'), hard: takeWord('hard') },
+      artist, options: soloOptions(),
       word: null, level: null, mod: pickMod(G.circleLen), revealed: [],
       guessed: [], almost: {}, wrong: [], points: null, started: 0
     };
     G.phase = 'choose';
     resetCanvas('main');
-    api.setTimer(T.choose, () => soloChoose(G.turn.artist, 'medium'));
+    api.setTimer(T.choose, () => soloChoose(G.turn.artist, G.turn.options.medium ? 'medium' : Object.keys(G.turn.options)[0]));
     api.sync();
   }
 
   function soloChoose(pid, level) {
     const tr = G.turn;
-    if (G.phase !== 'choose' || pid !== tr.artist || !LEVEL_MULT[level]) return;
+    if (G.phase !== 'choose' || pid !== tr.artist || !tr.options[level]) return;
     tr.level = level;
     tr.word = tr.options[level];
     G.phase = 'draw';
@@ -163,8 +186,8 @@ function create(api, opts) {
   function soloEndTurn() {
     const tr = G.turn;
     if (G.phase !== 'draw' && G.phase !== 'choose') return;
-    if (!tr.word) { tr.level = 'medium'; tr.word = tr.options.medium; }
-    const mult = LEVEL_MULT[tr.level] * (tr.mod ? MOD_MULT : 1);
+    if (!tr.word) { tr.level = tr.options.medium ? 'medium' : Object.keys(tr.options)[0]; tr.word = tr.options[tr.level]; }
+    const mult = multOf(tr.level) * (tr.mod ? MOD_MULT : 1);
     const pts = {};
     tr.guessed.forEach((id, i) => { pts[id] = Math.round((GUESS_POINTS[i] != null ? GUESS_POINTS[i] : 4) * mult); });
     const artistPts = Math.round(ARTIST_PER_GUESS * tr.guessed.length * mult);
@@ -257,7 +280,8 @@ function create(api, opts) {
     const circleLen = Math.max(ta.length, tb.length);
     const artistA = ta[G.teamIdx.a++ % ta.length];
     const artistB = tb[G.teamIdx.b++ % tb.length];
-    G.turn = { artists: { a: artistA, b: artistB }, word: takeWord('medium'), level: 'medium', mod: pickMod(circleLen),
+    const dw = duelWord();
+    G.turn = { artists: { a: artistA, b: artistB }, word: dw.word, level: dw.level, mod: pickMod(circleLen),
       claim: null, locks: {}, saved: 0, winner: null, points: 0, cancelled: 0 };
     G.phase = 'draw';
     resetCanvas('a');
@@ -402,7 +426,7 @@ function create(api, opts) {
       v.turnsTotal = G.turnNo + G.turns.length;
       if (tr) {
         v.artist = tr.artist;
-        v.level = ph === 'choose' ? null : tr.level;
+        v.level = ph === 'choose' || !tr.level ? null : levelKey(tr.level);
         v.mask = tr.word && ph === 'draw' ? maskOf(tr.word, tr.revealed) : null;
         v.guessed = tr.guessed.map((id) => ({ id, almost: !!tr.almost[id] }));
         v.wrong = tr.wrong.slice(-10);
@@ -439,7 +463,7 @@ function create(api, opts) {
       v.artist = tr.artist;
       v.isArtist = tr.artist === p.id;
       if (v.isArtist && ph === 'choose') v.options = tr.options;
-      if (v.isArtist && (ph === 'draw')) { v.word = tr.word; v.level = tr.level; v.canDraw = true; }
+      if (v.isArtist && (ph === 'draw')) { v.word = tr.word; v.level = levelKey(tr.level); v.canDraw = true; }
       if (!v.isArtist && ph === 'draw') {
         v.mask = maskOf(tr.word, tr.revealed);
         v.guessed = tr.guessed.includes(p.id);
@@ -491,7 +515,7 @@ function create(api, opts) {
     const key = G.turnNo + ':' + ph;
     const once = (k, ms, fn) => { if (m[k]) return; m[k] = true; later(ms, fn); };
     if (mode === 'solo') {
-      if (ph === 'choose' && tr.artist === p.id) once(key, randInt(1000, 3000), () => api.act(p, 'choose', { level: pick(['easy', 'medium', 'hard']) }));
+      if (ph === 'choose' && tr.artist === p.id) once(key, randInt(1000, 3000), () => api.act(p, 'choose', { level: pick(Object.keys(tr.options)) }));
       if (ph === 'draw' && tr.artist === p.id) once(key, 300, () => botDraw(p, 'main'));
       if (ph === 'draw' && tr.artist !== p.id) {
         const total = T.drawSolo * 1000 * api.timeScale;

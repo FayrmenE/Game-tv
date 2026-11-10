@@ -1,0 +1,121 @@
+/* ===== Атмосфера: темы игр, реакции, заставки, конфетти, правила, аватары ===== */
+
+/* Своя тема у каждой игры (фон + акцент) — по ТВ сразу видно, во что играем */
+body.tv, body.play { transition: background-color .6s; }
+body.game-alien { --accent2: #7cf29a; background-image: radial-gradient(circle at 15% 10%, #1d4d3c 0, transparent 45%), radial-gradient(circle at 90% 90%, #24305e 0, transparent 50%); }
+body.game-sniper { --accent2: #ff5d73; background-image: radial-gradient(circle at 50% 45%, #4a1530 0, transparent 55%), radial-gradient(circle at 10% 90%, #2a1346 0, transparent 45%); }
+body.game-croc { --accent2: #ffd60a; background-image: radial-gradient(circle at 15% 10%, #2b5a1e 0, transparent 45%), radial-gradient(circle at 90% 85%, #5a3c12 0, transparent 50%); }
+body.game-telepathy { --accent2: #c77dff; background-image: radial-gradient(circle at 50% 20%, #3c1a6b 0, transparent 55%), radial-gradient(circle at 10% 90%, #102a5c 0, transparent 50%); }
+.game-alien .brand .ufo, .game-sniper .brand .ufo, .game-croc .brand .ufo, .game-telepathy .brand .ufo { filter: drop-shadow(0 0 .3em var(--accent2)); }
+
+/* Крупный текст и высокий контраст (настройки хоста) */
+html.big body.tv { font-size: clamp(12px, min(1.45vw, 2.6vh), 40px); }
+html.contrast body.tv { --muted: #ffffff; --panel: #000000; --panel2: #1a1a1a; background: #000; background-image: none; }
+html.contrast body.tv .phase-sub, html.contrast body.tv .lobby-note { color: #fff; }
+html.contrast body.tv .word, html.contrast body.tv .cr-bubble { border: 2px solid #000; }
+html.contrast body.tv .scene-frame, html.contrast body.tv .cr-board-wrap { border-color: #ffd60a; }
+
+/* Подписи с дивана — чуть крупнее, чем раньше */
+.tv .phase-sub { font-size: 1.1em; }
+.tv .pcol .pname { font-size: 1.12em; }
+
+/* Нарисованные аватары */
+.avatar.img { background-size: cover; background-position: center; background-color: #fff; }
+
+/* Реакции эмодзи на ТВ */
+.react-layer { position: fixed; inset: 0; pointer-events: none; z-index: 30; overflow: hidden; }
+.react { position: absolute; bottom: -2em; display: flex; flex-direction: column; align-items: center; animation: floatUp 3.1s ease-out forwards; }
+.react .re { font-size: 4em; filter: drop-shadow(0 .1em .2em rgba(0,0,0,.4)); }
+.react .rn { font-size: 1em; font-weight: 900; background: var(--c); color: #fff; border-radius: 99px; padding: 0 .6em; margin-top: -.2em; text-shadow: 0 1px 0 rgba(0,0,0,.3); }
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(.6); opacity: 0; }
+  10% { opacity: 1; transform: translateY(-10vh) scale(1.1); }
+  100% { transform: translateY(-85vh) scale(1); opacity: 0; }
+}
+
+/* Конфетти */
+.confetti { position: absolute; top: -3vh; width: .7em; height: 1.1em; border-radius: 2px; animation: fall linear forwards; }
+@keyframes fall { to { top: 105vh; transform: rotate(720deg) translateX(6vw); } }
+
+/* Заставка смены фазы */
+.phase-banner { position: fixed; inset: 0; display: grid; place-items: center; pointer-events: none; z-index: 25; opacity: 0; }
+.phase-banner > div { font-size: 4.5em; font-weight: 900; color: var(--outline); background: var(--accent2); padding: .2em .9em; border-radius: .4em;
+  box-shadow: 0 .3em 1.5em rgba(0,0,0,.5); text-align: center; max-width: 90vw; }
+.phase-banner.show { animation: bannerIn 1.5s ease-out forwards; }
+@keyframes bannerIn {
+  0% { opacity: 0; transform: scale(.6); }
+  15% { opacity: 1; transform: scale(1.05); }
+  25% { transform: scale(1); }
+  75% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.1); }
+}
+
+/* Экран «Как играть» */
+.rules { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2em; padding: 0 2em; }
+.rules h1 { font-size: 3.2em; margin: 0; }
+.rules-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1em; width: 100%; max-width: 80em; }
+.rule { background: var(--panel); border-radius: 1.2em; padding: 1.2em 1em; position: relative; animation: pop .6s backwards; border: .15em solid rgba(255,255,255,.12); }
+.rule-n { position: absolute; top: -.7em; left: -.4em; width: 1.8em; height: 1.8em; border-radius: 50%; background: var(--accent2); color: var(--outline); font-weight: 900; display: grid; place-items: center; }
+.rule-ic { font-size: 3.4em; text-align: center; }
+.rule-t { font-size: 1.25em; font-weight: 800; text-align: center; line-height: 1.3; margin-top: .3em; }
+.rules-track { width: min(60em, 90%); }
+@media (max-aspect-ratio: 5/4) { .rules-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.lobby-note.hint { color: var(--accent2); font-weight: 800; }
+.lobby-note.small { font-size: .85em; opacity: .75; }
+
+/* Отсчёт 3-2-1 в Снайпере */
+.sn-count { font-size: 5em; font-weight: 900; color: var(--accent2); min-height: 1.2em; line-height: 1; }
+.sn-count.go { animation: countPop .9s ease-out; }
+@keyframes countPop { 0% { transform: scale(2.2); opacity: 0; } 30% { opacity: 1; transform: scale(1); } 100% { opacity: .2; } }
+
+/* Телефон: панель реакций */
+.react-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; justify-content: space-around; gap: 2px;
+  padding: 6px max(8px, env(safe-area-inset-right)) max(6px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+  background: rgba(20,18,44,.94); border-top: 1px solid rgba(255,255,255,.12); }
+.react-bar button { flex: 1; max-width: 56px; font-size: 26px; background: none; border: 0; padding: 4px 0; border-radius: 12px; }
+.react-bar button:active, .react-bar button.pulse { animation: pop .35s; background: rgba(255,255,255,.12); }
+body.play.has-react .play-app { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+body.play.has-react .fill-screen { height: calc(100vh - 170px); height: calc(100dvh - 170px); }
+
+/* Телефон: редактор аватара и модальное окно */
+.av-edit { display: flex; gap: 10px; align-items: flex-start; }
+.av-box { width: 150px; height: 150px; flex: none; background: #fff; border-radius: 50%; overflow: hidden; touch-action: none; border: 3px solid var(--accent); }
+.av-box canvas { width: 100%; height: 100%; display: block; touch-action: none; }
+.av-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+.av-tools .cr-col, .av-tools .cr-tool { width: 38px; height: 38px; }
+.modal { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.7); display: flex; align-items: center; justify-content: center; padding: 14px; }
+.modal-card { width: 100%; max-width: 460px; }
+.chk { display: flex; align-items: center; gap: 10px; font-weight: 800; margin: 12px 0 0; }
+.chk input { width: 24px; height: 24px; }
+textarea.t { resize: vertical; font-size: 16px; min-height: 70px; }
+@media (orientation: landscape) and (max-height: 520px) {
+  body.play.has-react .fill-screen { height: calc(100dvh - 120px); }
+  .react-bar button { font-size: 22px; }
+}
+.cr-choice.lv-custom { background: #c77dff; }
+.fill-screen .cr-choice { min-height: 0; }
+
+/* ===== Телепатия ===== */
+.tp-wrap { height: 100%; display: flex; flex-direction: column; gap: .6em; }
+.tp-clue { display: flex; align-items: center; justify-content: center; gap: .6em; min-height: 3.2em; flex-wrap: wrap; }
+.tp-clue small { font-size: 1.3em; color: var(--muted); font-weight: 800; }
+.tp-clue b { font-size: 2.8em; font-weight: 900; color: var(--outline); background: var(--accent2); padding: 0 .5em; border-radius: .3em; animation: pop .5s; text-transform: uppercase; }
+.tp-clue em { font-style: normal; font-size: 1.6em; font-weight: 900; color: var(--accent); }
+.tp-clue em.bad { color: var(--danger); }
+.tp-think { font-size: 1.8em; font-weight: 900; opacity: .9; animation: pulse 2s infinite; }
+.tp-scene { flex: 1; min-height: 0; height: auto; }
+.scene-item.tp-sel { filter: drop-shadow(0 0 10px #4cc9f0) drop-shadow(0 0 4px #4cc9f0); transform: scale(1.15); }
+.tp-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+.tp-card { border-radius: 14px; padding: 6px; text-align: center; display: flex; flex-direction: column; gap: 2px; font-size: 13px; }
+.tp-card.ok { background: #2b7a40; } .tp-card.trap { background: #a4161a; }
+.tp-card .thumb { aspect-ratio: 1; }
+.tp-card b { font-size: 12px; text-transform: uppercase; }
+.tp-head b { font-size: 30px; color: var(--accent2); text-transform: uppercase; margin-left: 6px; }
+.tp-head p { margin: 4px 0 0; }
+.tp-thumbs { grid-template-columns: repeat(6, 1fr); gap: 5px; margin-top: 0; }
+.tp-thumbs .thumb { padding: 2px; border-radius: 9px; }
+.tp-thumbs .thumb b { font-size: 10px; }
+@media (min-width: 600px) { .tp-thumbs { grid-template-columns: repeat(8, 1fr); } }
+.dim .scene-item.tp-sel { opacity: 1 !important; }
+.tp-clue em.zero { color: var(--muted); }

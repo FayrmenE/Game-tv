@@ -14,8 +14,15 @@
     return esc((Array.from(n)[0] || '?').toUpperCase());
   }
 
+  // Нарисованные аватары приходят отдельным событием 'avatars' и кэшируются здесь
+  var AVATARS = {};
+  function setAvatars(map) {
+    Object.keys(map || {}).forEach(function (id) { if (map[id]) AVATARS[id] = map[id]; else delete AVATARS[id]; });
+  }
   function avatar(p, cls) {
-    return '<div class="avatar ' + (cls || '') + (p.connected === false ? ' offline' : '') + '" style="--c:' + p.color + '">' + initial(p.name) + '</div>';
+    var img = p.id && AVATARS[p.id];
+    return '<div class="avatar ' + (cls || '') + (img ? ' img' : '') + (p.connected === false ? ' offline' : '') + '" style="--c:' + p.color +
+      (img ? ';background-image:url(' + img + ')' : '') + '">' + (img ? '' : initial(p.name)) + '</div>';
   }
 
   /* ---------- Таймер: сервер шлёт остаток, клиент плавно досчитывает ---------- */
@@ -65,6 +72,6 @@
 
   window.U = {
     t: t, esc: esc, avatar: avatar, onTimer: onTimer, timeLeft: timeLeft, fmt: fmt,
-    loadScenes: loadScenes, scene: scene, itemNum: itemNum, playerById: playerById, nameOf: nameOf
+    timerTotal: function () { return tm.total; }, loadScenes: loadScenes, setAvatars: setAvatars, AVATARS: AVATARS, scene: scene, itemNum: itemNum, playerById: playerById, nameOf: nameOf
   };
 })();

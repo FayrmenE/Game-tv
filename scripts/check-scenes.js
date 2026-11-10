@@ -2,6 +2,8 @@
 /* Проверка данных: в каждой сцене 24 предмета, ≥6 пар, у всех предметов есть рисунок и переводы. */
 const path = require('path');
 const ART = require('../public/js/art.js');
+require('../public/js/art2.js');
+const HINTS = require('../data/hints.js');
 const { I18N } = require('../public/js/i18n.js');
 const { scenes } = require(path.join(__dirname, '..', 'data', 'scenes.json'));
 
@@ -18,6 +20,7 @@ for (const s of scenes) {
   for (const l of langs) if (!I18N[l][s.nameKey]) errors.push(`${l}: нет перевода ${s.nameKey}`);
   for (const it of s.items) {
     if (!ART.ITEMS[it.id]) errors.push(`${s.id}: нет рисунка ${it.id}`);
+    if (!HINTS[it.id]) errors.push(`${s.id}: нет подсказок для ботов ${it.id}`);
     for (const l of langs) if (!I18N[l][it.nameKey]) errors.push(`${l}: нет перевода ${it.nameKey}`);
   }
   console.log(`✓ ${s.id}: ${s.items.length} предметов, ${s.pairs.length} пар`);

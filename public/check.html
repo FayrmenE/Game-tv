@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Диагностика</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/responsive.css">
+  <style>
+    .chk-app { max-width: 760px; margin: 0 auto; padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+    .row { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .ok { color: var(--accent); font-weight: 900; } .bad { color: var(--danger); font-weight: 900; }
+    .addr { font-family: ui-monospace, Menlo, monospace; font-size: 18px; word-break: break-all; }
+    .qr { background: #fff; border-radius: 12px; padding: 8px; width: 200px; display: block; margin: 8px auto; }
+    li { margin: 6px 0; color: var(--muted); }
+  </style>
+</head>
+<body class="play">
+  <div class="chk-app" id="app"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/sound.js"></script>
+  <script>
+  (function () {
+    var lang = new URLSearchParams(location.search).get('lang') || ((navigator.language || 'ru').slice(0, 2) === 'ru' ? 'ru' : 'en');
+    i18n.setLang(lang);
+    var t = i18n.t, $ = function (id) { return document.getElementById(id); };
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var feats = [
+      ['WebSocket', !!window.WebSocket], ['Web Audio', !!(window.AudioContext || window.webkitAudioContext)],
+      ['Pointer Events', !!window.PointerEvent], ['Canvas', !!document.createElement('canvas').getContext],
+      ['localStorage', (function () { try { localStorage.setItem('x', '1'); localStorage.removeItem('x'); return true; } catch (e) { return false; } })()],
+      ['ResizeObserver', !!window.ResizeObserver], ['CSS aspect-ratio', !!(window.CSS && CSS.supports && CSS.supports('aspect-ratio: 1'))]
+    ];
+    function card(h, body) { return '<div class="card"><h2>' + h + '</h2>' + body + '</div>'; }
+    function render(info, ping) {
+      var html = '<h1 style="margin:0">🛠 ' + esc(t('check.title')) + '</h1>';
+      html += card(info ? '✅ ' + esc(t('check.server')) : '❌ ' + esc(t('check.serverFail')), info ?
+        '<div class="row"><span>' + esc(t('check.open')) + '</span><span class="addr">' + esc(info.playUrl) + '</span></div>' +
+        '<img class="qr" alt="QR" src="/api/qr?text=' + encodeURIComponent(info.playUrl) + '">' +
+        '<div class="row"><span>' + esc(t('check.addr')) + '</span><span class="addr">' + info.ifaces.map(function (i) { return esc(i.address + ':' + info.port) + ' <small>(' + esc(i.name) + ')</small>'; }).join('<br>') + '</span></div>' +
+        '<div class="row"><span>' + esc(t('check.yourIP')) + '</span><span class="addr">' + esc(info.yourIP) + '</span></div>' : '');
+      var pq = ping == null ? '…' : ping + ' ms — <span class="' + (ping < 80 ? 'ok' : 'bad') + '">' + esc(ping < 30 ? t('check.pingGood') : ping < 80 ? t('check.pingOk') : t('check.pingBad')) + '</span>';
+      html += card('📶 ' + esc(t('check.ping')), '<div class="row"><span>socket.io</span><span>' + pq + '</span></div><button class="btn sec" id="snd">🔊 ' + esc(t('check.sound')) + '</button>');
+      html += card('🧩 ' + esc(t('check.features')), feats.map(function (f) {
+        return '<div class="row"><span>' + f[0] + '</span><span class="' + (f[1] ? 'ok' : 'bad') + '">' + esc(f[1] ? t('check.yes') : t('check.no')) + '</span></div>';
+      }).join('') + '<div class="row"><span>' + esc(t('check.screen')) + '</span><span>' + screen.width + '×' + screen.height + ' · ' + innerWidth + '×' + innerHeight + ' @' + (window.devicePixelRatio || 1) + 'x</span></div>' +
+        '<div class="row"><span>UA</span><span style="font-size:12px;text-align:right">' + esc(navigator.userAgent) + '</span></div>');
+      html += card('💡 ' + esc(t('check.tips')), '<ul>' + [1, 2, 3, 4].map(function (i) { return '<li>' + esc(t('check.tip' + i)) + '</li>'; }).join('') + '</ul>');
+      html += '<a class="btn" href="/tv" style="text-align:center;text-decoration:none">📺 ' + esc(t('check.back')) + '</a>';
+      $('app').innerHTML = html;
+      $('snd').onclick = function () { SFX.unlock(); SFX.play('win'); };
+    }
+    var info = null, ping = null;
+    fetch('/api/info').then(function (r) { return r.json(); }).then(function (j) { info = j; render(info, ping); }).catch(function () { render(null, ping); });
+    var socket = io(), samples = [];
+    socket.on('connect', function () {
+      var n = 0;
+      (function one() {
+        var t0 = performance.now();
+        socket.timeout(2000).emit('diag:ping', function () {
+          samples.push(performance.now() - t0);
+          if (++n < 8) setTimeout(one, 150);
+          else { samples.sort(function (a, b) { return a - b; }); ping = Math.round(samples[samples.length >> 1]); render(info, ping); }
+        });
+      })();
+    });
+    render(null, null);
+  })();
+  </script>
+</body>
+</html>

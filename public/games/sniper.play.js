@@ -50,5 +50,6 @@
   function unmount() { key = null; P = G = null; el = null; flash = null; clearTimeout(flashTimer); }
 
   window.GAMES = window.GAMES || {};
-  (window.GAMES.sniper = window.GAMES.sniper || {}).play = { render: render, unmount: unmount, onEvent: onEvent };
+  (window.GAMES.sniper = window.GAMES.sniper || {}).play = { render: render, unmount: unmount, onEvent: onEvent,
+    hideReactions: function (p) { return p.game && p.game.phase !== 'results'; } };
 })();

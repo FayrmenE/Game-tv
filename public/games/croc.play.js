@@ -119,8 +119,9 @@
     if (ph === 'choose' && G.options) {
       return set('choose:' + G.turnNo + i18n.getLang(), '<div class="fill-screen"><div class="card"><h2>🎨 ' + esc(t('croc.choose')) + '</h2>' +
         (G.mod ? '<p>⚡ ' + esc(t('croc.mod.' + G.mod)) + ' — ' + esc(t('croc.mod.' + G.mod + '.d')) + '</p>' : '') + '</div>' +
-        ['easy', 'medium', 'hard'].map(function (lv) {
-          return '<button class="cr-choice lv-' + lv + '" data-lv="' + lv + '"><b>' + esc(G.options[lv]) + '</b><small>' + esc(t('croc.level.' + lv)) + '</small></button>';
+        Object.keys(G.options).map(function (lv) {
+          var lk = /^c\d/.test(lv) ? 'custom' : lv;
+          return '<button class="cr-choice lv-' + lk + '" data-lv="' + lv + '"><b>' + esc(G.options[lv]) + '</b><small>' + esc(t('croc.level.' + lk)) + '</small></button>';
         }).join('') + '</div>', function () {
         el.querySelectorAll('[data-lv]').forEach(function (b) { b.onclick = function () { ctx.act('choose', { level: b.dataset.lv }); }; });
       });
@@ -218,5 +219,6 @@
   function unmount() { destroyPad(); key = null; P = G = null; el = null; draft = ''; }
 
   window.GAMES = window.GAMES || {};
-  (window.GAMES.croc = window.GAMES.croc || {}).play = { render: render, unmount: unmount, onEvent: onEvent, hostButtons: hostButtons };
+  (window.GAMES.croc = window.GAMES.croc || {}).play = { render: render, unmount: unmount, onEvent: onEvent, hostButtons: hostButtons,
+    hideReactions: function (p) { var g = p.game || {}; return !!(g.isArtist && g.word && (g.phase === 'draw' || g.phase === 'claimed' || g.phase === 'choose')) || (g.isArtist && g.phase === 'choose'); } };
 })();

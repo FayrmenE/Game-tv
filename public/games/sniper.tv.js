@@ -18,7 +18,7 @@
       lastImgK = null;
       if (ph === 'calibrate') $('main').innerHTML = '<div class="center-msg"><div class="sn-radar"></div><h1>📡</h1><div class="big">' + esc(t('sniper.calibrate')) + '</div></div>';
       else if (ph === 'intro') $('main').innerHTML = '<div class="center-msg sn-intro"><div class="sn-catch">' + esc(t('sniper.catch')) + '</div>' +
-        '<div class="sn-card target">' + ART.itemSvg(G.target) + '</div><div class="sn-tname">' + esc(t('item.' + G.target)) + '</div></div>';
+        '<div class="sn-card target">' + ART.itemSvg(G.target) + '</div><div class="sn-tname">' + esc(t('item.' + G.target)) + '</div><div class="sn-count" id="snCount"></div></div>';
       else if (ph === 'stream') $('main').innerHTML = '<div class="center-msg"><div class="sn-mini">' + esc(t('sniper.catch')) + ' ' + ART.itemSvg(G.target) + '<b>' + esc(t('item.' + G.target)) + '</b></div>' +
         '<div class="sn-card stream" id="snImg"></div></div>';
       else if (ph === 'results') $('main').innerHTML = resultsHtml();
@@ -26,6 +26,19 @@
     }
     renderStrip();
   }
+
+  // Обратный отсчёт 3-2-1 перед потоком картинок
+  var lastCount = null;
+  setInterval(function () {
+    var el = document.getElementById('snCount');
+    if (!el || !G || G.phase !== 'intro') { lastCount = null; return; }
+    var n = Math.ceil(U.timeLeft() / 1000 / (U.timerTotal() / 3000 || 1));
+    if (n < 1 || n > 3 || n === lastCount) return;
+    lastCount = n;
+    el.textContent = n;
+    el.classList.remove('go'); void el.offsetWidth; el.classList.add('go');
+    SFX.play('tick');
+  }, 60);
 
   function resultsHtml() {
     var R = G.results;
