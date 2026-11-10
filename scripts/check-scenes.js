@@ -25,5 +25,17 @@ for (const s of scenes) {
 const ru = Object.keys(I18N.ru), en = Object.keys(I18N.en);
 for (const k of ru) if (!en.includes(k)) errors.push(`en: нет ключа ${k}`);
 for (const k of en) if (!ru.includes(k)) errors.push(`ru: нет ключа ${k}`);
+// Словари Крокодила: по 150 слов на уровень, без повторов
+const WORDS = require('../data/words.js');
+for (const l of ['ru', 'en']) {
+  const all = [];
+  for (const lvl of ['easy', 'medium', 'hard']) {
+    const list = WORDS[l][lvl];
+    if (list.length !== 150) errors.push(`words ${l}.${lvl}: ${list.length} слов вместо 150`);
+    all.push(...list);
+  }
+  if (new Set(all).size !== all.length) errors.push(`words ${l}: есть повторы`);
+  console.log(`✓ словарь ${l}: ${all.length} слов`);
+}
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log('Всё в порядке.');

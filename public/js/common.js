@@ -9,7 +9,10 @@
     });
   }
 
-  function initial(name) { return esc((String(name || '?').trim()[0] || '?').toUpperCase()); }
+  function initial(name) {
+    var n = String(name || '?').replace(/^\s*🤖\s*/, '').trim();
+    return esc((Array.from(n)[0] || '?').toUpperCase());
+  }
 
   function avatar(p, cls) {
     return '<div class="avatar ' + (cls || '') + (p.connected === false ? ' offline' : '') + '" style="--c:' + p.color + '">' + initial(p.name) + '</div>';

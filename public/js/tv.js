@@ -1,232 +1,170 @@
-/* Экран ТВ */
+/* Экран ТВ — оболочка платформы: меню, пьедестал, итоги вечера, кубок. Игры — window.GAMES[*].tv */
 (function () {
   'use strict';
   var t = U.t, esc = U.esc;
   var socket = io();
-  var S = null;
-  var mode = null;          // 'lobby' | 'game:<sceneId>'
-  var overlayKey = null;    // чтобы не перезапускать анимацию раскрытия
-  var timers = [];          // таймауты анимации
-  var seenWords = {};       // для анимации появления слова
+  var P = null;
+  var active = null;      // ключ модуля игры, который сейчас отрисован
+  var shellKey = null;    // ключ последней отрисовки экрана оболочки
   var lang = null;
-  var prevBars = {};
-
   var $ = function (id) { return document.getElementById(id); };
+  var params = new URLSearchParams(location.search);
+
+  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc' };
+  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️' };
+  window.SHELL = { EMOJI: EMOJI, MODULE: MODULE };
 
   socket.on('connect', function () {
     var code = null;
-    try { code = sessionStorage.getItem('alien.tv.code'); } catch (e) { /* ignore */ }
-    socket.emit('tv:hello', { code: code });
+    try { code = sessionStorage.getItem('party.tv.code'); } catch (e) { /* ignore */ }
+    socket.emit('tv:hello', { code: code, bots: params.get('bots') });
   });
   socket.on('state', function (s) {
-    S = s;
-    try { sessionStorage.setItem('alien.tv.code', s.code); } catch (e) { /* ignore */ }
+    P = s;
+    try { sessionStorage.setItem('party.tv.code', s.code); } catch (e) { /* ignore */ }
     render();
   });
   socket.on('timer', U.onTimer);
-  U.loadScenes().then(function () { if (S) { mode = null; render(); } });
+  socket.on('sfx', function (k) { SFX.play(k); });
+  socket.on('ping2', function (t0, ack) { if (ack) ack(); });
+  // События конкретной игры («sniper:img», «croc:ops» …) отдаём её модулю
+  socket.onAny(function (ev, data) {
+    var i = ev.indexOf(':');
+    if (i < 0 || ev === 'tv:hello') return;
+    var g = window.GAMES[ev.slice(0, i)];
+    if (g && g.tv && g.tv.onEvent && active === ev.slice(0, i)) g.tv.onEvent(ev.slice(i + 1), data, P);
+  });
+  U.loadScenes().then(function () { shellKey = null; if (P) { unmountGame(); render(); } });
 
-  function clearAnim() { timers.forEach(clearTimeout); timers = []; }
-  function later(ms, fn) { timers.push(setTimeout(fn, ms)); }
+  // Кнопка включения звука (браузер не даёт играть звук без клика)
+  var snd = $('soundBtn');
+  snd.onclick = function () { SFX.unlock(); SFX.play('ok'); snd.classList.add('hidden'); };
+  setInterval(function () { if (SFX.ready()) snd.classList.add('hidden'); }, 1000);
+
+  function unmountGame() {
+    if (active && window.GAMES[active] && window.GAMES[active].tv.unmount) window.GAMES[active].tv.unmount();
+    active = null;
+    $('main').innerHTML = '';
+    $('strip').innerHTML = '';
+    document.body.className = 'tv';
+  }
 
   function render() {
-    if (!S) return;
-    if (lang !== S.settings.lang) { lang = S.settings.lang; i18n.setLang(lang); mode = null; overlayKey = null; }
-    document.title = t('app.title') + ' — TV';
-    $('brandName').textContent = t('app.title');
-    $('roomChip').innerHTML = '<small>' + esc(t('tv.roomCode')) + '</small>' + esc(S.code);
-    renderHeader();
-    if (S.phase === 'lobby' || !S.round) renderLobby();
-    else renderGame();
-    renderStrip();
-  }
-
-  function renderHeader() {
-    var r = S.round, ph = S.phase, title = t('phase.' + ph), sub = '';
-    if (ph === 'look') sub = t('phase.look.sub');
-    else if (ph === 'words' && r.turn) { title = t('phase.words', { c: r.turn.c + 1 }); sub = t('phase.words.sub', { name: U.nameOf(S, r.turn.id) }); }
-    else if (ph === 'discuss') sub = r.accelerated ? t('phase.discuss.fast') : t('phase.discuss.sub');
-    else if (ph === 'lastword') sub = t('phase.lastword.sub', { name: U.nameOf(S, r.speakerId) }) + ' · ❄ ' + t('frozen');
-    else if (ph === 'revote') sub = t('phase.revote.sub');
-    else if (ph === 'runoff') sub = t('phase.runoff.sub');
-    else if (ph === 'lastchance') sub = t('phase.lastchance.sub', { name: U.nameOf(S, r.alienId) });
-    if (ph !== 'lobby' && S.roundNo) title = t('tv.round', { n: S.roundNo }) + ' · ' + title;
-    if (ph !== 'lobby' && r) {
-      var sc = U.scene(r.sceneId);
-      if (sc) sub = (sub ? sub + ' · ' : '') + t(sc.nameKey);
+    if (!P) return;
+    if (lang !== P.settings.lang) { lang = P.settings.lang; i18n.setLang(lang); shellKey = null; }
+    document.title = t('platform.title') + ' — TV';
+    $('roomChip').innerHTML = '<small>' + esc(t('tv.roomCode')) + '</small>' + esc(P.code);
+    renderCup();
+    if (P.phase === 'game' && P.game && MODULE[P.gameId]) {
+      var key = MODULE[P.gameId];
+      if (active !== key) { unmountGame(); active = key; shellKey = null; document.body.className = 'tv game-' + key; }
+      $('brandName').textContent = t('game.' + P.gameId);
+      $('brandIcon').textContent = EMOJI[P.gameId];
+      window.GAMES[key].tv.render(P);
+      return;
     }
-    $('phaseTitle').textContent = title;
-    $('phaseSub').textContent = sub;
+    if (active) unmountGame();
+    $('brandName').textContent = t('platform.title');
+    $('brandIcon').textContent = '🎉';
+    if (P.phase === 'podium') renderPodium();
+    else if (P.phase === 'evening') renderEvening();
+    else renderMenu();
   }
 
-  /* ------------------------------ лобби ------------------------------ */
-  function renderLobby() {
-    mode = 'lobby';
-    overlayKey = null;
-    clearAnim();
-    var host = U.playerById(S, S.hostId);
-    var n = S.players.length;
-    var notice = S.notice ? '<div class="notice">' + esc(t(S.notice.key, { reason: t(S.notice.reasonKey) })) + '</div>' : '';
+  /* ------------------------------ кубок вечера (всегда в углу) ------------------------------ */
+  function renderCup() {
+    var el = $('cup');
+    var rows = P.cup.filter(function (c) { return c.points > 0; }).slice(0, 5);
+    if (!rows.length) { el.classList.add('hidden'); return; }
+    el.classList.remove('hidden');
+    el.innerHTML = '<div class="cup-h">🏆 ' + esc(t('cup.title')) + '</div>' + rows.map(function (c, i) {
+      return '<div class="cup-row"><span class="cup-pl">' + (i + 1) + '</span>' + U.avatar(c) + '<span class="cup-nm">' + esc(c.name) + '</span><b>' + c.points + '</b></div>';
+    }).join('');
+  }
+
+  /* ------------------------------ меню ------------------------------ */
+  function renderMenu() {
+    $('phaseTitle').textContent = t('menu.title');
+    $('phaseSub').textContent = t('menu.sub');
+    var key = JSON.stringify([lang, P.selected, P.players, P.hostId, !!P.qr]);
+    if (key === shellKey) return;
+    shellKey = key;
+    var host = U.playerById(P, P.hostId);
+    var n = P.players.filter(function (p) { return p.connected; }).length;
     $('main').innerHTML =
       '<div class="lobby">' +
       '<div class="qr-card">' +
-      (S.qr ? '<img alt="QR" src="' + S.qr + '">' : '<div style="height:20em"></div>') +
-      '<div class="code">' + esc(S.code) + '</div>' +
-      '<div class="url">' + esc(S.joinUrl || '') + '</div>' +
-      '</div>' +
-      '<div class="lobby-info">' + notice +
-      '<h1>👽 ' + esc(t('app.title')) + '</h1>' +
-      '<div class="tag">' + esc(t('app.tagline')) + '</div>' +
-      '<div class="lobby-note">📱 ' + esc(t('tv.scan')) + ' · ' + esc(t('tv.sameWifi')) + '</div>' +
-      '<div class="lobby-players">' + S.players.map(function (p) {
-        return '<div class="lobby-player">' + U.avatar(p) + '<b>' + esc(p.name) + '</b>' +
-          (p.id === S.hostId ? '<span class="crown">👑 ' + esc(t('play.host')) + '</span>' : '<span class="crown">' + (p.score ? '★ ' + p.score : '&nbsp;') + '</span>') + '</div>';
+      (P.qr ? '<img alt="QR" src="' + P.qr + '">' : '<div style="height:20em"></div>') +
+      '<div class="code">' + esc(P.code) + '</div>' +
+      '<div class="url">' + esc(P.joinUrl || '') + '</div></div>' +
+      '<div class="lobby-info">' +
+      '<div class="game-cards">' + P.games.map(function (g) {
+        var ok = n >= g.min && n <= g.max;
+        return '<div class="game-card' + (g.id === P.selected ? ' sel' : '') + (ok ? '' : ' dim') + '">' +
+          '<div class="gc-emoji">' + EMOJI[g.id] + '</div><div class="gc-name">' + esc(t('game.' + g.id)) + '</div>' +
+          '<div class="gc-desc">' + esc(t('game.' + g.id + '.desc')) + '</div>' +
+          '<div class="gc-players">👥 ' + g.min + '–' + g.max + '</div></div>';
       }).join('') + '</div>' +
-      '<div class="lobby-note">' + esc(t('tv.waitingPlayers', { n: n, min: S.minPlayers, max: S.maxPlayers })) + '</div>' +
-      '<div class="lobby-note">' + esc(host ? t('tv.hostStarts', { name: host.name }) : t('tv.noPlayers')) + '</div>' +
+      '<div class="lobby-note">📱 ' + esc(t('tv.scan')) + ' · ' + esc(t('tv.sameWifi')) + '</div>' +
+      '<div class="lobby-players">' + P.players.map(function (p) {
+        return '<div class="lobby-player">' + U.avatar(p) + '<b>' + esc(p.name) + '</b>' +
+          '<span class="crown">' + (p.id === P.hostId ? '👑 ' + esc(t('play.host')) : '&nbsp;') + '</span></div>';
+      }).join('') + '</div>' +
+      '<div class="lobby-note">' + esc(host ? t('menu.hostPicks', { name: host.name }) : t('tv.noPlayers')) + '</div>' +
       '</div></div>';
   }
 
-  /* ------------------------------ игра ------------------------------ */
-  function renderGame() {
-    var r = S.round, sc = U.scene(r.sceneId);
-    if (!sc) return;
-    var want = 'game:' + r.sceneId + ':' + S.roundNo;
-    if (mode !== want) {
-      mode = want;
-      overlayKey = null;
-      seenWords = {};
-      $('main').innerHTML = '<div class="scene-wrap"><div class="scene-frame" id="frame">' + ART.sceneSvg(sc) + '</div></div>' +
-        '<div id="overlay" class="overlay hidden"></div><div id="pausedBadge" class="paused-badge hidden"></div>';
-    }
-    $('pausedBadge').textContent = '⏸ ' + t('tv.paused');
-    $('pausedBadge').classList.toggle('hidden', !S.paused);
-    if (S.phase === 'reveal') showReveal();
-    else if (S.phase === 'roundEnd') showRoundEnd();
-    else if (S.phase === 'lastchance') { overlayKey = 'lastchance'; clearAnim(); $('overlay').classList.add('hidden'); highlight({}); }
-    else { overlayKey = null; $('overlay').classList.add('hidden'); highlight({}); }
-  }
-
-  function highlight(o) {
-    var frame = $('frame');
-    if (!frame) return;
-    var items = frame.querySelectorAll('.scene-item');
-    for (var i = 0; i < items.length; i++) items[i].classList.remove('hl', 'hl-alien', 'guess');
-    var any = false;
-    function add(id, cls) { var e = id && document.getElementById('item-' + id); if (e) { e.classList.add(cls); any = true; } }
-    add(o.a, 'hl'); add(o.b, 'hl-alien');
-    if (o.guess && o.guess !== o.a) add(o.guess, 'guess');
-    frame.classList.toggle('dim', any);
-  }
-
-  function itemCard(id, cls, label) {
-    if (!id) return '<div class="ritem mystery ' + cls + '"><div class="lbl">' + esc(label) + '</div><div class="q">?</div></div>';
-    return '<div class="ritem ' + cls + '"><div class="lbl">' + esc(label) + '</div>' + ART.itemSvg(id) +
-      '<div class="nm">№' + U.itemNum(S.round.sceneId, id) + ' · ' + esc(t('item.' + id)) + '</div></div>';
-  }
-
-  function voteCardsHtml(votes) {
-    return '<div class="vote-cards">' + votes.map(function (v, i) {
-      var a = U.playerById(S, v.voter) || { name: '?', color: '#888' }, b = U.playerById(S, v.target) || { name: '?', color: '#888' };
-      return '<div class="vcard" id="vc' + i + '"><div class="back">?</div><div class="front">' +
-        '<div class="row">' + U.avatar(a) + '<span>' + esc(a.name) + '</span></div>' +
-        '<div class="arrow">↓</div>' +
-        '<div class="row">' + U.avatar(b) + '<span>' + esc(b.name) + '</span></div></div></div>';
+  /* ------------------------------ пьедестал ------------------------------ */
+  function renderPodium() {
+    var R = P.result;
+    $('phaseTitle').textContent = t('podium.title') + ' · ' + t('game.' + R.gameId);
+    $('phaseSub').textContent = t('podium.sub');
+    var key = JSON.stringify([lang, 'podium', R]);
+    if (key === shellKey) return;
+    shellKey = key;
+    SFX.play('win');
+    var steps = R.places.slice(0, 3);
+    var order = [1, 0, 2].filter(function (i) { return steps[i]; });
+    var teamOf = function (ids) {
+      if (!R.teams) return null;
+      return R.teams.find(function (tm) { return tm.ids.some(function (id) { return ids.indexOf(id) >= 0; }); });
+    };
+    var podium = '<div class="podium">' + order.map(function (i) {
+      var s = steps[i], tm = teamOf(s.ids);
+      var who = tm ? '<div class="pod-team" style="--c:' + tm.color + '">' + esc(t(tm.name)) + '</div>' : '';
+      return '<div class="pod pod' + s.place + '">' + who + '<div class="pod-people">' + s.ids.map(function (id) {
+        var p = U.playerById(P, id) || { name: '?', color: '#888' };
+        return '<div class="pod-p">' + U.avatar(p) + '<b>' + esc(p.name) + '</b><span>' + (R.scores[id] != null && !tm ? R.scores[id] : '') + '</span></div>';
+      }).join('') + '</div><div class="pod-step"><span>' + s.place + '</span>' +
+        (tm ? '<small>' + tm.score + '</small>' : '') + '<em>+' + (R.cupDelta[s.ids[0]] || 0) + ' 🏆</em></div></div>';
     }).join('') + '</div>';
-  }
-
-  function showReveal() {
-    var r = S.round, key = 'reveal:' + S.roundNo;
-    if (overlayKey === key) return;
-    overlayKey = key;
-    clearAnim();
-    highlight({});
-    var ov = $('overlay');
-    ov.className = 'overlay';
-    var accusedName = r.accused ? U.nameOf(S, r.accused) : null;
-    ov.innerHTML = voteCardsHtml(r.revealVotes) +
-      '<div class="reveal-line" id="rl1">' + esc(accusedName ? t('reveal.accused', { name: accusedName }) : t('reveal.nobody')) + '</div>' +
-      '<div class="reveal-line alien" id="rl2">👽 ' + esc(t('reveal.alienWas', { name: U.nameOf(S, r.alienId) })) + '</div>' +
-      '<div class="reveal-items" id="ri">' +
-      itemCard(r.itemA, 'civil', t('reveal.itemCivil')) + itemCard(r.itemB, 'alien', t('reveal.itemAlien')) + '</div>';
-    var step = 1200;
-    r.revealVotes.forEach(function (v, i) { later(400 + i * step, function () { var c = $('vc' + i); if (c) c.classList.add('flip'); }); });
-    var tEnd = 400 + r.revealVotes.length * step;
-    later(tEnd, function () { var e = $('rl1'); if (e) e.classList.add('show'); });
-    later(tEnd + 1800, function () { var e = $('rl2'); if (e) e.classList.add('show'); });
-    later(tEnd + 3000, function () {
-      var e = $('ri'); if (e) e.classList.add('show');
-      if (r.itemA) highlight({ a: r.itemA, b: r.itemB });
-    });
-  }
-
-  function showRoundEnd() {
-    var r = S.round, key = 'end:' + S.roundNo;
-    highlight({ a: r.itemA, b: r.itemB, guess: r.guess });
-    if (overlayKey === key) return;
-    overlayKey = key;
-    clearAnim();
-    var ov = $('overlay');
-    ov.className = 'overlay end';
-    ov.style.background = '';
-    var good = r.outcome === 'civilians_win';
-    var guessLine = '';
-    if (r.caught) guessLine = '<div class="reveal-line show" style="font-size:1.3em">' +
-      esc(r.guess ? t('reveal.guessed', { item: '№' + U.itemNum(r.sceneId, r.guess) + ' ' + t('item.' + r.guess) }) : t('reveal.noGuess')) + '</div>';
-    var players = S.players.slice().sort(function (a, b) { return b.score - a.score; });
-    ov.innerHTML =
-      '<div class="outcome' + (good ? '' : ' bad') + '">' + esc(t('outcome.' + r.outcome)) + '</div>' +
-      '<div class="reveal-line alien show" style="font-size:2em">👽 ' + esc(t('reveal.alienWas', { name: U.nameOf(S, r.alienId) })) + '</div>' +
-      guessLine +
-      '<div class="reveal-items show">' + itemCard(r.itemA, 'civil', t('reveal.itemCivil')) + itemCard(r.itemB, 'alien', t('reveal.itemAlien')) + '</div>' +
-      '<div class="scoreboard">' + players.map(function (p) {
-        var d = r.deltas[p.id];
-        return '<div class="sc">' + U.avatar(p) + esc(p.name) + ' · ' + p.score + (d ? ' <span class="delta">' + esc(t('outcome.points', { n: d })) + '</span>' : '') + '</div>';
-      }).join('') + '</div>';
-    // Через несколько секунд убираем затемнение, чтобы было видно подсвеченные предметы на сцене
-    later(9000, function () { ov.style.background = 'rgba(20,18,44,.55)'; });
-  }
-
-  /* ------------------------------ полоса игроков ------------------------------ */
-  function renderStrip() {
-    var strip = $('strip');
-    if (S.phase === 'lobby' || !S.round) { strip.innerHTML = ''; return; }
-    var r = S.round, ph = S.phase;
-    var ids = r.order.filter(function (id) { return U.playerById(S, id); });
-    S.players.forEach(function (p) { if (ids.indexOf(p.id) < 0) ids.push(p.id); });
-    var showBars = ['discuss', 'lastword', 'revote', 'runoff'].indexOf(ph) >= 0;
-    var maxV = Math.max(1, r.participants.length - 1);
-    strip.innerHTML = ids.map(function (id) {
-      var p = U.playerById(S, id), inR = r.participants.indexOf(id) >= 0;
-      var cls = ['pcol'];
-      if (!inR) cls.push('out');
-      if (r.turn && r.turn.id === id) cls.push('turn');
-      if (r.speakerId === id) cls.push('speaker');
-      if (r.leaders && r.leaders.indexOf(id) >= 0) cls.push('leader');
-      if (ph === 'runoff' && r.candidates && r.candidates.indexOf(id) < 0) cls.push('out');
-      var cnt = r.voteCounts[id] || 0;
-      var h = 100 * cnt / maxV;
-      var bar = showBars ? '<div class="bar' + (cnt ? '' : ' zero') + '" data-id="' + id + '" data-h="' + h + '" style="height:' + (prevBars[id] || 0) + '%">' + (cnt ? '<span>' + cnt + '</span>' : '') + '</div>' : '';
-      var words = (r.words[id] || [null, null]).map(function (w, c) {
-        var k = id + ':' + c;
-        if (typeof w === 'string') {
-          var fresh = !seenWords[k]; seenWords[k] = true;
-          return '<div class="word' + (fresh ? ' fresh' : '') + '">' + esc(w) + '</div>';
-        }
-        if (w === false) return '<div class="word miss">—</div>';
-        if (r.turn && r.turn.id === id && r.turn.c === c) return '<div class="word typing">…</div>';
-        return '<div class="word empty"></div>';
-      }).join('');
-      var check = ph === 'look' && p.looked ? '<div class="check">✓</div>' : '';
-      return '<div class="' + cls.join(' ') + '"><div class="bar-area">' + bar + '</div>' + check + U.avatar(p) +
-        '<div class="pname">' + esc(p.name) + '</div><div class="score">★ ' + p.score + '</div>' +
-        (inR ? '<div class="words">' + words + '</div>' : '') + '</div>';
+    var titles = R.titles.length ? '<div class="titles">' + R.titles.map(function (tt) {
+      var p = U.playerById(P, tt.playerId) || { name: '?', color: '#888' };
+      return '<div class="title-card"><div class="tt-name">🏅 ' + esc(t(tt.key, tt.vars)) + '</div><div class="tt-who">' + U.avatar(p) + esc(p.name) +
+        (tt.text ? ' — «' + esc(tt.text) + '»' : '') + '</div></div>';
+    }).join('') + '</div>' : '';
+    var rest = R.places.slice(3).map(function (s) {
+      return s.ids.map(function (id) { var p = U.playerById(P, id); return p ? '<span>' + s.place + '. ' + esc(p.name) + ' · ' + (R.scores[id] || 0) + '</span>' : ''; }).join('');
     }).join('');
-    // Плавный рост столбиков: стартуем с прошлой высоты и анимируем к новой
-    var bars = strip.querySelectorAll('.bar');
-    requestAnimationFrame(function () {
-      for (var i = 0; i < bars.length; i++) { bars[i].style.height = bars[i].dataset.h + '%'; prevBars[bars[i].dataset.id] = bars[i].dataset.h; }
-    });
-    if (!showBars) prevBars = {};
+    $('main').innerHTML = '<div class="podium-wrap">' + podium + titles + (rest ? '<div class="rest">' + rest + '</div>' : '') +
+      '<div class="lobby-note">' + esc(t('podium.hostNext')) + '</div></div>';
+  }
+
+  /* ------------------------------ итоги вечера ------------------------------ */
+  function renderEvening() {
+    $('phaseTitle').textContent = t('evening.title');
+    $('phaseSub').textContent = '';
+    var key = JSON.stringify([lang, 'evening', P.cup]);
+    if (key === shellKey) return;
+    shellKey = key;
+    SFX.play('win');
+    var champ = P.cup[0];
+    $('main').innerHTML = '<div class="evening">' +
+      (champ && champ.points > 0 ? '<div class="champ"><div class="crown-big">👑</div>' + U.avatar(champ, 'big') +
+        '<h1>' + esc(t('evening.champion', { name: champ.name })) + '</h1><div class="lobby-note">' + esc(t('evening.points', { n: champ.points })) + '</div></div>'
+        : '<h1>' + esc(t('evening.empty')) + '</h1>') +
+      '<div class="scoreboard">' + P.cup.map(function (c, i) {
+        return '<div class="sc">' + (i + 1) + '. ' + U.avatar(c) + esc(c.name) + ' · ' + c.points + ' 🏆</div>';
+      }).join('') + '</div></div>';
   }
 })();

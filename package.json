@@ -1,7 +1,7 @@
 {
-  "name": "alien-party-game",
-  "version": "0.1.0",
-  "description": "«Чужой» — локальная party-игра: ТВ + телефоны в одной Wi-Fi сети",
+  "name": "party-games-night",
+  "version": "0.2.0",
+  "description": "Вечер игр: «Чужой», «Снайпер», «Крокодил» — party-игры для ТВ и телефонов в одной Wi-Fi сети",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
