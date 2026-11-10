@@ -1,0 +1,165 @@
+/*
+ * Адаптивный слой: одинаково на ТВ 4K, ноутбуке с маленьким окном, планшете,
+ * телефоне вертикально и горизонтально, в Chrome / Safari / Firefox / Samsung Internet.
+ * Подключается последним и переопределяет базовые стили.
+ */
+
+/* =============================== ТВ =============================== */
+
+/* Весь интерфейс ТВ задан в em. Масштаб — по меньшей из сторон окна,
+   чтобы всё влезало и в широкие, и в «короткие» окна (ноутбук с панелями браузера). */
+body.tv { font-size: clamp(10px, min(1.2vw, 2.15vh), 34px); }
+.tv-app { height: 100vh; height: 100dvh; }
+.tv-head { gap: .8em; padding: .5em 1em; }
+.brand { flex: none; }
+.phase-box { min-width: 0; }
+.phase-title { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.phase-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tv-head .timer { font-size: 2.8em; flex: none; min-width: 1.6em; }
+.room-chip { flex: none; }
+.tv-main { padding: 0 1em .8em; }
+
+/* Кубок вечера — в шапке, в правом верхнем углу, не перекрывает поле */
+.cup { position: static; flex: none; font-size: .62em; min-width: 0; max-width: 17em; padding: .35em .7em; box-shadow: none; }
+.cup-row:nth-child(n+5) { display: none; }
+
+/* Полоса игроков: сжимается, если игроков много */
+.strip { gap: .6em; padding: .3em .8em .6em; }
+.pcol { flex: 0 1 7.4em; min-width: 0; }
+.pcol .check { top: -.4em; right: 1.3em; }
+
+/* Сцена Чужого: точные 16:9 в доступном месте (контейнерные единицы, где поддерживаются) */
+@supports (container-type: size) {
+  .scene-wrap { container-type: size; }
+  .scene-frame { height: auto; width: min(100cqw, 100cqh * 16 / 9); }
+}
+
+/* Оверлеи раскрытия и итогов */
+.overlay { inset: 0 0 .4em; margin: 0 1em; gap: .6em; padding: .8em; }
+.overlay.end { font-size: .9em; }
+.reveal-items { gap: 1.5em; flex-wrap: wrap; justify-content: center; }
+.ritem { width: auto; min-width: 11em; padding: .5em .9em .7em; }
+.ritem svg, .overlay.end .ritem svg { width: min(8em, 22vh); height: min(8em, 22vh); }
+.reveal-line { font-size: 1.9em; }
+.reveal-line.alien { font-size: 2.4em; }
+.vote-cards { gap: .6em; }
+
+/* Меню */
+.game-cards { grid-template-columns: repeat(auto-fit, minmax(9.5em, 1fr)); }
+.lobby { gap: 2.4em; padding: .6em 2em; }
+.lobby-info { min-width: 0; }
+
+/* Короткие окна */
+@media (max-height: 620px) {
+  .lobby-players { margin: .5em 0; }
+  .gc-desc { display: none; }
+  .tv-head .timer { font-size: 2.4em; }
+}
+
+/* Узкие и вертикальные экраны (портретный монитор, планшет, телефон) */
+@media (max-aspect-ratio: 5/4) {
+  body.tv { font-size: clamp(9px, min(2.1vw, 1.55vh), 30px); }
+  #brandName { display: none; }
+  .lobby { grid-template-columns: 1fr; gap: 1em; padding: .5em 1em; justify-items: center; overflow: auto; align-content: start; }
+  .qr-card img { width: min(26vh, 20em); height: min(26vh, 20em); }
+  .qr-card .code { font-size: 2.4em; }
+  .lobby-info { text-align: center; }
+  .lobby-players { justify-content: center; }
+  .game-cards { grid-template-columns: repeat(2, 1fr); }
+  .cr-solo { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
+  .cr-side { max-height: 26vh; }
+  .cr-boards { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+  .cr-overlay.compact { inset: auto 4% 30% 4%; }
+  .cr-votes { grid-template-columns: repeat(2, 1fr); }
+  .podium { gap: .6em; }
+  .pod { width: 9.5em; }
+  .sn-table { min-width: 0; width: 100%; }
+  .cup { display: none; }
+  .strip { flex-wrap: wrap; }
+}
+
+/* Крупные экраны 4K: не даём элементам «расплыться» */
+@media (min-width: 2400px) {
+  .lobby { max-width: 2200px; margin: 0 auto; }
+}
+
+/* =============================== ТЕЛЕФОН =============================== */
+
+/* Безопасные зоны (вырез камеры, «чёлка», полоска жестов) */
+.play-app {
+  padding: max(12px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+}
+body.play { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+input.t, select.t { font-size: max(16px, 1em); }   /* iOS не зумит поле ввода от 16px */
+.btn, .vote-btn, .pick, .cr-choice, .sn-fire, .cr-got, .hold-btn { -webkit-appearance: none; appearance: none; touch-action: manipulation; }
+
+/* Совсем маленькие телефоны (320–360 px) */
+@media (max-width: 360px) {
+  body.play { font-size: 15px; }
+  .play-app { gap: 10px; }
+  .btn { font-size: 17px; padding: 14px; }
+  .card { padding: 13px; }
+  .card h2 { font-size: 19px; }
+  .vote-btn { padding: 10px; font-size: 15px; min-height: 56px; }
+  .sn-fire { font-size: 36px; }
+  .cr-col, .cr-tool { width: 38px; height: 38px; font-size: 17px; }
+  .cr-choice b { font-size: 22px; }
+  .pick { min-height: 84px; font-size: 14px; }
+  .pick span { font-size: 26px; }
+}
+
+/* Планшеты */
+@media (min-width: 700px) {
+  body.play { font-size: 19px; }
+  .play-app { max-width: 680px; }
+  .cr-col, .cr-tool { width: 52px; height: 52px; }
+}
+
+/* Телефон горизонтально: невысокий экран */
+@media (orientation: landscape) and (max-height: 520px) {
+  .play-app { max-width: none; gap: 8px; padding-top: max(6px, env(safe-area-inset-top)); }
+  .top .avatar { font-size: 10px; }
+  .top .timer { font-size: 24px; }
+  .fill-screen { height: calc(100vh - 64px); height: calc(100dvh - 64px); }
+  .big-msg { padding: 14px; }
+  .big-msg .emoji { font-size: 36px; }
+  .hold-btn { aspect-ratio: auto; height: 62vh; max-height: none; }
+  .vote-list { grid-template-columns: repeat(3, 1fr); }
+  .sn-fire { font-size: 34px; }
+  .cr-shout { font-size: 44px; }
+  /* Холст слева, инструменты справа */
+  .cr-phone { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 1fr auto; grid-template-areas: "w w" "p t" "p g"; gap: 6px 10px; }
+  .cr-pword { grid-area: w; font-size: 15px; }
+  .cr-pword b { font-size: 18px; }
+  .cr-pad-wrap { grid-area: p; min-height: 0; }
+  .cr-tools { grid-area: t; display: grid; grid-template-columns: repeat(3, 40px); align-content: start; gap: 5px; }
+  .cr-col, .cr-tool { width: 40px; height: 40px; font-size: 17px; }
+  .cr-got { grid-area: g; font-size: 18px; padding: 10px; }
+  .cr-choice { padding: 10px; }
+  .cr-choice b { font-size: 20px; }
+}
+
+/* Оверлеи раскрытия/итогов: крупнее, раз полоса игроков на это время скрыта */
+.tv .overlay { font-size: 1.2em; }
+.tv .overlay.end { font-size: 1.12em; }
+.tv .ritem svg, .tv .overlay.end .ritem svg { width: min(9em, 24vh); height: min(9em, 24vh); }
+.tv .vcard { width: 8.5em; height: 5em; }
+@media (max-aspect-ratio: 5/4) { .tv .overlay, .tv .overlay.end { font-size: 1em; } }
+
+/* Крокодил на ТВ: слот занимает всё свободное место, холст — квадрат по меньшей стороне (JS) */
+.cr-slot { flex: 1; min-height: 0; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.cr-slot > .cr-board-wrap { flex: none; aspect-ratio: auto; max-width: none; }
+.cr-left { min-width: 0; }
+.cr-half { min-width: 0; overflow: hidden; }
+
+/* ===== Запасные правила для старых браузеров (Safari < 15, браузеры Smart TV) ===== */
+@supports not (aspect-ratio: 1) {
+  .scene-frame { width: 100%; height: 100%; }
+  .hold-btn { height: 58vh; }
+  .thumb { height: 0; padding-bottom: 100%; }
+  .thumb svg { position: absolute; left: 4px; top: 4px; width: calc(100% - 8px); height: calc(100% - 8px); }
+}
+@supports not (inset: 0) {
+  .paused-badge, .hold-btn .reveal, .cr-pad-note, .cr-banner, .cr-overlay { top: 0; right: 0; bottom: 0; left: 0; }
+  .overlay { top: 0; right: 0; bottom: .4em; left: 0; }
+}

@@ -5,6 +5,8 @@
   var $ = function (id) { return document.getElementById(id); };
   var P = null, G = null, layout = null, boards = {}, pending = {}, lastBanner = null, lastWrongKey = null;
   var feed = [];
+  var ro = null;
+  window.addEventListener('resize', function () { if (layout) fitBoards(); });
 
   function nm(id) { return U.nameOf(P, id); }
   function pl(id) { return U.playerById(P, id) || { name: '?', color: '#888' }; }
@@ -25,7 +27,7 @@
     layout = mode + ':' + i18n.getLang();
     if (mode === 'solo') {
       $('main').innerHTML = '<div class="cr-solo">' +
-        '<div class="cr-left"><div class="cr-board-wrap" id="wrap_main"><canvas id="cv_main"></canvas><div class="cr-minibox"></div></div>' +
+        '<div class="cr-left"><div class="cr-slot"><div class="cr-board-wrap" id="wrap_main"><canvas id="cv_main"></canvas><div class="cr-minibox"></div></div></div>' +
         '<div class="cr-mask" id="crMask"></div></div>' +
         '<div class="cr-side" id="crSide"></div>' +
         '<div class="cr-banner hidden" id="crBanner"></div><div class="cr-overlay hidden" id="crOv"></div></div>';
@@ -33,10 +35,25 @@
       $('main').innerHTML = '<div class="cr-duel"><div class="cr-race" id="crRace"></div><div class="cr-boards">' +
         ['a', 'b'].map(function (k) {
           return '<div class="cr-half team-' + k + '"><div class="cr-artist" id="crArt_' + k + '"></div>' +
-            '<div class="cr-board-wrap" id="wrap_' + k + '"><canvas id="cv_' + k + '"></canvas><div class="cr-minibox"></div></div></div>';
+            '<div class="cr-slot"><div class="cr-board-wrap" id="wrap_' + k + '"><canvas id="cv_' + k + '"></canvas><div class="cr-minibox"></div></div></div></div>';
         }).join('') + '</div><div class="cr-banner hidden" id="crBanner"></div><div class="cr-overlay hidden" id="crOv"></div></div>';
     }
     ['main', 'a', 'b'].forEach(board);
+    // Квадратный холст по свободному месту — одинаково на любом разрешении и пропорциях
+    if (ro) ro.disconnect();
+    var slots = document.querySelectorAll('.cr-slot');
+    if (window.ResizeObserver) { ro = new ResizeObserver(fitBoards); slots.forEach(function (sl) { ro.observe(sl); }); }
+    fitBoards();
+  }
+
+  function fitBoards() {
+    document.querySelectorAll('.cr-slot').forEach(function (sl) {
+      var w = sl.querySelector('.cr-board-wrap');
+      if (!w) return;
+      var size = Math.max(60, Math.floor(Math.min(sl.clientWidth, sl.clientHeight)));
+      w.style.width = w.style.height = size + 'px';
+    });
+    Object.keys(boards).forEach(function (k) { boards[k].resize(); });
   }
 
   function render(p) {
@@ -195,6 +212,7 @@
   }
 
   function unmount() {
+    if (ro) { ro.disconnect(); ro = null; }
     Object.keys(boards).forEach(function (k) { boards[k].destroy(); });
     boards = {}; pending = {}; layout = null; P = G = null; lastBanner = null; feed = []; lastWrongKey = null;
   }

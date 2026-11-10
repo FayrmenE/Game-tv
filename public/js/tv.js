@@ -46,6 +46,7 @@
     active = null;
     $('main').innerHTML = '';
     $('strip').innerHTML = '';
+    $('strip').classList.remove('hidden');
     document.body.className = 'tv';
   }
 

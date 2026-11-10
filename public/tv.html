@@ -2,10 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Party — TV</title>
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/games.css">
+  <link rel="stylesheet" href="/responsive.css">
 </head>
 <body class="tv">
   <div class="tv-app">
@@ -16,12 +17,12 @@
         <div class="phase-sub" id="phaseSub"></div>
       </div>
       <div class="timer js-timer" id="timer"></div>
+      <aside class="cup hidden" id="cup"></aside>
       <div class="room-chip" id="roomChip"></div>
     </header>
     <main class="tv-main" id="main"></main>
     <footer class="strip" id="strip"></footer>
   </div>
-  <aside class="cup hidden" id="cup"></aside>
   <button class="sound-btn" id="soundBtn">🔊</button>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/js/i18n.js"></script>

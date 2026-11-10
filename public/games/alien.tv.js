@@ -24,6 +24,8 @@
     if (S.phase === 'lobby' || !S.round) renderLobby();
     else renderGame();
     renderStrip();
+    // На раскрытии и итогах полоса игроков не нужна — отдаём всю высоту оверлею
+    $('strip').classList.toggle('hidden', S.phase === 'reveal' || S.phase === 'roundEnd');
   }
 
   function renderHeader() {
@@ -187,7 +189,8 @@
         return '<div class="word empty"></div>';
       }).join('');
       var check = ph === 'look' && p.looked ? '<div class="check">✓</div>' : '';
-      return '<div class="' + cls.join(' ') + '"><div class="bar-area">' + bar + '</div>' + check + U.avatar(p) +
+      // Место под столбики голосов резервируем только во время голосования
+      return '<div class="' + cls.join(' ') + '">' + (showBars ? '<div class="bar-area">' + bar + '</div>' : '') + check + U.avatar(p) +
         '<div class="pname">' + esc(p.name) + '</div><div class="score">★ ' + p.score + '</div>' +
         (inR ? '<div class="words">' + words + '</div>' : '') + '</div>';
     }).join('');
