@@ -1,7 +1,7 @@
 {
   "name": "party-games-night",
-  "version": "0.2.0",
-  "description": "Вечер игр: «Чужой», «Снайпер», «Крокодил» — party-игры для ТВ и телефонов в одной Wi-Fi сети",
+  "version": "0.3.0",
+  "description": "Вечер игр: «Чужой», «Снайпер», «Крокодил», «Телепатия» — party-игры для ТВ и телефонов в одной Wi-Fi сети",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -13,5 +13,14 @@
     "express": "^4.21.2",
     "qrcode": "^1.5.4",
     "socket.io": "^4.8.1"
+  },
+  "bin": "server.js",
+  "pkg": {
+    "assets": [
+      "public/**/*",
+      "data/**/*",
+      "node_modules/socket.io/client-dist/*"
+    ],
+    "outputPath": "dist"
   }
 }
