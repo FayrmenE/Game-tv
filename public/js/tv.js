@@ -13,8 +13,8 @@
   var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship', doodle: 'doodle' };
   var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢', doodle: '🖍️' };
   // Фазы, при входе в которые на ТВ на секунду всплывает крупная заставка
-  var BANNER_PHASES = { alien: ['look', 'words', 'discuss', 'lastword', 'revote', 'runoff', 'reveal', 'lastchance'], telepathy: ['clue', 'guess'] };
-  var lastBannerKey = null;
+  var BANNER_PHASES = { alien: ['look', 'words', 'discuss', 'lastword', 'revote', 'runoff', 'reveal', 'lastchance'], telepathy: ['clue', 'guess'], doodle: ['draw', 'lie', 'vote', 'reveal'], battleship: ['battle'] };
+  var lastBannerKey = null, lastCount = null;
   window.SHELL = { EMOJI: EMOJI, MODULE: MODULE };
 
   socket.on('connect', function () {
@@ -57,6 +57,7 @@
     el.style.setProperty('--c', p.color);
     el.innerHTML = '<span class="re">' + d.e + '</span><span class="rn">' + esc(p.name) + '</span>';
     layer.appendChild(el);
+    SFX.play('pop');
     setTimeout(function () { el.remove(); }, 3200);
     while (layer.children.length > 40) layer.firstChild.remove();
   }
@@ -83,16 +84,19 @@
   function phaseBanner() {
     var g = P.game, list = BANNER_PHASES[MODULE[P.gameId]];
     if (!g || !list || list.indexOf(g.phase) < 0) return;
-    var key = P.gameId + ':' + (g.roundNo || g.turnNo || 0) + ':' + g.phase + ':' + (g.round && g.round.turn ? g.round.turn.c : '');
+    var key = P.gameId + ':' + (g.roundNo || g.turnNo || g.round || 0) + ':' + (g.cur ? g.cur.artist + g.left : '') + ':' + g.phase + ':' + (g.round && g.round.turn ? g.round.turn.c : '');
     if (key === lastBannerKey) return;
     var first = lastBannerKey === null;
     lastBannerKey = key;
     if (first) return;
     var b = $('phaseBanner');
-    b.innerHTML = '<div>' + esc($('phaseTitle').textContent.replace(/^.*·\s*/, '')) + '</div>';
+    // из «Раунд 2 · Обсуждение» или «Что это нарисовано? · рисует Аня» берём название этапа
+    var parts = $('phaseTitle').textContent.split(' · ').filter(function (x) { return !/^(Раунд|Round|Ход|Turn)\s|^(рисует|drawn by)\s/i.test(x); });
+    b.innerHTML = '<div>' + esc(parts[0] || $('phaseTitle').textContent) + '</div>';
     b.classList.remove('show');
     void b.offsetWidth;
     b.classList.add('show');
+    SFX.play('whoosh');
   }
   var lastTickSec = null;
   setInterval(function () {
@@ -120,6 +124,9 @@
     document.documentElement.classList.toggle('contrast', !!P.settings.contrast);
     $('roomChip').innerHTML = '<small>' + esc(t('tv.roomCode')) + '</small>' + esc(P.code);
     renderCup();
+    var cnt = P.players.length;
+    if (lastCount !== null && cnt > lastCount) SFX.play('join');
+    lastCount = cnt;
     if (P.phase === 'game' && P.game && MODULE[P.gameId]) {
       var key = MODULE[P.gameId];
       if (active !== key) { unmountGame(); active = key; shellKey = null; document.body.className = 'tv game-' + key; }

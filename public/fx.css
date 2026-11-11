@@ -204,3 +204,33 @@ body.game-doodle { --accent2: #ff9f1c; background-image: radial-gradient(circle 
 .dd-big { font-size: 2.6em; font-weight: 900; }
 .dd-sub { font-size: 1.3em; color: var(--muted); font-weight: 700; }
 .dd-prog { font-size: 1.6em; }
+
+/* ===== Анимации переходов ===== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes shakeX { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+@keyframes glowPulse { 50% { box-shadow: 0 0 0 .3em rgba(255,214,10,.35), 0 0 1.6em rgba(255,214,10,.5); } }
+/* телефон: каждый новый экран мягко «въезжает» */
+body.play #screen > * { animation: fadeUp .28s ease-out backwards; }
+body.play #screen > *:nth-child(2) { animation-delay: .05s; }
+body.play #screen > *:nth-child(3) { animation-delay: .1s; }
+body.play .vote-list > *, body.play .cr-vlist > * { animation: fadeUp .3s ease-out backwards; }
+body.play .vote-list > :nth-child(2), body.play .cr-vlist > :nth-child(2) { animation-delay: .04s; }
+body.play .vote-list > :nth-child(3), body.play .cr-vlist > :nth-child(3) { animation-delay: .08s; }
+body.play .vote-list > :nth-child(4), body.play .cr-vlist > :nth-child(4) { animation-delay: .12s; }
+body.play .vote-list > :nth-child(n+5), body.play .cr-vlist > :nth-child(n+5) { animation-delay: .16s; }
+body.play .err:not(.hidden) { animation: shakeX .4s; }
+body.play .btn:not(:disabled):active, body.play .vote-btn:active, body.play .pick:active { transform: scale(.96); }
+body.play .vote-btn.sel { animation: pop .3s; }
+/* холсты и экраны с рисованием не дёргаем */
+body.play #screen > .fill-screen, body.play #screen > .cr-phone { animation: fadeIn .2s ease-out; }
+/* ТВ: новые экраны проявляются, «ход» подсвечивается пульсом */
+body.tv .tv-main > * { animation: fadeIn .45s ease-out; }
+body.tv .pcol.turn .avatar { animation: glowPulse 1.6s ease-in-out infinite; }
+body.tv .phase-title { animation: fadeUp .35s ease-out; }
+body.tv .game-card.sel .gc-emoji { animation: bob 2s ease-in-out infinite; }
+body.tv .lobby-player .avatar { transition: transform .2s; }
+.bs-c.hit, .bs-c.sunk { animation: pop .35s; }
+.dd-opt:not(.rv) { animation: fadeUp .35s ease-out backwards; }
+.dd-opt:nth-child(2):not(.rv) { animation-delay: .1s; } .dd-opt:nth-child(3):not(.rv) { animation-delay: .2s; } .dd-opt:nth-child(n+4):not(.rv) { animation-delay: .3s; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }

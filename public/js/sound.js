@@ -48,6 +48,12 @@
     boom: function () { noise(0, 0.5, 0.9, 80); tone(70, 0, 0.5, 'sine', 0.5, 35); },
     sink: function () { noise(0, 0.8, 0.9, 60); tone(110, 0.05, 0.9, 'sawtooth', 0.25, 30); tone(660, 0.5, 0.25, 'triangle', 0.2); },
     splash: function () { noise(0, 0.35, 0.35, 1500); },
+    click: function () { tone(880, 0, 0.035, 'triangle', 0.07); },
+    pop: function () { tone(500, 0, 0.09, 'sine', 0.2, 1100); },
+    whoosh: function () { noise(0, 0.35, 0.25, 2500); tone(300, 0, 0.3, 'sine', 0.06, 900); },
+    join: function () { tone(523, 0, 0.1, 'triangle', 0.2); tone(784, 0.08, 0.18, 'triangle', 0.2); },
+    vote: function () { tone(660, 0, 0.06, 'square', 0.08); tone(990, 0.05, 0.08, 'square', 0.06); },
+    reveal: function () { [392, 523, 659].forEach(function (f, i) { tone(f, i * 0.09, 0.22, 'triangle', 0.18); }); },
     win: function () { [523, 659, 784, 1047].forEach(function (f, i) { tone(f, i * 0.12, 0.3, 'triangle', 0.25); }); }
   };
 

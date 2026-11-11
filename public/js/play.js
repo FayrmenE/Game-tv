@@ -80,6 +80,14 @@
   });
   U.loadScenes().then(function () { screenKey = null; if (P) { unmountGame(); render(); } });
 
+  // Лёгкий щелчок и вибрация на нажатия кнопок
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.btn, .vote-btn, .pick, .thumb, .cr-choice, .bs-c, .cr-col, .cr-tool, .react-bar button');
+    if (!b || b.disabled) return;
+    SFX.play(b.classList.contains('vote-btn') ? 'vote' : 'click');
+    try { navigator.vibrate && navigator.vibrate(12); } catch (x) { /* ignore */ }
+  }, true);
+
   /* ------------------------------ не «выкидывать» с iPhone / iPad ------------------------------ */
   // Вернулись в браузер — сразу переподключаемся, не дожидаясь таймера socket.io
   document.addEventListener('visibilitychange', function () {
