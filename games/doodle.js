@@ -8,16 +8,21 @@
  * Секретность: фраза — только автору рисунка; на ТВ — только после раскрытия.
  * Авторы обманок не раскрываются до раскрытия.
  */
-const PHRASES = require('../data/phrases');
+const PHRASES_SRC = require('../data/phrases');
 const { pick, shuffle, randInt, normalize, levenshtein, rankByScore } = require('../lib/util');
 
 const T = { draw: 80, lie: 45, vote: 25, revealPer: 2.2, revealTail: 5 };
 const COLORS = 7;
 const MAX_STROKES = 1500;
-const POINTS = { truth: 2, artist: 1, fool: 1 };
+// Баланс: каждый голос приносит 2 очка — либо угадавшему, либо обманщику.
+// Художнику +1 за каждого угадавшего (рисуй понятно!), но если правду нашли ВСЕ —
+// рисунок «слишком простой» и художник получает лишь +1 за ход.
+const POINTS = { truth: 2, artist: 1, fool: 2, allGuessedArtist: 1 };
 
 function create(api) {
   const lang = api.settings.lang === 'en' ? 'en' : 'ru';
+  // единый список: сначала 150 сочетаний, потом 100 слов
+  const PHRASES = { [lang]: PHRASES_SRC.combos[lang].concat(PHRASES_SRC.words[lang]) };
   const parts = api.players.filter((p) => p.connected).map((p) => p.id);
   const G = {
     phase: 'draw', round: 1, rounds: parts.length >= 6 ? 1 : 2,
@@ -181,6 +186,8 @@ function create(api) {
         G.stats.fooled[a] = (G.stats.fooled[a] || 0) + 1;
       }
     }
+    const voters = Object.keys(c.votes);
+    if (voters.length > 1 && voters.every((v) => c.options[c.votes[v]].real)) d[c.artist] = POINTS.allGuessedArtist;
     for (const [id, n] of Object.entries(d)) if (G.scores[id] != null) G.scores[id] += n;
     c.deltas = d;
     G.phase = 'reveal';
