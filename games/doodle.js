@@ -14,10 +14,10 @@ const { pick, shuffle, randInt, normalize, levenshtein, rankByScore } = require(
 const T = { draw: 80, lie: 45, vote: 25, revealPer: 2.2, revealTail: 5 };
 const COLORS = 7;
 const MAX_STROKES = 1500;
-// Баланс: каждый голос приносит 2 очка — либо угадавшему, либо обманщику.
+// Баланс: нашёл правду +300, поверили подписи — автору +200 за каждого.
 // Художнику +1 за каждого угадавшего (рисуй понятно!), но если правду нашли ВСЕ —
 // рисунок «слишком простой» и художник получает лишь +1 за ход.
-const POINTS = { truth: 2, artist: 1, fool: 2, allGuessedArtist: 1 };
+const POINTS = { truth: 300, artist: 100, fool: 200, allGuessedArtist: 100 };
 
 function create(api) {
   const lang = api.settings.lang === 'en' ? 'en' : 'ru';

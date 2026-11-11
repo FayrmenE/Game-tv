@@ -425,7 +425,7 @@
       "rules.doodle.1": "🖍️|Каждый получает на телефон свою смешную фразу и рисует её. Фразу видит только художник.",
       "rules.doodle.2": "🤥|Рисунки по очереди появляются на ТВ. Остальные пишут свою подпись — так, чтобы все поверили, что именно её и загадали.",
       "rules.doodle.3": "🗳️|Все голосуют, какая из фраз настоящая. За свою обманку голосовать нельзя.",
-      "rules.doodle.4": "🏆|Нашёл правду +2. Автору подписи +2 за каждого, кто в неё поверил. Художнику +1 за каждого угадавшего (но если угадали все — только +1).",
+      "rules.doodle.4": "🏆|Нашёл правду +300. Автору подписи +200 за каждого, кто в неё поверил. Художнику +100 за каждого угадавшего (но если угадали все — только +100).",
       // Новые сцены
       "scene.office": "Офис",
       "scene.park": "Парк",
@@ -1071,7 +1071,7 @@
       "rules.doodle.1": "🖍️|Everyone gets a funny phrase on their phone and draws it. Only the artist sees the phrase.",
       "rules.doodle.2": "🤥|The drawings appear on the TV one by one. Everyone else writes a fake title that sounds true.",
       "rules.doodle.3": "🗳️|Everyone votes for the real phrase. You can’t vote for your own fake.",
-      "rules.doodle.4": "🏆|Find the truth +2. A fake’s author gets +2 per player fooled. The artist gets +1 per correct guess (only +1 if everyone guessed).",
+      "rules.doodle.4": "🏆|Find the truth +300. A fake’s author gets +200 per player fooled. The artist gets +100 per correct guess (only +100 if everyone guessed).",
       'scene.kitchen': 'Kitchen',
       'scene.beach': 'Beach',
       'scene.station': 'Train station',
