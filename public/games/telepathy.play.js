@@ -25,7 +25,7 @@
       };
       return set('give:' + G.turnNo + lang, '<div class="card"><h2>🔮 ' + esc(t('tele.youGive')) + '</h2>' +
         '<div class="tp-cards">' + card(tr.targets[0], 'ok', t('tele.target')) + card(tr.targets[1], 'ok', t('tele.target')) + card(tr.trap, 'trap', t('tele.trap')) + '</div>' +
-        '<input class="t" id="tpIn" maxlength="20" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="' + esc(t('tele.wordPh')) + '">' +
+        '<input class="t" id="tpIn" maxlength="16" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="' + esc(t('tele.wordPh')) + '">' +
         '<button class="btn" id="tpGo">' + esc(t('tele.send')) + '</button></div>', function () {
         var i = $('tpIn'); i.value = draft;
         i.addEventListener('input', function () { var v = i.value.replace(/\s+/g, ''); if (v !== i.value) i.value = v; });

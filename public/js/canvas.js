@@ -5,7 +5,7 @@
  */
 (function () {
   'use strict';
-  var COLORS = ['#22223b', '#e63946', '#1982c4', '#2d9d4f', '#ffbe0b', '#8d5a3b'];
+  var COLORS = ['#22223b', '#e63946', '#1982c4', '#2d9d4f', '#ffbe0b', '#8d5a3b', '#ffffff'];
   var WIDTHS = [8, 22];
   var MINI = [300, 700];
 

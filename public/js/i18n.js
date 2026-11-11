@@ -131,7 +131,7 @@
       'err.noRoom': 'Комната не найдена. Проверьте код на экране ТВ.',
       'err.full': 'Комната заполнена (максимум 10 игроков)',
       'err.badName': 'Введите имя (1–16 символов)',
-      'err.badWord': 'Одно слово без пробелов, до 20 символов',
+      'err.badWord': 'Одно слово без пробелов, до 16 символов',
       'err.notEnough': 'Нужно минимум {min} игрока',
       'err.notHost': 'Это может только хост',
 
@@ -627,7 +627,7 @@
       'err.noRoom': 'Room not found. Check the code on the TV.',
       'err.full': 'The room is full (10 players max)',
       'err.badName': 'Enter a name (1–16 characters)',
-      'err.badWord': 'One word, no spaces, up to 20 characters',
+      'err.badWord': 'One word, no spaces, up to 16 characters',
       'err.notEnough': 'Need at least {min} players',
       'err.notHost': 'Only the host can do that',
 

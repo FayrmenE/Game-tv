@@ -80,6 +80,25 @@
   });
   U.loadScenes().then(function () { screenKey = null; if (P) { unmountGame(); render(); } });
 
+  /* ------------------------------ не «выкидывать» с iPhone / iPad ------------------------------ */
+  // Вернулись в браузер — сразу переподключаемся, не дожидаясь таймера socket.io
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState !== 'visible') return;
+    if (!socket.connected) socket.connect();
+    keepAwake();
+  });
+  window.addEventListener('pageshow', function () { if (!socket.connected) socket.connect(); });
+  window.addEventListener('online', function () { if (!socket.connected) socket.connect(); });
+  // Не даём экрану гаснуть во время вечера (иначе iOS рвёт соединение)
+  var wakeLock = null;
+  function keepAwake() {
+    try {
+      if (!navigator.wakeLock || (wakeLock && !wakeLock.released) || document.visibilityState !== 'visible') return;
+      navigator.wakeLock.request('screen').then(function (l) { wakeLock = l; }).catch(function () { /* нет разрешения — не страшно */ });
+    } catch (e) { /* ignore */ }
+  }
+  ['pointerdown', 'touchend', 'click'].forEach(function (ev) { window.addEventListener(ev, keepAwake, { passive: true }); });
+
   function doJoin(name) {
     if (joining) return;
     joining = true;

@@ -156,10 +156,26 @@ input.t, select.t { font-size: max(16px, 1em); }   /* iOS не зумит пол
 @supports not (aspect-ratio: 1) {
   .scene-frame { width: 100%; height: 100%; }
   .hold-btn { height: 58vh; }
-  .thumb { height: 0; padding-bottom: 100%; }
-  .thumb svg { position: absolute; left: 4px; top: 4px; width: calc(100% - 8px); height: calc(100% - 8px); }
+  .thumb { height: 72px; }
 }
 @supports not (inset: 0) {
   .paused-badge, .hold-btn .reveal, .cr-pad-note, .cr-banner, .cr-overlay { top: 0; right: 0; bottom: 0; left: 0; }
   .overlay { top: 0; right: 0; bottom: .4em; left: 0; }
 }
+
+/* ===== Исправления после живой игры на iPhone/iPad ===== */
+/* Слово под аватаркой на ТВ — целиком, длинные чуть мельче */
+.pcol .word { text-overflow: clip; }
+.pcol .word.long { font-size: .78em; }
+.pcol .word.xlong { font-size: .64em; }
+
+/* Плитки предметов: картинка позиционирована абсолютно и не влияет на размер плитки
+   (связка aspect-ratio + картинка с height:100% в Safari на iPad заставляла плитки расти) */
+.thumb { aspect-ratio: 1 / 1; display: block; width: 100%; padding: 0; overflow: hidden; contain: layout paint; }
+.thumb svg { position: absolute; left: 6%; top: 6%; width: 88%; height: 88%; }
+.thumb b { z-index: 1; }
+
+/* Нет «двойного тапа = зум» на телефонах: быстрые нажатия больше не приближают страницу */
+body.play, body.play button, body.play .thumb, body.play .scene-item, body.play .vote-btn { touch-action: manipulation; }
+body.play .cr-pad-box, body.play .cr-pad-box canvas, body.play .av-box, body.play .av-box canvas, body.play .hold-btn, body.play .sn-fire { touch-action: none; }
+html { -webkit-text-size-adjust: 100%; }

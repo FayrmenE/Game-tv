@@ -38,7 +38,7 @@
       var wordsHtml = myW.length ? '<div class="my-words">' + myW.map(function (w) { return '<div>' + esc(w) + '</div>'; }).join('') + '</div>' : '';
       if (mine) {
         html = '<div class="card"><h2>✍️ ' + esc(t('play.yourTurn')) + '</h2>' +
-          '<input class="t" id="word" maxlength="20" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="' + esc(t('play.wordPh')) + '">' +
+          '<input class="t" id="word" maxlength="16" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="' + esc(t('play.wordPh')) + '">' +
           '<button class="btn" id="send">' + esc(t('play.send')) + '</button>' +
           '<div class="timer-track" style="margin-top:14px"><div class="js-timer-bar"></div></div>' + wordsHtml + '</div>';
         after = bindWord;
@@ -109,7 +109,7 @@
     var inp = $('word'), send = $('send');
     var go = function () {
       var w = inp.value.trim();
-      if (!w || /\s/.test(w) || Array.from(w).length > 20) return ctx.showErr(t('err.badWord'));
+      if (!w || /\s/.test(w) || Array.from(w).length > 16) return ctx.showErr(t('err.badWord'));
       send.disabled = true;
       ctx.act('word', { word: w });
       setTimeout(function () { send.disabled = false; }, 1500);

@@ -53,7 +53,7 @@ function create(api) {
     const tr = G.turn;
     if (G.phase !== 'clue' || player.id !== tr.giver) return;
     const w = String(word || '').trim();
-    if (!w || /\s/.test(w) || [...w].length > 20) return api.toPlayer(player.id, 'errorMsg', { key: 'err.badWord' });
+    if (!w || /\s/.test(w) || [...w].length > 16) return api.toPlayer(player.id, 'errorMsg', { key: 'err.badWord' });
     // Нельзя подсказывать прямым названием загаданного предмета
     const n = normalize(w);
     if (tr.targets.some((id) => nameWords(id).includes(n))) return api.toPlayer(player.id, 'errorMsg', { key: 'tele.errName' });

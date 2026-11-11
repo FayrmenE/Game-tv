@@ -21,7 +21,8 @@ const MIN_OVERRIDE = Number(process.env.MIN_PLAYERS) || 0;
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+// Телефоны (особенно iPhone/iPad) притормаживают вкладку в фоне — даём связи запас по времени
+const io = new Server(server, { pingInterval: 20000, pingTimeout: 45000 });
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => res.redirect('/tv'));

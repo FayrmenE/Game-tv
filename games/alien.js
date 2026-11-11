@@ -37,7 +37,7 @@ const VOTING_PHASES = ['discuss', 'revote', 'runoff'];
 function validWord(w) {
   if (typeof w !== 'string') return null;
   w = w.trim();
-  if (!w || /\s/.test(w) || [...w].length > 20) return null;
+  if (!w || /\s/.test(w) || [...w].length > 16) return null;
   return w;
 }
 

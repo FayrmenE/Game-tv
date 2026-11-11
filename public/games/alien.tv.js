@@ -183,7 +183,8 @@
         var k = id + ':' + c;
         if (typeof w === 'string') {
           var fresh = !seenWords[k]; seenWords[k] = true;
-          return '<div class="word' + (fresh ? ' fresh' : '') + '">' + esc(w) + '</div>';
+          var len = Array.from(w).length;
+          return '<div class="word' + (fresh ? ' fresh' : '') + (len > 12 ? ' xlong' : len > 9 ? ' long' : '') + '">' + esc(w) + '</div>';
         }
         if (w === false) return '<div class="word miss">—</div>';
         if (r.turn && r.turn.id === id && r.turn.c === c) return '<div class="word typing">…</div>';
