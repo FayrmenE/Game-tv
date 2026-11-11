@@ -7,8 +7,8 @@
   var active = null, screenKey = null, hostKey = null, hostPhase = null, lang = null;
   var kicked = false, joining = false;
   var $ = function (id) { return document.getElementById(id); };
-  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship' };
-  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢' };
+  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship', doodle: 'doodle' };
+  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢', doodle: '🖍️' };
 
   var params = new URLSearchParams(location.search);
   var ls = {

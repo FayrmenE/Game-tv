@@ -175,3 +175,32 @@ body.game-battleship { --accent2: #4cc9f0; background-image: radial-gradient(cir
 .bs-plbl { font-weight: 800; color: var(--muted); font-size: 14px; }
 .bs-hint { color: var(--muted); margin: 0; text-align: center; font-size: 14px; }
 .bs-phone .host-row { width: 100%; }
+
+/* ===== Каракули ===== */
+body.game-doodle { --accent2: #ff9f1c; background-image: radial-gradient(circle at 15% 15%, #5a2a0c 0, transparent 50%), radial-gradient(circle at 85% 85%, #4a1a4a 0, transparent 50%); }
+.dd-grid { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; margin-top: 1em; }
+.dd-p { display: flex; flex-direction: column; align-items: center; gap: .3em; width: 7em; opacity: .7; }
+.dd-p.done { opacity: 1; } .dd-p span { font-size: 1.6em; } .dd-p.done span { color: var(--accent); }
+.dd-p .avatar { font-size: 1.2em; }
+.dd-show { height: 100%; display: grid; grid-template-columns: auto 1fr; gap: 1.5em; align-items: center; }
+.dd-left { height: 100%; display: flex; align-items: center; }
+.dd-board { height: 100%; flex: none; aspect-ratio: 1; }
+.dd-right { display: flex; flex-direction: column; gap: 1em; min-width: 0; }
+.dd-opts { display: flex; flex-direction: column; gap: .5em; }
+.dd-opt { background: #fff; color: var(--outline); border-radius: .8em; padding: .5em .9em; font-size: 1.5em; font-weight: 900; }
+.dd-opt.rv { opacity: .15; transition: opacity .4s, transform .4s; display: grid; grid-template-columns: 1fr auto; gap: .2em .6em; align-items: center; }
+.dd-opt.rv.open { opacity: 1; animation: pop .45s; }
+.dd-opt.real.open { background: var(--accent); box-shadow: 0 0 0 .2em #fff, 0 0 1.5em var(--accent); }
+.dd-t { grid-column: 1; }
+.dd-v { grid-column: 2; grid-row: 1 / span 2; display: flex; gap: .2em; }
+.dd-v .avatar { font-size: .5em; border-width: 2px; }
+.dd-who { grid-column: 1; font-size: .6em; color: #6a4c93; }
+.dd-opt.real .dd-who { color: var(--outline); }
+.dd-prog { display: flex; flex-wrap: wrap; gap: .6em; }
+.dd-prog span { display: flex; align-items: center; gap: .2em; font-weight: 900; opacity: .5; }
+.dd-prog span.ok { opacity: 1; color: var(--accent); }
+.dd-prog .avatar { font-size: .6em; border-width: 2px; }
+@media (max-aspect-ratio: 5/4) { .dd-show { grid-template-columns: 1fr; grid-template-rows: 1fr auto; } .dd-board { height: auto; width: min(100%, 50vh); } .dd-left { justify-content: center; } }
+.dd-big { font-size: 2.6em; font-weight: 900; }
+.dd-sub { font-size: 1.3em; color: var(--muted); font-weight: 700; }
+.dd-prog { font-size: 1.6em; }
