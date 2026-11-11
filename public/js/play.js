@@ -7,8 +7,8 @@
   var active = null, screenKey = null, hostKey = null, hostPhase = null, lang = null;
   var kicked = false, joining = false;
   var $ = function (id) { return document.getElementById(id); };
-  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy' };
-  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮' };
+  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship' };
+  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢' };
 
   var params = new URLSearchParams(location.search);
   var ls = {
@@ -296,7 +296,7 @@
       var sel = P.games.find(function (g) { return g.id === P.selected; }) || P.games[0];
       rows += '<div class="pick-grid">' + P.games.map(function (g) {
         return '<button class="pick' + (g.id === P.selected ? ' sel' : '') + '" data-pick="' + g.id + '"><span>' + EMOJI[g.id] + '</span>' +
-          esc(t('game.' + g.id)) + '<small>👥 ' + g.min + '–' + g.max + '</small></button>';
+          esc(t('game.' + g.id)) + '<small>👥 ' + (g.label || g.min + '–' + g.max) + '</small></button>';
       }).join('') + '</div>';
       var ok = connected >= sel.min && connected <= sel.max;
       rows += btn('hStart', '▶ ' + t('host.start') + ': ' + t('game.' + sel.id), '', !ok);

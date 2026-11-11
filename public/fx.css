@@ -119,3 +119,59 @@ textarea.t { resize: vertical; font-size: 16px; min-height: 70px; }
 @media (min-width: 600px) { .tp-thumbs { grid-template-columns: repeat(8, 1fr); } }
 .dim .scene-item.tp-sel { opacity: 1 !important; }
 .tp-clue em.zero { color: var(--muted); }
+
+/* ===== Морской бой ===== */
+body.game-battleship { --accent2: #4cc9f0; background-image: radial-gradient(circle at 20% 15%, #0b4f7c 0, transparent 50%), radial-gradient(circle at 85% 85%, #023047 0, transparent 50%); }
+.bs-wrap { height: 100%; display: flex; flex-direction: column; gap: .5em; }
+.bs-shot { text-align: center; font-size: 1.7em; font-weight: 900; min-height: 1.5em; }
+.bs-shot.show { animation: pop .5s; }
+.bs-shot.hit b, .bs-shot.sunk b { color: var(--danger); }
+.bs-shot.sunk { color: #ffd166; }
+.bs-shot small { font-size: .55em; opacity: .75; }
+.bs-seas { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2em; }
+.bs-sea { display: flex; flex-direction: column; align-items: center; gap: .4em; min-height: 0; border-radius: 1em; padding: .4em; transition: background .3s; }
+.bs-sea.target { background: rgba(76,201,240,.14); box-shadow: 0 0 0 .2em rgba(76,201,240,.6); }
+.bs-sea.winner { background: rgba(255,214,10,.18); }
+.bs-cap { display: flex; align-items: center; gap: .5em; font-size: 1.25em; }
+.bs-cap .avatar { font-size: .55em; border-width: 2px; }
+.bs-st { color: var(--muted); font-weight: 800; } .bs-st.ok { color: var(--accent); }
+.bs-tg { background: var(--accent2); color: var(--outline); border-radius: .4em; padding: 0 .4em; font-weight: 900; font-size: .8em; }
+.bs-fleet { display: inline-flex; gap: .2em; align-items: center; }
+.bs-fleet em { height: .55em; background: #adb5bd; border-radius: .15em; display: inline-block; }
+.bs-grid { display: grid; grid-template-columns: .8fr repeat(10, 1fr); gap: 2px; aspect-ratio: 11 / 11; height: 100%; max-width: 100%; min-height: 0; }
+.bs-sea .bs-grid { flex: 1; height: auto; width: auto; max-height: 100%; }
+.bs-lbl { font-style: normal; font-weight: 900; color: var(--muted); display: grid; place-items: center; font-size: .9em; }
+.bs-c { background: #1d6fa5; border-radius: 3px; position: relative; display: block; }
+.bs-c.ship { background: #adb5bd; }
+.bs-c.sunk-ship, .bs-c.sunk { background: #6b0f1a; }
+.bs-c.miss::after, .bs-c.auto::after { content: ''; position: absolute; left: 35%; top: 35%; width: 30%; height: 30%; border-radius: 50%; background: #e9f5ff; }
+.bs-c.auto::after { opacity: .35; }
+.bs-c.hit { background: #e63946; }
+.bs-c.hit::after, .bs-c.sunk::after { content: '✕'; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-weight: 900; font-size: .8em; }
+.bs-c.last { animation: bsLast 1s ease-out 2; box-shadow: 0 0 0 3px #ffd60a; z-index: 1; }
+@keyframes bsLast { 50% { transform: scale(1.35); } }
+@media (max-aspect-ratio: 5/4) { .bs-seas { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; gap: .6em; } }
+/* телефон */
+.bs-phone { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.bs-phone .bs-grid { width: min(100%, 42vh, 42dvh); height: auto; font-size: 11px; }
+.bs-phone .bs-grid.mini { width: min(55%, 19vh, 19dvh); font-size: 7px; gap: 1px; }
+.bs-phone .bs-grid.place { width: min(100%, 52vh, 52dvh); }
+.bs-secs { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; }
+.bs-sec { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; }
+@media (orientation: landscape) and (max-height: 520px) {
+  .bs-phone { gap: 4px; }
+  .bs-phone .bs-ptitle { font-size: 18px; }
+  .bs-secs { flex-direction: row; justify-content: center; align-items: flex-start; gap: 18px; }
+  .bs-sec { width: auto; }
+  .bs-phone .bs-grid { width: min(62vh, 46vw); }
+  .bs-phone .bs-grid.mini { width: min(44vh, 30vw); }
+  .bs-phone .bs-grid.place { width: min(58vh, 50vw); }
+}
+.bs-phone .bs-grid.live .bs-c { cursor: pointer; }
+.bs-phone .bs-c.sel { background: #ffd166; box-shadow: 0 0 0 2px #fff inset; }
+.bs-phone .bs-c.aim { background: #ffd60a; }
+.bs-ptitle { font-size: 22px; font-weight: 900; text-align: center; }
+.bs-ptitle.go { color: var(--accent2); animation: pulse 1.4s infinite; }
+.bs-plbl { font-weight: 800; color: var(--muted); font-size: 14px; }
+.bs-hint { color: var(--muted); margin: 0; text-align: center; font-size: 14px; }
+.bs-phone .host-row { width: 100%; }

@@ -45,6 +45,9 @@
     shot: function () { noise(0, 0.15, 0.6, 1200); tone(140, 0, 0.12, 'square', 0.15, 60); },
     tick: function () { tone(1200, 0, 0.04, 'square', 0.08); },
     drum: function () { for (var i = 0; i < 18; i++) noise(i * 0.06, 0.07, 0.25 + i * 0.02, 300); tone(90, 1.1, 0.5, 'sine', 0.4, 50); },
+    boom: function () { noise(0, 0.5, 0.9, 80); tone(70, 0, 0.5, 'sine', 0.5, 35); },
+    sink: function () { noise(0, 0.8, 0.9, 60); tone(110, 0.05, 0.9, 'sawtooth', 0.25, 30); tone(660, 0.5, 0.25, 'triangle', 0.2); },
+    splash: function () { noise(0, 0.35, 0.35, 1500); },
     win: function () { [523, 659, 784, 1047].forEach(function (f, i) { tone(f, i * 0.12, 0.3, 'triangle', 0.25); }); }
   };
 

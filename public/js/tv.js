@@ -10,8 +10,8 @@
   var $ = function (id) { return document.getElementById(id); };
   var params = new URLSearchParams(location.search);
 
-  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy' };
-  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮' };
+  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship' };
+  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢' };
   // Фазы, при входе в которые на ТВ на секунду всплывает крупная заставка
   var BANNER_PHASES = { alien: ['look', 'words', 'discuss', 'lastword', 'revote', 'runoff', 'reveal', 'lastchance'], telepathy: ['clue', 'guess'] };
   var lastBannerKey = null;
@@ -171,7 +171,7 @@
         return '<div class="game-card' + (g.id === P.selected ? ' sel' : '') + (ok ? '' : ' dim') + '">' +
           '<div class="gc-emoji">' + EMOJI[g.id] + '</div><div class="gc-name">' + esc(t('game.' + g.id)) + '</div>' +
           '<div class="gc-desc">' + esc(t('game.' + g.id + '.desc')) + '</div>' +
-          '<div class="gc-players">👥 ' + g.min + '–' + g.max + '</div></div>';
+          '<div class="gc-players">👥 ' + (g.label || g.min + '–' + g.max) + '</div></div>';
       }).join('') + '</div>' +
       '<div class="lobby-note">📱 ' + esc(t('tv.scan')) + ' · ' + esc(t('tv.sameWifi')) + '</div>' +
       '<div class="lobby-players">' + P.players.map(function (p) {

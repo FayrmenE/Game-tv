@@ -40,5 +40,9 @@ for (const l of ['ru', 'en']) {
   if (new Set(all).size !== all.length) errors.push(`words ${l}: есть повторы`);
   console.log(`✓ словарь ${l}: ${all.length} слов`);
 }
+// Морской бой: случайная расстановка всегда корректна
+const BS = require('../games/battleship.js');
+for (let i = 0; i < 200; i++) if (!BS.validFleet(BS.randomFleet())) { errors.push('battleship: неверная случайная расстановка'); break; }
+console.log('✓ морской бой: расстановка');
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log('Всё в порядке.');
