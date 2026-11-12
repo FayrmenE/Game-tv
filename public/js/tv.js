@@ -206,7 +206,7 @@
     $('main').innerHTML = '<div class="rules"><h1>' + U.gameIcon(id, EMOJI[id]) + ' ' + esc(t('game.' + id)) + '</h1><div class="rules-grid">' +
       steps.map(function (st, i) {
         return '<div class="rule" style="animation-delay:' + (i * 0.35) + 's"><div class="rule-n">' + (i + 1) + '</div><div class="rule-ic">' + st[0] + '</div><div class="rule-t">' + esc(st[1] || '') + '</div></div>';
-      }).join('') + '</div><div class="timer-track rules-track"><div class="js-timer-bar"></div></div></div>';
+      }).join('') + '</div><div class="rules-wait">▶ ' + esc(t('rules.hostSkip')) + '</div></div>';
   }
 
   /* ------------------------------ пьедестал ------------------------------ */

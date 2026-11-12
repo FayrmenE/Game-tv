@@ -316,7 +316,7 @@
         gameButtons.map(function (b, i) { return btn(null, b.label, b.cls || '', b.disabled, 'data-gb="' + i + '"'); }).join('') +
         btn('hMenu', t('host.toMenu'), 'sec') + '</div>';
     } else if (ph === 'rules') {
-      rows += '<div class="host-row">' + btn('hSkip', '⏭ ' + t('rules.skip'), '') + btn('hMenu', t('host.toMenu'), 'sec') + '</div>';
+      rows += '<div class="host-row">' + btn('hSkip', '▶ ' + t('rules.start'), '') + btn('hMenu', t('host.toMenu'), 'sec') + '</div>';
     } else if (ph === 'podium') {
       rows += '<div class="host-row">' + btn('hAgain', '🔁 ' + t('host.again'), '') + btn('hMenu', '🎲 ' + t('host.otherGame'), 'sec') +
         btn('hEvening', '🏆 ' + t('host.evening'), 'warn') + '</div>';

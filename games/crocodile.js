@@ -198,7 +198,7 @@ function create(api, opts) {
     tr.points = pts;
     tr.mult = mult;
     G.phase = 'reveal';
-    api.sfx(tr.guessed.length ? 'win' : 'err');
+    api.sfx(tr.guessed.length ? 'win' : 'lose');
     api.setTimer(T.reveal, soloNextTurn);
     api.sync();
   }
@@ -328,7 +328,7 @@ function create(api, opts) {
       G.stats.claims[tr.artists[team]] = (G.stats.claims[tr.artists[team]] || 0) + 1;
     }
     G.phase = 'reveal';
-    api.sfx(team ? 'win' : 'err');
+    api.sfx(team ? 'win' : 'lose');
     api.setTimer(T.duelReveal, duelNextTurn);
     api.sync();
   }

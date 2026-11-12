@@ -290,3 +290,4 @@ body.tv .lobby-player .avatar { transition: transform .2s; }
 .pick span .gicon { width: 46px; height: 46px; }
 .rules h1 .gicon { display: inline-block; width: 1.3em; height: 1.3em; vertical-align: -.25em; }
 .big-msg .emoji .gicon.big { width: 120px; height: 120px; margin: 0 auto; }
+.rules-wait { font-size: 1.5em; font-weight: 900; color: var(--accent2); animation: pulse 2s infinite; }

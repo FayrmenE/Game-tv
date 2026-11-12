@@ -103,7 +103,7 @@ function create(api) {
     });
     G.results = { hits, wrongs: Object.entries(G.wrongs).map(([id, n]) => ({ id, n, pts: n * WRONG })) };
     G.phase = 'results';
-    api.sfx(hits.length ? 'ok' : 'err');
+    api.sfx(hits.length ? 'ok' : 'lose');
     api.setTimer(RESULTS_SEC, nextTarget);
     api.sync();
   }

@@ -67,7 +67,7 @@
     opts.forEach(function (o, i) {
       timers.push(setTimeout(function () {
         var e = $('ddo' + i); if (!e) return;
-        e.classList.add('open'); if (o.real) { e.classList.add('real'); SFX.play('win'); } else SFX.play(o.voters.length ? 'ok' : 'tick');
+        e.classList.add('open'); if (o.real) { e.classList.add('real'); SFX.play('reveal'); } else SFX.play(o.voters.length ? 'pop' : 'tick');
       }, 700 + i * 2000));
     });
   }
