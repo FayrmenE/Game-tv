@@ -591,7 +591,12 @@
   /*                               API                                */
   /* ---------------------------------------------------------------- */
 
+  // Нарисованные картинки (нарезка листов) имеют приоритет над SVG
+  var IMAGES = {};
+  (root.ART_IMAGES || []).forEach(function (id) { IMAGES[id] = true; });
+
   function itemInner(id) {
+    if (IMAGES[id]) return '<image href="/img/items/' + id + '.png" x="0" y="0" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>';
     var f = ITEMS[id];
     return f ? f() : '<text x="50" y="55" text-anchor="middle">?</text>';
   }

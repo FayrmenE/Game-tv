@@ -262,6 +262,9 @@ data/words.js             Словари Крокодила (ru, en × 3 уро�
 public/tv.html, play.html Страницы /tv и /play
 public/js/tv.js, play.js  Оболочка ТВ и телефона (меню, пьедестал, панель хоста)
 public/js/art.js, art2.js SVG-иллюстрации: 144 предмета и 6 фонов
+public/img/items/         Нарисованные картинки предметов (наклейки, приоритет над SVG; список — art-images.js)
+scripts/slice-sheets.py   Нарезка листов предметов от Gemini
+docs/gemini-prompts.md    Промпты для новых картинок
 public/js/i18n.js         Единый файл переводов (ru + en)
 public/js/canvas.js       Холст Крокодила (рисование и отрисовка штрихов)
 public/js/sound.js        Звуки через Web Audio
