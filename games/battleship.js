@@ -179,7 +179,7 @@ function create(api) {
       }
     } else me.shots[key] = 'miss';
     G.last = { by: shooterId, r, c, result, auto: !!auto, len: ship ? ship.len : 0, n: G.shotNo };
-    api.sfx(result === 'miss' ? 'splash' : result === 'sunk' ? 'sink' : 'boom');
+    // звук и анимацию выстрела ТВ проигрывает сам, по данным G.last
     if (!aliveShips(foeId).length) return endGame(shooterId);
     if (result === 'miss') G.turn = foeId;    // попал — стреляет ещё
     nextShotTimer();
@@ -262,8 +262,9 @@ function create(api) {
         shots: shotsList(foe),               // выстрелы соперника по флоту игрока
         fleet: fleetInfo(id),
         fired: G.side[id].fired, hits: G.side[id].hitCount,
-        // корабли показываем только в конце партии
-        ships: G.phase === 'end' ? G.side[id].ships.map(({ r, c, len, dir, hits }) => ({ r, c, len, dir, sunk: hits >= len })) : null
+        // корабли показываем только в конце партии; потопленные — сразу (их клетки уже известны)
+        ships: G.phase === 'end' ? G.side[id].ships.map(({ r, c, len, dir, hits }) => ({ r, c, len, dir, sunk: hits >= len })) : null,
+        sunkShips: G.side[id].ships.filter((s) => s.hits >= s.len).map(({ r, c, len, dir }) => ({ r, c, len, dir, sunk: true }))
       };
     }
     return v;

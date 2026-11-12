@@ -28,25 +28,11 @@
     return '<div class="card big-msg"><div class="emoji">' + emoji + '</div><h2>' + esc(title) + '</h2>' + (sub ? '<p>' + esc(sub) + '</p>' : '') + '</div>';
   }
 
-  /** Сетка 10×10. opts: ships, shots, click, mini, selShip */
+  /** Сетка 10×10 — общая с ТВ (SHIPS.gridHtml). opts: ships, shots, click, mini, selShip, cls, lastOf */
   function grid(opts) {
-    var map = {};
-    (opts.ships || []).forEach(function (s, i) {
-      cells(s).forEach(function (x) { map[x[0] * N + x[1]] = { i: i, hit: s.hits >= s.len }; });
-    });
-    var L = t('bs.letters'), h = '<div class="bs-grid ph' + (opts.mini ? ' mini' : '') + (opts.click ? ' live' : '') + (opts.cls ? ' ' + opts.cls : '') + '"><i></i>';
-    for (var c = 0; c < N; c++) h += '<i class="bs-lbl">' + L.charAt(c) + '</i>';
-    for (var r = 0; r < N; r++) {
-      h += '<i class="bs-lbl">' + (r + 1) + '</i>';
-      for (c = 0; c < N; c++) {
-        var k = r * N + c, cls = 'bs-c', sh = map[k], st = opts.shots && opts.shots[k];
-        if (sh) cls += ' ship' + (sh.i === opts.selShip ? ' sel' : '') + (sh.hit ? ' sunk-ship' : '');
-        if (st) cls += ' ' + st;
-        if (G.last && G.last.r === r && G.last.c === c && opts.lastOf === G.last.by) cls += ' last';
-        h += '<b class="' + cls + '" data-r="' + r + '" data-c="' + c + '"></b>';
-      }
-    }
-    return h + '</div>';
+    var last = G.last && opts.lastOf === G.last.by ? { r: G.last.r, c: G.last.c } : null;
+    return SHIPS.gridHtml({ ships: opts.ships, shots: opts.shots, live: opts.click, sel: opts.selShip, last: last,
+      cls: 'ph' + (opts.mini ? ' mini' : '') + (opts.cls ? ' ' + opts.cls : '') });
   }
 
   function set(k, html, after) { if (k === key) return; key = k; el.innerHTML = html; if (after) after(); }
@@ -63,7 +49,7 @@
         '<div class="bs-phone">' +
         '<div class="bs-ptitle ' + (mine ? 'go' : '') + '">' + esc(mine ? '🎯 ' + t('bs.yourShot') : '⏳ ' + t('bs.foeShot')) + '</div>' +
         '<div class="bs-secs"><div class="bs-sec"><div class="bs-plbl">' + esc(t('bs.foeSea')) + ' · ' + esc(t('bs.fleetLeft')) + ' ' + G.boards[G.foe].fleet.left.length + '/10</div>' +
-        grid({ shots: G.myShots, click: mine, lastOf: G.me }) + '</div>' +
+        grid({ ships: G.boards[G.foe].sunkShips, shots: G.myShots, click: mine, lastOf: G.me }) + '</div>' +
         '<div class="bs-sec"><div class="bs-plbl">' + esc(t('bs.mySea')) + '</div>' +
         grid({ ships: G.myShips, shots: G.foeShots, mini: true, lastOf: G.foe }) + '</div></div></div>', function () {
         if (!mine) return;
@@ -121,10 +107,11 @@
     }
     function clearPreview() {
       cellEls.forEach(function (e) { e.classList.remove('pv-ok', 'pv-bad', 'drag-src'); });
+      gridEl.querySelectorAll('.bs-ship').forEach(function (e) { e.classList.remove('dragging'); });
     }
     function preview(cand, ok) {
       clearPreview();
-      cells(ships[drag.i]).forEach(function (x) { var e = cellAt(x[0], x[1]); if (e) e.classList.add('drag-src'); });
+      var sp = gridEl.querySelector('.bs-ship[data-ship="' + drag.i + '"]'); if (sp) sp.classList.add('dragging');
       cells(cand).forEach(function (x) {
         if (x[0] < 0 || x[1] < 0 || x[0] >= N || x[1] >= N) return;
         cellAt(x[0], x[1]).classList.add(ok ? 'pv-ok' : 'pv-bad');

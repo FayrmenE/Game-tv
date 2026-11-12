@@ -241,3 +241,44 @@ body.tv .lobby-player .avatar { transition: transform .2s; }
 .bs-grid.place .bs-c.drag-src { opacity: .35; }
 .bs-grid.place .bs-c.pv-ok { background: #52d17c !important; box-shadow: inset 0 0 0 3px #fff; opacity: 1; }
 .bs-grid.place .bs-c.pv-bad { background: #ff4d6d !important; box-shadow: inset 0 0 0 3px #fff; opacity: 1; }
+
+/* ===== Морской бой: корабли-картинки и анимация выстрела ===== */
+.bs-grid { grid-template-columns: .8fr repeat(10, 1fr); grid-template-rows: .8fr repeat(10, 1fr); aspect-ratio: 1; }
+.bs-ship { position: relative; z-index: 0; pointer-events: none; padding: 2%; transition: opacity .2s, filter .2s; }
+.bs-ship svg, .bs-ship img { width: 100%; height: 100%; display: block; filter: drop-shadow(0 2px 0 rgba(0,0,0,.25)); }
+.bs-ship.sel { filter: drop-shadow(0 0 6px #ffd60a) drop-shadow(0 0 3px #ffd60a); animation: glowPulse 1.4s infinite; }
+.bs-ship.dragging { opacity: .3; }
+.bs-ship.wreck { animation: none; }
+.bs-c { z-index: 1; }
+.bs-c.ship { background: transparent !important; box-shadow: none !important; }
+.bs-c.ship.hit { background: rgba(230,57,70,.45) !important; }
+.bs-c.ship.sunk, .bs-c.ship.sunk-ship { background: rgba(40,10,10,.25) !important; }
+.bs-grid.place .bs-c.ship { cursor: grab; }
+.bs-grid.place .bs-c.pv-ok { background: rgba(82,209,124,.85) !important; }
+.bs-grid.place .bs-c.pv-bad { background: rgba(255,77,109,.85) !important; }
+/* до прилёта снаряда клетку не раскрываем */
+.bs-grid.incoming .bs-c.last { background: #1d6fa5 !important; animation: none; box-shadow: 0 0 0 3px rgba(255,214,10,.6); }
+.bs-grid.incoming .bs-c.last::after { display: none; }
+
+.bs-wrap { position: relative; }
+.bs-gunboat { height: 3.2em; display: flex; justify-content: center; opacity: .18; transition: opacity .3s, transform .3s; transform: scale(.85); }
+.bs-gunboat.on { opacity: 1; transform: none; }
+.bs-gunboat svg { height: 100%; width: auto; overflow: visible; }
+.bs-gunboat.recoil svg { animation: recoil .35s ease-out; }
+@keyframes recoil { 20% { transform: translateX(-8%) rotate(-3deg); } 100% { transform: none; } }
+.bs-ball { position: absolute; left: 0; top: 0; width: var(--s); height: var(--s); margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+  border-radius: 50%; background: radial-gradient(circle at 35% 35%, #6c757d, #212529 70%); box-shadow: 0 0 0 3px #2d2a3e, 0 0 12px rgba(255,160,0,.8); z-index: 5; pointer-events: none; }
+.bs-fx { position: absolute; width: 0; height: 0; z-index: 6; pointer-events: none; }
+.bs-fx i, .bs-fx b { position: absolute; left: 0; top: 0; border-radius: 50%; }
+.bs-fx.boom b { width: calc(var(--s) * 2.2); height: calc(var(--s) * 2.2); margin: calc(var(--s) * -1.1); background: radial-gradient(circle, #fff3b0 0, #ffb703 35%, #fb5607 60%, rgba(230,57,70,0) 72%); animation: boom .7s ease-out forwards; }
+.bs-fx.boom.big b { width: calc(var(--s) * 3.4); height: calc(var(--s) * 3.4); margin: calc(var(--s) * -1.7); }
+.bs-fx.boom i { width: calc(var(--s) * .35); height: calc(var(--s) * .35); margin: calc(var(--s) * -.175); background: #ffb703; box-shadow: 0 0 6px #fb5607; animation: spark .7s ease-out forwards; }
+.bs-fx.splash b { width: calc(var(--s) * 1.8); height: calc(var(--s) * 1.8); margin: calc(var(--s) * -.9); border: 4px solid #bde0fe; animation: ring .8s ease-out forwards; }
+.bs-fx.splash i { width: calc(var(--s) * .25); height: calc(var(--s) * .4); margin: calc(var(--s) * -.2) calc(var(--s) * -.125); background: #bde0fe; animation: drop .8s ease-out forwards; }
+.bs-fx i:nth-child(1) { --dx: -1.2; --dy: -1.4; } .bs-fx i:nth-child(2) { --dx: 1.2; --dy: -1.4; } .bs-fx i:nth-child(3) { --dx: -1.6; --dy: .3; }
+.bs-fx i:nth-child(4) { --dx: 1.6; --dy: .3; } .bs-fx i:nth-child(5) { --dx: -.4; --dy: -1.9; } .bs-fx i:nth-child(6) { --dx: .5; --dy: -1.8; }
+@keyframes boom { 0% { transform: scale(.2); opacity: 1; } 60% { opacity: 1; } 100% { transform: scale(1.15); opacity: 0; } }
+@keyframes spark { to { transform: translate(calc(var(--dx) * var(--s)), calc(var(--dy) * var(--s))) scale(.3); opacity: 0; } }
+@keyframes ring { 0% { transform: scale(.2); opacity: 1; } 100% { transform: scale(1.3); opacity: 0; } }
+@keyframes drop { 0% { transform: translate(0, 0); opacity: 1; } 50% { transform: translate(calc(var(--dx) * var(--s) * .6), calc(var(--dy) * var(--s) * .9)); } 100% { transform: translate(calc(var(--dx) * var(--s) * .9), calc(var(--s) * .3)); opacity: 0; } }
+.bs-gunboat { height: 4em; }

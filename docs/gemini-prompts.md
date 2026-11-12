@@ -202,3 +202,21 @@ Create ONE square image 2048×2048: 6 game logo icons in a grid of 3 columns × 
 3. a crocodile holding a paintbrush, 4. two crocodiles with crossed paintbrushes like swords,
 5. a battleship firing at a sea grid, 6. a messy crayon doodle on paper with a question mark.
 ```
+
+## Морской бой: корабли (battleship)
+
+Корабли лягут прямо на клетки поля, поэтому важны **пропорции**: 1-палубный — квадрат 1×1,
+2-палубный — 2×1, 3-палубный — 3×1, 4-палубный — 4×1. Обломки — те же корабли, но разбитые.
+
+```
+Create ONE wide image, 2048×1024 px, on a pure plain white background (#FFFFFF), for a family board game "battleship" shown on a TV.
+Imagine the canvas as an invisible grid of 8 columns × 4 rows of equal SQUARE cells (256×256 px each). Place each item exactly in its cells, horizontally, nose pointing RIGHT, viewed strictly from ABOVE (top-down), centered, with a small margin, never crossing into other items:
+
+Row 1: cells 1–4 — a 4-deck battleship (long, 4 cells); cells 5–8 — the SAME battleship but destroyed (burnt dark hull, cracks, small flames and smoke).
+Row 2: cells 1–3 — a 3-deck cruiser; cell 4 — a 1-deck small patrol boat (square-ish); cells 5–7 — the destroyed cruiser; cell 8 — the destroyed patrol boat.
+Row 3: cells 1–2 — a 2-deck destroyer; cells 3–4 — the destroyed destroyer; cells 5–8 — a cute warship seen from the SIDE with one big cannon pointing right, sitting on a small wave.
+Row 4: cell 1 — a black cannonball; cells 2–3 — a big cartoon explosion (orange/yellow burst); cells 4–5 — a water splash (white/light-blue); cells 6–8 — empty.
+
+STYLE: bright flat vector, cheerful and toy-like, thick dark navy outline (#2d2a3e) around every object, flat fills with one soft shade and a small white highlight, no gradients, no realistic textures, no shadows on the ground. Ships: light grey-blue hull (#9aa5b8), lighter deck (#c3cad6), dark grey turrets — one turret or deck element per cell so the number of decks is easy to count.
+NO text, NO numbers, NO grid lines, NO frames, NO watermark.
+```
