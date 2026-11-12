@@ -234,3 +234,10 @@ body.tv .lobby-player .avatar { transition: transform .2s; }
 .dd-opt:not(.rv) { animation: fadeUp .35s ease-out backwards; }
 .dd-opt:nth-child(2):not(.rv) { animation-delay: .1s; } .dd-opt:nth-child(3):not(.rv) { animation-delay: .2s; } .dd-opt:nth-child(n+4):not(.rv) { animation-delay: .3s; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+/* Морской бой: перетаскивание кораблей */
+.bs-grid.place { touch-action: none; -webkit-user-select: none; user-select: none; }
+.bs-grid.place .bs-c.ship { background: #ced4da; box-shadow: inset 0 0 0 2px #868e96; cursor: grab; }
+.bs-grid.place .bs-c.ship.sel { background: #ffd166; box-shadow: inset 0 0 0 3px #fff, 0 0 10px #ffd166; animation: glowPulse 1.4s infinite; }
+.bs-grid.place .bs-c.drag-src { opacity: .35; }
+.bs-grid.place .bs-c.pv-ok { background: #52d17c !important; box-shadow: inset 0 0 0 3px #fff; opacity: 1; }
+.bs-grid.place .bs-c.pv-bad { background: #ff4d6d !important; box-shadow: inset 0 0 0 3px #fff; opacity: 1; }

@@ -38,11 +38,17 @@ function create(api) {
   const alive = (ids) => ids.filter((id) => api.getPlayer(id));
   const isPart = (id) => G.participants.includes(id) && api.getPlayer(id);
 
+  /** Все варианты выглядят одинаково: регистр, пробелы, знаки в конце — ничего не выдаёт автора */
+  function pretty(text) {
+    const t = String(text || '').trim().replace(/\s+/g, ' ').replace(/[.!?…,;:]+$/u, '').toLocaleLowerCase(lang === 'en' ? 'en' : 'ru');
+    return t ? t[0].toLocaleUpperCase(lang === 'en' ? 'en' : 'ru') + t.slice(1) : t;
+  }
+
   function takePhrase() {
     const free = PHRASES[lang].map((_, i) => i).filter((i) => !used.has(i));
     const i = pick(free.length ? free : PHRASES[lang].map((_, k) => k));
     used.add(i);
-    return { idx: i, text: PHRASES[lang][i] };
+    return { idx: i, text: pretty(PHRASES[lang][i]) };
   }
 
   /* ------------------------------ рисование ------------------------------ */
@@ -130,7 +136,7 @@ function create(api) {
 
   function lie(player, text) {
     if (G.phase !== 'lie' || !isPart(player.id) || player.id === G.cur.artist) return;
-    text = String(text || '').trim().replace(/\s+/g, ' ').slice(0, 40);
+    text = pretty(String(text || '').slice(0, 40));
     if (!text) return;
     if (tooClose(text, G.sheets[G.cur.artist].phrase)) return api.toPlayer(player.id, 'errorMsg', { key: 'doodle.tooClose' });
     G.cur.lies[player.id] = text;

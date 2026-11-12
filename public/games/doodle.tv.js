@@ -56,8 +56,8 @@
     var k = c.artist + ':' + G.left + ':' + G.round;
     if (revealKey === k) return;
     revealKey = k; clear();
-    // обманки (от менее популярных к более), правда — последней
-    var opts = c.options.slice().sort(function (a, b) { return (a.real - b.real) || (a.voters.length - b.voters.length); });
+    // в том же (случайном) порядке, что и при голосовании — правда может открыться когда угодно
+    var opts = c.options.slice();
     var right = $('ddRight');
     right.innerHTML = '<div class="dd-opts">' + opts.map(function (o, i) {
       var who = o.real ? t('doodle.truth') : o.house ? t('doodle.house') : t('doodle.lieOf', { names: o.authors.map(function (id) { return pl(id).name; }).join(', ') });
