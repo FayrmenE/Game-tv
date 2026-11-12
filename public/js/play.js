@@ -247,7 +247,7 @@
     var key, html;
     if (P.phase === 'rules') {
       key = 'rules:' + P.rulesFor + lang;
-      html = msg(EMOJI[P.rulesFor] || '📖', t('rules.phone'), t('game.' + P.rulesFor) + ' · ' + t('rules.phoneSub'));
+      html = msg(U.gameIcon(P.rulesFor, EMOJI[P.rulesFor] || '📖', 'big'), t('rules.phone'), t('game.' + P.rulesFor) + ' · ' + t('rules.phoneSub'));
     } else if (P.phase === 'podium') {
       var R = P.result, place = null;
       R.places.forEach(function (s) { if (s.ids.indexOf(P.me.id) >= 0) place = s.place; });
@@ -265,8 +265,8 @@
       html = msg('👑', champ ? t('evening.champion', { name: champ.name }) : t('evening.empty'), t('play.lookTv'));
     } else {
       key = 'menu:' + P.selected + ':' + P.me.isHost + lang + ':' + !!U.AVATARS[P.me.id];
-      html = (P.me.isHost ? msg(EMOJI[P.selected] || '🎉', t('menu.youPick'), t('menu.youPickSub'))
-        : msg(EMOJI[P.selected] || '🎉', t('menu.waitHost'), t('game.' + P.selected))) +
+      html = (P.me.isHost ? msg(U.gameIcon(P.selected, EMOJI[P.selected] || '🎉', 'big'), t('menu.youPick'), t('menu.youPickSub'))
+        : msg(U.gameIcon(P.selected, EMOJI[P.selected] || '🎉', 'big'), t('menu.waitHost'), t('game.' + P.selected))) +
         '<button class="btn sec" id="avBtn">🎨 ' + esc(t('avatar.change')) + '</button>';
     }
     if (key === screenKey) return;
@@ -303,7 +303,7 @@
     if (ph === 'menu') {
       var sel = P.games.find(function (g) { return g.id === P.selected; }) || P.games[0];
       rows += '<div class="pick-grid">' + P.games.map(function (g) {
-        return '<button class="pick' + (g.id === P.selected ? ' sel' : '') + '" data-pick="' + g.id + '"><span>' + EMOJI[g.id] + '</span>' +
+        return '<button class="pick' + (g.id === P.selected ? ' sel' : '') + '" data-pick="' + g.id + '"><span>' + U.gameIcon(g.id, EMOJI[g.id]) + '</span>' +
           esc(t('game.' + g.id)) + '<small>👥 ' + (g.label || g.min + '–' + g.max) + '</small></button>';
       }).join('') + '</div>';
       var ok = connected >= sel.min && connected <= sel.max;

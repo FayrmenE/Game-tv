@@ -610,7 +610,9 @@
     opts = opts || {};
     var out = '<svg class="scene-svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">' +
       '<defs><filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#ffd60a" flood-opacity="1"/></filter></defs>' +
-      (BACKGROUNDS[scene.id] ? BACKGROUNDS[scene.id]() : '');
+      ((root.ART_BACKGROUNDS || []).indexOf(scene.id) >= 0
+        ? '<image href="/img/bg/' + scene.id + '.jpg" x="0" y="0" width="1600" height="900" preserveAspectRatio="xMidYMid slice"/>'
+        : (BACKGROUNDS[scene.id] ? BACKGROUNDS[scene.id]() : ''));
     scene.items.forEach(function (it) {
       var s = it.size || 150, x = it.x - s / 2, y = it.y - s / 2;
       var bx = x + 10, by = y + 12;

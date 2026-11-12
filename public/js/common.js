@@ -70,8 +70,14 @@
   function playerById(state, id) { return state.players.find(function (p) { return p.id === id; }); }
   function nameOf(state, id) { var p = playerById(state, id); return p ? p.name : '?'; }
 
+  /** Иконка игры: картинка, если есть, иначе эмодзи */
+  function gameIcon(id, emoji, cls) {
+    if ((window.GAME_ICONS || []).indexOf(id) >= 0) return '<img class="gicon ' + (cls || '') + '" alt="" src="/img/games/' + id + '.png">';
+    return emoji || '';
+  }
+
   window.U = {
-    t: t, esc: esc, avatar: avatar, onTimer: onTimer, timeLeft: timeLeft, fmt: fmt,
+    t: t, esc: esc, gameIcon: gameIcon, avatar: avatar, onTimer: onTimer, timeLeft: timeLeft, fmt: fmt,
     timerTotal: function () { return tm.total; }, loadScenes: loadScenes, setAvatars: setAvatars, AVATARS: AVATARS, scene: scene, itemNum: itemNum, playerById: playerById, nameOf: nameOf
   };
 })();

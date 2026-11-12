@@ -176,7 +176,7 @@
       '<div class="game-cards">' + P.games.map(function (g) {
         var ok = n >= g.min && n <= g.max;
         return '<div class="game-card' + (g.id === P.selected ? ' sel' : '') + (ok ? '' : ' dim') + '">' +
-          '<div class="gc-emoji">' + EMOJI[g.id] + '</div><div class="gc-name">' + esc(t('game.' + g.id)) + '</div>' +
+          '<div class="gc-emoji">' + U.gameIcon(g.id, EMOJI[g.id]) + '</div><div class="gc-name">' + esc(t('game.' + g.id)) + '</div>' +
           '<div class="gc-desc">' + esc(t('game.' + g.id + '.desc')) + '</div>' +
           '<div class="gc-players">👥 ' + (g.label || g.min + '–' + g.max) + '</div></div>';
       }).join('') + '</div>' +
@@ -203,7 +203,7 @@
     if (key === shellKey) return;
     shellKey = key;
     var steps = [1, 2, 3, 4].map(function (i) { return t('rules.' + id + '.' + i).split('|'); });
-    $('main').innerHTML = '<div class="rules"><h1>' + EMOJI[id] + ' ' + esc(t('game.' + id)) + '</h1><div class="rules-grid">' +
+    $('main').innerHTML = '<div class="rules"><h1>' + U.gameIcon(id, EMOJI[id]) + ' ' + esc(t('game.' + id)) + '</h1><div class="rules-grid">' +
       steps.map(function (st, i) {
         return '<div class="rule" style="animation-delay:' + (i * 0.35) + 's"><div class="rule-n">' + (i + 1) + '</div><div class="rule-ic">' + st[0] + '</div><div class="rule-t">' + esc(st[1] || '') + '</div></div>';
       }).join('') + '</div><div class="timer-track rules-track"><div class="js-timer-bar"></div></div></div>';
