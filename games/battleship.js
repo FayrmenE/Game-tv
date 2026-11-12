@@ -165,6 +165,12 @@ function create(api) {
       me.hitCount++;
       me.shots[key] = 'hit';
       result = 'hit';
+      // По диагоналям от подбитой клетки корабля быть не может: корабли прямые и не касаются
+      // даже углами. Отмечаем только эти 4 клетки — это точный вывод, а не подсказка.
+      for (const [dr, dc] of [[-1, -1], [-1, 1], [1, -1], [1, 1]]) {
+        const rr = r + dr, cc = c + dc;
+        if (rr >= 0 && cc >= 0 && rr < N && cc < N && !me.shots[rr * N + cc]) me.shots[rr * N + cc] = 'auto';
+      }
       if (sunk(ship)) {
         result = 'sunk';
         // клетки корабля — «потоплен», вокруг — автоматические промахи

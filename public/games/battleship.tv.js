@@ -24,25 +24,27 @@
     var fresh = G.last && G.last.n !== lastShot;
     var pendingLand = G.last && G.last.n !== landed;
     // Поле игрока id — это его море: по нему стреляет соперник
-    $('bsSeas').innerHTML = G.order.map(function (id) {
+    $('bsSeas').innerHTML = G.order.map(function (id, idx) {
       var b = G.boards[id], who = pl(id);
       var isTarget = ph === 'battle' && G.turn !== id;
+      var shooting = ph === 'battle' && G.turn === id;   // флот этого игрока сейчас стреляет
       var status = ph === 'place' ? (b.ready ? t('bs.ready') : t('bs.placing')) : '';
       var last = G.last && G.last.by !== id ? { r: G.last.r, c: G.last.c } : null;
-      return '<div class="bs-sea' + (isTarget ? ' target' : '') + (G.winner === id ? ' winner' : '') + '" data-sea="' + id + '">' +
+      return '<div class="bs-sea ' + (idx ? 'right' : 'left') + (isTarget ? ' target' : '') + (G.winner === id ? ' winner' : '') + '" data-sea="' + id + '">' +
         '<div class="bs-cap">' + U.avatar(who) + '<b>' + esc(who.name) + '</b>' +
         (status ? '<span class="bs-st' + (b.ready ? ' ok' : '') + '">' + esc(status) + '</span>' : fleetHtml(b.fleet)) + '</div>' +
-        '<div class="bs-gunboat' + (isTarget || (last && pendingLand) ? ' on' : '') + '">' + SHIPS.gunboat() + '</div>' +
+        '<div class="bs-gunboat' + (shooting || (G.last && G.last.by === id && pendingLand) ? ' on' : '') + '">' + SHIPS.gunboat() + '</div>' +
         SHIPS.gridHtml({ ships: b.ships || b.sunkShips, shots: b.shots, last: last, cls: pendingLand && last ? 'incoming' : '' }) + '</div>';
     }).join('');
     if (fresh) {
       lastShot = G.last.n;
       var L = G.last, sea = document.querySelector('.bs-sea[data-sea="' + G.order.find(function (x) { return x !== L.by; }) + '"]');
       var cell = sea && sea.querySelector('.bs-c[data-r="' + L.r + '"][data-c="' + L.c + '"]');
+      var ownSea = document.querySelector('.bs-sea[data-sea="' + L.by + '"]');   // стреляет корабль стрелявшего
       var text = L.result === 'sunk' ? t('bs.sunk', { cell: cellName(L.r, L.c), n: L.len }) : L.result === 'hit' ? t('bs.hit', { cell: cellName(L.r, L.c) }) : t('bs.miss', { cell: cellName(L.r, L.c) });
       var shot = $('bsShot');
       shot.className = 'bs-shot'; shot.innerHTML = '🎯 <b>' + esc(pl(L.by).name) + '</b> → ' + esc(cellName(L.r, L.c));
-      SHIPS.fireAt($('bsWrap'), sea && sea.querySelector('.bs-gunboat'), cell, L.result, function () {
+      SHIPS.fireAt($('bsWrap'), ownSea && ownSea.querySelector('.bs-gunboat'), cell, L.result, function () {
         landed = L.n;
         var g = document.querySelector('.bs-grid.incoming'); if (g) g.classList.remove('incoming');
         if (L.n !== lastShot) return;

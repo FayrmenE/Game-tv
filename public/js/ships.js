@@ -87,7 +87,8 @@
   function fireAt(layer, boat, cellEl, result, done) {
     if (!layer || !boat || !cellEl || !layer.animate) { if (done) done(); return; }
     var lr = layer.getBoundingClientRect(), br = boat.getBoundingClientRect(), cr = cellEl.getBoundingClientRect();
-    var x0 = br.left + br.width * 0.88 - lr.left, y0 = br.top + br.height * 0.45 - lr.top;
+    var mirror = !!boat.closest('.bs-sea.right');
+    var x0 = br.left + br.width * (mirror ? 0.12 : 0.88) - lr.left, y0 = br.top + br.height * 0.45 - lr.top;
     var x1 = cr.left + cr.width / 2 - lr.left, y1 = cr.top + cr.height / 2 - lr.top;
     boat.classList.remove('recoil'); void boat.offsetWidth; boat.classList.add('recoil');
     var ball = document.createElement('div');

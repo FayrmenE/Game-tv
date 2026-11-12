@@ -26,8 +26,7 @@ const T = {
   revote: 5,
   runoff: 15,
   lastchance: 30,
-  quietAccel: 10,     // все проголосовали и 10 сек без изменений → ускорение
-  accelSpeed: 3,
+  allVotedLeft: 10,   // все проголосовали → на обсуждение остаётся 10 сек
   revealPerVote: 1.2,
   revealTail: 6
 };
@@ -130,6 +129,7 @@ function create(api) {
     r.frozen = false;
     r.candidates = null;
     r.lastVoteChange = Date.now();
+    r.allVotedCut = false;
     const n = activeIds(room).length;
     const total = Math.round((T.discussBase + T.discussPerPlayer * n) * (PACE[room.settings.pace] || 1));
     setTimer(room, Math.max(5, total - T.freezeBefore), () => endDiscuss(room));
@@ -297,7 +297,7 @@ function create(api) {
         voteCounts: (VOTING_PHASES.includes(ph) || ph === 'lastword') ? voteCounts(room) : {},
         votedCount: Object.keys(r.votes).filter((v) => inRound(room, v)).length,
         frozen: r.frozen,
-        accelerated: !!(room.timer && room.timer.speed > 1),
+        accelerated: !!r.allVotedCut,
         leaders: ['lastword', 'runoff'].includes(ph) ? r.leaders : [],
         speakerId: ph === 'lastword' ? r.leaders[r.speakerIdx] : null,
         candidates: r.candidates,
@@ -394,7 +394,6 @@ function create(api) {
         if (r.votes[player.id] === target) return;
         r.votes[player.id] = target;
         r.lastVoteChange = Date.now();
-        if (room.timer && room.timer.speed > 1) room.timer.speed = 1;
         sync();
       } else if (type === 'guess') {
         if (room.phase !== 'lastchance' || player.id !== r.alienId) return;
@@ -430,8 +429,13 @@ function create(api) {
       const r = room.round;
       const ids = activeIds(room).filter((id) => getPlayer(room, id).connected);
       const allVoted = ids.length > 0 && ids.every((id) => r.votes[id]);
-      const speed = allVoted && now - r.lastVoteChange >= T.quietAccel * 1000 * api.timeScale ? T.accelSpeed : 1;
-      if (speed !== tm.speed) { tm.speed = speed; sync(); }
+      // Все проголосовали — сразу 10-секундный отсчёт (если осталось больше)
+      if (allVoted && !r.allVotedCut) {
+        r.allVotedCut = true;
+        const left = T.allVotedLeft * 1000 * api.timeScale;
+        if (tm.remaining > left) { tm.remaining = left; tm.total = Math.max(left, tm.total); api.emitTimer(); }
+        sync();
+      }
     },
 
     leave(id) { removePlayer(room, id); },
