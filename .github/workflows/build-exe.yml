@@ -15,6 +15,7 @@ jobs:
           node-version: 22
       - run: npm ci --no-audit --no-fund
       - run: npm run check
+      - run: npm test
       - run: npm run build:exe
       - name: Быстрая проверка запуска
         shell: pwsh

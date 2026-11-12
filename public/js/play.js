@@ -7,8 +7,8 @@
   var active = null, screenKey = null, hostKey = null, hostPhase = null, lang = null;
   var kicked = false, joining = false;
   var $ = function (id) { return document.getElementById(id); };
-  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship', doodle: 'doodle' };
-  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢', doodle: '🖍️' };
+  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship', doodle: 'doodle', chests: 'chests' };
+  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢', doodle: '🖍️', chests: '🧰' };
 
   var params = new URLSearchParams(location.search);
   var ls = {
@@ -310,6 +310,15 @@
       rows += btn('hStart', '▶ ' + t('host.start') + ': ' + t('game.' + sel.id), '', !ok);
       rows += btn('hRules', '📖 ' + t('host.rules') + ': ' + t('game.' + sel.id), 'sec', !ok);
       if (!ok) rows += '<p>' + esc(t('host.needRange', { min: sel.min, max: sel.max, n: connected })) + '</p>';
+      if (sel.id === 'chests') {
+        var cs = P.settings, o2 = function (v, cur, label) { return '<option value="' + v + '"' + (String(v) === String(cur || (v === 3 || v === 40 ? v : '')) ? ' selected' : '') + '>' + esc(label) + '</option>'; };
+        rows += '<div class="chests-set"><label class="f">🧰 ' + esc(t('chests.set.rounds')) + '</label><select class="t" id="hChR">' +
+          o2(3, cs.chestsRounds, '3') + o2(2, cs.chestsRounds, '2') + '</select>' +
+          '<label class="f">⏱ ' + esc(t('chests.set.discuss')) + '</label><select class="t" id="hChD">' +
+          o2(40, cs.chestsDiscuss, t('chests.sec', { n: 40 })) + o2(30, cs.chestsDiscuss, t('chests.sec', { n: 30 })) + '</select>' +
+          '<label class="chk"><input type="checkbox" id="hChH"' + (cs.chestsHard ? ' checked' : '') + '> ' + esc(t('chests.set.hard')) + '</label>' +
+          '<p class="hint">' + esc(t('chests.set.hardHint')) + '</p></div>';
+      }
       if (P.cup.length) rows += btn('hEvening', '🏆 ' + t('host.evening'), 'sec');
     } else if (ph === 'game') {
       rows += '<div class="host-row">' + btn('hPause', P.paused ? '▶ ' + t('host.resume') : '⏸ ' + t('host.pause'), 'warn') +
@@ -356,6 +365,11 @@
         if (p && confirm(t('host.kick') + ': ' + p.name + '?')) ctx.host('kick', { playerId: p.id });
       };
     });
+    if ($('hChR')) {
+      $('hChR').onchange = function () { ctx.host('settings', { chestsRounds: this.value }); };
+      $('hChD').onchange = function () { ctx.host('settings', { chestsDiscuss: this.value }); };
+      $('hChH').onchange = function () { ctx.host('settings', { chestsHard: this.checked }); };
+    }
     $('hLang').onchange = function () { ctx.host('settings', { lang: this.value }); };
     $('hPace').onchange = function () { ctx.host('settings', { pace: this.value }); };
     $('hDuel').onchange = function () { ctx.host('settings', { duelTarget: this.value }); };

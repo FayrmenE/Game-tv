@@ -301,3 +301,94 @@ body.tv .lobby-player .avatar { transition: transform .2s; }
 @keyframes recoilR { 20% { transform: scaleX(-1) translateX(-8%) rotate(-3deg); } 100% { transform: scaleX(-1); } }
 .bs-sea.left .bs-gunboat { justify-content: flex-end; }
 .bs-sea.right .bs-gunboat { justify-content: flex-start; }
+
+/* ===================== «Сундуки» ===================== */
+body.game-chests { --accent2: #ffd166; background-image: radial-gradient(circle at 50% 40%, #4a2c12 0, transparent 55%), radial-gradient(circle at 10% 90%, #2a1346 0, transparent 50%); }
+.ch-tv { display: grid; grid-template-columns: minmax(14em, 1fr) 2.2fr minmax(14em, 1fr); gap: 1.2em; height: 100%; align-items: stretch; padding: .4em 1em; }
+.ch-table, .ch-out { background: var(--panel); border-radius: var(--radius); padding: .8em; overflow: auto; }
+.ch-table h3, .ch-out h3 { margin: 0 0 .5em; font-size: 1.1em; }
+.ch-out h4 { margin: .9em 0 .4em; font-size: .9em; color: var(--muted); }
+.ch-row { display: flex; align-items: center; gap: .5em; padding: .35em .5em; border-radius: 12px; margin-bottom: .3em; background: var(--panel2); transition: background .3s, opacity .3s; }
+.ch-row .avatar { font-size: .7em; }
+.ch-row b { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ch-row .ch-c { font-weight: 900; font-size: 1.25em; min-width: 2.2em; text-align: right; color: #ffd166; }
+.ch-row.keeper { background: linear-gradient(90deg, #8b5a12, var(--panel2)); box-shadow: 0 0 0 3px #ffd166 inset; }
+.ch-row.broke { opacity: .5; }
+.ch-row.broke .ch-c { color: var(--danger); }
+.ch-row.done .ch-tag { color: var(--accent); }
+.ch-row em { font-style: normal; font-weight: 900; animation: chPop .5s; }
+.ch-row em.up { color: var(--accent); } .ch-row em.down { color: var(--danger); }
+.ch-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .8em; min-width: 0; }
+.ch-stage { position: relative; display: flex; flex-direction: column; align-items: center; gap: .4em; }
+.ch-chest { position: relative; width: 15em; }
+.ch-svg { width: 100%; display: block; overflow: visible; filter: drop-shadow(0 .4em .6em rgba(0,0,0,.45)); }
+.ch-lid { transform-origin: 18px 70px; transition: transform .7s cubic-bezier(.3,1.6,.5,1); }
+.ch-chest.peek .ch-lid { animation: chPeek 2.4s ease-in-out infinite; }
+.ch-chest.shake { animation: chShake 1.6s ease-in-out infinite; }
+.ch-chest.open .ch-lid { transform: rotate(-28deg) translate(-6px, -14px); }
+.ch-content { position: absolute; left: 50%; top: 32%; transform: translate(-50%, 30%) scale(.2); opacity: 0; transition: all .7s cubic-bezier(.3,1.6,.5,1) .15s; text-align: center; pointer-events: none; }
+.ch-content span { font-size: 4.2em; display: block; line-height: 1; }
+.ch-content b { display: block; font-size: 2em; font-weight: 900; text-shadow: 0 3px 0 var(--outline), 0 0 12px rgba(0,0,0,.6); white-space: nowrap; }
+.ch-chest.open .ch-content { opacity: 1; transform: translate(-50%, -75%) scale(1); }
+.ch-content.good b { color: #7cf29a; } .ch-content.bad b { color: #ff4d6d; } .ch-content.trap b { color: #c77dff; } .ch-content.empty b { color: #ddd; }
+.ch-chest.open.good .ch-svg { filter: drop-shadow(0 0 1.6em #ffd166); }
+.ch-chest.open.bad .ch-svg, .ch-chest.open.trap .ch-svg { filter: drop-shadow(0 0 1.4em #ff4d6d); }
+.ch-chest.open.burn .ch-svg { filter: grayscale(.7) drop-shadow(0 0 1.6em #ff7b00); animation: chBurn .9s ease-in-out 2; }
+.ch-keeper { display: flex; align-items: center; gap: .4em; font-weight: 800; font-size: 1.15em; }
+.ch-keeper .avatar { font-size: .7em; }
+.ch-timer { font-size: 3.4em; font-weight: 900; color: #ffd166; text-shadow: 0 4px 0 var(--outline); min-height: 1.1em; }
+.ch-timer.danger { color: var(--danger); animation: chPulse 1s infinite; }
+.ch-bids { display: flex; flex-wrap: wrap; justify-content: center; gap: .6em; max-width: 100%; }
+.ch-bid { width: 6.2em; height: 7em; }
+.ch-bid .front { gap: .15em; }
+.ch-bid .front .avatar { font-size: .5em; }
+.ch-bid .ch-bn { font-size: 2.1em; font-weight: 900; line-height: 1; }
+.ch-bid .front small { font-size: .8em; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ch-bid.top.flip .front { background: #ffd166; box-shadow: 0 0 1.2em #ffd166; }
+.ch-nobid { color: var(--muted); font-size: 1.2em; }
+.ch-msg { font-size: 1.45em; font-weight: 800; text-align: center; min-height: 2.6em; max-width: 30em; }
+.ch-msg b { color: #ffd166; }
+.ch-hist { display: flex; flex-wrap: wrap; gap: .3em; }
+.ch-mini { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 10px; background: var(--panel2); font-size: 1em; line-height: 1; animation: chPop .4s; }
+.ch-mini small { font-size: .55em; font-weight: 900; }
+.ch-mini.good { box-shadow: 0 0 0 2px #7cf29a inset; } .ch-mini.bad { box-shadow: 0 0 0 2px #ff4d6d inset; } .ch-mini.trap { box-shadow: 0 0 0 2px #c77dff inset; }
+.ch-deck { display: grid; grid-template-columns: 1fr 1fr; gap: .25em .6em; font-size: .9em; }
+.ch-dk { display: flex; justify-content: space-between; gap: .3em; padding: .15em .3em; border-radius: 8px; }
+.ch-dk b { color: var(--muted); } .ch-dk.gone { opacity: .35; text-decoration: line-through; }
+.ch-final { text-align: center; }
+.ch-final h2 { font-size: 2em; margin: 0 0 .6em; }
+.ch-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: .8em; }
+.ch-stat { display: flex; align-items: center; gap: .6em; background: var(--panel); border-radius: var(--radius); padding: .7em 1em; text-align: left; animation: chPop .5s backwards; }
+.ch-stat:nth-child(2) { animation-delay: .4s; } .ch-stat:nth-child(3) { animation-delay: .8s; }
+.ch-stat > span { font-size: 2.4em; }
+.ch-stat small { display: block; color: var(--muted); } .ch-stat b { display: block; font-size: 1.3em; } .ch-stat i { font-style: normal; color: #ffd166; }
+@keyframes chPeek { 0%, 100% { transform: none; } 40%, 60% { transform: rotate(-12deg) translate(-2px, -4px); } }
+@keyframes chShake { 0%, 100% { transform: none; } 10% { transform: rotate(-3deg); } 20% { transform: rotate(3deg); } 30% { transform: none; } }
+@keyframes chBurn { 50% { transform: scale(.94) rotate(-2deg); } }
+@keyframes chPulse { 50% { transform: scale(1.12); } }
+@keyframes chPop { from { transform: scale(.3); opacity: 0; } }
+/* телефон */
+.ch-me { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.ch-coins { background: var(--panel); border-radius: 999px; padding: 6px 14px; font-size: 20px; }
+.ch-coins b { color: #ffd166; font-size: 24px; }
+.ch-role { border-radius: 999px; padding: 6px 12px; font-weight: 800; background: var(--panel2); }
+.ch-role.keeper { background: #8b5a12; color: #ffe8a3; } .ch-role.bankrupt { background: #5a1a2a; }
+.ch-cnt { margin-left: auto; color: var(--muted); font-size: 14px; }
+.ch-secret { text-align: center; padding: 22px 12px; animation: chPop .5s; }
+.ch-secret .ch-s-emoji { font-size: 84px; line-height: 1.1; }
+.ch-secret .ch-s-label { font-size: 44px; font-weight: 900; }
+.ch-secret.small { padding: 10px; } .ch-secret.small .ch-s-emoji { font-size: 44px; } .ch-secret.small .ch-s-label { font-size: 26px; }
+.ch-secret.good .ch-s-label { color: #7cf29a; } .ch-secret.bad .ch-s-label { color: #ff4d6d; } .ch-secret.trap .ch-s-label { color: #c77dff; }
+.ch-warn { text-align: center; font-weight: 800; color: #ffd166; margin: 12px 0; }
+.ch-hint { text-align: center; color: var(--muted); }
+.ch-bidbox { text-align: center; }
+.ch-bidbox h2 { margin: 0; }
+.ch-big { font-size: 76px; font-weight: 900; color: #ffd166; line-height: 1.1; }
+.ch-big.zero { color: var(--muted); font-size: 56px; }
+.ch-ok { min-height: 24px; color: var(--muted); font-weight: 700; margin-bottom: 10px; }
+.ch-ok.yes { color: var(--accent); }
+.ch-btns { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px; }
+.ch-btns.two { grid-template-columns: 1fr 1fr; }
+.ch-btns .btn { margin: 0; padding: 16px 4px; font-size: 20px; }
+.chests-set { margin-top: 6px; }
+@media (max-width: 900px) { .ch-tv { grid-template-columns: 1fr; } }
