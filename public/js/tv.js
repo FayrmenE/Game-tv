@@ -10,8 +10,8 @@
   var $ = function (id) { return document.getElementById(id); };
   var params = new URLSearchParams(location.search);
 
-  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship', doodle: 'doodle', chests: 'chests' };
-  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢', doodle: '🖍️', chests: '🧰' };
+  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship', doodle: 'doodle', chests: 'chests', explain: 'words', hat: 'words' };
+  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢', doodle: '🖍️', chests: '🧰', explain: '🗣️', hat: '🎩' };
   // Фазы, при входе в которые на ТВ на секунду всплывает крупная заставка
   var BANNER_PHASES = { alien: ['look', 'words', 'discuss', 'lastword', 'revote', 'runoff', 'reveal', 'lastchance'], telepathy: ['clue', 'guess'], doodle: ['draw', 'lie', 'vote', 'reveal'], battleship: ['battle'] };
   var lastBannerKey = null, lastCount = null;

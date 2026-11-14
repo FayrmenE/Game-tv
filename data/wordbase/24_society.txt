@@ -1,0 +1,145 @@
+# abstract
+государство|state|État
+страна|country|pays
+народ|people|peuple
+нация|nation|nation
+граница|border|frontière
+флаг|flag|drapeau
+герб|coat of arms|blason
+гимн|anthem|hymne
+конституция|constitution|constitution
+закон|law|loi
+право|right|droit
+судебный процесс|trial|procès
+приговор|sentence|verdict
+наказание|punishment|punition
+преступление|crime|crime
+полицейский участок|police precinct|poste de police
+армия|army|armée
+флот|navy|marine
+парламент|parliament|parlement
+правительство|government|gouvernement
+партия|political party|parti politique
+оппозиция|opposition|opposition
+демократия|democracy|démocratie
+монархия|monarchy|monarchie
+диктатура|dictatorship|dictature
+империя|empire|empire
+королевство|kingdom|royaume
+республика|republic|république
+колония|colony|colonie
+бюрократия|bureaucracy|bureaucratie
+коррупция|corruption|corruption
+взятка|bribe|pot-de-vin
+налоговая|tax office|fisc
+пенсионный фонд|pension fund|caisse de retraite
+экономика|economy|économie
+деньги|money|argent
+монета|coin|pièce de monnaie
+купюра|banknote|billet de banque
+валюта|currency|devise
+доллар|dollar|dollar
+евро|euro|euro
+рубль|rouble|rouble
+биткоин|bitcoin|bitcoin
+биржа|stock exchange|bourse
+акции|shares|actions
+инфляция|inflation|inflation
+бизнес|business|business
+стартап|start-up|start-up
+компания|company|entreprise
+корпорация|corporation|multinationale
+бренд|brand|marque
+логотип|logo|logo
+конкуренция|competition in business|concurrence
+монополия|monopoly|monopole
+торговля|trade|commerce
+экспорт|export|exportation
+импорт|import|importation
+рецессия|recession|récession
+безработица|unemployment|chômage
+профсоюз|trade union|syndicat
+благотворительность|charity|charité
+волонтёрство|volunteering|bénévolat
+экология|ecology|écologie
+загрязнение|pollution|pollution
+переработка|recycling|recyclage
+глобальное потепление|global warming|réchauffement climatique
+озоновая дыра|ozone hole|trou dans la couche d’ozone
+вымирание|extinction|extinction
+заповедник|nature reserve|réserve naturelle
+всемирная история|world history|histoire du monde
+каменный век|Stone Age|âge de pierre
+средневековье|Middle Ages|Moyen Âge
+эпоха Возрождения|Renaissance|Renaissance
+древний Египет|ancient Egypt|Égypte ancienne
+древняя Греция|ancient Greece|Grèce antique
+Римская империя|Roman Empire|Empire romain
+крестовый поход|crusade|croisade
+рыцарский турнир|joust|joute
+инквизиция|Inquisition|Inquisition
+открытие Америки|discovery of America|découverte de l’Amérique
+промышленная революция|industrial revolution|révolution industrielle
+мировая война|world war|guerre mondiale
+холодная война|Cold War|guerre froide
+космическая гонка|space race|course à l’espace
+полёт Гагарина|Gagarin’s flight|vol de Gagarine
+высадка на Луну|Moon landing|alunissage
+падение Берлинской стены|fall of the Berlin Wall|chute du mur de Berlin
+археологическая находка|archaeological find|découverte archéologique
+раскопки|excavation|fouilles
+мумия фараона|pharaoh’s mummy|momie de pharaon
+пирамида Хеопса|Great Pyramid|pyramide de Khéops
+культура|culture|culture
+традиция|tradition|tradition
+обычай|custom|coutume
+религия|religion|religion
+легенда|legend|légende
+миф|myth|mythe
+сказание|saga|saga
+пословица|proverb|proverbe
+поговорка|saying|dicton
+анекдот|joke story|histoire drôle
+иностранный язык|foreign language|langue étrangère
+перевод|translation|traduction
+акцент|accent|accent
+грамматика|grammar|grammaire
+словарный запас|vocabulary|vocabulaire
+образование|education|éducation
+наука|science|science
+искусство|art|art
+философия|philosophy|philosophie
+психология|psychology|psychologie
+медицина|medicine|médecine
+олимпийское движение|Olympic movement|mouvement olympique
+массовый туризм|mass tourism|tourisme de masse
+тренд|trend|tendance
+субкультура|subculture|sous-culture
+поколение|generation|génération
+семья|family|famille
+брак|marriage|mariage civil
+развод|divorce|divorce
+наследство|inheritance|héritage
+завещание|will|testament
+родословная|family tree|arbre généalogique
+фамилия|surname|nom de famille
+имя|first name|prénom
+отчество|patronymic|patronyme
+прозвище|nickname|surnom
+псевдоним|pen name|pseudonyme
+удостоверение личности|ID card|carte d’identité
+прописка|registration|domiciliation
+очередь в поликлинику|doctor’s queue|file chez le médecin
+справка|certificate|certificat
+печать на документе|official stamp|tampon officiel
+подпись|signature|signature
+договор|contract|contrat
+бюллетень|ballot paper|bulletin de vote
+урна для голосования|ballot box|urne
+агитация|campaigning|propagande électorale
+лозунг|slogan|slogan
+новости|news|actualités
+пресса|press|presse
+цензура|censorship|censure
+фейк|fake news|fausse information
+пропаганда|propaganda|propagande

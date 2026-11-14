@@ -1,0 +1,119 @@
+# concrete
+солнце|sun|soleil
+луна|moon|lune
+звезда|star|étoile
+небо|sky|ciel
+облако|cloud|nuage
+туча|storm cloud|nuage d’orage
+дождь|rain|pluie
+ливень|downpour|averse
+гроза|thunderstorm|orage
+гром|thunder|tonnerre
+молния|lightning|éclair
+радуга|rainbow|arc-en-ciel
+снег|snow|neige
+снежинка|snowflake|flocon
+сугроб|snowdrift|congère
+метель|blizzard|tempête de neige
+град|hail|grêle
+иней|frost|givre
+сосулька|icicle|stalactite de glace
+туман|fog|brouillard
+роса|dew|rosée
+ветер|wind|vent
+ураган|hurricane|ouragan
+смерч|tornado|tornade
+жара|heat|canicule
+холод|cold weather|froid
+мороз|hard frost|gel
+лужа|puddle|flaque
+гора|mountain|montagne
+холм|hill|colline
+вулкан|volcano|volcan
+скала|cliff|falaise
+камень|stone|pierre
+валун|boulder|rocher
+пещера|cave|grotte
+ущелье|gorge|gorge
+долина|valley|vallée
+равнина|plain|plaine
+степь|steppe|steppe
+пустыня|desert|désert
+бархан|sand dune|dune
+оазис|oasis|oasis
+лес|forest|forêt
+джунгли|jungle|jungle
+тайга|taiga|taïga
+поле|field|champ
+луг|meadow|prairie
+болото|swamp|marais
+река|river|rivière
+ручей|stream|ruisseau
+озеро|lake|lac
+пруд|pond|étang
+море|sea|mer
+океан|ocean|océan
+волна|wave|vague
+прибой|surf|ressac
+берег|shore|rivage
+остров|island|île
+полуостров|peninsula|péninsule
+залив|bay|baie
+водопад|waterfall|cascade
+родник|spring|source
+айсберг|iceberg|iceberg
+ледник|glacier|glacier
+лавина|avalanche|avalanche
+землетрясение|earthquake|tremblement de terre
+наводнение|flood|inondation
+засуха|drought|sécheresse
+цунами|tsunami|tsunami
+песок|sand|sable
+глина|clay|argile
+грязь|mud|boue
+пыль|dust|poussière
+почва|soil|terreau
+огонь|fire|feu
+костёр|campfire|feu de camp
+дым|smoke|fumée
+пепел|ash|cendre
+искра|spark|étincelle
+закат|sunset|coucher de soleil
+рассвет|sunrise|lever du soleil
+полнолуние|full moon|pleine lune
+затмение|eclipse|éclipse
+северное сияние|northern lights|aurore boréale
+горизонт|horizon|horizon
+тень|shadow|ombre
+эхо|echo|écho
+весна|spring season|printemps
+лето|summer|été
+осень|autumn|automne
+зима|winter|hiver
+утро|morning|matin
+день|day|jour
+вечер|evening|soir
+ночь|night|nuit
+полдень|noon|midi
+полночь|midnight|minuit
+планета|planet|planète
+Земля|Earth|Terre
+Марс|Mars|Mars
+Венера|Venus|Vénus
+Юпитер|Jupiter|Jupiter
+Сатурн|Saturn|Saturne
+комета|comet|comète
+метеорит|meteorite|météorite
+астероид|asteroid|astéroïde
+галактика|galaxy|galaxie
+Млечный Путь|Milky Way|Voie lactée
+чёрная дыра|black hole|trou noir
+созвездие|constellation|constellation
+Большая Медведица|Great Bear|Grande Ourse
+спутник|satellite|satellite
+космос|outer space|espace
+орбита|orbit|orbite
+невесомость|weightlessness|apesanteur
+кратер|crater|cratère
+звездопад|meteor shower|pluie d’étoiles filantes
+падающая звезда|shooting star|étoile filante

@@ -1,0 +1,103 @@
+# concrete
+бегемотик|baby hippo|bébé hippopotame
+слонёнок|baby elephant|éléphanteau
+медвежонок|bear cub|ourson
+львёнок|lion cub|lionceau
+лисёнок|fox cub|renardeau
+утёнок|duckling|caneton
+гусёнок|gosling|oison
+бельчонок|baby squirrel|bébé écureuil
+тюленёнок|seal pup|bébé phoque
+пингвинёнок|penguin chick|bébé manchot
+черепашка|baby turtle|bébé tortue
+лягушонок|froglet|petite grenouille
+бабочка-капустница|cabbage butterfly|piéride du chou
+майский жук|cockchafer|hanneton
+жук-носорог|rhinoceros beetle|scarabée rhinocéros
+навозный жук|dung beetle|bousier
+тарантул|tarantula|tarentule
+чёрная вдова|black widow|veuve noire
+саранча|locust|criquet
+термит|termite|termite
+вошь|louse|pou
+пиявка|leech|sangsue
+дождевой червь|earthworm|lombric
+морской ёж|sea urchin|oursin
+морской котик|fur seal|otarie
+морская корова|manatee|lamantin
+нарвал|narwhal|narval
+косатка|killer whale|orque
+кашалот|sperm whale|cachalot
+рыба-фугу|pufferfish|poisson-globe
+рыба-клоун|clownfish|poisson-clown
+мурена|moray eel|murène
+барракуда|barracuda|barracuda
+скат-манта|manta ray|raie manta
+каракатица|cuttlefish|seiche
+морская черепаха|sea turtle|tortue de mer
+галапагосская черепаха|giant tortoise|tortue géante
+варан|monitor lizard|varan
+геккон|gecko|gecko
+аллигатор|alligator|alligator
+питон|python|python
+гадюка|viper|vipère
+гремучая змея|rattlesnake|serpent à sonnette
+саламандра|salamander|salamandre
+тритон|newt|triton
+аксолотль|axolotl|axolotl
+дикая кошка|wildcat|chat sauvage
+сурикат|meerkat|suricate
+лемур|lemur|lémurien
+бабуин|baboon|babouin
+мартышка|marmoset|ouistiti
+капибара|capybara|capybara
+шиншилла|chinchilla|chinchilla
+тушканчик|jerboa|gerboise
+суслик|ground squirrel|spermophile
+сурок|marmot|marmotte des Alpes
+летяга|flying squirrel|écureuil volant
+опоссум|opossum|opossum
+вомбат|wombat|wombat
+ехидна|echidna|échidné
+тапир|tapir|tapir
+окапи|okapi|okapi
+гну|wildebeest|gnou
+буйвол|buffalo|buffle
+горный козёл|ibex|bouquetin
+муфлон|mouflon|mouflon
+косуля|roe deer|chevreuil
+лань|fallow deer|daim
+кабарга|musk deer|porte-musc
+зубр|European bison|bison d’Europe
+снежный барс|snow leopard|panthère des neiges
+пума|puma|puma
+ягуар|jaguar|jaguar
+оцелот|ocelot|ocelot
+росомаха|wolverine|glouton
+куница|marten|martre
+горностай|stoat|hermine
+лебедь-шипун|mute swan|cygne tuberculé
+журавль|crane bird|grue cendrée
+кулик|sandpiper|bécasseau
+зимородок|kingfisher|martin-pêcheur
+иволга|oriole|loriot
+жаворонок|lark|alouette
+дрозд|thrush|grive
+клёст|crossbill|bec-croisé
+свиристель|waxwing|jaseur
+глухарь|capercaillie|grand tétras
+фазан|pheasant|faisan
+перепёлка|quail|caille
+куропатка|partridge|perdrix
+альбатрос|albatross|albatros
+баклан|cormorant|cormoran
+буревестник|petrel|pétrel
+кондор|condor|condor
+ара|macaw|ara
+какаду|cockatoo|cacatoès
+волнистый попугайчик|budgie|perruche
+канарейка|canary|canari
+птица киви|kiwi bird|kiwi oiseau
+эму|emu|émeu
+казуар|cassowary|casoar
+летучая рыба|flying fish|poisson volant

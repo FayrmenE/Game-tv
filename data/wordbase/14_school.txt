@@ -1,0 +1,119 @@
+# concrete
+урок|lesson|leçon
+класс|classroom|salle de classe
+парта|school desk|pupitre
+доска|blackboard|tableau noir
+мел|chalk|craie
+учебник|textbook|manuel
+тетрадь|exercise book|cahier
+дневник|school diary|carnet de notes
+ручка|pen|stylo
+карандаш|pencil|crayon
+ластик|eraser|gomme
+точилка|sharpener|taille-crayon
+линейка|ruler|règle
+циркуль|pair of compasses|compas
+транспортир|protractor|rapporteur
+пенал|pencil case|trousse
+школьный рюкзак|school bag|sac d’école
+клей|glue|colle
+ножницы|scissors|ciseaux
+скрепка|paper clip|trombone
+степлер|stapler|agrafeuse
+кнопка|drawing pin|punaise
+скотч|sticky tape|ruban adhésif
+папка|folder|chemise cartonnée
+бумага|paper|papier
+конверт|envelope|enveloppe
+марка|stamp|timbre
+открытка|postcard|carte postale
+письмо|letter|lettre
+посылка|parcel|colis
+глобус|globe|globe terrestre
+атлас|atlas|atlas
+калькулятор|calculator|calculatrice
+школьный звонок|school bell|sonnerie
+перемена|break time|récréation
+каникулы|holidays|vacances scolaires
+экзамен|exam|examen
+контрольная|test|contrôle
+оценка|mark|note
+пятёрка|top mark|vingt sur vingt
+двойка|bad mark|mauvaise note
+домашнее задание|homework|devoirs
+шпаргалка|crib sheet|antisèche
+диктант|dictation|dictée
+сочинение|essay|rédaction
+математика|maths|mathématiques
+физика|physics|physique
+химия|chemistry|chimie
+биология|biology|biologie
+история|history|histoire
+география|geography|géographie
+литература|literature|littérature
+алфавит|alphabet|alphabet
+буква|letter of the alphabet|lettre de l’alphabet
+цифра|digit|chiffre
+число|number|nombre
+таблица умножения|times table|table de multiplication
+дробь|fraction|fraction
+уравнение|equation|équation
+задача|maths problem|problème
+плюс|plus|plus
+минус|minus|moins
+процент|percent|pour cent
+круг|circle|cercle
+квадрат|square shape|carré
+трапеция|trapezium|trapèze
+прямоугольник|rectangle|rectangle
+куб|cube|cube
+шар|sphere|sphère
+пирамида|pyramid|pyramide
+спираль|spiral|spirale
+стрелка|arrow|flèche
+лаборатория|laboratory|laboratoire
+микроскоп|microscope|microscope
+телескоп|telescope|télescope
+пробирка|test tube|éprouvette
+колба|flask|fiole
+магнит|magnet|aimant
+батарейка|battery|pile électrique
+атом|atom|atome
+молекула|molecule|molécule
+клетка организма|cell|cellule
+бактерия|bacterium|bactérie
+вирус|virus|virus
+ДНК|DNA|ADN
+формула|formula|formule
+опыт|experiment|expérience
+изобретение|invention|invention
+теория|theory|théorie
+гравитация|gravity|gravité
+электричество|electricity|électricité
+энергия|energy|énergie
+скорость|speed|vitesse
+вес|weight|poids
+термометр уличный|outdoor thermometer|thermomètre extérieur
+градус|degree|degré
+метр|metre|mètre
+килограмм|kilogram|kilogramme
+литр|litre|litre
+секунда|second|seconde
+минута|minute|minute
+час|hour|heure
+неделя|week|semaine
+месяц|month|mois
+год|year|année
+век|century|siècle
+календарь|calendar|calendrier
+карта мира|world map|carte du monde
+окаменелость|fossil|fossile
+выпускной|graduation|remise des diplômes
+диплом|diploma|diplôme
+стипендия|scholarship|bourse d’études
+лекция|lecture|cours magistral
+общежитие|hall of residence|résidence universitaire
+отличник|top student|premier de la classe
+прогул|truancy|école buissonnière
+учительская|staff room|salle des profs
+школьная форма|school uniform|uniforme scolaire

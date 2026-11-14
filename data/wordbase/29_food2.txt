@@ -1,0 +1,111 @@
+# concrete
+бутерброд с колбасой|salami sandwich|sandwich au saucisson
+бутерброд с сыром|cheese sandwich|sandwich au fromage
+каша с вареньем|porridge with jam|bouillie à la confiture
+бульонный кубик|stock cube|cube de bouillon
+доширак|instant noodles|nouilles instantanées
+наггетсы|chicken nuggets|nuggets
+крылышки|chicken wings|ailes de poulet
+рёбрышки|spare ribs|travers de porc
+фрикадельки|meatballs|boulettes de viande
+тефтели|meatballs in sauce|boulettes en sauce
+пельмени со сметаной|dumplings with sour cream|raviolis à la crème
+чебурек|fried meat pie|beignet à la viande
+беляш|meat bun|petit pain frit à la viande
+пирожок с капустой|cabbage pie|chausson au chou
+пирог с яблоками|apple pie|tarte aux pommes
+шарлотка|apple sponge cake|charlotte aux pommes
+медовик|honey cake|gâteau au miel
+наполеон|mille-feuille|mille-feuille
+птичье молоко|bird’s milk cake|gâteau lait d’oiseau
+ватрушка с творогом|curd tart|tarte au fromage blanc
+пончик с джемом|jam doughnut|beignet à la confiture
+круассан с шоколадом|chocolate croissant|pain au chocolat
+брецель|pretzel|bretzel
+крекер|cracker|cracker
+сушки|bread rings|petits anneaux de pain
+баранки|bagel rings|craquelins
+сухофрукты|dried fruit|fruits secs
+чернослив|prune fruit|pruneau
+курага|dried apricots|abricots secs
+цукаты|candied fruit|fruits confits
+орехи в шоколаде|chocolate nuts|noix enrobées de chocolat
+шоколадная паста|chocolate spread|pâte à tartiner
+арахисовая паста|peanut butter|beurre de cacahuète
+сливки|cream|crème liquide
+взбитые сливки|whipped cream|crème chantilly
+сгущённое молоко|sweetened condensed milk|lait concentré sucré
+мороженое в стаканчике|ice cream cup|glace en pot
+фруктовый лёд|fruit ice|sorbet
+пломбир|vanilla ice cream|glace à la vanille
+сорбет|sorbet|sorbet aux fruits
+морс|berry drink|jus de baies
+чай с лимоном|tea with lemon|thé au citron
+чай с мёдом|tea with honey|thé au miel
+холодный чай|iced tea|thé glacé
+газированная вода|sparkling water|eau gazeuse
+томатный сок|tomato juice|jus de tomate
+апельсиновый сок|orange juice|jus d’orange
+энергетик|energy drink|boisson énergisante
+кофе с молоком|white coffee|café au lait
+сырок|cheese snack bar|barre au fromage blanc
+плавленый сырок|processed cheese|fromage fondu
+моцарелла|mozzarella|mozzarella
+пармезан|parmesan|parmesan
+камамбер|camembert|camembert
+сыр с плесенью|blue cheese|fromage bleu
+брынза|feta|feta
+шпроты|sprats|sprats
+крабовые палочки|crab sticks|surimi
+кальмары|calamari|calamars
+мидии|mussels|moules
+устрицы с лимоном|oysters with lemon|huîtres au citron
+виноградные улитки|escargots|escargots de Bourgogne
+лягушачьи лапки|frogs’ legs|cuisses de grenouille
+фуа-гра|foie gras|foie gras
+паштет|pâté|pâté
+рататуй|ratatouille|ratatouille
+луковый суп|onion soup|soupe à l’oignon
+буйабес|bouillabaisse|bouillabaisse
+крок-месье|croque-monsieur|croque-monsieur
+блинчики с икрой|pancakes with caviar|blinis au caviar
+солянка|meat soup|soupe solianka
+уха|fish soup|soupe de poisson
+рассольник|pickle soup|soupe aux cornichons
+грибной суп|mushroom soup|soupe aux champignons
+гороховый суп|pea soup|soupe aux pois
+куриный суп|chicken soup|soupe au poulet
+солёные огурцы|pickles|cornichons
+квашеная капуста|sauerkraut|choucroute
+маринованные грибы|pickled mushrooms|champignons marinés
+аджика|spicy sauce|sauce piquante
+хрен|horseradish|raifort
+соевый соус|soy sauce|sauce soja
+васаби|wasabi|wasabi
+имбирь|ginger|gingembre
+карри|curry|curry
+паприка|paprika|paprika
+лавровый лист|bay leaf|feuille de laurier
+мята|mint|menthe
+базилик|basil|basilic
+розмарин|rosemary|romarin
+тимьян|thyme|thym
+кинза|coriander|coriandre
+шафран|saffron|safran
+маковые зёрна|poppy seeds|graines de pavot
+кунжут|sesame|sésame
+овсяное печенье|oat cookie|biscuit à l’avoine
+печенье с предсказанием|fortune cookie|biscuit chinois
+имбирный пряник|gingerbread man|bonhomme en pain d’épices
+пряничный домик|gingerbread house|maison en pain d’épices
+леденцовый петушок|lollipop rooster|sucette en forme de coq
+конфета на палочке|candy on a stick|bonbon sur bâton
+шоколадное яйцо с сюрпризом|surprise chocolate egg|œuf surprise
+мармеладные мишки|gummy bears|oursons en gomme
+лакрица|liquorice|réglisse
+нуга|nougat|nougat
+трюфель|truffle|truffe
+пралине|praline|praliné
+безе|meringue|meringue
+профитроли|profiteroles|profiteroles
+блинный торт|crêpe cake|gâteau de crêpes

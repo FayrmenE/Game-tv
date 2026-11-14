@@ -1,0 +1,116 @@
+# concrete
+голова|head|tête
+лицо|face|visage
+волосы|hair|cheveux
+лоб|forehead|front
+бровь|eyebrow|sourcil
+ресница|eyelash|cil
+глаз|eye|œil
+нос|nose|nez
+ноздря|nostril|narine
+рот|mouth|bouche
+губы|lips|lèvres
+зуб|tooth|dent
+язык|tongue|langue
+щека|cheek|joue
+подбородок|chin|menton
+ухо|ear|oreille
+шея|neck|cou
+плечо|shoulder|épaule
+рука|arm|bras
+локоть|elbow|coude
+ладонь|palm|paume
+кулак|fist|poing
+палец|finger|doigt
+большой палец|thumb|pouce
+ноготь|nail|ongle
+грудь|chest|poitrine
+живот|belly|ventre
+пупок|belly button|nombril
+спина|back|dos
+талия|waist|taille
+нога|leg|jambe
+колено|knee|genou
+пятка|heel of foot|talon du pied
+стопа|foot|pied
+пальцы ног|toes|orteils
+сердце|heart|cœur
+лёгкие|lungs|poumons
+желудок|stomach|estomac
+мозг|brain|cerveau
+кость|bone|os
+скелет|skeleton|squelette
+череп|skull|crâne
+позвоночник|spine|colonne vertébrale
+мышца|muscle|muscle
+бицепс|biceps|biceps
+кровь|blood|sang
+кожа|skin|peau
+веснушки|freckles|taches de rousseur
+родинка|mole on skin|grain de beauté
+морщина|wrinkle|ride
+борода|beard|barbe
+усы|moustache|moustache
+лысина|bald head|calvitie
+коса|plait|tresse
+чёлка|fringe|frange
+хвостик|ponytail|queue-de-cheval
+кудри|curls|boucles
+улыбка|smile|sourire
+слеза|tear|larme
+пот|sweat|sueur
+зевота|yawn|bâillement
+чих|sneeze|éternuement
+кашель|cough|toux
+икота|hiccup|hoquet
+храп|snore|ronflement
+насморк|runny nose|nez qui coule
+температура|fever|fièvre
+простуда|cold|rhume
+грипп|flu|grippe
+синяк|bruise|bleu
+шишка|bump|bosse
+царапина|scratch|égratignure
+порез|cut|coupure
+ожог|burn|brûlure
+перелом|fracture|fracture
+гипс|plaster cast|plâtre
+пластырь|plaster|pansement
+бинт|bandage|bandage
+таблетка|pill|comprimé
+лекарство|medicine|médicament
+укол|injection|piqûre
+шприц|syringe|seringue
+градусник|thermometer|thermomètre
+стетоскоп|stethoscope|stéthoscope
+костыли|crutches|béquilles
+инвалидная коляска|wheelchair|fauteuil roulant
+очки для зрения|eyeglasses|lunettes de vue
+слуховой аппарат|hearing aid|appareil auditif
+зубной протез|dentures|dentier
+брекеты|braces on teeth|appareil dentaire
+скорая помощь|ambulance|ambulance
+больница|hospital|hôpital
+аптека|pharmacy|pharmacie
+поликлиника|clinic|centre médical
+операция|surgery|opération
+рентген|X-ray|radio des os
+прививка|vaccination|vaccin
+витамины|vitamins|vitamines
+массаж|massage|massage
+зарядка|morning exercises|gymnastique
+диета|diet|régime
+сон|sleep|sommeil
+отпечаток пальца|fingerprint|empreinte digitale
+пульс|pulse|pouls
+дыхание|breath|respiration
+голос|voice|voix
+шёпот|whisper|chuchotement
+крик|scream|cri
+аллергия|allergy|allergie
+укус комара|mosquito bite|piqûre de moustique
+зубная боль|toothache|mal de dents
+головная боль|headache|mal de tête
+мозоль|blister|ampoule au pied
+загар|suntan|bronzage
+мурашки|goosebumps|chair de poule

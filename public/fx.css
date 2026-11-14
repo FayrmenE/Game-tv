@@ -392,3 +392,82 @@ body.game-chests { --accent2: #ffd166; background-image: radial-gradient(circle 
 .ch-btns .btn { margin: 0; padding: 16px 4px; font-size: 20px; }
 .chests-set { margin-top: 6px; }
 @media (max-width: 900px) { .ch-tv { grid-template-columns: 1fr; } }
+
+/* ===================== «Объясни!» и «Шляпа» ===================== */
+body.game-words { --accent2: #4cc9f0; background-image: radial-gradient(circle at 20% 15%, #233a7a 0, transparent 50%), radial-gradient(circle at 85% 85%, #5a1a4a 0, transparent 50%); }
+.wd-tv { display: grid; grid-template-columns: minmax(15em, 1fr) 2.4fr; gap: 1.2em; height: 100%; padding: .4em 1em; }
+.wd-teams { display: flex; flex-direction: column; gap: .7em; overflow: auto; }
+.wd-team { background: var(--panel); border-radius: var(--radius); padding: .7em .9em; font-size: 1.25em; border-left: .4em solid var(--c); transition: transform .3s, box-shadow .3s; }
+.wd-team.active { box-shadow: 0 0 0 3px var(--c), 0 0 1.4em var(--c); transform: scale(1.03); }
+.wd-th { display: flex; justify-content: space-between; align-items: center; font-size: 1.2em; }
+.wd-th b { color: var(--c); }
+.wd-sc { font-size: 1.6em; font-weight: 900; }
+.wd-bar { position: relative; height: .6em; background: var(--panel2); border-radius: 99px; margin: .35em 0 .45em; }
+.wd-bar i { position: absolute; inset: 0 auto 0 0; background: var(--c); border-radius: 99px; transition: width .8s cubic-bezier(.3,1.4,.5,1); }
+.wd-bar em { position: absolute; right: -.2em; top: -.55em; font-style: normal; }
+.wd-mem { display: flex; flex-wrap: wrap; gap: .3em .7em; font-size: .9em; }
+.wd-mem span { display: inline-flex; align-items: center; gap: .3em; opacity: .9; }
+.wd-mem span.exp { font-weight: 900; opacity: 1; }
+.wd-mem .avatar { font-size: .6em; }
+.wd-stage { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-width: 0; min-height: 0; }
+.wd-big { font-size: 2.2em; font-weight: 900; }
+.wd-sub { color: var(--muted); font-size: 1.2em; }
+.wd-round { animation: chPop .6s; }
+.wd-round h2 { font-size: 2.4em; margin: .2em 0; }
+.wd-round p { font-size: 1.3em; max-width: 30em; }
+.wd-ricon { font-size: 6em; animation: wdBob 2s ease-in-out infinite; }
+.wd-ready { animation: chPop .5s; }
+.wd-ready h2 { font-size: 2.6em; margin: .3em 0 .1em; color: var(--c); }
+.wd-ready p { font-size: 1.3em; }
+.wd-mode { font-size: 1.4em; font-weight: 800; }
+.wd-turn { display: flex; flex-direction: column; align-items: center; gap: .4em; width: 100%; height: 100%; justify-content: center; }
+.wd-turn.draw { justify-content: flex-start; }
+.wd-who { display: flex; align-items: center; gap: .5em; font-size: 1.5em; }
+.wd-who b { color: var(--c); }
+.wd-who .avatar { font-size: .7em; }
+.wd-timer { font-size: 6em; font-weight: 900; color: var(--c); text-shadow: 0 5px 0 var(--outline); line-height: 1; min-height: 1em; }
+.wd-turn.draw .wd-timer { font-size: 2.6em; }
+.wd-timer.danger { color: var(--danger); animation: chPulse 1s infinite; }
+.wd-slot { flex: 1; width: 100%; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.wd-hint, .wd-lastw { font-size: 1.4em; font-weight: 800; }
+.wd-lastw { color: #ffd166; animation: chPulse 1s infinite; }
+.wd-count { font-size: 1.3em; color: var(--muted); }
+.wd-chips { display: flex; flex-wrap: wrap; gap: .4em; justify-content: center; max-width: 40em; }
+.wd-chips span { background: var(--panel); border-radius: 99px; padding: .25em .8em; font-weight: 800; }
+.wd-chips span.new { animation: chPop .4s; background: #1f6f43; }
+.wd-review h2 { font-size: 1.8em; }
+.wd-list { display: flex; flex-wrap: wrap; gap: .5em; justify-content: center; max-width: 44em; margin: .6em auto; }
+.wd-list span { border-radius: 99px; padding: .3em .9em; font-weight: 800; font-size: 1.15em; animation: chPop .4s backwards; }
+.wd-list span.ok { background: #1f6f43; } .wd-list span.no { background: #6b2433; text-decoration: line-through; opacity: .8; }
+.wd-final h2 { font-size: 2.4em; }
+.wd-frow { display: flex; justify-content: space-between; gap: 2em; min-width: 18em; font-size: 1.6em; padding: .3em .8em; margin: .3em auto; border-radius: 14px; background: var(--panel); border-left: .3em solid var(--c); animation: chPop .5s backwards; }
+.wd-frow:nth-child(3) { animation-delay: .3s; } .wd-frow:nth-child(4) { animation-delay: .6s; }
+@keyframes wdBob { 50% { transform: translateY(-.15em) rotate(-6deg); } }
+/* телефон */
+.wd-me { display: flex; justify-content: space-between; align-items: center; background: var(--panel); border-left: 6px solid var(--c); border-radius: 14px; padding: 8px 14px; margin-bottom: 10px; font-size: 18px; }
+.wd-me b { color: var(--c); } .wd-me span { font-weight: 900; font-size: 22px; }
+.wd-pteam { border-left: 6px solid var(--c); padding: 6px 10px; margin: 8px 0; background: var(--panel2); border-radius: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.wd-pteam b { width: 100%; color: var(--c); }
+.wd-pteam span, .wd-mv { display: inline-flex; align-items: center; gap: 4px; }
+.wd-pteam .avatar { font-size: 11px; }
+.wd-mv { background: var(--panel); color: var(--ink); border: 0; border-radius: 99px; padding: 6px 10px; font: inherit; font-weight: 700; }
+.wd-nbtn { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 8px; }
+.wd-nbtn .btn { margin: 0; padding: 10px 4px; font-size: 15px; }
+.wd-nbtn .btn.sel { box-shadow: 0 0 0 3px var(--accent) inset; }
+.wd-go .wd-rule { font-weight: 800; color: #ffd166; }
+.wd-xp { text-align: center; }
+.wd-xp .wd-mode { color: #ffd166; font-size: 16px; margin-bottom: 6px; }
+.wd-word { background: #fff; color: var(--outline); border-radius: 18px; padding: 26px 12px; font-weight: 900; line-height: 1.15; animation: chPop .3s; overflow-wrap: break-word; hyphens: manual; }
+.wd-cnt { color: var(--muted); margin: 10px 0; }
+.wd-btns { display: grid; grid-template-columns: 1fr 1.4fr; gap: 10px; margin-top: 8px; }
+.wd-btns .btn { margin: 0; padding: 22px 6px; font-size: 22px; }
+.wd-ctrl { text-align: center; }
+.wd-cword { font-size: 30px; font-weight: 900; color: #ffd166; margin: 8px 0; word-break: break-word; }
+.wd-lastbox { text-align: center; }
+.wd-lastbox .btn { margin: 6px 0; }
+.wd-tb { background: var(--c); }
+.wd-rlist { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.wd-ritem { border: 0; border-radius: 99px; padding: 10px 14px; font: inherit; font-weight: 800; color: #fff; }
+.wd-ritem.ok { background: #1f6f43; } .wd-ritem.no { background: #6b2433; text-decoration: line-through; }
+.wd-ritem:disabled { opacity: 1; }
+@media (max-width: 900px) { .wd-tv { grid-template-columns: 1fr; } }

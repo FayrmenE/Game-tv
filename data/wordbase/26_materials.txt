@@ -1,0 +1,69 @@
+# concrete
+древесина|wood|bois
+металл|metal|métal
+железо|iron ore|fer
+золото|gold|or
+серебро|silver|argent métal
+бронза|bronze|bronze
+медь|copper|cuivre
+алюминий|aluminium|aluminium
+сталь|steel|acier
+стекло|glass material|verre matériau
+пластик|plastic|plastique
+резина|rubber|caoutchouc
+кожа для сумок|leather|cuir
+ткань|fabric|tissu
+шёлк|silk|soie
+шерсть|wool|laine
+бархат|velvet|velours
+джинса|denim|toile de jean
+мех|fur|fourrure
+картон|cardboard|carton ondulé
+бетон|concrete|béton
+кирпич|brick|brique
+мрамор|marble|marbre
+гранит|granite|granit
+фарфор|porcelain|porcelaine
+хрусталь|crystal|cristal
+алмаз|diamond|diamant
+рубин|ruby|rubis
+изумруд|emerald|émeraude
+сапфир|sapphire|saphir
+жемчуг|pearl|perle fine
+янтарь|amber|ambre
+уголь|coal|charbon
+нефть|crude oil|pétrole
+газ|gas|gaz
+воск|wax|cire
+гипс строительный|gypsum|gypse
+красный|red|rouge
+оранжевый|orange colour|orange couleur
+жёлтый|yellow|jaune
+зелёный|green|vert
+голубой|light blue|bleu ciel
+синий|blue|bleu
+фиолетовый|purple|violet
+розовый|pink|rose couleur
+белый|white|blanc
+чёрный|black|noir
+серый|grey|gris
+коричневый|brown|marron
+бежевый|beige|beige
+бирюзовый|turquoise|turquoise
+золотистый|golden|doré
+серебристый|silvery|argenté
+радужный|rainbow-coloured|multicolore
+сердечко|heart shape|cœur dessiné
+звёздочка|little star|petite étoile
+полумесяц|crescent|croissant de lune
+овал|oval|ovale
+ромб|rhombus|losange
+крестик|cross|croix
+галочка|tick|coche
+точка|dot|point
+линия|line|ligne
+зигзаг|zigzag|zigzag
+волнистая линия|wavy line|ligne ondulée
+узел|knot|nœud de corde
+петля|loop|boucle
+дырка|hole|trou

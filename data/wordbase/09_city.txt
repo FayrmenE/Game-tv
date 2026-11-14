@@ -1,0 +1,123 @@
+# concrete
+город|city|ville
+деревня|village|village
+столица|capital city|capitale
+улица|street|rue
+площадь|square|place
+проспект|avenue|avenue
+переулок|alley|ruelle
+тротуар|pavement|trottoir
+бульвар|boulevard|boulevard
+набережная|embankment|quai
+парк|park|parc
+сквер|public garden|square
+фонтан|fountain|fontaine
+памятник|monument|monument
+статуя|statue|statue
+скамейка|bench|banc
+фонарь|street lamp|réverbère
+урна|litter bin|corbeille
+клумба|flower bed|massif de fleurs
+детская площадка|playground|aire de jeux
+горка|slide|toboggan
+карусель|merry-go-round|manège
+магазин|shop|magasin
+супермаркет|supermarket|supermarché
+рынок|market|marché
+торговый центр|shopping centre|centre commercial
+киоск|kiosk|kiosque
+булочная|bread shop|boulangerie de quartier
+мясная лавка|butcher’s shop|boucherie
+книжный магазин|bookshop|librairie
+цветочный магазин|flower shop|fleuriste en boutique
+аптечный киоск|chemist’s kiosk|parapharmacie
+банк|bank|banque
+банкомат|cash machine|distributeur de billets
+почта|post office|bureau de poste
+полиция|police station|commissariat
+пожарная часть|fire station|caserne de pompiers
+школа|school|école
+детский сад|kindergarten|maternelle
+университет|university|université
+библиотека|library|bibliothèque
+музей|museum|musée
+театр|theatre|théâtre
+кинотеатр|cinema|cinéma
+цирк|circus|cirque
+стадион|stadium|stade
+спортзал|gym|salle de sport
+каток|ice rink|patinoire
+аквапарк|water park|parc aquatique
+парк аттракционов|amusement park|parc d’attractions
+гостиница|hotel|hôtel
+хостел|hostel|auberge de jeunesse
+офис|office|bureau
+небоскрёб|skyscraper|gratte-ciel
+многоэтажка|block of flats|immeuble
+завод|factory|usine
+фабрика|mill|fabrique
+склад|warehouse|entrepôt
+стройка|building site|chantier
+электростанция|power station|centrale électrique
+маяк|lighthouse|phare
+башня|tower|tour
+замок|castle|château
+крепость|fortress|forteresse
+дворец|palace|palais
+церковь|church|église
+собор|cathedral|cathédrale
+храм|temple|temple
+мечеть|mosque|mosquée
+кладбище|cemetery|cimetière
+тюрьма|prison|prison
+суд|court|tribunal
+мэрия|town hall|mairie
+посольство|embassy|ambassade
+парикмахерская|hairdresser’s|salon de coiffure
+химчистка|dry cleaner’s|pressing
+прачечная|launderette|laverie
+автомойка|car wash|station de lavage
+автосервис|garage workshop|garage auto
+ветклиника|vet clinic|clinique vétérinaire
+зоомагазин|pet shop|animalerie
+игрушечный магазин|toy shop|magasin de jouets
+ювелирный магазин|jeweller’s|bijouterie
+бар|bar|bar
+ночной клуб|nightclub|boîte de nuit
+казино|casino|casino
+боулинг|bowling alley|bowling
+крытый бассейн|indoor pool|piscine couverte
+баня|bathhouse|bains publics
+сауна|sauna|sauna
+салон красоты|beauty salon|institut de beauté
+галерея|art gallery|galerie d’art
+выставка|exhibition|exposition
+концертный зал|concert hall|salle de concert
+планетарий|planetarium|planétarium
+обсерватория|observatory|observatoire
+ботанический сад|botanical garden|jardin botanique
+перрон|platform|quai de gare
+пристань|pier|embarcadère
+пляж|beach|plage
+кемпинг|campsite|camping
+бензоколонка|petrol pump|pompe à essence
+пешеходный светофор|pedestrian light|feu piéton
+граффити|graffiti|graffiti
+реклама|advertisement|publicité
+вывеска|shop sign|enseigne
+афиша|poster|affiche
+очередь|queue|file d’attente
+толпа|crowd|foule
+квартал|neighbourhood|quartier
+окраина|outskirts|banlieue
+центр города|city centre|centre-ville
+пригород|suburb|périphérie
+район|district|arrondissement
+дача|country house|maison de campagne
+коттедж|cottage|chalet
+хижина|hut|cabane
+шалаш|shelter|abri de branches
+палатка|tent|tente
+юрта|yurt|yourte
+иглу|igloo|igloo
+вигвам|wigwam|wigwam

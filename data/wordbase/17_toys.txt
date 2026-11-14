@@ -1,0 +1,111 @@
+# concrete
+игрушка|toy|jouet
+кукла|doll|poupée
+плюшевый мишка|teddy bear|ours en peluche
+мягкая игрушка|soft toy|peluche
+машинка|toy car|petite voiture
+игрушечная железная дорога|toy train set|train électrique
+конструктор|building blocks|jeu de construction
+кубики|toy blocks|cubes
+пирамидка|stacking rings|pyramide à anneaux
+юла|spinning top|toupie
+волчок|whirligig|toton
+калейдоскоп|kaleidoscope|kaléidoscope
+погремушка|rattle|hochet
+соска|dummy|tétine
+неваляшка|roly-poly toy|culbuto
+матрёшка|nesting doll|matriochka
+воздушный змей|kite|cerf-volant
+мыльные пузыри|soap bubbles|bulles de savon
+воздушный шарик|balloon|ballon gonflable
+свистулька|toy whistle|sifflet en terre
+барабанчик|toy drum|tambour d’enfant
+лошадка-качалка|rocking horse|cheval à bascule
+деревянная лошадка|hobby horse|cheval-bâton
+солдатик|toy soldier|soldat de plomb
+робот-трансформер|transforming robot|robot transformable
+пазл|jigsaw puzzle|puzzle
+кубик Рубика|Rubik’s cube|Rubik’s cube
+домино|dominoes|dominos
+лото|bingo|loto
+игральные карты|playing cards|cartes à jouer
+игральный кубик|die|dé
+фишка|counter|pion
+настольная игра|board game|jeu de société
+жмурки|blind man’s buff|colin-maillard
+прятки|hide and seek|cache-cache
+догонялки|tag|chat perché
+классики|hopscotch|marelle
+резиночка|elastics|jeu de l’élastique
+снежок|snowball|boule de neige
+снеговик|snowman|bonhomme de neige
+снежная крепость|snow fort|fort de neige
+ледяная горка|ice slide|glissade
+ватрушка|snow tube|bouée à neige
+песочный замок|sandcastle|château de sable
+ведёрко и совок|bucket and spade|seau et pelle
+водяная горка|water slide|toboggan aquatique
+надувной круг|swim ring|bouée gonflable
+надувной матрас|lilo|matelas gonflable
+бумажный самолётик|paper plane|avion en papier
+бумажный кораблик|paper boat|bateau en papier
+фантик|sweet wrapper|papier de bonbon
+наклейка|sticker|autocollant
+раскраска|colouring book|cahier de coloriage
+пластилин|plasticine|pâte à modeler colorée
+фокусы с картами|card tricks|tours de cartes
+кукольный домик|dollhouse|maison de poupée
+коляска для кукол|doll’s pram|landau de poupée
+игрушечный пистолет|toy gun|pistolet en plastique
+игрушечный лук|toy bow|arc en bois
+деревянный меч|wooden sword|épée en bois
+маска супергероя|superhero mask|masque de super-héros
+костюм пирата|pirate costume|déguisement de pirate
+бумажная корона|paper crown|couronne en papier
+праздник|celebration|fête
+день рождения|birthday|anniversaire de naissance
+торт со свечами|birthday cake|gâteau d’anniversaire
+подарок|present|cadeau
+бант|bow|nœud
+упаковочная бумага|wrapping paper|papier cadeau
+поздравительная открытка|greeting card|carte de vœux
+Новый год|New Year|Nouvel An
+Дед Мороз|Father Frost|Père Gel
+Снегурочка|Snow Maiden|Fille des neiges
+Санта-Клаус|Santa Claus|Père Noël
+ёлочная игрушка|bauble|boule de Noël
+гирлянда|fairy lights|guirlande
+мишура|tinsel|guirlande brillante
+новогодняя хлопушка|party popper|cotillon
+бенгальский огонь|sparkler|cierge magique
+салют|fireworks|feu d’artifice
+конфетти|confetti|confettis
+серпантин|streamer|serpentin
+праздничный колпак|party hat|chapeau de fête
+маскарад|masquerade|bal masqué
+карнавал|carnival|carnaval
+Хэллоуин|Halloween|Halloween
+тыква с глазами|jack-o’-lantern|citrouille d’Halloween
+Пасха|Easter|Pâques
+пасхальное яйцо|Easter egg|œuf de Pâques
+кулич|Easter cake|gâteau de Pâques
+Масленица|Shrovetide|Mardi gras
+Восьмое марта|Women’s Day|Journée de la femme
+День святого Валентина|Valentine’s Day|Saint-Valentin
+валентинка|valentine card|carte de Saint-Valentin
+свадьба|wedding|mariage
+жених|groom|marié
+невеста|bride|mariée
+обручальное кольцо|wedding ring|alliance
+фата|bridal veil|voile de mariée
+выпускной бал|prom|bal de promo
+новоселье|housewarming|pendaison de crémaillère
+юбилей|jubilee|jubilé
+вечеринка|party|soirée
+пижамная вечеринка|sleepover|soirée pyjama
+квест-комната|escape room|escape game
+аттракцион|ride|attraction
+американские горки|roller coaster|montagnes russes
+комната страха|ghost train|train fantôme
+кривые зеркала|hall of mirrors|palais des glaces
+тир|shooting gallery|stand de tir

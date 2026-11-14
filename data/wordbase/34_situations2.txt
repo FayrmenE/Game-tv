@@ -1,0 +1,98 @@
+# abstract
+сломанный каблук|broken heel|talon cassé
+порванные колготки|laddered tights|collant filé
+пятно от кофе|coffee stain|tache de café
+застрявшая молния|stuck zip|fermeture coincée
+жвачка в волосах|gum in the hair|chewing-gum dans les cheveux
+развязанный шнурок|untied shoelace|lacet défait
+упавший бутерброд|dropped sandwich|tartine tombée
+собака съела домашку|dog ate the homework|chien qui a mangé les devoirs
+громкий чих в театре|loud sneeze in the theatre|éternuement au théâtre
+звонок телефона в кино|phone ringing in the cinema|téléphone qui sonne au cinéma
+смех на похоронах|giggles at a funeral|fou rire déplacé
+неловкое молчание|awkward silence|silence pesant
+перепутал имя|mixing up names|confusion de prénoms
+не тот этаж|wrong floor|mauvais étage
+не тот автобус|wrong bus|mauvais bus
+заблудиться в лесу|getting lost in the forest|se perdre en forêt
+уснуть в транспорте|falling asleep on the bus|s’endormir dans le bus
+проехать остановку|missing one’s stop|rater son arrêt
+бег за автобусом|running for the bus|course après le bus
+холодная вода в душе|cold shower surprise|douche froide
+соседский ремонт|neighbour’s renovation|travaux des voisins
+дрель в воскресенье|drill on Sunday|perceuse le dimanche
+вечеринка за стеной|party next door|fête chez les voisins
+сосулька на голову|icicle falls|stalactite qui tombe
+гололёд|black ice|verglas
+снегопад в мае|snow in May|neige en mai
+жара в офисе|office heatwave|canicule au bureau
+сломанный кондиционер|broken air conditioning|clim en panne
+отключение воды|water cut-off|coupure d’eau
+очередь в туалет|toilet queue|file aux toilettes
+корпоратив|office party|soirée d’entreprise
+тимбилдинг|team building|team building
+совещание|meeting|réunion
+планёрка|briefing|point d’équipe
+отчёт|report|rapport
+презентация|presentation|présentation
+мозговой штурм|brainstorm|remue-méninges
+сверхурочные|overtime|heures supplémentaires
+удалёнка|remote work|télétravail
+открытый офис|open-plan office|open space
+кулер с водой|water cooler|fontaine à eau
+кофе-брейк|coffee break|pause café
+бизнес-ланч|set lunch|formule du midi
+дресс-код|dress code|code vestimentaire
+испытательный срок|probation period|période d’essai
+первый рабочий день|first day at work|premier jour de travail
+последний рабочий день|last day at work|dernier jour de travail
+отпуск на море|beach holiday|vacances à la mer
+отпуск в горах|mountain holiday|vacances à la montagne
+отпуск на даче|holiday at the dacha|vacances à la campagne
+поездка к бабушке|visit to grandma|visite chez mamie
+родственники в гости|relatives visiting|visite de la famille
+незваный гость|uninvited guest|invité surprise
+свадебный торт|wedding cake|pièce montée
+букет невесты|bridal bouquet|bouquet de la mariée
+первый танец|first dance|première danse
+тамада|toastmaster|maître de cérémonie
+выкуп невесты|bride ransom game|rançon de la mariée
+мальчишник|stag party|enterrement de vie de garçon
+девичник|hen party|enterrement de vie de jeune fille
+беременность|pregnancy|grossesse
+роддом|maternity ward|maternité
+колыбельная|lullaby|berceuse
+сказка на ночь|bedtime story|histoire du soir
+ночные страхи|night terrors|terreurs nocturnes
+монстр под кроватью|monster under the bed|monstre sous le lit
+выпавший молочный зуб|lost baby tooth|dent de lait
+первый класс|first grade|CP
+линейка первого сентября|first-day assembly|cérémonie de rentrée
+последний звонок|last school bell|dernier jour d’école
+летний лагерь|summer camp|colonie de vacances
+вожатый|camp counsellor|moniteur de colonie
+дискотека в лагере|camp disco|boum de colo
+прощальный костёр|farewell bonfire|feu d’adieu
+ночные страшилки|scary stories at night|histoires qui font peur
+подушечный бой|pillow fight|bataille d’oreillers
+разыгрывание|prank|farce
+первое апреля|April Fool’s Day|poisson d’avril
+розыгрыш по телефону|prank call|canular téléphonique
+скрытая камера|hidden camera|caméra cachée
+торт в лицо|cake in the face|tarte à la crème
+банановая кожура|banana skin|peau de banane
+падение на льду|slip on the ice|chute sur la glace
+застрять в двери|stuck in a door|coincé dans une porte
+потерянная перчатка|lost glove|gant perdu
+бюро находок|lost property office|objets trouvés
+находка кошелька|found wallet|portefeuille trouvé
+дождь без зонта|rain without an umbrella|pluie sans parapluie
+радуга после дождя|rainbow after rain|arc-en-ciel après la pluie
+первый снег|first snowfall|première neige
+ледоход|ice breakup|débâcle
+половодье|spring flood|crue
+грибная пора|mushroom season|saison des champignons
+сбор урожая|harvest|récolte
+сенокос|haymaking|fenaison
+пахота|ploughing|labour
+посевная|sowing season|semailles

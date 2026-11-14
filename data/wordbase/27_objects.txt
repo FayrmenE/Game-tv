@@ -1,0 +1,114 @@
+# concrete
+паспортная обложка|passport cover|protège-passeport
+блокнот|notebook|carnet
+ежедневник|planner|agenda
+визитка|business card|carte de visite
+бейдж|name badge|badge nominatif
+пропуск|pass|laissez-passer
+талон|coupon|ticket de rationnement
+чек|receipt|ticket de caisse
+квитанция|bill slip|quittance
+купон|voucher|bon de réduction
+лотерейный билет|lottery ticket|billet de loterie
+копилка|piggy bank|tirelire
+кассовый аппарат|cash register|caisse enregistreuse
+тележка в магазине|shopping trolley|caddie
+корзина для покупок|shopping basket|panier de courses
+пакет с ручками|carrier bag|sac en plastique
+авоська|string bag|filet à provisions
+зонт-трость|golf umbrella|grand parapluie
+плащ-палатка|groundsheet|bâche
+брезент|tarpaulin|toile de bâche
+одноразовый стаканчик|paper cup|gobelet jetable
+пластиковая бутылка|plastic bottle|bouteille en plastique
+стеклянная банка|glass jar|bocal en verre
+жестяная банка|tin can|boîte de conserve
+коробок спичек|matchbox|boîte d’allumettes
+пепельница|ashtray|cendrier
+курительная трубка|tobacco pipe|pipe
+сигара|cigar|cigare
+кальян|hookah|narguilé
+чётки|prayer beads|chapelet
+амулет|amulet|amulette
+талисман|lucky charm|porte-bonheur
+подкова на счастье|lucky horseshoe|fer à cheval porte-bonheur
+четырёхлистный клевер|four-leaf clover|trèfle à quatre feuilles
+кроличья лапка|rabbit’s foot|patte de lapin
+ловец снов|dreamcatcher|attrape-rêves
+колокольчик над дверью|door chime|carillon
+музыкальная шкатулка|music box|boîte à musique
+снежный шар|snow globe|boule à neige
+часы с кукушкой|cuckoo clock|coucou
+маятник|pendulum|balancier
+чучело|stuffed animal|animal empaillé
+рога на стене|antlers on the wall|bois de cerf au mur
+камин с дровами|log fire|feu de cheminée
+дрова|firewood|bûches
+кочерга|poker|tisonnier
+мешок с картошкой|sack of potatoes|sac de pommes de terre
+коробка передач|gearbox|boîte de vitesses
+домкрат|car jack|cric
+запаска|spare tyre|roue de secours
+аптечка|first-aid kit|trousse de secours
+знак аварийной остановки|warning triangle|triangle de signalisation
+автокресло|car seat|siège auto
+освежитель воздуха|air freshener|désodorisant
+дезодорант|deodorant|déodorant
+лак для волос|hairspray|laque
+бигуди|hair curlers|bigoudis
+пинцет|tweezers|pince à épiler
+маникюрные ножницы|nail scissors|ciseaux à ongles
+пилочка для ногтей|nail file|lime à ongles
+ватная палочка|cotton bud|coton-tige
+влажные салфетки|wet wipes|lingettes
+подгузник|nappy|couche
+бутылочка для малыша|baby bottle|biberon
+слюнявчик|bib|bavoir
+манеж|playpen|parc pour bébé
+радионяня|baby monitor|babyphone
+детский горшок|potty|pot de bébé
+ходунки|baby walker|trotteur
+грелка|hot-water bottle|bouillotte
+пульверизатор для цветов|plant mister|brumisateur
+мухобойка|fly swatter|tapette à mouches
+фумигатор|mosquito plug|diffuseur anti-moustiques
+сетка от комаров|mosquito net|moustiquaire
+потолочный вентилятор|ceiling fan|ventilateur de plafond
+увлажнитель|humidifier|humidificateur
+напольные весы|bathroom scales|pèse-personne
+шагомер|pedometer|podomètre
+тонометр|blood pressure monitor|tensiomètre
+электрогрелка|heating pad|coussin chauffant
+очки для сна|sleep mask|masque de nuit
+беруши|earplugs|bouchons d’oreilles
+подушка для шеи|neck pillow|coussin de voyage
+дорожная сумка|holdall|sac de voyage
+бирка на багаж|luggage tag|étiquette de bagage
+путеводитель|guidebook|guide de voyage
+разговорник|phrasebook|guide de conversation
+адаптер для розетки|plug adapter|adaptateur de prise
+открытка с видом|picture postcard|carte postale illustrée
+магнит на холодильник|fridge magnet|magnet de frigo
+брелок|keyring|porte-clés
+кружка с надписью|slogan mug|mug personnalisé
+футболка с принтом|printed T-shirt|tee-shirt imprimé
+бейсболка|baseball cap|casquette de baseball
+бандана|bandana|bandana
+повязка на глаз|eye patch|bandeau sur l’œil
+деревянная нога|wooden leg|jambe de bois
+крюк пирата|hook hand|crochet à la place de la main
+попугай на плече|parrot on the shoulder|perroquet sur l’épaule
+бутылка с письмом|message in a bottle|bouteille à la mer
+пиратский флаг|Jolly Roger|pavillon pirate
+штурвал|ship’s wheel|gouvernail
+спасательная шлюпка|lifeboat|canot de sauvetage
+сундук моряка|sea chest|malle de marin
+гамак матроса|sailor’s hammock|hamac de marin
+ракушка|cockleshell|coquille Saint-Jacques
+жемчужина|pearl in an oyster|perle
+коралл|coral|corail
+риф|reef|récif
+песчаный пляж|sandy beach|plage de sable
+волнорез|breakwater|brise-lames
+пирс|jetty|jetée
+буй|buoy|bouée de balisage

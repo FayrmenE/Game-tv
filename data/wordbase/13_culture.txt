@@ -1,0 +1,127 @@
+# concrete
+музыка|music|musique
+песня|song|chanson
+мелодия|melody|mélodie
+гитара|guitar|guitare
+электрогитара|electric guitar|guitare électrique
+бас-гитара|bass guitar|basse
+скрипка|violin|violon
+виолончель|cello|violoncelle
+контрабас|double bass|contrebasse
+арфа|harp|harpe
+пианино|piano|piano
+рояль|grand piano|piano à queue
+орган|organ|orgue
+синтезатор|synthesizer|synthétiseur
+аккордеон|accordion|accordéon
+баян|button accordion|bayan
+балалайка|balalaika|balalaïka
+барабан|drum|tambour
+барабанная установка|drum kit|batterie
+бубен|tambourine|tambourin
+ксилофон|xylophone|xylophone
+треугольник|triangle|triangle
+маракасы|maracas|maracas
+флейта|flute|flûte
+дудочка|pipe|pipeau
+кларнет|clarinet|clarinette
+саксофон|saxophone|saxophone
+труба|trumpet|trompette
+тромбон|trombone|trombone
+туба|tuba|tuba
+волынка|bagpipes|cornemuse
+губная гармошка|harmonica|harmonica
+укулеле|ukulele|ukulélé
+лютня|lute|luth
+колокол|bell|cloche
+микрофон|microphone|micro
+наушники|headphones|casque
+колонка|speaker|enceinte
+пластинка|vinyl record|disque vinyle
+кассета|cassette|cassette
+ноты|sheet music|partition
+дирижёрская палочка|baton|baguette de chef
+оркестр|orchestra|orchestre
+хор|choir|chorale
+группа|band|groupe de musique
+концерт|concert|concert
+опера|opera|opéra
+балет|ballet|ballet
+мюзикл|musical|comédie musicale
+рок|rock|rock
+джаз|jazz|jazz
+рэп|rap|rap
+караоке|karaoke|karaoké
+дискотека|disco|discothèque
+фестиваль|festival|festival
+сцена|stage|scène
+кулисы|wings of a stage|coulisses
+занавес|curtain|rideau de scène
+зрители|audience|public
+аплодисменты|applause|applaudissements
+билет в театр|theatre ticket|billet de théâtre
+спектакль|play|pièce de théâtre
+кукольный театр|puppet show|théâtre de marionnettes
+марионетка|marionette|marionnette à fils
+фильм|film|film
+мультфильм|cartoon|dessin animé
+сериал|TV series|série télé
+комедия|comedy|comédie
+ужастик|horror film|film d’horreur
+боевик|action film|film d’action
+вестерн|western|western
+попкорн в кино|cinema popcorn|pop-corn de cinéma
+Оскар|Oscar|Oscar
+красная дорожка|red carpet|tapis rouge
+кинокамера|film camera|caméra
+хлопушка|clapperboard|clap
+сценарий|script|scénario
+афиша кино|film poster|affiche de film
+книга|book|livre
+сказка|fairy tale|conte de fées
+роман|novel|roman
+стихи|poems|poèmes
+комикс|comic|bande dessinée
+журнал|magazine|magazine
+газета|newspaper|journal
+словарь|dictionary|dictionnaire
+энциклопедия|encyclopedia|encyclopédie
+закладка|bookmark|marque-page
+обложка|cover|couverture de livre
+страница|page|page
+автограф|autograph|autographe
+картина маслом|oil painting|peinture à l’huile
+портрет|portrait|portrait
+пейзаж|landscape painting|paysage
+натюрморт|still life|nature morte
+мольберт|easel|chevalet
+палитра|palette|palette
+кисть|paintbrush|pinceau
+краски|paints|peintures
+акварель|watercolour|aquarelle
+мелки|crayons|craies de cire
+фломастер|felt-tip pen|feutre
+холст|canvas|toile
+скульптура|sculpture|sculpture
+глина для лепки|modelling clay|pâte à modeler
+мозаика|mosaic|mosaïque
+витраж|stained glass|vitrail
+оригами|origami|origami
+вышивка|embroidery|broderie
+вязание|knitting|tricot
+спицы|knitting needles|aiguilles à tricoter
+клубок|ball of yarn|pelote de laine
+фотоаппарат|camera|appareil photo
+селфи|selfie|selfie
+фотоальбом|photo album|album photo
+музей восковых фигур|waxworks|musée de cire
+Мона Лиза|Mona Lisa|Joconde
+танец|dance|pas de danse
+вальс|waltz|valse
+танго|tango|tango
+хоровод|round dance|ronde
+цирковой купол|big top|chapiteau
+канатоходец|tightrope walker|funambule
+фокус|magic trick|tour de magie
+волшебная палочка|magic wand|baguette magique
+иллюзионист|illusionist|illusionniste

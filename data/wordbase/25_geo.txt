@@ -1,0 +1,140 @@
+# abstract
+Россия|Russia|Russie
+Франция|France|France
+Англия|England|Angleterre
+Германия|Germany|Allemagne
+Италия|Italy|Italie
+Испания|Spain|Espagne
+Португалия|Portugal|Portugal
+Греция|Greece|Grèce
+Швейцария|Switzerland|Suisse
+Бельгия|Belgium|Belgique
+Голландия|Netherlands|Pays-Bas
+Швеция|Sweden|Suède
+Норвегия|Norway|Norvège
+Финляндия|Finland|Finlande
+Исландия|Iceland|Islande
+Ирландия|Ireland|Irlande
+Шотландия|Scotland|Écosse
+Польша|Poland|Pologne
+Чехия|Czech Republic|République tchèque
+Австрия|Austria|Autriche
+Венгрия|Hungary|Hongrie
+Украина|Ukraine|Ukraine
+Беларусь|Belarus|Biélorussie
+Грузия|Georgia|Géorgie
+Армения|Armenia|Arménie
+Казахстан|Kazakhstan|Kazakhstan
+Турция|Turkey|Turquie
+Египет|Egypt|Égypte
+Марокко|Morocco|Maroc
+Тунис|Tunisia|Tunisie
+Алжир|Algeria|Algérie
+Сенегал|Senegal|Sénégal
+Кения|Kenya|Kenya
+ЮАР|South Africa|Afrique du Sud
+Мадагаскар|Madagascar|Madagascar
+Израиль|Israel|Israël
+Индия|India|Inde
+Китай|China|Chine
+Япония|Japan|Japon
+Корея|Korea|Corée
+Таиланд|Thailand|Thaïlande
+Вьетнам|Vietnam|Viêt Nam
+Индонезия|Indonesia|Indonésie
+Австралия|Australia|Australie
+Новая Зеландия|New Zealand|Nouvelle-Zélande
+США|USA|États-Unis
+Канада|Canada|Canada
+Мексика|Mexico|Mexique
+Куба|Cuba|Cuba
+Бразилия|Brazil|Brésil
+Аргентина|Argentina|Argentine
+Чили|Chile|Chili
+Перу|Peru|Pérou
+Антарктида|Antarctica|Antarctique
+Арктика|Arctic|Arctique
+Северный полюс|North Pole|pôle Nord
+Южный полюс|South Pole|pôle Sud
+экватор|equator|équateur
+Европа|Europe|Europe
+Азия|Asia|Asie
+Африка|Africa|Afrique
+Америка|America|Amérique
+Сибирь|Siberia|Sibérie
+Кавказ|Caucasus|Caucase
+Урал|Ural Mountains|Oural
+Альпы|Alps|Alpes
+Гималаи|Himalayas|Himalaya
+Эверест|Everest|Everest
+Сахара|Sahara|Sahara
+Амазонка|Amazon|Amazone
+Нил|Nile|Nil
+Волга|Volga|Volga
+Сена|Seine|Seine
+Байкал|Lake Baikal|lac Baïkal
+Чёрное море|Black Sea|mer Noire
+Средиземное море|Mediterranean|Méditerranée
+Тихий океан|Pacific Ocean|océan Pacifique
+Атлантический океан|Atlantic Ocean|océan Atlantique
+Бермудский треугольник|Bermuda Triangle|triangle des Bermudes
+Ниагарский водопад|Niagara Falls|chutes du Niagara
+Гранд-Каньон|Grand Canyon|Grand Canyon
+Москва|Moscow|Moscou
+Санкт-Петербург|Saint Petersburg|Saint-Pétersbourg
+Париж|Paris|Paris
+Лондон|London|Londres
+Берлин|Berlin|Berlin
+Рим|Rome|Rome
+Венеция|Venice|Venise
+Мадрид|Madrid|Madrid
+Барселона|Barcelona|Barcelone
+Амстердам|Amsterdam|Amsterdam
+Прага|Prague|Prague
+Вена|Vienna|Vienne
+Стамбул|Istanbul|Istanbul
+Афины|Athens|Athènes
+Нью-Йорк|New York|New York
+Лас-Вегас|Las Vegas|Las Vegas
+Голливуд|Hollywood|Hollywood
+Токио|Tokyo|Tokyo
+Пекин|Beijing|Pékin
+Дубай|Dubai|Dubaï
+Рио-де-Жанейро|Rio de Janeiro|Rio de Janeiro
+Марсель|Marseille|Marseille
+Лион|Lyon|Lyon
+Ницца|Nice|Nice
+Бордо|Bordeaux|Bordeaux
+Брюссель|Brussels|Bruxelles
+Женева|Geneva|Genève
+Монреаль|Montreal|Montréal
+Эйфелева башня|Eiffel Tower|tour Eiffel
+Лувр|Louvre|Louvre
+Нотр-Дам|Notre-Dame|Notre-Dame
+Триумфальная арка|Arc de Triomphe|Arc de triomphe
+Мон-Сен-Мишель|Mont Saint-Michel|Mont-Saint-Michel
+Красная площадь|Red Square|place Rouge
+Кремль|Kremlin|Kremlin
+Биг-Бен|Big Ben|Big Ben
+Колизей|Colosseum|Colisée
+Пизанская башня|Leaning Tower of Pisa|tour de Pise
+Статуя Свободы|Statue of Liberty|statue de la Liberté
+Великая Китайская стена|Great Wall of China|Grande Muraille
+Тадж-Махал|Taj Mahal|Taj Mahal
+Стоунхендж|Stonehenge|Stonehenge
+Акрополь|Acropolis|Acropole
+Сиднейская опера|Sydney Opera House|opéra de Sydney
+Мачу-Пикчу|Machu Picchu|Machu Picchu
+остров Пасхи|Easter Island|île de Pâques
+Северное море|North Sea|mer du Nord
+Ла-Манш|English Channel|Manche
+Корсика|Corsica|Corse
+Сицилия|Sicily|Sicile
+Гавайи|Hawaii|Hawaï
+Мальдивы|Maldives|Maldives
+Таити|Tahiti|Tahiti
+Лазурный берег|French Riviera|Côte d’Azur
+Прованс|Provence|Provence
+Бретань|Brittany|Bretagne
+Нормандия|Normandy|Normandie
+Шампань|Champagne region|Champagne

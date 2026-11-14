@@ -1,0 +1,160 @@
+# concrete
+дом|house|maison
+квартира|flat|appartement
+комната|room|pièce
+кухня|kitchen|cuisine
+спальня|bedroom|chambre
+гостиная|living room|salon
+ванная|bathroom|salle de bains
+туалет|toilet|toilettes
+прихожая|hallway|entrée
+балкон|balcony|balcon
+чердак|attic|grenier
+подвал|cellar|cave
+гараж|garage|garage
+крыльцо|porch|perron
+лестница|stairs|escalier
+лифт|lift|ascenseur
+подъезд|entrance hall|cage d’escalier
+дверь|door|porte
+окно|window|fenêtre
+подоконник|windowsill|rebord de fenêtre
+форточка|small window|vasistas
+стена|wall|mur
+пол|floor|sol
+потолок|ceiling|plafond
+крыша|roof|toit
+труба|chimney|cheminée
+камин|fireplace|foyer
+печка|stove|poêle à bois
+батарея|radiator|radiateur
+кондиционер|air conditioner|climatiseur
+вентилятор|fan|ventilateur
+обогреватель|heater|chauffage d’appoint
+стол|table|table
+стул|chair|chaise
+табуретка|stool|tabouret
+кресло|armchair|fauteuil
+кресло-качалка|rocking chair|fauteuil à bascule
+диван|sofa|canapé
+кровать|bed|lit
+двухъярусная кровать|bunk bed|lits superposés
+колыбель|cradle|berceau
+матрас|mattress|matelas
+подушка|pillow|oreiller
+одеяло|blanket|couverture
+плед|throw|plaid
+простыня|sheet|drap
+пододеяльник|duvet cover|housse de couette
+шкаф|wardrobe|armoire
+комод|chest of drawers|commode
+тумбочка|bedside table|table de chevet
+полка|shelf|étagère
+книжный шкаф|bookcase|bibliothèque
+вешалка|hanger|cintre
+крючок|hook|crochet
+зеркало|mirror|miroir
+ковёр|carpet|tapis
+коврик|doormat|paillasson
+шторы|curtains|rideaux
+жалюзи|blinds|stores
+люстра|chandelier|lustre
+лампа|lamp|lampe
+торшер|floor lamp|lampadaire
+настольная лампа|desk lamp|lampe de bureau
+ночник|night light|veilleuse
+выключатель|light switch|interrupteur
+розетка|socket|prise
+удлинитель|extension cord|rallonge
+лампочка|light bulb|ampoule
+свеча|candle|bougie
+подсвечник|candlestick|chandelier à bougie
+часы|clock|horloge
+будильник|alarm clock|réveil
+картина|painting|tableau
+рамка|frame|cadre
+фотография|photo|photo
+ваза|vase|vase
+цветочный горшок|flowerpot|pot de fleurs
+статуэтка|figurine|figurine
+ванна|bathtub|baignoire
+душ|shower|douche
+унитаз|toilet bowl|cuvette
+туалетная бумага|toilet paper|papier toilette
+мыло|soap|savon
+шампунь|shampoo|shampooing
+зубная щётка|toothbrush|brosse à dents
+зубная паста|toothpaste|dentifrice
+полотенце|towel|serviette
+халат|bathrobe|peignoir
+тапочки|slippers|pantoufles
+расчёска|comb|peigne
+щётка для волос|hairbrush|brosse à cheveux
+фен|hairdryer|sèche-cheveux
+бритва|razor|rasoir
+мочалка|washcloth|gant de toilette
+резиновая уточка|rubber duck|canard en plastique
+стиральная машина|washing machine|lave-linge
+сушилка для белья|clothes horse|étendoir
+прищепка|clothes peg|pince à linge
+утюг|iron|fer à repasser
+гладильная доска|ironing board|planche à repasser
+пылесос|vacuum cleaner|aspirateur
+робот-пылесос|robot vacuum|aspirateur robot
+швабра|mop|serpillière
+веник|broom|balai
+совок|dustpan|pelle à poussière
+ведро|bucket|seau
+тряпка|rag|chiffon
+корзина для белья|laundry basket|panier à linge
+мусорный пакет|bin bag|sac poubelle
+ключ|key|clé
+замок|lock|serrure
+дверной звонок|doorbell|sonnette
+глазок|peephole|judas
+почтовый ящик|letterbox|boîte aux lettres
+забор|fence|clôture
+калитка|gate|portillon
+ворота|gates|portail
+сад|garden|jardin
+огород|vegetable garden|potager
+грядка|garden bed|plate-bande
+теплица|greenhouse|serre
+сарай|shed|cabane de jardin
+будка|kennel box|niche à chien
+бассейн|swimming pool|piscine
+гамак|hammock|hamac
+качели|swing|balançoire
+песочница|sandbox|bac à sable
+шезлонг|deckchair|chaise longue
+зонт от солнца|parasol|parasol
+садовый гном|garden gnome|nain de jardin
+лейка|watering can|arrosoir
+шланг|hose|tuyau d’arrosage
+газонокосилка|lawnmower|tondeuse
+кормушка|bird feeder|mangeoire
+сейф|safe|coffre-fort
+сундук|chest|coffre
+шкатулка|jewellery box|boîte à bijoux
+коробка|box|carton
+чемодан|suitcase|valise
+рюкзак|backpack|sac à dos
+сумка|bag|sac
+кошелёк|purse|porte-monnaie
+зонтик|umbrella|parapluie
+очки|glasses|lunettes
+пульт|remote control|télécommande
+телевизор|television|télévision
+радио|radio|radio
+магнитофон|tape recorder|magnétophone
+проигрыватель|record player|tourne-disque
+телефон|telephone|téléphone
+дверная ручка|door handle|poignée de porte
+порог|threshold|seuil
+обои|wallpaper|papier peint
+плитка|tile|carrelage
+паркет|parquet|parquet
+кладовка|pantry|débarras
+гардероб|walk-in closet|dressing
+детская|nursery|chambre d’enfant
+кабинет|study|bureau à la maison

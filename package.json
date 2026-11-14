@@ -7,7 +7,7 @@
     "start": "node server.js",
     "check": "node scripts/check-scenes.js",
     "build:exe": "npx --yes @yao-pkg/pkg@6 . --targets node22-win-x64 --output dist/Vecher-igr.exe",
-    "test": "node --test test/chests.test.js"
+    "test": "node --test test/chests.test.js test/words.test.js"
   },
   "license": "MIT",
   "dependencies": {

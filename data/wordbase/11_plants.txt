@@ -1,0 +1,87 @@
+# concrete
+дерево|tree|arbre
+куст|bush|buisson
+трава|grass|herbe
+цветок|flower|fleur
+лист|leaf|feuille d’arbre
+ветка|branch|branche
+корень|root|racine
+ствол|trunk|tronc
+пень|stump|souche
+кора|bark|écorce
+семя|seed|graine
+росток|sprout|pousse
+бутон|bud|bouton de fleur
+лепесток|petal|pétale
+стебель|stem|tige
+шип|thorn|épine
+жёлудь|acorn|gland
+еловая шишка|pine cone|pomme de pin
+дуб|oak|chêne
+берёза|birch|bouleau
+ёлка|fir tree|sapin
+сосна|pine|pin
+клён|maple|érable
+липа|lime tree|tilleul
+ива|willow|saule
+тополь|poplar|peuplier
+каштановое дерево|chestnut tree|marronnier
+яблоня|apple tree|pommier
+вишнёвое дерево|cherry tree|cerisier
+баобаб|baobab|baobab
+пальма|palm tree|palmier
+бамбук|bamboo|bambou
+кактус|cactus|cactus
+алоэ|aloe|aloès
+роза|rose|rose
+тюльпан|tulip|tulipe
+ромашка|daisy|marguerite
+одуванчик|dandelion|pissenlit
+подсолнух|sunflower|tournesol
+колокольчик|bluebell|campanule
+василёк|cornflower|bleuet
+мак|poppy|coquelicot
+лилия|lily|lys
+орхидея|orchid|orchidée
+лотос|lotus|lotus
+кувшинка|water lily|nénuphar
+ландыш|lily of the valley|muguet
+сирень|lilac|lilas
+пион|peony|pivoine
+фиалка|violet|violette
+нарцисс|daffodil|jonquille
+гвоздика|carnation|œillet
+хризантема|chrysanthemum|chrysanthème
+лаванда|lavender|lavande
+клевер|clover|trèfle
+крапива|nettle|ortie
+лопух|burdock|bardane
+папоротник|fern|fougère
+мох|moss|mousse
+плющ|ivy|lierre
+лиана|liana|liane
+водоросли|seaweed|algues
+камыш|reed|roseau
+мухомор|fly agaric|amanite
+подберёзовик|birch bolete|bolet
+лисички|chanterelles|girolles
+гриб|mushroom|champignon des bois
+венок|wreath|couronne de fleurs
+букет|bouquet|bouquet
+сено|hay|foin
+солома|straw bale|paille de blé
+пшеница|wheat|blé
+рожь|rye|seigle
+колосок|ear of wheat|épi
+хлопок|cotton|coton
+лён|flax|lin
+виноградная лоза|vine|vigne
+плод|fruit|fruit
+ягода|berry|baie
+листопад|leaf fall|chute des feuilles
+гербарий|herbarium|herbier
+комнатное растение|houseplant|plante d’intérieur
+рассада|seedlings|semis
+сорняк|weed|mauvaise herbe
+газон|lawn|pelouse
+живая изгородь|hedge|haie

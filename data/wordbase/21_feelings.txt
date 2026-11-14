@@ -1,0 +1,165 @@
+# abstract
+любовь|love|amour
+дружба|friendship|amitié
+ненависть|hatred|haine
+радость|joy|joie
+счастье|happiness|bonheur
+грусть|sadness|tristesse
+тоска|longing|mélancolie
+печаль|sorrow|chagrin
+гнев|anger|colère
+ярость|rage|rage
+страх|fear|peur
+ужас|horror|horreur
+паника|panic|panique
+тревога|anxiety|anxiété
+волнение|excitement|émotion
+стыд|shame|honte
+вина|guilt|culpabilité
+гордость|pride|fierté
+зависть|envy|envie
+ревность|jealousy|jalousie
+обида|resentment|rancune
+удивление|surprise|étonnement
+восторг|delight|ravissement
+восхищение|admiration|admiration
+скука|boredom|ennui
+лень|laziness|paresse
+усталость|tiredness|fatigue
+надежда|hope|espoir
+вера|faith|foi
+сомнение|doubt|doute
+уверенность|confidence|assurance
+смелость|courage|courage
+трусость|cowardice|lâcheté
+доброта|kindness|bonté
+жадность|greed|avidité
+щедрость|generosity|générosité
+честность|honesty|honnêteté
+ложь|lie|mensonge
+правда|truth|vérité
+справедливость|justice|justice
+свобода|freedom|liberté
+мир|peace|paix
+война|war|guerre
+победа|victory|victoire
+поражение|defeat|défaite
+успех|success|succès
+неудача|failure|échec
+удача|luck|chance
+судьба|fate|destin
+мечта|dream|rêve
+цель|goal|objectif
+план|plan|plan
+идея|idea|idée
+мысль|thought|pensée
+память|memory|mémoire
+воспоминание|recollection|souvenir
+вдохновение|inspiration|inspiration
+талант|talent|talent
+мудрость|wisdom|sagesse
+глупость|foolishness|bêtise
+ум|mind|esprit
+характер|personality|caractère
+настроение|mood|humeur
+интуиция|intuition|intuition
+совесть|conscience|conscience
+терпение|patience|patience
+нетерпение|impatience|impatience
+спешка|hurry|précipitation
+тишина|silence|silence
+шум|noise|bruit
+красота|beauty|beauté
+мода|fashion|mode
+стиль|style|style
+вкус|taste|goût
+запах|smell|odeur
+юмор|humour|humour
+шутка|joke|blague
+сарказм|sarcasm|sarcasme
+ирония|irony|ironie
+комплимент|compliment|compliment
+секрет|secret|confidence secrète
+сплетня|gossip|ragot
+слух|rumour|rumeur
+обещание|promise|promesse
+клятва|oath|serment
+предательство|betrayal|trahison
+месть|revenge|vengeance
+прощение|forgiveness|pardon
+благодарность|gratitude|gratitude
+забота|care|attention
+уважение|respect|respect
+доверие|trust|confiance
+одиночество|loneliness|solitude
+ностальгия|nostalgia|nostalgie
+детство|childhood|enfance
+юность|youth|jeunesse
+старость|old age|vieillesse
+жизнь|life|vie
+смерть|death|mort
+время|time|temps
+вечность|eternity|éternité
+бесконечность|infinity|infini
+будущее|future|avenir
+прошлое|past|passé
+настоящее|present|présent
+случай|coincidence|hasard
+привычка|habit|habitude
+зависимость|addiction|dépendance
+хобби|hobby|passe-temps
+мотивация|motivation|motivation
+прокрастинация|procrastination|procrastination
+выгорание|burnout|épuisement professionnel
+стресс|stress|stress
+кризис|crisis|crise
+хаос|chaos|chaos
+порядок|order|ordre
+гармония|harmony|harmonie
+баланс|balance|équilibre
+дежавю|déjà vu|déjà-vu
+сюрприз|surprise party|surprise
+загадка|riddle|énigme
+тайна|mystery|mystère
+чудо|miracle|miracle
+магия|magic|magie
+опасность|danger|danger
+риск|risk|risque
+азарт|thrill|frisson du jeu
+вызов|challenge|défi
+соревнование|competition|compétition
+лидерство|leadership|leadership
+власть|power|pouvoir
+слава|fame|gloire
+богатство|wealth|richesse
+бедность|poverty|pauvreté
+роскошь|luxury|luxe
+комфорт|comfort|confort
+уют|cosiness|douceur du foyer
+голод|hunger|faim
+жажда|thirst|soif
+боль|pain|douleur
+здоровье|health|santé
+красноречие|eloquence|éloquence
+вежливость|politeness|politesse
+грубость|rudeness|grossièreté
+хвастовство|boasting|vantardise
+скромность|modesty|modestie
+упрямство|stubbornness|entêtement
+любопытство|curiosity|curiosité
+рассеянность|absent-mindedness|distraction
+внимание|attention span|vigilance
+сосредоточенность|concentration|concentration
+бессонница|insomnia|insomnie
+кошмар|nightmare|cauchemar
+сладкий сон|sweet dream|beau rêve
+мурашки по коже|shivers|frissons
+бабочки в животе|butterflies in the stomach|papillons dans le ventre
+чувство юмора|sense of humour|sens de l’humour
+здравый смысл|common sense|bon sens
+шестое чувство|sixth sense|sixième sens
+первая любовь|first love|premier amour
+любовь с первого взгляда|love at first sight|coup de foudre
+разбитое сердце|broken heart|cœur brisé
+кризис среднего возраста|midlife crisis|crise de la quarantaine
+синдром понедельника|Monday blues|blues du lundi

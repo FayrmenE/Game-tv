@@ -1,0 +1,116 @@
+# concrete
+вода|water|eau
+чай|tea|thé
+кофе|coffee|café
+какао|cocoa|cacao
+сок|juice|jus
+лимонад|lemonade|limonade
+газировка|soda|soda
+компот|fruit drink|compote
+кисель|fruit jelly drink|kissel
+квас|kvass|kvas
+молочный коктейль|milkshake|milk-shake
+смузи|smoothie|smoothie
+горячий шоколад|hot chocolate|chocolat chaud
+капучино|cappuccino|cappuccino
+эспрессо|espresso|expresso
+латте|latte|latte
+минералка|mineral water|eau minérale
+вино|wine|vin
+шампанское|champagne|champagne
+пиво|beer|bière
+коктейль|cocktail|cocktail
+лёд|ice|glaçon
+трубочка|straw|paille
+чашка|cup|tasse
+кружка|mug|mug
+стакан|glass|verre
+бокал|wine glass|verre à vin
+бутылка|bottle|bouteille
+банка|jar|bocal
+термос|thermos|thermos
+чайник|kettle|bouilloire
+заварочный чайник|teapot|théière
+кофеварка|coffee machine|machine à café
+турка|coffee pot|cafetière turque
+самовар|samovar|samovar
+тарелка|plate|assiette
+миска|bowl|bol
+блюдце|saucer|soucoupe
+поднос|tray|plateau
+ложка|spoon|cuillère
+вилка|fork|fourchette
+нож|knife|couteau
+половник|ladle|louche
+лопатка|spatula|spatule
+венчик|whisk|fouet
+тёрка|grater|râpe
+скалка|rolling pin|rouleau à pâtisserie
+дуршлаг|colander|passoire
+сито|sieve|tamis
+воронка|funnel|entonnoir
+открывалка|bottle opener|décapsuleur
+штопор|corkscrew|tire-bouchon
+консервный нож|can opener|ouvre-boîte
+палочки для еды|chopsticks|baguettes
+сковородка|frying pan|poêle
+кастрюля|saucepan|casserole
+котёл|cauldron|chaudron
+противень|baking tray|plaque de cuisson
+форма для торта|cake tin|moule à gâteau
+разделочная доска|chopping board|planche à découper
+скатерть|tablecloth|nappe
+салфетка|napkin|serviette de table
+фартук|apron|tablier
+прихватка|oven glove|manique
+холодильник|fridge|réfrigérateur
+морозилка|freezer|congélateur
+плита|stove|cuisinière
+духовка|oven|four
+микроволновка|microwave|micro-ondes
+тостер|toaster|grille-pain
+блендер|blender|mixeur
+миксер|mixer|batteur
+мясорубка|mincer|hachoir
+вафельница|waffle iron|gaufrier
+посудомойка|dishwasher|lave-vaisselle
+раковина|sink|évier
+кран|tap|robinet
+губка|sponge|éponge
+мусорное ведро|bin|poubelle
+пакет|bag|sachet
+коробка для обеда|lunch box|boîte à repas
+солонка|salt shaker|salière
+перечница|pepper shaker|poivrière
+сахарница|sugar bowl|sucrier
+хлебница|bread bin|corbeille à pain
+ваза для фруктов|fruit bowl|coupe à fruits
+графин|carafe|carafe
+кувшин|jug|pichet
+пробка|cork|bouchon
+крышка|lid|couvercle
+поварёшка|serving spoon|cuillère de service
+шумовка|skimmer|écumoire
+пароварка|steamer|cuiseur vapeur
+мультиварка|slow cooker|mijoteuse
+гриль|grill|gril
+мангал|barbecue|barbecue
+вертел|spit|broche
+шампур|skewer|brochette en métal
+кулинарная книга|cookbook|livre de cuisine
+рецепт|recipe|recette
+повар|cook|cuisinier
+поварской колпак|chef’s hat|toque
+меню|menu|menu
+официант|waiter|serveur
+чаевые|tip|pourboire
+счёт в ресторане|bill|addition
+кафе|café|café-bar
+ресторан|restaurant|restaurant
+столовая|canteen|cantine
+пекарня|bakery|boulangerie
+кондитерская|pastry shop|pâtisserie-salon
+пиццерия|pizzeria|pizzeria
+фудкорт|food court|aire de restauration
+пикник|picnic|pique-nique
+корзинка|basket|panier

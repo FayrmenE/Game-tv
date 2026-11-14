@@ -1,0 +1,214 @@
+# concrete
+хлеб|bread|pain
+батон|loaf|baguette
+булочка|bun|petit pain
+круассан|croissant|croissant
+бублик|bagel|bagel
+сухарь|rusk|biscotte
+тост|toast|toast
+бутерброд|sandwich|sandwich
+сыр|cheese|fromage
+масло|butter|beurre
+молоко|milk|lait
+кефир|kefir|kéfir
+йогурт|yogurt|yaourt
+творог|cottage cheese|fromage blanc
+сметана|sour cream|crème fraîche
+яйцо|egg|œuf
+яичница|fried eggs|œufs au plat
+омлет|omelette|omelette
+каша|porridge|bouillie
+овсянка|oatmeal|flocons d’avoine
+гречка|buckwheat|sarrasin
+рис|rice|riz
+макароны|pasta|pâtes
+спагетти|spaghetti|spaghettis
+лапша|noodles|nouilles
+пельмени|dumplings|raviolis russes
+вареники|filled dumplings|varenikis
+блины|pancakes|crêpes
+оладьи|fritters|beignets
+сырники|cheese pancakes|galettes de fromage blanc
+пирог|pie|tarte
+пирожок|patty|chausson
+пицца|pizza|pizza
+бургер|burger|hamburger
+хот-дог|hot dog|hot-dog
+шаурма|shawarma|chawarma
+картошка фри|french fries|frites
+чипсы|crisps|chips
+попкорн|popcorn|pop-corn
+суп|soup|soupe
+борщ|borscht|bortsch
+щи|cabbage soup|soupe au chou
+бульон|broth|bouillon
+окрошка|cold soup|soupe froide
+салат|salad|salade
+винегрет|beet salad|salade de betteraves
+оливье|olivier salad|salade russe
+котлета|cutlet|boulette
+шашлык|kebab|brochette
+стейк|steak|steak
+колбаса|sausage|saucisson
+сосиска|frankfurter|saucisse
+ветчина|ham|jambon
+бекон|bacon|bacon
+курица гриль|roast chicken|poulet rôti
+куриная ножка|drumstick|cuisse de poulet
+мясо|meat|viande
+фарш|minced meat|viande hachée
+рыба жареная|fried fish|poisson frit
+икра|caviar|caviar
+селёдка|herring|hareng
+суши|sushi|sushis
+роллы|rolls|makis
+креветки в кляре|tempura shrimp|crevettes en beignet
+картошка|potato|pomme de terre
+пюре|mashed potatoes|purée
+морковь|carrot|carotte
+капуста|cabbage|chou
+брокколи|broccoli|brocoli
+цветная капуста|cauliflower|chou-fleur
+огурец|cucumber|concombre
+помидор|tomato|tomate
+перец|pepper|poivron
+лук|onion|oignon
+чеснок|garlic|ail
+свёкла|beetroot|betterave
+редиска|radish|radis
+репа|turnip|navet
+тыква|pumpkin|citrouille
+кабачок|courgette|courgette
+баклажан|aubergine|aubergine
+горох|peas|petits pois
+фасоль|beans|haricots
+кукуруза|corn|maïs
+грибы|mushrooms|champignons
+оливки|olives|olives
+укроп|dill|aneth
+петрушка|parsley|persil
+шпинат|spinach|épinards
+сельдерей|celery|céleri
+спаржа|asparagus|asperge
+авокадо|avocado|avocat
+яблоко|apple|pomme
+груша|pear|poire
+банан|banana|banane
+апельсин|orange|orange
+мандарин|tangerine|mandarine
+лимон|lemon|citron
+лайм|lime|citron vert
+грейпфрут|grapefruit|pamplemousse
+персик|peach|pêche
+абрикос|apricot|abricot
+слива|plum|prune
+вишня|cherry|cerise
+черешня|sweet cherry|griotte
+виноград|grapes|raisin
+изюм|raisins|raisins secs
+клубника|strawberry|fraise
+малина|raspberry|framboise
+черника|blueberry|myrtille
+ежевика|blackberry|mûre
+смородина|currant|cassis
+крыжовник|gooseberry|groseille à maquereau
+клюква|cranberry|canneberge
+арбуз|watermelon|pastèque
+дыня|melon|melon
+ананас|pineapple|ananas
+манго|mango|mangue
+киви|kiwi|kiwi
+гранат|pomegranate|grenade
+кокос|coconut|noix de coco
+финик|date|datte
+инжир|fig|figue
+хурма|persimmon|kaki
+орех|nut|noix
+арахис|peanut|cacahuète
+фундук|hazelnut|noisette
+миндаль|almond|amande
+каштан|chestnut|châtaigne
+семечки|sunflower seeds|graines de tournesol
+мёд|honey|miel
+варенье|jam|confiture
+сахар|sugar|sucre
+соль|salt|sel
+чёрный перец|black pepper|poivre
+горчица|mustard|moutarde
+кетчуп|ketchup|ketchup
+майонез|mayonnaise|mayonnaise
+соус|sauce|sauce
+уксус|vinegar|vinaigre
+растительное масло|oil|huile
+мука|flour|farine
+тесто|dough|pâte
+дрожжи|yeast|levure
+корица|cinnamon|cannelle
+ваниль|vanilla|vanille
+шоколад|chocolate|chocolat
+конфета|sweet|bonbon
+леденец|lollipop|sucette
+карамель|caramel|caramel
+жвачка|chewing gum|chewing-gum
+мармелад|jelly sweets|bonbons gélifiés
+зефир|marshmallow|guimauve
+пастила|fruit pastille|pâte de fruits
+халва|halva|halva
+печенье|biscuit|biscuit
+пряник|gingerbread|pain d’épices
+вафля|waffle|gaufre
+пончик|doughnut|beignet sucré
+кекс|muffin|muffin
+торт|cake|gâteau
+пирожное|pastry|pâtisserie
+эклер|eclair|éclair
+макарон|macaron|macaron
+чизкейк|cheesecake|cheesecake
+мороженое|ice cream|glace
+эскимо|ice lolly|esquimau
+желе|jelly|gelée
+пудинг|pudding|pudding
+сгущёнка|condensed milk|lait concentré
+хлопья|cereal|céréales
+мюсли|muesli|muesli
+гренки|croutons|croûtons
+лаваш|flatbread|pain lavash
+тортилья|tortilla|tortilla
+тако|taco|taco
+буррито|burrito|burrito
+лазанья|lasagne|lasagnes
+ризотто|risotto|risotto
+паэлья|paella|paella
+плов|pilaf|plov
+голубцы|cabbage rolls|chou farci
+холодец|aspic|aspic
+студень|meat jelly|gelée de viande
+рагу|stew|ragoût
+гуляш|goulash|goulache
+фондю|fondue|fondue
+раклет|raclette|raclette
+киш|quiche|quiche
+багет|baguette|pain baguette
+бриошь|brioche|brioche
+крем-брюле|crème brûlée|crème brûlée
+тирамису|tiramisu|tiramisu
+манка|semolina|semoule
+консервы|canned food|conserves
+сухой паёк|ration|ration
+обед|lunch|déjeuner
+завтрак|breakfast|petit-déjeuner
+ужин|dinner|dîner
+полдник|snack|goûter
+десерт|dessert|dessert
+закуска|appetizer|entrée
+гарнир|side dish|accompagnement
+порция|portion|portion
+крошка|crumb|miette
+корочка|crust|croûte
+косточка|pit|noyau
+кожура|peel|épluchure
+ломтик|slice|tranche
+кусок торта|piece of cake|part de gâteau
+шоколадка|chocolate bar|tablette de chocolat
+коробка конфет|box of chocolates|boîte de chocolats
+сахарная вата|candy floss|barbe à papa

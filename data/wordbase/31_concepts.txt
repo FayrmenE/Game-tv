@@ -1,0 +1,179 @@
+# abstract
+алгоритм|algorithm|algorithme
+аргумент|argument|argument
+аукцион|auction|vente aux enchères
+бартер|barter|troc
+бессмертие|immortality|immortalité
+бизнес-план|business plan|business plan
+блокбастер|blockbuster|superproduction
+бойкот|boycott|boycott
+бонус|perk|avantage
+бюджет|budget|budget
+вакансия|vacancy|poste vacant
+вдохновитель|mastermind|cerveau de l’opération
+версия|version|version
+видеоблог|vlog|vlog
+визит|visit|visite
+голосование|vote|vote
+гороскоп|horoscope|horoscope
+гостеприимство|hospitality|hospitalité
+график работы|work schedule|horaire de travail
+дедлайн|deadline|date butoir
+дежурство|duty shift|permanence
+депрессия|depression|dépression
+диагноз|diagnosis|diagnostic
+дискуссия|discussion|discussion
+долг|debt|dette
+досуг|leisure|loisirs
+доход|income|revenu
+жанр|genre|genre
+жест|gesture|geste
+перегрузка|brain overload|surcharge mentale
+задержка|delay|délai
+запрет|ban on something|interdiction
+звонок другу|phone a friend|appel à un ami
+здоровый образ жизни|healthy lifestyle|mode de vie sain
+знакомство|acquaintance|rencontre
+игра слов|pun|jeu de mots
+иллюзия|illusion|illusion
+имидж|image|image de marque
+интрига|intrigue|intrigue
+искренность|sincerity|sincérité
+испытание|ordeal|épreuve
+каприз|whim|caprice
+карьера|career|carrière
+катарсис|catharsis|catharsis
+квест|quest|quête
+комплекс неполноценности|inferiority complex|complexe d’infériorité
+компромисс|compromise|compromis
+конфликт|conflict|conflit
+контроль|control|contrôle
+концепция|concept|concept
+кругосветка|round-the-world trip|tour du monde
+лайфхак|life hack|astuce
+легкомыслие|frivolity|légèreté
+лидер|leader|leader
+лимит|limit|limite
+логика|logic|logique
+мания величия|delusions of grandeur|folie des grandeurs
+маршрут|route|itinéraire
+мастер-класс|masterclass|atelier
+метод|method|méthode
+минимализм|minimalism|minimalisme
+мнение|opinion|opinion
+мотив|motive|mobile
+намёк|hint|allusion
+наивность|naivety|naïveté
+наследник|heir|héritier
+небылица|tall tale|histoire à dormir debout
+недоразумение|misunderstanding|malentendu
+нежность|tenderness|tendresse
+новость дня|headline|gros titre
+норма|norm|norme
+обаяние|charm|charme
+обмен|exchange|échange
+образ жизни|lifestyle|mode de vie
+обряд|ritual|rituel
+опыт работы|work experience|expérience professionnelle
+отговорка|excuse|excuse
+открытие|discovery|découverte
+отношения|relationship|relation
+очарование|fascination|fascination
+ошибка|mistake|erreur
+паранойя|paranoia|paranoïa
+парадокс|paradox|paradoxe
+пауза|pause|pause
+перфекционизм|perfectionism|perfectionnisme
+план Б|plan B|plan B
+подвиг|heroic deed|exploit
+подозрение|suspicion|soupçon
+подсказка|hint in a game|indice de jeu
+позор|disgrace|déshonneur
+поиск|search|recherche
+покой|tranquillity|tranquillité
+помощь|help|aide
+популярность|popularity|popularité
+порыв|impulse|élan
+посредник|middleman|intermédiaire
+правило|rule|règle
+праздность|idleness|oisiveté
+предчувствие|premonition|pressentiment
+предрассудок|prejudice|préjugé
+престиж|prestige|prestige
+привилегия|privilege|privilège
+приз|prize|prix gagné
+приключение|adventure|aventure
+принцип|principle|principe
+приоритет|priority|priorité
+провокация|provocation|provocation
+прогноз|forecast|prévision
+прогресс|progress|progrès
+проект|project|projet
+происшествие|incident|incident
+путаница|mix-up|confusion
+равенство|equality|égalité
+развлечение|entertainment|divertissement
+разгадка|solution|solution
+разлука|separation|séparation
+размах|scale|envergure
+разочарование|disappointment|déception
+реальность|reality|réalité
+ревизия|audit|audit
+режим дня|daily routine|routine quotidienne
+рейтинг|rating|classement
+репутация|reputation|réputation
+рутина|routine|train-train
+самооценка|self-esteem|estime de soi
+самолюбие|vanity|amour-propre
+сделка|deal|marché conclu
+семейная тайна|family secret|secret de famille
+сила воли|willpower|volonté
+символ|symbol|symbole
+слабость|weakness|faiblesse
+смысл жизни|meaning of life|sens de la vie
+совпадение|coincidence of events|coïncidence
+сострадание|compassion|compassion
+спокойствие|calmness|sérénité
+спонтанность|spontaneity|spontanéité
+статус|status|statut
+стратегия|strategy|stratégie
+суеверие|superstition|superstition
+сюжет|plot|intrigue de roman
+тактика|tactics|tactique
+творчество|creativity|créativité
+темперамент|temperament|tempérament
+теория заговора|conspiracy theory|théorie du complot
+терапия|therapy|thérapie
+толерантность|tolerance|tolérance
+трагедия|tragedy|tragédie
+тщеславие|conceit|vanité
+уважительная причина|good excuse|bonne excuse
+угроза|threat|menace
+удовольствие|pleasure|plaisir
+ультиматум|ultimatum|ultimatum
+упражнение|exercise|exercice
+усилие|effort|effort
+утопия|utopia|utopie
+факт|fact|fait
+фантазия|imagination|imagination
+фантастика|science fiction|science-fiction
+фиаско|fiasco|fiasco total
+фобия|phobia|phobie
+характеристика|reference|lettre de recommandation
+хеппи-энд|happy ending|fin heureuse
+цивилизация|civilisation|civilisation
+цинизм|cynicism|cynisme
+чемпионство|title|titre de champion
+чувство вины|guilty conscience|mauvaise conscience
+шанс|chance opportunity|opportunité
+шедевр|masterpiece|chef-d’œuvre
+шок|shock|choc
+щедрый жест|generous gesture|geste généreux
+эгоизм|selfishness|égoïsme
+экзотика|exotic|exotisme
+эксперимент|scientific experiment|expérimentation
+эмоция|emotion|émotion
+энтузиазм|enthusiasm|enthousiasme
+эпидемия|epidemic|épidémie
+эпоха|era|époque
+этикет|etiquette|étiquette

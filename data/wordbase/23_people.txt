@@ -1,0 +1,129 @@
+# concrete
+мама|mum|maman
+папа|dad|papa
+бабушка|grandma|mamie
+дедушка|grandpa|papi
+сын|son|fils
+дочь|daughter|fille
+брат|brother|frère
+сестра|sister|sœur
+близнецы|twins|jumeaux
+тётя|aunt|tante
+дядя|uncle|oncle
+племянник|nephew|neveu
+двоюродный брат|cousin|cousin
+муж|husband|mari
+жена|wife|femme
+тёща|mother-in-law|belle-mère
+свекровь|husband’s mother|belle-mère du mari
+зять|son-in-law|gendre
+невестка|daughter-in-law|belle-fille
+внук|grandson|petit-fils
+внучка|granddaughter|petite-fille
+правнук|great-grandson|arrière-petit-fils
+прабабушка|great-grandmother|arrière-grand-mère
+отчим|stepfather|beau-père
+мачеха|stepmother|marâtre
+сирота|orphan|orphelin
+малыш|toddler|bambin
+младенец|baby|bébé
+ребёнок|child|enfant
+подросток|teenager|adolescent
+взрослый|adult|adulte
+старик|old man|vieillard
+старушка|old lady|vieille dame
+мальчик|boy|garçon
+девочка|girl|fillette
+мужчина|man|homme
+женщина|woman|femme adulte
+друг|friend|ami
+подруга|girlfriend|amie
+лучший друг|best friend|meilleur ami
+сосед|neighbour|voisin
+гость|guest|invité
+хозяин|host|hôte de maison
+незнакомец|stranger|inconnu
+коллега|colleague|collègue
+одноклассник|classmate|camarade de classe
+сосед по парте|desk mate|voisin de table
+тренер команды|team coach|entraîneur d’équipe
+капитан команды|team captain|capitaine d’équipe
+новичок|newbie|débutant
+профессионал|professional|professionnel
+любитель|amateur|amateur
+гений|genius|génie scientifique
+круглый отличник|straight-A student|élève modèle
+двоечник|failing student|cancre
+хулиган|hooligan|voyou
+задира|bully|petite brute
+ябеда|telltale|rapporteur
+зануда|bore|raseur
+сплетник|gossip person|commère
+болтун|chatterbox|moulin à paroles
+соня|sleepyhead|marmotte
+обжора|glutton|goinfre
+сладкоежка|sweet tooth|gourmand
+модница|fashionista|fashionista
+ботаник|nerd|intello
+спортсменка|sportswoman|sportive
+романтик|romantic|romantique
+мечтатель|dreamer|rêveur
+оптимист|optimist|optimiste
+пессимист|pessimist|pessimiste
+трудоголик|workaholic|bourreau de travail
+лентяй|lazybones|fainéant
+жадина|miser|radin
+хвастун|show-off|frimeur
+трус|coward|froussard
+герой|hero|héros
+киношный злодей|film villain|méchant de cinéma
+вор|thief|voleur
+грабитель|robber|braqueur
+мошенник|swindler|escroc
+бандит|gangster|gangster
+свидетель|witness|témoin
+жертва|victim|victime
+подозреваемый|suspect|suspect
+адвокат|defence lawyer|avocat de la défense
+заключённый|prisoner|prisonnier
+надзиратель|prison guard|gardien de prison
+бездомный|homeless person|sans-abri
+миллионер|millionaire|millionnaire
+олигарх|tycoon|magnat
+нищий|beggar|mendiant
+звезда эстрады|pop star|star de la pop
+инфлюенсер|influencer|influenceur
+фанат|superfan|fan inconditionnel
+зритель|spectator|spectateur
+слушатель|listener|auditeur
+читатель|reader|lecteur
+пассажир|passenger|passager
+пешеход|pedestrian|piéton
+водитель автобуса|bus driver|conducteur de bus
+покупатель|customer|client
+клиент банка|bank customer|client de la banque
+пациент|patient in hospital|malade hospitalisé
+донор|donor|donneur
+дачник|summer resident|estivant
+горожанин|city dweller|citadin
+деревенский житель|villager|villageois
+иностранец|foreigner|étranger
+эмигрант|emigrant|émigré
+кочевник|nomad|nomade
+индеец|Native American|Amérindien
+эскимос|Inuk|Inuit
+викинг|Viking|Viking
+самурай|samurai|samouraï
+ниндзя|ninja|ninja
+гладиатор|gladiator|gladiateur
+фараон|pharaoh|pharaon
+царь|tsar|tsar
+император|emperor|empereur
+султан|sultan|sultan
+шейх|sheikh|cheikh
+вождь|chief|chef de tribu
+шаман|shaman|chaman
+пророк|prophet|prophète
+святой|saint|saint
+ангел|angel|ange
+чёрт|devil|diable

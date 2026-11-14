@@ -6,6 +6,7 @@ const croc = require('./crocodile');
 const battleship = require('./battleship');
 const doodle = require('./doodle');
 const chests = require('./chests');
+const words = require('./wordgames');
 
 module.exports = {
   alien: { id: 'alien', min: 3, max: 10, create: alien.create },
@@ -15,5 +16,8 @@ module.exports = {
   // играют двое, остальные в комнате — зрители
   doodle: { id: 'doodle', min: 3, max: 8, create: doodle.create },
   chests: { id: 'chests', min: 3, max: 12, create: chests.create },
+  // командные: минимум две команды по двое
+  explain: { id: 'explain', min: 4, max: 12, create: words.create, opts: { mode: 'alias' } },
+  hat: { id: 'hat', min: 4, max: 12, create: words.create, opts: { mode: 'hat' } },
   battleship: { id: 'battleship', min: 2, max: 12, label: '2', create: battleship.create }
 };

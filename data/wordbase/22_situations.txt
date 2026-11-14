@@ -1,0 +1,181 @@
+# abstract
+очередь в кассу|checkout queue|queue à la caisse
+опоздание|lateness|retard
+отпуск|holiday leave|congés
+командировка|business trip|voyage d’affaires
+собеседование|job interview|entretien d’embauche
+увольнение|dismissal|licenciement
+повышение|promotion|promotion
+зарплата|salary|salaire
+премия|bonus|prime
+пенсия|pension|retraite
+кредит|loan|crédit
+ипотека|mortgage|prêt immobilier
+налоги|taxes|impôts
+штраф|fine|amende
+скидка|discount|réduction
+распродажа|sale|soldes
+шопинг|shopping|shopping
+доставка|delivery|livraison
+возврат товара|refund|remboursement
+переезд|move|déménagement
+ремонт|renovation|travaux
+соседи сверху|upstairs neighbours|voisins du dessus
+потоп|flooded neighbours|dégât des eaux
+отключение света|power cut|coupure de courant
+сломанный лифт|broken lift|ascenseur en panne
+забытый зонт|forgotten umbrella|parapluie oublié
+потерянные ключи|lost keys|clés perdues
+разрядившийся телефон|dead phone battery|téléphone déchargé
+будильник не прозвенел|alarm didn’t ring|réveil qui n’a pas sonné
+утро понедельника|Monday morning|lundi matin
+вечер пятницы|Friday night|vendredi soir
+выходные|weekend|week-end
+праздничный ужин|festive dinner|dîner de fête
+семейный обед|family lunch|déjeuner en famille
+пикник в парке|picnic in the park|pique-nique au parc
+шашлыки на даче|barbecue at the dacha|barbecue à la campagne
+поход в горы|mountain hike|randonnée en montagne
+ночь у костра|night by the campfire|nuit au coin du feu
+рыбалка на рассвете|dawn fishing|pêche à l’aube
+поездка на море|seaside trip|voyage à la mer
+перелёт|flight|vol en avion
+задержка рейса|flight delay|vol retardé
+потерянный багаж|lost luggage|bagage perdu
+таможня|customs|douane
+паспортный контроль|passport control|contrôle des passeports
+регистрация на рейс|check-in|enregistrement
+посадка на самолёт|boarding|embarquement
+турбулентность|turbulence|turbulences
+морская болезнь|seasickness|mal de mer
+солнечный удар|sunstroke|insolation
+укачивание|travel sickness|mal des transports
+экскурсия|guided tour|visite guidée
+сувенир|souvenir|souvenir de voyage
+открытка с моря|postcard from the sea|carte postale de la mer
+отель всё включено|all-inclusive hotel|hôtel tout compris
+бронирование|booking|réservation
+чемодан не закрывается|overstuffed suitcase|valise qui ne ferme pas
+первый день в школе|first day of school|rentrée des classes
+родительское собрание|parents’ meeting|réunion de parents
+выпускной экзамен|final exam|examen final
+сессия|exam period|partiels
+списывание|copying in an exam|copiage
+опоздание на урок|late for class|retard en cours
+вызов к доске|called to the board|passage au tableau
+двойка в дневнике|bad mark in the diary|mauvaise note dans le carnet
+первое свидание|first date|premier rendez-vous
+предложение руки и сердца|marriage proposal|demande en mariage
+медовый месяц|honeymoon|lune de miel
+годовщина|anniversary|anniversaire de mariage
+рождение ребёнка|birth of a baby|naissance d’un bébé
+первые шаги|first steps|premiers pas
+первое слово|first word|premier mot
+выпадение зуба|losing a tooth|dent qui tombe
+зубная фея|tooth fairy|petite souris
+поход к стоматологу|trip to the dentist|visite chez le dentiste
+больничный|sick leave|arrêt maladie
+бессонная ночь|sleepless night|nuit blanche
+похмелье|hangover|gueule de bois
+диета с понедельника|diet starting Monday|régime à partir de lundi
+утренняя пробежка|morning run|jogging matinal
+спортзал в январе|January gym|salle de sport en janvier
+новогодние обещания|New Year’s resolutions|bonnes résolutions
+пожар|fire emergency|incendie
+ограбление|robbery|cambriolage
+погоня|chase|course-poursuite
+побег из тюрьмы|prison break|évasion de prison
+арест|arrest|arrestation
+допрос|interrogation|interrogatoire
+суд присяжных|jury trial|procès avec jury
+алиби|alibi|alibi
+улика|clue|indice
+отпечатки пальцев|fingerprints|empreintes digitales
+расследование|investigation|enquête
+шпионаж|espionage|espionnage
+похищение|kidnapping|enlèvement
+выкуп|ransom|rançon
+заговор|conspiracy|complot
+переворот|coup|coup d’État
+забастовка|strike|grève
+митинг|rally|manifestation
+выборы|election|élections
+референдум|referendum|référendum
+революция|revolution|révolution
+перемирие|ceasefire|cessez-le-feu
+катастрофа|disaster|catastrophe
+авария|accident|accident
+кораблекрушение|shipwreck|naufrage
+эвакуация|evacuation|évacuation
+спасательная операция|rescue operation|opération de sauvetage
+конец света|end of the world|fin du monde
+нашествие зомби|zombie invasion|invasion de zombies
+вторжение инопланетян|alien invasion|invasion extraterrestre
+путешествие во времени|time travel|voyage dans le temps
+полёт на Луну|trip to the Moon|voyage sur la Lune
+высадка на Марс|landing on Mars|atterrissage sur Mars
+выход в открытый космос|spacewalk|sortie dans l’espace
+обратный отсчёт|countdown|compte à rebours
+старт ракеты|rocket launch|lancement de fusée
+прямой эфир|live broadcast|émission en direct
+интервью|interview|interview
+пресс-конференция|press conference|conférence de presse
+фотосессия|photo shoot|séance photo
+кастинг|casting|casting
+премьера|premiere|première
+аншлаг|full house|salle comble
+провал|flop|fiasco
+овация|ovation|ovation
+бис|encore|bis
+автограф-сессия|book signing|séance de dédicaces
+поклонник|admirer|admirateur
+фанатка|fangirl|fan
+папарацци|paparazzi|paparazzi
+скандал|scandal|scandale
+сплетни о звёздах|celebrity gossip|potins de stars
+реалити-шоу|reality show|téléréalité
+ток-шоу|talk show|talk-show
+викторина|quiz|quiz
+лотерея|lottery|loterie
+джекпот|jackpot|jackpot
+пари|bet|pari
+ставка|stake|mise
+блеф|bluff|bluff
+жульничество|cheating|triche
+дуэль|duel|duel
+рукопожатие|handshake|poignée de main
+объятия|hugs|câlins
+поцелуй|kiss|baiser
+подмигивание|wink|clin d’œil
+селфи с котом|selfie with a cat|selfie avec un chat
+видео с котиками|cat videos|vidéos de chats
+вирусное видео|viral video|vidéo virale
+отписка|unfollow|désabonnement
+бан|ban|bannissement
+забытый пароль|forgotten password|mot de passe oublié
+заражённый компьютер|infected computer|ordinateur infecté
+синий экран|blue screen|écran bleu
+зависший компьютер|frozen computer|ordinateur planté
+сломанный экран|cracked screen|écran fissuré
+спам-звонок|spam call|appel indésirable
+автоответчик|answering machine|répondeur
+громкая связь|speakerphone|haut-parleur du téléphone
+групповой чат|group chat|discussion de groupe
+голосовое сообщение|voice message|message vocal
+опечатка|typo|faute de frappe
+автозамена|autocorrect|correction automatique
+ночной перекус|midnight snack|grignotage nocturne
+холодильник ночью|fridge at night|frigo la nuit
+пригоревшая каша|burnt porridge|bouillie brûlée
+убежавшее молоко|milk boiling over|lait qui déborde
+разбитая тарелка|broken plate|assiette cassée
+пятно на рубашке|stain on a shirt|tache sur la chemise
+дырка в носке|hole in a sock|trou dans la chaussette
+потерянный носок|missing sock|chaussette perdue
+мокрые ноги|wet feet|pieds mouillés
+сквозняк|draught|courant d’air
+комар ночью|mosquito at night|moustique la nuit
+храпящий сосед|snoring neighbour|voisin qui ronfle
+будильник соседа|neighbour’s alarm|réveil du voisin
+лай собаки|dog barking|aboiement
+кошка на клавиатуре|cat on the keyboard|chat sur le clavier

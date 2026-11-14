@@ -1,0 +1,127 @@
+# concrete
+одежда|clothes|vêtements
+футболка|T-shirt|tee-shirt
+рубашка|shirt|chemise
+блузка|blouse|chemisier
+свитер|sweater|pull
+толстовка|hoodie|sweat à capuche
+кофта|cardigan|gilet
+жилетка|waistcoat|gilet sans manches
+пиджак|jacket|veste
+костюм|suit|costume
+смокинг|tuxedo|smoking
+пальто|coat|manteau
+куртка|jacket coat|blouson
+пуховик|down jacket|doudoune
+шуба|fur coat|manteau de fourrure
+плащ|raincoat|imperméable
+дождевик|rain poncho|poncho de pluie
+брюки|trousers|pantalon
+джинсы|jeans|jean
+шорты|shorts|short
+юбка|skirt|jupe
+платье|dress|robe
+свадебное платье|wedding dress|robe de mariée
+сарафан|pinafore dress|robe d’été
+комбинезон|overalls|salopette
+пижама|pyjamas|pyjama
+ночная рубашка|nightgown|chemise de nuit
+трусы|underpants|caleçon
+майка|vest top|débardeur
+бюстгальтер|bra|soutien-gorge
+купальник|swimsuit|maillot de bain
+плавки|swimming trunks|slip de bain
+носки|socks|chaussettes
+колготки|tights|collants
+гольфы|knee socks|mi-bas
+шапка|hat|bonnet
+кепка|cap|casquette
+шляпа|hat with brim|chapeau
+панама|sun hat|bob
+берет|beret|béret
+цилиндр|top hat|haut-de-forme
+ковбойская шляпа|cowboy hat|chapeau de cow-boy
+шлем|helmet|casque
+капюшон|hood|capuche
+шарф|scarf|écharpe
+платок|headscarf|foulard
+галстук|tie|cravate
+галстук-бабочка|bow tie|nœud papillon
+ремень|belt|ceinture
+подтяжки|braces|bretelles
+перчатки|gloves|gants
+варежки|mittens|moufles
+ботинки|boots|chaussures montantes
+туфли|shoes|chaussures
+кроссовки|trainers|baskets
+кеды|sneakers|tennis
+сапоги|high boots|bottes
+резиновые сапоги|wellingtons|bottes en caoutchouc
+валенки|felt boots|bottes de feutre
+сандалии|sandals|sandales
+шлёпанцы|flip-flops|tongs
+каблук|heel|talon
+шнурки|shoelaces|lacets
+пуговица|button|bouton
+молния|zip|fermeture éclair
+карман|pocket|poche
+воротник|collar|col
+рукав|sleeve|manche
+манжета|cuff|poignet de chemise
+заплатка|patch|pièce rapportée
+кольцо|ring|bague
+серьги|earrings|boucles d’oreilles
+ожерелье|necklace|collier
+браслет|bracelet|bracelet
+цепочка|chain|chaînette
+кулон|pendant|pendentif
+брошь|brooch|broche
+часы наручные|wristwatch|montre
+корона|crown|couronne
+диадема|tiara|diadème
+заколка|hair clip|barrette
+резинка для волос|hair tie|élastique à cheveux
+ободок|headband|serre-tête
+веер|hand fan|éventail
+маска|mask|masque
+парик|wig|perruque
+солнечные очки|sunglasses|lunettes de soleil
+линзы|contact lenses|lentilles
+сумочка|handbag|sac à main
+портфель|briefcase|cartable
+клатч|clutch|pochette
+чемоданчик|attaché case|mallette
+косметичка|make-up bag|trousse de toilette
+помада|lipstick|rouge à lèvres
+тушь|mascara|mascara
+духи|perfume|parfum
+лак для ногтей|nail polish|vernis à ongles
+пудра|powder|poudre
+крем|cream|crème
+тату|tattoo|tatouage
+пирсинг|piercing|piercing
+униформа|uniform|uniforme
+фартук повара|chef’s apron|tablier de cuisine
+халат врача|white coat|blouse blanche
+скафандр|spacesuit|scaphandre
+гидрокостюм|wetsuit|combinaison de plongée
+доспехи|armour|armure
+кольчуга|chain mail|cotte de mailles
+плащ супергероя|cape|cape
+пачка балерины|tutu|tutu
+кимоно|kimono|kimono
+сари|sari|sari
+килт|kilt|kilt
+пончо|poncho|poncho
+тельняшка|striped vest|marinière
+фрак|tailcoat|queue-de-pie
+мантия|gown|toge
+корсет|corset|corset
+вуаль|veil|voile
+бусы|beads|perles
+значок|badge|badge
+медальон|locket|médaillon
+поясная сумка|bum bag|banane
+шапка с помпоном|bobble hat|bonnet à pompon
+меховые наушники|earmuffs|cache-oreilles
+трость|walking stick|canne

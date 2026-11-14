@@ -1,0 +1,93 @@
+# concrete
+компьютер|computer|ordinateur
+ноутбук|laptop|ordinateur portable
+планшет|tablet|tablette
+смартфон|smartphone|smartphone
+монитор|monitor|écran d’ordinateur
+клавиатура|keyboard|clavier
+компьютерная мышь|computer mouse|souris d’ordinateur
+коврик для мыши|mouse mat|tapis de souris
+принтер|printer|imprimante
+сканер|scanner|scanner
+флешка|USB stick|clé USB
+жёсткий диск|hard drive|disque dur
+процессор|processor|processeur
+видеокарта|graphics card|carte graphique
+провод|cable|câble
+зарядка для телефона|phone charger|chargeur
+пауэрбанк|power bank|batterie externe
+роутер|router|routeur
+Wi-Fi|Wi-Fi|Wi-Fi
+интернет|internet|internet
+сайт|website|site web
+браузер|browser|navigateur
+поисковик|search engine|moteur de recherche
+пароль|password|mot de passe
+логин|login|identifiant
+электронная почта|email|courriel
+спам|spam|spam
+компьютерный вирус|computer virus|virus informatique
+хакер|hacker|pirate informatique
+программа|program|logiciel
+приложение|app|application
+видеоигра|video game|jeu vidéo
+игровая приставка|games console|console de jeux
+джойстик|joystick|manette de jeu
+виртуальная реальность|virtual reality|réalité virtuelle
+шлем VR|VR headset|casque de réalité virtuelle
+робот|robot|robot
+дрон|drone|drone
+искусственный интеллект|artificial intelligence|intelligence artificielle
+чат-бот|chatbot|chatbot
+смарт-часы|smartwatch|montre connectée
+умная колонка|smart speaker|enceinte connectée
+лайк|like|j’aime
+подписчик|follower|abonné
+хештег|hashtag|hashtag
+мем|meme|mème
+смайлик|emoji|émoticône
+стрим|live stream|direct
+видеозвонок|video call|appel vidéo
+эсэмэска|text message|SMS
+уведомление|notification|notification
+скриншот|screenshot|capture d’écran
+обновление|update|mise à jour
+загрузка|download|téléchargement
+облачное хранилище|cloud storage|cloud
+курсор|cursor|curseur
+кнопка включения|power button|bouton marche
+батарея телефона|phone battery|batterie de téléphone
+сенсорный экран|touchscreen|écran tactile
+камера телефона|phone camera|appareil photo du téléphone
+QR-код|QR code|QR code
+штрихкод|barcode|code-barres
+банковская карта|bank card|carte bancaire
+терминал оплаты|card reader|terminal de paiement
+навигатор в машине|car navigation|GPS de voiture
+спутниковая тарелка|satellite dish|antenne parabolique
+антенна|antenna|antenne
+телевышка|TV tower|tour de télévision
+радиоприёмник|radio receiver|poste de radio
+рация|walkie-talkie|talkie-walkie
+пейджер|pager|bipeur
+телефонная будка|phone box|cabine téléphonique
+факс|fax|fax
+арифмометр|adding machine|machine à calculer
+лазер|laser|laser
+голограмма|hologram|hologramme
+3D-принтер|3D printer|imprimante 3D
+электромобиль|electric car|voiture électrique
+солнечная батарея|solar panel|panneau solaire
+ветряк|wind turbine|éolienne
+лампа накаливания|incandescent bulb|lampe à incandescence
+светодиод|LED|LED
+пульт от телевизора|TV remote|télécommande de télé
+камера наблюдения|security camera|caméra de surveillance
+сигнализация|alarm system|alarme
+домофон|intercom|interphone
+электронная книга|e-reader|liseuse
+веб-камера|webcam|webcam
+ксерокс|photocopier|photocopieuse
+ламинатор|laminator|plastifieuse
+шредер|shredder|déchiqueteuse
+кофемашина|espresso machine|machine à expresso

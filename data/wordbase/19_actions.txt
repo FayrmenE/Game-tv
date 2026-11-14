@@ -1,0 +1,242 @@
+# abstract
+бежать|to run|courir
+идти|to walk|marcher
+прыгать|to jump|sauter
+плавать|to swim|nager
+нырять|to dive|plonger
+летать|to fly|voler
+ползти|to crawl|ramper
+лезть|to climb|grimper
+падать|to fall|tomber
+сидеть|to sit|être assis
+стоять|to stand|être debout
+лежать|to lie down|être allongé
+спать|to sleep|dormir
+просыпаться|to wake up|se réveiller
+зевать|to yawn|bâiller
+потягиваться|to stretch|s’étirer
+есть|to eat|manger
+пить|to drink|boire
+жевать|to chew|mâcher
+глотать|to swallow|avaler
+кусать|to bite|mordre
+облизывать|to lick|lécher
+готовить|to cook|cuisiner
+жарить|to fry|faire frire
+варить|to boil|faire bouillir
+печь|to bake|cuire au four
+резать|to cut|couper
+чистить|to peel|éplucher
+мыть|to wash|laver
+стирать|to do laundry|faire la lessive
+гладить|to iron|repasser
+подметать|to sweep|balayer
+пылесосить|to hoover|passer l’aspirateur
+поливать|to water|arroser
+копать|to dig|creuser
+сажать|to plant|planter
+строить|to build|construire
+ломать|to break|casser
+чинить|to repair|réparer
+красить|to paint|peindre
+рисовать|to draw|dessiner
+писать|to write|écrire
+читать|to read|lire
+считать|to count|compter
+думать|to think|penser
+вспоминать|to remember|se souvenir
+забывать|to forget|oublier
+мечтать|to dream|rêver
+учиться|to study|étudier
+учить|to teach|enseigner
+говорить|to speak|parler
+шептать|to whisper|chuchoter
+кричать|to shout|crier
+петь|to sing|chanter
+свистеть|to whistle|siffler
+смеяться|to laugh|rire
+улыбаться|to smile|sourire
+плакать|to cry|pleurer
+хмуриться|to frown|froncer les sourcils
+подмигивать|to wink|faire un clin d’œil
+кивать|to nod|hocher la tête
+качать головой|to shake one’s head|secouer la tête
+пожимать плечами|to shrug|hausser les épaules
+махать|to wave|faire signe de la main
+хлопать|to clap|applaudir
+обнимать|to hug|serrer dans ses bras
+целовать|to kiss|embrasser
+здороваться|to greet|saluer
+прощаться|to say goodbye|dire au revoir
+знакомиться|to meet someone|faire connaissance
+дружить|to be friends|être amis
+ссориться|to quarrel|se disputer
+мириться|to make up|se réconcilier
+спорить|to argue|débattre
+шутить|to joke|plaisanter
+врать|to lie|mentir
+обманывать|to cheat|tricher
+хвастаться|to boast|se vanter
+жаловаться|to complain|se plaindre
+извиняться|to apologise|s’excuser
+благодарить|to thank|remercier
+просить|to ask for|demander
+прощать|to forgive|pardonner
+ждать|to wait|attendre
+торопиться|to hurry|se dépêcher
+опаздывать|to be late|être en retard
+искать|to search|chercher
+находить|to find|trouver
+терять|to lose|perdre
+прятать|to hide something|cacher
+прятаться|to hide oneself|se cacher
+подглядывать|to peek|épier
+подслушивать|to eavesdrop|écouter aux portes
+слушать|to listen|écouter
+смотреть|to watch|regarder
+нюхать|to sniff|renifler
+трогать|to touch|toucher
+щекотать|to tickle|chatouiller
+щипать|to pinch|pincer
+толкать|to push|pousser
+тянуть|to pull|tirer
+поднимать|to lift|soulever
+бросать|to throw|lancer
+ловить|to catch|attraper
+пинать|to kick|donner un coup de pied
+бить|to hit|frapper
+драться|to fight|se battre
+защищаться|to defend oneself|se défendre
+нападать|to attack|attaquer
+убегать|to run away|s’enfuir
+догонять|to chase|poursuivre
+танцевать|to dance|danser
+играть|to play|jouer
+выигрывать|to win|gagner
+проигрывать|to lose a game|perdre une partie
+болеть за команду|to cheer for a team|supporter une équipe
+тренироваться|to train|s’entraîner
+отжиматься|to do push-ups|faire des pompes
+приседать|to squat|faire des squats
+кувыркаться|to somersault|faire une roulade
+кататься на коньках|to skate|patiner
+кататься на лыжах|to ski|skier
+ехать на велосипеде|to cycle|faire du vélo
+водить машину|to drive|conduire
+парковаться|to park|se garer
+путешествовать|to travel|voyager
+собирать чемодан|to pack a suitcase|faire sa valise
+фотографировать|to take photos|photographier
+звонить|to call|téléphoner
+печатать|to type|taper au clavier
+листать|to scroll|faire défiler
+лайкать|to like a post|liker
+покупать|to buy|acheter
+продавать|to sell|vendre
+платить|to pay|payer
+торговаться|to haggle|marchander
+копить|to save money|économiser
+тратить|to spend|dépenser
+дарить|to give a gift|offrir
+получать|to receive|recevoir
+открывать|to open|ouvrir
+закрывать|to close|fermer
+стучать|to knock|frapper à la porte
+звонить в дверь|to ring the doorbell|sonner à la porte
+входить|to enter|entrer
+выходить|to exit|sortir
+переезжать|to move house|déménager
+убираться|to tidy up|ranger
+мусорить|to litter|jeter des déchets
+курить|to smoke|fumer
+кашлять|to cough|tousser
+чихать|to sneeze|éternuer
+икать|to hiccup|avoir le hoquet
+храпеть|to snore|ronfler
+болеть|to be ill|être malade
+лечить|to treat|soigner
+выздоравливать|to recover|guérir
+расти|to grow|grandir
+стареть|to grow old|vieillir
+рождаться|to be born|naître
+жениться|to get married|se marier
+разводиться|to divorce|divorcer
+работать|to work|travailler
+отдыхать|to rest|se reposer
+загорать|to sunbathe|bronzer
+рыбачить|to fish|pêcher
+охотиться|to hunt|chasser
+собирать грибы|to pick mushrooms|cueillir des champignons
+нести|to carry|porter
+везти|to transport|transporter
+тащить|to drag|traîner
+катить|to roll|rouler une balle
+крутить|to spin|faire tourner
+мешать|to stir|remuer
+наливать|to pour|verser
+разливать|to spill|renverser
+сыпать|to sprinkle|saupoudrer
+дуть|to blow|souffler
+вдыхать|to breathe in|inspirer
+надувать шарик|to blow up a balloon|gonfler un ballon
+лопать|to pop|faire éclater
+рвать|to tear|déchirer
+клеить|to glue|coller
+шить|to sew|coudre
+вязать|to knit|tricoter
+завязывать|to tie|nouer
+развязывать|to untie|dénouer
+застёгивать|to button up|boutonner
+одеваться|to get dressed|s’habiller
+раздеваться|to undress|se déshabiller
+причёсываться|to comb one’s hair|se coiffer
+бриться|to shave|se raser
+краситься|to put on make-up|se maquiller
+умываться|to wash one’s face|se débarbouiller
+чистить зубы|to brush one’s teeth|se brosser les dents
+принимать душ|to take a shower|prendre une douche
+греться|to warm up|se réchauffer
+мёрзнуть|to freeze|geler
+потеть|to sweat|transpirer
+дрожать|to shiver|trembler
+краснеть|to blush|rougir
+бледнеть|to turn pale|pâlir
+пугать|to frighten|effrayer
+бояться|to be afraid|avoir peur
+удивляться|to be surprised|s’étonner
+радоваться|to rejoice|se réjouir
+грустить|to be sad|être triste
+злиться|to be angry|être en colère
+обижаться|to take offence|se vexer
+ревновать|to be jealous|être jaloux
+влюбляться|to fall in love|tomber amoureux
+скучать|to miss someone|manquer à quelqu’un
+верить|to believe|croire
+надеяться|to hope|espérer
+сомневаться|to doubt|douter
+решать|to decide|décider
+выбирать|to choose|choisir
+угадывать|to guess|deviner
+объяснять|to explain|expliquer
+показывать|to show|montrer
+притворяться|to pretend|faire semblant
+передразнивать|to mimic|imiter
+аплодировать стоя|to give a standing ovation|faire une ovation debout
+дирижировать|to conduct an orchestra|diriger un orchestre
+жонглировать|to juggle|jongler
+балансировать|to balance|garder l’équilibre
+качаться на качелях|to swing|se balancer
+скользить|to slide|glisser
+спотыкаться|to trip|trébucher
+врезаться|to crash|percuter
+тонуть|to drown|se noyer
+спасать|to rescue|sauver
+тушить пожар|to put out a fire|éteindre un incendie
+звать на помощь|to call for help|appeler à l’aide
+голосовать|to vote|voter
+маршировать|to march|défiler au pas
+салютовать|to salute|faire le salut militaire
+молиться|to pray|prier
+медитировать|to meditate|méditer
+гадать|to tell fortunes|dire la bonne aventure
+колдовать|to cast spells|jeter des sorts

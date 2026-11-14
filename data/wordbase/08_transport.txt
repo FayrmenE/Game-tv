@@ -1,0 +1,115 @@
+# concrete
+машина|car|voiture
+такси|taxi|taxi
+автобус|bus|bus
+троллейбус|trolleybus|trolleybus
+трамвай|tram|tramway
+метро|underground|métro
+поезд|train|train
+электричка|suburban train|train de banlieue
+паровоз|steam locomotive|locomotive à vapeur
+вагон|carriage|wagon
+рельсы|rails|rails
+грузовик|lorry|camion
+фура|articulated lorry|semi-remorque
+пикап|pickup truck|pick-up
+джип|jeep|jeep
+лимузин|limousine|limousine
+кабриолет|convertible|cabriolet
+гоночная машина|racing car|voiture de course
+мотоцикл|motorbike|moto
+мопед|moped|mobylette
+скутер|scooter|scooter
+велосипед|bicycle|vélo
+трёхколёсный велосипед|tricycle|tricycle
+самокат|kick scooter|trottinette
+электросамокат|electric scooter|trottinette électrique
+моноколесо|unicycle|monoroue
+скейт|skateboard|skate
+ролики|roller skates|rollers
+коляска|pram|poussette
+тележка|trolley|chariot
+тачка|wheelbarrow|brouette
+трактор|tractor|tracteur
+комбайн|combine harvester|moissonneuse-batteuse
+экскаватор|excavator|pelleteuse
+бульдозер|bulldozer|bulldozer
+асфальтовый каток|road roller|rouleau compresseur
+подъёмный кран|crane|grue
+бетономешалка|concrete mixer|bétonnière
+мусоровоз|bin lorry|camion poubelle
+пожарная машина|fire engine|camion de pompiers
+полицейская машина|police car|voiture de police
+эвакуатор|tow truck|dépanneuse
+танк|tank|char d’assaut
+самолёт|plane|avion
+вертолёт|helicopter|hélicoptère
+планер|glider|planeur
+дирижабль|airship|dirigeable
+воздушный шар|hot-air balloon|montgolfière
+парашют|parachute|parachute
+дельтаплан|hang glider|deltaplane
+ракета|rocket|fusée
+космический корабль|spaceship|vaisseau spatial
+летающая тарелка|flying saucer|soucoupe volante
+корабль|ship|navire
+лодка|boat|barque
+парусник|sailing ship|voilier
+яхта|yacht|yacht
+катер|motorboat|vedette
+байдарка|kayak|kayak
+каноэ|canoe|canoë
+плот|raft|radeau
+паром|ferry|ferry
+лайнер|ocean liner|paquebot
+подводная лодка|submarine|sous-marin
+ледокол|icebreaker|brise-glace
+гондола|gondola|gondole
+пароход|steamboat|bateau à vapeur
+якорь|anchor|ancre
+весло|oar|rame
+парус|sail|voile de bateau
+руль|steering wheel|volant
+колесо|wheel|roue
+шина|tyre|pneu
+мотор|engine|moteur
+бензин|petrol|essence
+фары|headlights|phares
+гудок|horn|klaxon
+багажник|car boot|coffre de voiture
+ремень безопасности|seat belt|ceinture de sécurité
+номерной знак|number plate|plaque d’immatriculation
+дворники|windscreen wipers|essuie-glaces
+сани|sledge|traîneau
+санки|sled|luge
+снегоход|snowmobile|motoneige
+карета|carriage coach|carrosse
+телега|cart|charrette
+вокзал|railway station|gare
+аэропорт|airport|aéroport
+порт|harbour|port
+остановка|bus stop|arrêt de bus
+заправка|petrol station|station-service
+парковка|car park|parking
+светофор|traffic lights|feu de circulation
+пешеходный переход|zebra crossing|passage piéton
+дорога|road|route
+шоссе|motorway|autoroute
+перекрёсток|crossroads|carrefour
+мост|bridge|pont
+тоннель|tunnel|tunnel
+пробка на дороге|traffic jam|bouchon
+билет|ticket|billet
+паспорт|passport|passeport
+виза|visa|visa
+чемодан на колёсиках|wheeled suitcase|valise à roulettes
+багаж|luggage|bagages
+карта|map|carte
+компас|compass|boussole
+навигатор|satnav|GPS
+дорожный знак|road sign|panneau routier
+шлагбаум|barrier|barrière
+эскалатор|escalator|escalator
+канатная дорога|cable car|téléphérique
+фуникулёр|funicular|funiculaire
+колесо обозрения|Ferris wheel|grande roue

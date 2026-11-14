@@ -1,0 +1,217 @@
+# concrete
+кошка|cat|chat
+собака|dog|chien
+щенок|puppy|chiot
+котёнок|kitten|chaton
+лошадь|horse|cheval
+жеребёнок|foal|poulain
+корова|cow|vache
+бык|bull|taureau
+телёнок|calf|veau
+свинья|pig|cochon
+поросёнок|piglet|porcelet
+овца|sheep|mouton
+ягнёнок|lamb|agneau
+коза|goat|chèvre
+осёл|donkey|âne
+кролик|rabbit|lapin
+заяц|hare|lièvre
+хомяк|hamster|hamster
+морская свинка|guinea pig|cochon d’Inde
+мышь|mouse|souris
+крыса|rat|rat
+белка|squirrel|écureuil
+бурундук|chipmunk|tamia
+ёж|hedgehog|hérisson
+крот|mole|taupe
+бобр|beaver|castor
+выдра|otter|loutre
+енот|raccoon|raton laveur
+барсук|badger|blaireau
+скунс|skunk|mouffette
+лиса|fox|renard
+волк|wolf|loup
+медведь|bear|ours
+белый медведь|polar bear|ours polaire
+панда|panda|panda
+коала|koala|koala
+кенгуру|kangaroo|kangourou
+ленивец|sloth|paresseux
+обезьяна|monkey|singe
+горилла|gorilla|gorille
+шимпанзе|chimpanzee|chimpanzé
+орангутан|orangutan|orang-outan
+лев|lion|lion
+львица|lioness|lionne
+тигр|tiger|tigre
+леопард|leopard|léopard
+гепард|cheetah|guépard
+пантера|panther|panthère
+рысь|lynx|lynx
+слон|elephant|éléphant
+носорог|rhinoceros|rhinocéros
+бегемот|hippopotamus|hippopotame
+жираф|giraffe|girafe
+зебра|zebra|zèbre
+верблюд|camel|chameau
+лама|llama|lama
+олень|deer|cerf
+лось|moose|élan
+кабан|wild boar|sanglier
+бизон|bison|bison
+антилопа|antelope|antilope
+гиена|hyena|hyène
+шакал|jackal|chacal
+летучая мышь|bat|chauve-souris
+дикобраз|porcupine|porc-épic
+броненосец|armadillo|tatou
+муравьед|anteater|fourmilier
+утконос|platypus|ornithorynque
+кит|whale|baleine
+дельфин|dolphin|dauphin
+акула|shark|requin
+тюлень|seal|phoque
+морж|walrus|morse
+пингвин|penguin|manchot
+осьминог|octopus|pieuvre
+кальмар|squid|calmar
+медуза|jellyfish|méduse
+морская звезда|starfish|étoile de mer
+морской конёк|seahorse|hippocampe
+краб|crab|crabe
+омар|lobster|homard
+креветка|shrimp|crevette
+устрица|oyster|huître
+улитка|snail|escargot
+слизень|slug|limace
+черепаха|turtle|tortue
+крокодил|crocodile|crocodile
+ящерица|lizard|lézard
+хамелеон|chameleon|caméléon
+игуана|iguana|iguane
+змея|snake|serpent
+кобра|cobra|cobra
+удав|boa|boa
+лягушка|frog|grenouille
+жаба|toad|crapaud
+головастик|tadpole|têtard
+рыба|fish|poisson
+золотая рыбка|goldfish|poisson rouge
+щука|pike|brochet
+карп|carp|carpe
+лосось|salmon|saumon
+сом|catfish|silure
+скат|stingray|raie
+рыба-меч|swordfish|espadon
+пиранья|piranha|piranha
+угорь|eel|anguille
+птица|bird|oiseau
+воробей|sparrow|moineau
+голубь|pigeon|pigeon
+ворона|crow|corneille
+сорока|magpie|pie
+синица|tit|mésange
+снегирь|bullfinch|bouvreuil
+соловей|nightingale|rossignol
+ласточка|swallow|hirondelle
+скворец|starling|étourneau
+дятел|woodpecker|pic
+кукушка|cuckoo|coucou
+сова|owl|chouette
+филин|eagle owl|grand-duc
+орёл|eagle|aigle
+ястреб|hawk|faucon
+сокол|falcon|faucon pèlerin
+гриф|vulture|vautour
+попугай|parrot|perroquet
+павлин|peacock|paon
+фламинго|flamingo|flamant rose
+лебедь|swan|cygne
+утка|duck|canard
+гусь|goose|oie
+курица|hen|poule
+петух|rooster|coq
+цыплёнок|chick|poussin
+индюк|turkey|dinde
+страус|ostrich|autruche
+пеликан|pelican|pélican
+аист|stork|cigogne
+цапля|heron|héron
+чайка|seagull|mouette
+колибри|hummingbird|colibri
+тукан|toucan|toucan
+насекомое|insect|insecte
+муравей|ant|fourmi
+пчела|bee|abeille
+оса|wasp|guêpe
+шмель|bumblebee|bourdon
+муха|fly|mouche
+комар|mosquito|moustique
+бабочка|butterfly|papillon
+гусеница|caterpillar|chenille
+стрекоза|dragonfly|libellule
+кузнечик|grasshopper|sauterelle
+сверчок|cricket|grillon
+божья коровка|ladybug|coccinelle
+жук|beetle|scarabée
+таракан|cockroach|cafard
+паук|spider|araignée
+скорпион|scorpion|scorpion
+клещ|tick|tique
+блоха|flea|puce
+светлячок|firefly|luciole
+богомол|praying mantis|mante religieuse
+червяк|worm|ver
+сороконожка|centipede|mille-pattes
+моль|moth|mite
+динозавр|dinosaur|dinosaure
+мамонт|mammoth|mammouth
+саблезубый тигр|sabre-toothed tiger|tigre à dents de sabre
+птеродактиль|pterodactyl|ptérodactyle
+тираннозавр|tyrannosaurus|tyrannosaure
+хорёк|ferret|furet
+ласка|weasel|belette
+норка|mink|vison
+соболь|sable|zibeline
+песец|arctic fox|renard polaire
+северный олень|reindeer|renne
+як|yak|yack
+мул|mule|mule
+пони|pony|poney
+далматинец|dalmatian|dalmatien
+такса|dachshund|teckel
+пудель|poodle|caniche
+овчарка|sheepdog|berger allemand
+бульдог|bulldog|bouledogue
+чихуахуа|chihuahua|chihuahua
+дворняга|mutt|bâtard
+лапа|paw|patte
+клюв|beak|bec
+перо|feather|plume
+крыло|wing|aile
+хвост|tail|queue
+грива|mane|crinière
+рог|horn|corne
+бивень|tusk|défense
+копыто|hoof|sabot
+коготь|claw|griffe
+чешуя|scales|écailles
+плавник|fin|nageoire
+панцирь|shell|carapace
+усы кота|whiskers|moustaches de chat
+нора|burrow|terrier
+гнездо|nest|nid
+муравейник|anthill|fourmilière
+улей|beehive|ruche
+паутина|spider web|toile d’araignée
+берлога|den|tanière
+конура|kennel|niche
+скворечник|birdhouse|nichoir
+аквариум|aquarium|aquarium
+клетка|cage|cage
+зоопарк|zoo|zoo
+ферма|farm|ferme
+стадо|herd|troupeau
+стая|flock|nuée
+косяк рыб|school of fish|banc de poissons
+рой|swarm|essaim

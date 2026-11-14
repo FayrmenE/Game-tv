@@ -1,0 +1,79 @@
+# concrete
+лесная поляна|forest clearing|clairière
+опушка|forest edge|lisière
+тропинка|path|sentier
+просёлок|dirt road|chemin de terre
+обрыв|precipice|précipice
+овраг|ravine|ravin
+холмик|mound|butte
+вершина|summit|sommet
+склон|slope|pente
+перевал|mountain pass|col de montagne
+плато|plateau|plateau
+каньон|canyon|canyon
+гейзер|geyser|geyser
+горячий источник|hot spring|source chaude
+дельта реки|river delta|delta
+устье|river mouth|embouchure
+плотина|dam|barrage
+водохранилище|reservoir|réservoir
+канал|canal|canal
+шлюз|lock gate|écluse
+лагуна|lagoon|lagune
+атолл|atoll|atoll
+фьорд|fjord|fjord
+коралловый риф|coral reef|récif corallien
+мангровые заросли|mangrove|mangrove
+саванна|savannah|savane
+тундра|tundra|toundra
+вечная мерзлота|permafrost|pergélisol
+джунгли Амазонки|Amazon rainforest|forêt amazonienne
+бамбуковая роща|bamboo grove|bambouseraie
+берёзовая роща|birch grove|bois de bouleaux
+сосновый бор|pine forest|pinède
+виноградник|vineyard|vignoble
+фруктовый сад|orchard|verger
+пасека|apiary|rucher
+птичник|poultry house|poulailler
+коровник|cowshed|étable
+свинарник|pigsty|porcherie
+амбар|barn|grange
+водяная мельница|watermill|moulin à eau
+колодец-журавль|sweep well|puits à balancier
+деревенский дом|farmhouse|maison de ferme
+русская печь|Russian stove|poêle russe
+погреб|root cellar|cellier
+деревенская баня|wooden bathhouse|bania
+сеновал|hayloft|fenil
+пугало|scarecrow|épouvantail
+кукурузное поле|cornfield|champ de maïs
+поле подсолнухов|sunflower field|champ de tournesols
+лавандовое поле|lavender field|champ de lavande
+рисовая терраса|rice terrace|rizière en terrasses
+чайная плантация|tea plantation|plantation de thé
+кофейная плантация|coffee plantation|plantation de café
+нефтяная вышка|oil rig|plateforme pétrolière
+шахта|mine|mine
+карьер|quarry|carrière de pierre
+свалка|rubbish dump|décharge
+очистные сооружения|sewage works|station d’épuration
+канализация|sewer|égout
+люк|manhole|bouche d’égout
+подземный переход|underpass|passage souterrain
+эстакада|flyover|viaduc
+развязка|interchange|échangeur
+кольцевая|ring road|périphérique
+автовокзал|bus station|gare routière
+депо|depot|dépôt
+ангар|hangar|hangar
+взлётная полоса|runway|piste d’atterrissage
+диспетчерская вышка|control tower|tour de contrôle
+верфь|shipyard|chantier naval
+док|dock|bassin portuaire
+военная база|military base|base militaire
+бункер|bunker|bunker
+окоп|trench|tranchée
+полигон|test site|terrain d’essais
+космодром|spaceport|cosmodrome
+стартовая площадка|launch pad|aire de lancement
+лунная база|lunar base|base lunaire

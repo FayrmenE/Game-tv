@@ -1,0 +1,99 @@
+# concrete
+молоток|hammer|marteau
+гвоздь|nail for wood|clou
+шуруп|screw|vis
+отвёртка|screwdriver|tournevis
+гаечный ключ|spanner|clé à molette
+плоскогубцы|pliers|pince
+пила|saw|scie
+топор|axe|hache
+лопата|shovel|pelle de jardin
+грабли|rake|râteau
+вилы|pitchfork|fourche
+кирка|pickaxe|pioche
+лом|crowbar|pied-de-biche
+дрель|drill|perceuse
+шуруповёрт|cordless screwdriver|visseuse
+рулетка|tape measure|mètre ruban
+строительный уровень|spirit level|niveau à bulle
+стремянка|stepladder|escabeau
+верёвка|rope|corde
+цепь|chain|chaîne
+проволока|wire|fil de fer
+изолента|electrical tape|chatterton
+наждачка|sandpaper|papier de verre
+напильник|file|lime
+тиски|vice|étau
+паяльник|soldering iron|fer à souder
+ножовка|hacksaw|scie à métaux
+бензопила|chainsaw|tronçonneuse
+болт|bolt|boulon
+гайка|nut bolt|écrou
+шайба для болта|washer|rondelle
+малярная кисть|paint brush|pinceau de peintre
+валик|paint roller|rouleau de peinture
+краска для стен|wall paint|peinture murale
+ведро с краской|paint pot|pot de peinture
+ящик для инструментов|toolbox|boîte à outils
+мастерская|workshop|atelier
+верстак|workbench|établi
+наковальня|anvil|enclume
+клещи|pincers|tenailles
+игла|needle|aiguille
+нитка|thread|fil à coudre
+напёрсток|thimble|dé à coudre
+швейная машинка|sewing machine|machine à coudre
+булавка|pin|épingle
+английская булавка|safety pin|épingle à nourrice
+портновский метр|tape measure for sewing|mètre de couturière
+утюжок|hair straightener|lisseur
+зажигалка|lighter|briquet
+спички|matches|allumettes
+керосиновая лампа|oil lamp|lampe à pétrole
+лупа|magnifying glass|loupe
+весы|scales|balance
+гирька для весов|weight for scales|poids de balance
+песочные часы|hourglass|sablier
+метроном|metronome|métronome
+театральный бинокль|opera glasses|jumelles de théâtre
+подзорная труба|spyglass|longue-vue
+ртутный градусник|mercury thermometer|thermomètre à mercure
+барометр|barometer|baromètre
+флюгер|weathervane|girouette
+громкоговоритель|loudspeaker|haut-parleur
+мегафон|megaphone|mégaphone
+сирена|siren|sirène
+огнетушитель|fire extinguisher|extincteur
+каска|hard hat|casque de chantier
+противогаз|gas mask|masque à gaz
+наручники|handcuffs|menottes
+щит|shield|bouclier
+меч|sword|épée
+кинжал|dagger|poignard
+копьё|spear|lance
+лук и стрелы|bow and arrows|arc et flèches
+арбалет|crossbow|arbalète
+рогатка|slingshot|lance-pierre
+бумеранг|boomerang|boomerang
+пушка|cannon|canon
+водяной пистолет|water pistol|pistolet à eau
+катапульта|catapult|catapulte
+капкан|trap|piège
+сачок|butterfly net|filet à papillons
+мышеловка|mousetrap|tapette à souris
+ключ от машины|car key|clé de voiture
+связка ключей|bunch of keys|trousseau de clés
+навесной замок|padlock|cadenas
+кодовый замок|combination lock|cadenas à code
+клей-пистолет|glue gun|pistolet à colle
+пульверизатор|spray bottle|vaporisateur
+распылитель краски|spray can|bombe de peinture
+кондитерский мешок|piping bag|poche à douille
+форма для льда|ice tray|bac à glaçons
+мешок|sack|sac en toile
+бочка|barrel|tonneau
+ящик|crate|caisse
+контейнер|shipping container|conteneur
+поддон|pallet|palette de manutention
+канистра|jerrycan|jerrican
+пожарное ведро|fire bucket|seau d’incendie

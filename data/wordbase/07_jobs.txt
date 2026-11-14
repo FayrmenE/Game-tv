@@ -1,0 +1,159 @@
+# concrete
+врач|doctor|médecin
+медсестра|nurse|infirmière
+хирург|surgeon|chirurgien
+стоматолог|dentist|dentiste
+ветеринар|vet|vétérinaire
+фармацевт|pharmacist|pharmacien
+учитель|teacher|professeur
+воспитатель|nursery teacher|éducatrice
+директор|headmaster|directeur
+профессор|professor|professeur d’université
+студент|student|étudiant
+школьник|schoolboy|écolier
+повар-кондитер|pastry chef|pâtissier
+пекарь|baker|boulanger
+мясник|butcher|boucher
+продавец|shop assistant|vendeur
+кассир|cashier|caissier
+бармен|bartender|barman
+бариста|barista|barista
+полицейский|police officer|policier
+пожарный|firefighter|pompier
+спасатель|lifeguard|sauveteur
+солдат|soldier|soldat
+генерал|general|général
+моряк|sailor|marin
+капитан|captain|capitaine
+пилот|pilot|pilote
+стюардесса|flight attendant|hôtesse de l’air
+космонавт|astronaut|astronaute
+водитель|driver|chauffeur
+таксист|taxi driver|chauffeur de taxi
+машинист|train driver|conducteur de train
+дальнобойщик|lorry driver|routier
+курьер|courier|coursier
+почтальон|postman|facteur
+строитель|builder|maçon
+архитектор|architect|architecte
+инженер|engineer|ingénieur
+электрик|electrician|électricien
+сантехник|plumber|plombier
+плотник|carpenter|charpentier
+столяр|joiner|menuisier
+маляр|painter decorator|peintre en bâtiment
+сварщик|welder|soudeur
+механик|mechanic|mécanicien
+кузнец|blacksmith|forgeron
+шахтёр|miner|mineur de fond
+фермер|farmer|agriculteur
+пастух|shepherd|berger
+садовник|gardener|jardinier
+рыбак|fisherman|pêcheur
+охотник|hunter|chasseur
+лесник|forester|garde forestier
+дровосек|woodcutter|bûcheron
+пчеловод|beekeeper|apiculteur
+программист|programmer|programmeur
+дизайнер|designer|designer
+блогер|blogger|blogueur
+журналист|journalist|journaliste
+фотограф|photographer|photographe
+оператор|camera operator|cadreur
+режиссёр|film director|réalisateur
+актёр|actor|acteur
+актриса|actress|actrice
+певец|singer|chanteur
+музыкант|musician|musicien
+дирижёр|conductor|chef d’orchestre
+композитор|composer|compositeur
+художник|artist|peintre
+скульптор|sculptor|sculpteur
+писатель|writer|écrivain
+поэт|poet|poète
+переводчик|translator|traducteur
+библиотекарь|librarian|bibliothécaire
+учёный|scientist|scientifique
+химик|chemist|chimiste
+физик|physicist|physicien
+астроном|astronomer|astronome
+археолог|archaeologist|archéologue
+историк|historian|historien
+юрист|lawyer|avocat
+судья|judge|juge
+нотариус|notary|notaire
+бухгалтер|accountant|comptable
+банкир|banker|banquier
+менеджер|manager|manager
+секретарь|secretary|secrétaire
+бизнесмен|businessman|homme d’affaires
+начальник|boss|patron
+стажёр|intern|stagiaire
+парикмахер|hairdresser|coiffeur
+визажист|make-up artist|maquilleur
+портной|tailor|tailleur
+швея|seamstress|couturière
+модель|model|mannequin
+стилист|stylist|styliste
+тренер|coach|entraîneur
+спортсмен|athlete|sportif
+футболист|footballer|footballeur
+боксёр|boxer|boxeur
+балерина|ballerina|ballerine
+танцор|dancer|danseur
+клоун|clown|clown
+фокусник|magician|magicien
+акробат|acrobat|acrobate
+жонглёр|juggler|jongleur
+дрессировщик|animal trainer|dompteur
+гид|tour guide|guide
+экскурсовод|museum guide|guide de musée
+горничная|maid|femme de chambre
+няня|nanny|nounou
+дворник|janitor|balayeur
+уборщик|cleaner|agent d’entretien
+сторож|watchman|veilleur de nuit
+охранник|security guard|vigile
+детектив|detective|détective
+шпион|spy|espion
+пират|pirate|pirate
+ковбой|cowboy|cow-boy
+рыцарь|knight|chevalier
+король|king|roi
+королева|queen|reine
+принц|prince|prince
+принцесса|princess|princesse
+президент|president|président
+министр|minister|ministre
+мэр|mayor|maire
+депутат|member of parliament|député
+дипломат|diplomat|diplomate
+священник|priest|prêtre
+монах|monk|moine
+психолог|psychologist|psychologue
+логопед|speech therapist|orthophoniste
+окулист|eye doctor|ophtalmologiste
+педиатр|paediatrician|pédiatre
+массажист|masseur|masseur
+диджей|DJ|DJ
+ведущий|presenter|présentateur
+комментатор|commentator|commentateur
+диктор|newsreader|speaker
+продюсер|producer|producteur
+каскадёр|stuntman|cascadeur
+водолаз|diver|scaphandrier
+кондуктор|conductor on a bus|contrôleur
+носильщик|porter|porteur
+лётчик-испытатель|test pilot|pilote d’essai
+трубочист|chimney sweep|ramoneur
+ювелир|jeweller|bijoutier
+часовщик|watchmaker|horloger
+сапожник|shoemaker|cordonnier
+флорист|florist|fleuriste
+кинолог|dog handler|maître-chien
+пенсионер|pensioner|retraité
+безработный|unemployed person|chômeur
+волонтёр|volunteer|bénévole
+изобретатель|inventor|inventeur
+путешественник|traveller|voyageur
+турист|tourist|touriste

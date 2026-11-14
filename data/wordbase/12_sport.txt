@@ -1,0 +1,117 @@
+# concrete
+футбол|football|football
+хоккей|ice hockey|hockey
+баскетбол|basketball|basket
+волейбол|volleyball|volley
+теннис|tennis|tennis
+настольный теннис|table tennis|ping-pong
+бадминтон|badminton|badminton
+гольф|golf|golf
+бейсбол|baseball|baseball
+регби|rugby|rugby
+бокс|boxing|boxe
+борьба|wrestling|lutte
+карате|karate|karaté
+дзюдо|judo|judo
+фехтование|fencing|escrime
+плавание|swimming|natation
+дайвинг|scuba diving|plongée
+сёрфинг|surfing|surf
+водное поло|water polo|water-polo
+гребля|rowing|aviron
+парусный спорт|sailing|voile sportive
+бег|running|course à pied
+марафон|marathon|marathon
+прыжки в длину|long jump|saut en longueur
+прыжки в высоту|high jump|saut en hauteur
+прыжки с шестом|pole vault|saut à la perche
+метание копья|javelin|lancer du javelot
+штанга|barbell|haltère long
+гиря|kettlebell|kettlebell
+гантель|dumbbell|haltère
+гимнастика|gymnastics|gymnastique sportive
+акробатика|acrobatics|acrobatie
+фигурное катание|figure skating|patinage artistique
+лыжи|skis|skis
+сноуборд|snowboard|snowboard
+биатлон|biathlon|biathlon
+бобслей|bobsleigh|bobsleigh
+керлинг|curling|curling
+скалолазание|climbing|escalade
+альпинизм|mountaineering|alpinisme
+велоспорт|cycling|cyclisme
+конный спорт|horse riding|équitation
+скачки|horse racing|course hippique
+шахматы|chess|échecs
+шашки|draughts|dames
+бильярд|billiards|billard
+дартс|darts|fléchettes
+кегли|skittles|quilles
+йога|yoga|yoga
+фитнес|fitness|fitness
+аэробика|aerobics|aérobic
+пилатес|pilates|pilates
+танцы|dancing|danse
+бальные танцы|ballroom dancing|danse de salon
+брейк-данс|breakdance|breakdance
+паркур|parkour|parkour
+рыбалка|fishing|pêche
+охота|hunting|chasse
+поход|hike|randonnée
+туризм|hiking|tourisme
+мяч|ball|ballon
+футбольные ворота|goal|but
+сетка|net|filet
+ракетка|racket|raquette
+клюшка|hockey stick|crosse
+шайба|puck|palet
+бита|bat|batte
+перчатка вратаря|goalkeeper glove|gant de gardien
+кубок|cup trophy|coupe
+медаль|medal|médaille
+пьедестал|podium|podium
+финишная лента|finish line|ligne d’arrivée
+старт|start|départ
+свисток|whistle|sifflet
+секундомер|stopwatch|chronomètre
+табло|scoreboard|tableau d’affichage
+лайнсмен|linesman|juge de ligne
+болельщик|fan|supporter
+чемпион|champion|champion
+рекорд|record|record
+олимпиада|Olympics|Jeux olympiques
+чемпионат|championship|championnat
+турнир|tournament|tournoi
+матч|match|match
+гол|goal scored|but marqué
+пенальти|penalty|penalty
+офсайд|offside|hors-jeu
+нокаут|knockout|K.-O.
+ничья|draw|match nul
+тренировка|training|entraînement
+разминка|warm-up|échauffement
+батут|trampoline|trampoline
+скакалка|skipping rope|corde à sauter
+обруч|hoop|cerceau
+турник|pull-up bar|barre fixe
+брусья|parallel bars|barres parallèles
+канат|climbing rope|corde lisse
+мат|gym mat|tapis de gym
+кимоно для дзюдо|judogi|kimono de judo
+боксёрские перчатки|boxing gloves|gants de boxe
+боксёрская груша|punching bag|sac de frappe
+коньки|ice skates|patins à glace
+лыжные палки|ski poles|bâtons de ski
+сноубордист|snowboarder|snowboardeur
+серфборд|surfboard|planche de surf
+акваланг|aqualung|scaphandre autonome
+ласты|flippers|palmes
+маска для плавания|diving mask|masque de plongée
+спасательный круг|lifebuoy|bouée de sauvetage
+спасательный жилет|life jacket|gilet de sauvetage
+удочка|fishing rod|canne à pêche
+поплавок|float|bouchon de pêche
+рыболовный крючок|fishhook|hameçon
+спальный мешок|sleeping bag|sac de couchage
+фонарик|torch|lampe de poche
+бинокль|binoculars|jumelles

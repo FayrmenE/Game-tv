@@ -1,0 +1,85 @@
+# concrete
+коллекция марок|stamp collection|collection de timbres
+нумизматика|coin collecting|numismatique
+модель самолёта|model plane|maquette d’avion
+воздушная гимнастика|aerial silks|tissu aérien
+стрельба из лука|archery|tir à l’arc
+пейнтбол|paintball|paintball
+лазертаг|laser tag|laser game
+картинг|go-karting|karting
+квадроцикл|quad bike|quad
+прыжок с тарзанки|bungee jump|saut à l’élastique
+зиплайн|zip line|tyrolienne
+каякинг|kayaking|kayak de mer
+рафтинг|rafting|rafting
+кайтсёрфинг|kitesurfing|kitesurf
+виндсёрфинг|windsurfing|planche à voile
+вейкборд|wakeboarding|wakeboard
+водные лыжи|water skiing|ski nautique
+подводная охота|spearfishing|chasse sous-marine
+спелеология|caving|spéléologie
+геокешинг|geocaching|géocaching
+садоводство|gardening|jardinage
+вышивание крестиком|cross-stitch|point de croix
+макраме|macramé|macramé
+гончарный круг|potter’s wheel|tour de potier
+резьба по дереву|woodcarving|sculpture sur bois
+выжигание|pyrography|pyrogravure
+каллиграфия|calligraphy|calligraphie
+скрапбукинг|scrapbooking|scrapbooking
+мыловарение|soap making|savonnerie artisanale
+свечеварение|candle making|fabrication de bougies
+выпечка хлеба|bread baking|fabrication du pain
+домашнее вино|homemade wine|vin maison
+кроссворд|crossword|grille de mots croisés
+судоку|sudoku|sudoku
+ребус|rebus|rébus
+шарада|charade|charade
+крестики-нолики|noughts and crosses|morpion
+морской бой|battleships game|bataille navale
+балда|word game|jeu de lettres
+игра в города|city name game|jeu des villes
+мафия|mafia game|jeu du loup-garou
+фанты|forfeits|gages
+бутылочка|spin the bottle|jeu de la bouteille
+правда или действие|truth or dare|action ou vérité
+испорченный телефон|Chinese whispers|téléphone arabe
+горячая картошка|hot potato|patate chaude
+стулья с музыкой|musical chairs|chaises musicales
+вышибалы|dodgeball|balle aux prisonniers
+резиновый мяч|rubber ball|balle en caoutchouc
+воланчик|shuttlecock|volant
+фрисби|frisbee|frisbee
+йо-йо|yo-yo|yo-yo
+спиннер|fidget spinner|hand spinner
+тамагочи|virtual pet|animal virtuel
+слайм|slime|slime
+кинетический песок|kinetic sand|sable magique
+мыльница|point-and-shoot camera|appareil compact
+полароид|instant camera|appareil photo instantané
+штатив|tripod|trépied
+селфи-палка|selfie stick|perche à selfie
+детский микроскоп|toy microscope|microscope jouet
+набор юного химика|chemistry set|kit de chimie
+аквариумные рыбки|aquarium fish|poissons d’aquarium
+хомячье колесо|hamster wheel|roue de hamster
+когтеточка|scratching post|griffoir
+лежанка для кота|cat bed|panier pour chat
+ошейник|collar for a dog|collier de chien
+поводок|lead|laisse
+намордник|muzzle|muselière
+косточка для собаки|dog bone|os pour chien
+корм|pet food|croquettes
+кошачий лоток|litter tray|litière
+птичья клетка|birdcage|cage à oiseaux
+террариум|terrarium|terrarium
+улитка ахатина|giant snail|escargot géant
+конюшня|stable|écurie
+седло|saddle|selle
+стремя|stirrup|étrier
+уздечка|bridle|bride
+кнут|whip|fouet de cocher
+шпоры|spurs|éperons
+лассо|lasso|lasso
+родео|rodeo|rodéo
+скачки с препятствиями|show jumping|saut d’obstacles

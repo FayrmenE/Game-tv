@@ -1,0 +1,121 @@
+# concrete
+дракон|dragon|dragon
+единорог|unicorn|licorne
+русалка|mermaid|sirène
+фея|fairy|fée
+эльф|elf|elfe
+гном|dwarf|nain
+тролль|troll|troll
+великан|giant|géant
+ведьма|witch|sorcière
+колдун|sorcerer|sorcier
+маг|wizard|enchanteur
+джинн|genie|génie
+призрак|ghost|fantôme
+вампир|vampire|vampire
+оборотень|werewolf|loup-garou
+зомби|zombie|zombie
+мумия|mummy|momie
+скелет в шкафу|skeleton in the cupboard|cadavre dans le placard
+привидение|spectre|revenant
+домовой|house spirit|lutin de la maison
+леший|forest spirit|esprit de la forêt
+водяной|water spirit|esprit des eaux
+Баба-Яга|Baba Yaga|Baba Yaga
+Кощей Бессмертный|Koschei the Deathless|Kochtcheï l’Immortel
+Змей Горыныч|three-headed dragon|dragon à trois têtes
+жар-птица|firebird|oiseau de feu
+феникс|phoenix|phénix
+пегас|Pegasus|Pégase
+кентавр|centaur|centaure
+минотавр|minotaur|minotaure
+циклоп|cyclops|cyclope
+грифон|griffin|griffon
+сфинкс|sphinx|sphinx
+горгона|gorgon|gorgone
+кракен|kraken|kraken
+лох-несское чудовище|Loch Ness monster|monstre du Loch Ness
+снежный человек|yeti|yéti
+инопланетянин|alien|extraterrestre
+НЛО|UFO|OVNI
+робот-убийца|killer robot|robot tueur
+супергерой|superhero|super-héros
+злодей|villain|méchant
+плащ-невидимка|invisibility cloak|cape d’invisibilité
+шапка-невидимка|invisibility hat|chapeau d’invisibilité
+ковёр-самолёт|flying carpet|tapis volant
+сапоги-скороходы|seven-league boots|bottes de sept lieues
+волшебная лампа|magic lamp|lampe magique
+хрустальный шар|crystal ball|boule de cristal
+зелье|potion|potion
+котёл ведьмы|witch’s cauldron|chaudron de sorcière
+метла|broomstick|balai de sorcière
+заклинание|spell|sortilège
+проклятие|curse|malédiction
+волшебное зеркало|magic mirror|miroir magique
+золотое яйцо|golden egg|œuf d’or
+волшебная рыбка|wish-granting fish|poisson magique
+сундук с сокровищами|treasure chest|coffre au trésor
+клад|buried treasure|trésor enfoui
+карта сокровищ|treasure map|carte au trésor
+необитаемый остров|desert island|île déserte
+корабль-призрак|ghost ship|vaisseau fantôme
+замок с привидениями|haunted castle|château hanté
+башня принцессы|princess tower|tour de la princesse
+трон|throne|trône
+скипетр|sceptre|sceptre
+меч в камне|sword in the stone|épée dans le rocher
+Колобок|bun man|Kolobok
+Красная Шапочка|Little Red Riding Hood|Petit Chaperon rouge
+Золушка|Cinderella|Cendrillon
+хрустальная туфелька|glass slipper|pantoufle de verre
+тыква-карета|pumpkin coach|citrouille carrosse
+Белоснежка|Snow White|Blanche-Neige
+отравленное яблоко|poisoned apple|pomme empoisonnée
+Спящая красавица|Sleeping Beauty|Belle au bois dormant
+Буратино|wooden puppet boy|pantin de bois
+Дюймовочка|Thumbelina|Poucette
+Гадкий утёнок|Ugly Duckling|Vilain Petit Canard
+Снежная королева|Snow Queen|Reine des neiges
+Кот в сапогах|Puss in Boots|Chat botté
+Робин Гуд|Robin Hood|Robin des Bois
+Дон Кихот|Don Quixote|Don Quichotte
+Шерлок Холмс|Sherlock Holmes|Sherlock Holmes
+Дракула|Dracula|Dracula
+Франкенштейн|Frankenstein|Frankenstein
+Маленький принц|Little Prince|Petit Prince
+Алиса в Стране чудес|Alice in Wonderland|Alice au pays des merveilles
+Питер Пэн|Peter Pan|Peter Pan
+Пиноккио|Pinocchio|Pinocchio
+Гулливер|Gulliver|Gulliver
+Робинзон Крузо|Robinson Crusoe|Robinson Crusoé
+Тарзан|Tarzan|Tarzan
+Маугли|Mowgli|Mowgli
+Ромео и Джульетта|Romeo and Juliet|Roméo et Juliette
+Гамлет|Hamlet|Hamlet
+три мушкетёра|three musketeers|trois mousquetaires
+Царевна-лягушка|Frog Princess|Princesse grenouille
+Иван-дурак|Ivan the Fool|Ivan le Simplet
+Илья Муромец|Ilya Muromets|Ilia de Mourom
+Геракл|Hercules|Hercule
+Одиссей|Odysseus|Ulysse
+Зевс|Zeus|Zeus
+Посейдон|Poseidon|Poséidon
+Медуза Горгона|Medusa|Méduse la Gorgone
+троянский конь|Trojan horse|cheval de Troie
+Атлантида|Atlantis|Atlantide
+Эльдорадо|El Dorado|Eldorado
+машина времени|time machine|machine à remonter le temps
+телепорт|teleporter|téléporteur
+портал|portal|portail magique
+параллельный мир|parallel world|monde parallèle
+киборг|cyborg|cyborg
+андроид|android|androïde
+лазерный меч|laser sword|sabre laser
+бластер|blaster|pistolet laser
+звездолёт|starship|astronef
+космическая станция|space station|station spatiale
+луноход|moon rover|rover lunaire
+марсоход|Mars rover|rover martien
+космический шлем|space helmet|casque spatial
+марсианин|Martian|Martien

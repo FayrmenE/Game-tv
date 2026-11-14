@@ -7,8 +7,8 @@
   var active = null, screenKey = null, hostKey = null, hostPhase = null, lang = null;
   var kicked = false, joining = false;
   var $ = function (id) { return document.getElementById(id); };
-  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship', doodle: 'doodle', chests: 'chests' };
-  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢', doodle: '🖍️', chests: '🧰' };
+  var MODULE = { alien: 'alien', sniper: 'sniper', croc_solo: 'croc', croc_duel: 'croc', telepathy: 'telepathy', battleship: 'battleship', doodle: 'doodle', chests: 'chests', explain: 'words', hat: 'words' };
+  var EMOJI = { alien: '👽', sniper: '🎯', croc_solo: '🐊', croc_duel: '⚔️', telepathy: '🔮', battleship: '🚢', doodle: '🖍️', chests: '🧰', explain: '🗣️', hat: '🎩' };
 
   var params = new URLSearchParams(location.search);
   var ls = {
@@ -276,6 +276,26 @@
   }
 
   /* ------------------------------ панель хоста ------------------------------ */
+  /** Настройки «Объясни!» / «Шляпы» в меню хоста. Элементы с data-ws сохраняются сразу. */
+  function wordsSettings(id, S) {
+    var sel = function (key, vals, cur, fmt) {
+      return '<select class="t" data-ws="' + key + '">' + vals.map(function (v) {
+        return '<option value="' + v + '"' + (v === cur ? ' selected' : '') + '>' + esc(fmt ? fmt(v) : String(v)) + '</option>';
+      }).join('') + '</select>';
+    };
+    var sec = function (n) { return t('chests.sec', { n: n }); };
+    var chk = function (key, on, label) { return '<label class="chk"><input type="checkbox" data-ws="' + key + '"' + (on ? ' checked' : '') + '> ' + esc(label) + '</label>'; };
+    if (id === 'explain') {
+      return '<div class="chests-set"><label class="f">⏱ ' + esc(t('words.set.time')) + '</label>' + sel('aliasTime', [30, 45, 60, 90], S.aliasTime || 60, sec) +
+        '<label class="f">🏁 ' + esc(t('words.set.target')) + '</label>' + sel('aliasTarget', [20, 30, 50, 70], S.aliasTarget || 30) +
+        chk('aliasPenalty', S.aliasPenalty !== false, t('words.set.penalty')) + '</div>';
+    }
+    return '<div class="chests-set"><label class="f">⏱ ' + esc(t('words.set.time')) + '</label>' + sel('hatTime', [30, 45, 60, 90], S.hatTime || 45, sec) +
+      '<label class="f">🎩 ' + esc(t('words.set.words')) + '</label>' + sel('hatWords', [20, 30, 40, 50], S.hatWords || 30) +
+      '<label class="f">🔁 ' + esc(t('words.set.rounds')) + '</label>' + sel('hatRounds', [4, 3], S.hatRounds || 4, function (v) { return t(v === 4 ? 'words.set.rounds4' : 'words.set.rounds3'); }) +
+      chk('hatSame', !!S.hatSame, t('words.set.same')) + '<p class="hint">' + esc(t('words.set.sameHint')) + '</p></div>';
+  }
+
   function renderHost() {
     var panel = $('host');
     if (!P.me.isHost) { panel.classList.add('hidden'); hostKey = null; return; }
@@ -319,6 +339,7 @@
           '<label class="chk"><input type="checkbox" id="hChH"' + (cs.chestsHard ? ' checked' : '') + '> ' + esc(t('chests.set.hard')) + '</label>' +
           '<p class="hint">' + esc(t('chests.set.hardHint')) + '</p></div>';
       }
+      if (sel.id === 'explain' || sel.id === 'hat') rows += wordsSettings(sel.id, P.settings);
       if (P.cup.length) rows += btn('hEvening', '🏆 ' + t('host.evening'), 'sec');
     } else if (ph === 'game') {
       rows += '<div class="host-row">' + btn('hPause', P.paused ? '▶ ' + t('host.resume') : '⏸ ' + t('host.pause'), 'warn') +
@@ -363,6 +384,12 @@
       b.onclick = function () {
         var p = U.playerById(P, b.dataset.kick);
         if (p && confirm(t('host.kick') + i18n.colon() + p.name + '?')) ctx.host('kick', { playerId: p.id });
+      };
+    });
+    panel.querySelectorAll('[data-ws]').forEach(function (e) {
+      e.onchange = function () {
+        var d = {}; d[e.dataset.ws] = e.type === 'checkbox' ? e.checked : Number(e.value);
+        ctx.host('settings', d);
       };
     });
     if ($('hChR')) {

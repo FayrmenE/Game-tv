@@ -1,0 +1,99 @@
+# abstract
+небесное тело|celestial body|corps céleste
+невезение|bad luck|malchance
+нейтралитет|neutrality|neutralité
+непогода|bad weather|intempéries
+ночная смена|night shift|équipe de nuit
+обратная сторона Луны|far side of the Moon|face cachée de la Lune
+общественный транспорт|public transport|transports en commun
+одноразовая посуда|disposable tableware|vaisselle jetable
+озарение|epiphany|illumination
+окно возможностей|window of opportunity|fenêtre d’opportunité
+олимпийский огонь|Olympic flame|flamme olympique
+мыльная опера|soap opera|feuilleton
+оптическая иллюзия|optical illusion|illusion d’optique
+открытый космос|open space|espace intersidéral
+отпечаток лапы|paw print|empreinte de patte
+умные очки|smart glasses|lunettes connectées
+падение курса|currency crash|effondrement du cours
+пароль от вайфая|Wi-Fi password|mot de passe du Wi-Fi
+первая помощь|first aid|premiers secours
+перелётные птицы|migratory birds|oiseaux migrateurs
+персональный тренер|personal trainer|coach personnel
+пищевая цепочка|food chain|chaîne alimentaire
+план эвакуации|evacuation plan|plan d’évacuation
+пограничник|border guard|garde-frontière
+подводное течение|undercurrent|courant sous-marin
+подземелье|dungeon|donjon
+подсознание|subconscious|subconscient
+пожарная тревога|fire alarm|alarme incendie
+полярная ночь|polar night|nuit polaire
+полярный день|midnight sun|soleil de minuit
+последний герой|last survivor|dernier survivant
+почётный гость|guest of honour|invité d’honneur
+правая рука|right-hand man|bras droit
+прайм-тайм|prime time|heure de grande écoute
+предсказание|prediction|prédiction
+приворотное зелье|love potion|philtre d’amour
+прыжок веры|leap of faith|acte de foi
+пустая трата времени|waste of time|perte de temps
+пятое колесо|fifth wheel|cinquième roue du carrosse
+радиоактивность|radioactivity|radioactivité
+разминирование|bomb disposal|déminage
+раскадровка|storyboard|story-board
+расписание поездов|train timetable|horaires des trains
+реинкарнация|reincarnation|réincarnation
+ржавчина|rust|rouille
+родная речь|mother tongue|langue maternelle
+рыбий жир|cod liver oil|huile de foie de morue
+самоизоляция|self-isolation|confinement
+сборная страны|national team|équipe nationale
+свадебное путешествие|wedding trip|voyage de noces
+световой год|light year|année-lumière
+свободное падение|free fall|chute libre
+северный ветер|north wind|vent du nord
+секретное оружие|secret weapon|arme secrète
+сердцебиение|heartbeat|battement de cœur
+серое вещество|grey matter|matière grise
+сила притяжения|pull of gravity|force d’attraction
+синоптик|weather forecaster|météorologue
+сказочный принц|Prince Charming|prince charmant
+слепое пятно|blind spot|angle mort
+служебный роман|office romance|romance de bureau
+смертельный номер|death-defying act|numéro périlleux
+солнечная система|solar system|système solaire
+сон наяву|daydream|rêve éveillé
+спящий режим|sleep mode|mode veille
+стадный инстинкт|herd instinct|instinct grégaire
+стихийное бедствие|natural disaster|catastrophe naturelle
+страховка|insurance|assurance
+сухой закон|prohibition|prohibition
+счастливый билет|lucky ticket|ticket gagnant
+тёмная лошадка|dark horse|outsider
+теневая сторона|dark side|côté obscur
+тест на беременность|pregnancy test|test de grossesse
+технический перерыв|technical break|pause technique
+тихий час|quiet hour|sieste
+точка невозврата|point of no return|point de non-retour
+трудный возраст|awkward age|âge ingrat
+туманность|nebula|nébuleuse
+удар молнии|lightning strike|impact de foudre
+уличный музыкант|busker|musicien de rue
+урок физкультуры|PE lesson|cours d’EPS
+утечка газа|gas leak|fuite de gaz
+фальстарт|false start|faux départ
+финишная прямая|home straight|dernière ligne droite
+фотофиниш|photo finish|photo-finish
+целебный источник|healing spring|source thermale
+цепная реакция|chain reaction|réaction en chaîne
+чёрная полоса|bad patch|mauvaise passe
+чёрный ящик|black box|boîte noire
+чистый лист|clean slate|page blanche
+шахматная доска|chessboard|échiquier
+шведский стол|buffet|buffet à volonté
+шоковая терапия|shock therapy|thérapie de choc
+эффект бабочки|butterfly effect|effet papillon
+эхо в горах|mountain echo|écho en montagne
+ядерный реактор|nuclear reactor|réacteur nucléaire
+язык жестов|sign language|langue des signes
+яркая личность|colourful character|forte personnalité
