@@ -351,17 +351,17 @@ function create(api) {
     });
   }
 
-  const BOT_WORDS = { ru: ['круглый', 'большой', 'яркий', 'полезный'], en: ['round', 'big', 'bright', 'useful'] };
+  const BOT_WORDS = { ru: ['круглый', 'большой', 'яркий', 'полезный'], en: ['round', 'big', 'bright', 'useful'], fr: ['rond', 'grand', 'coloré', 'utile'] };
   // Бот играет честно: знает только свой предмет (Чужой-бот — свой «чужой»)
   const botItem = (p, r) => (p.id === r.alienId ? r.itemB : r.itemA);
   function botWord(p, r, c) {
-    const lang = api.settings.lang === 'en' ? 'en' : 'ru';
+    const lang = (['en', 'fr'].includes(api.settings.lang) ? api.settings.lang : 'ru');
     const list = (HINTS[botItem(p, r)] || {})[lang] || BOT_WORDS[lang];
     return list[(c + (p.id.charCodeAt(1) || 0)) % list.length];
   }
   // Голосует за того, чьи слова хуже всего подходят к его предмету
   function botSuspect(p, r, cands) {
-    const lang = api.settings.lang === 'en' ? 'en' : 'ru';
+    const lang = (['en', 'fr'].includes(api.settings.lang) ? api.settings.lang : 'ru');
     const mine = ((HINTS[botItem(p, r)] || {})[lang] || []).map((w) => w.toLowerCase());
     const scored = cands.map((id) => {
       const ws = (r.words[id] || []).filter((w) => typeof w === 'string').map((w) => w.toLowerCase());

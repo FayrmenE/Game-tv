@@ -33,7 +33,8 @@ function maskOf(word, revealed) {
 }
 
 function checkGuess(guess, word) {
-  const g = normalize(guess), w = normalize(word);
+  // «le chat», «a cat» — артикли в начале не мешают угадать
+  const g = normalize(guess).replace(/^(?:le|la|les|l|un|une|des|du|the|a|an)\s+/, ''), w = normalize(word);
   if (!g) return null;
   if (g === w) return 'exact';
   const letters = [...w.replace(/\s/g, '')].length;
@@ -43,7 +44,7 @@ function checkGuess(guess, word) {
 
 function create(api, opts) {
   const mode = opts.mode === 'duel' ? 'duel' : 'solo';
-  const lang = api.settings.lang === 'en' ? 'en' : 'ru';
+  const lang = (['en', 'fr'].includes(api.settings.lang) ? api.settings.lang : 'ru');
   const dict = WORDS[lang];
   const usedWords = new Set();
   const G = {

@@ -20,7 +20,7 @@
   socket.on('connect', function () {
     var code = null;
     try { code = sessionStorage.getItem('party.tv.code'); } catch (e) { /* ignore */ }
-    socket.emit('tv:hello', { code: code, bots: params.get('bots') });
+    socket.emit('tv:hello', { code: code, bots: params.get('bots'), lang: params.get('lang') || i18n.getLang() });
   });
   socket.on('state', function (s) {
     P = s;
@@ -91,7 +91,7 @@
     if (first) return;
     var b = $('phaseBanner');
     // из «Раунд 2 · Обсуждение» или «Что это нарисовано? · рисует Аня» берём название этапа
-    var parts = $('phaseTitle').textContent.split(' · ').filter(function (x) { return !/^(Раунд|Round|Ход|Turn)\s|^(рисует|drawn by)\s/i.test(x); });
+    var parts = $('phaseTitle').textContent.split(' · ').filter(function (x) { return !/^(Раунд|Round|Manche|Ход|Turn|Tour)\s|^(рисует|drawn by|dessiné par)\s/i.test(x); });
     b.innerHTML = '<div>' + esc(parts[0] || $('phaseTitle').textContent) + '</div>';
     b.classList.remove('show');
     void b.offsetWidth;

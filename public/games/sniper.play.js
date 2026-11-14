@@ -14,7 +14,7 @@
     if (G.spectator) { el.innerHTML = '<div class="card big-msg"><div class="emoji">🎯</div><h2>' + esc(t('play.spectator')) + '</h2></div>'; return; }
     var head = '';
     if (G.target) head = '<div class="sn-phead">' + esc(t('sniper.catch')) + ' ' + ART.itemSvg(G.target, 'sn-ico') + '<b>' + esc(t('item.' + G.target)) + '</b>' +
-      '<span class="sn-pscore">' + esc(t('sniper.score')) + ': ' + G.score + '</span></div>';
+      '<span class="sn-pscore">' + esc(t('sniper.score')) + i18n.colon() + G.score + '</span></div>';
     var label = t('sniper.fire'), cls = '';
     var sub = G.phase === 'stream' ? t('sniper.waitTv') : G.phase === 'calibrate' ? t('sniper.calibrateSub') : t('sniper.getReady');
     if (G.phase === 'calibrate') { label = '📡'; cls = 'idle'; }

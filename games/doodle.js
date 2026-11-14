@@ -20,7 +20,7 @@ const MAX_STROKES = 1500;
 const POINTS = { truth: 300, artist: 100, fool: 200, allGuessedArtist: 100 };
 
 function create(api) {
-  const lang = api.settings.lang === 'en' ? 'en' : 'ru';
+  const lang = (['en', 'fr'].includes(api.settings.lang) ? api.settings.lang : 'ru');
   // единый список: сначала 150 сочетаний, потом 100 слов
   const PHRASES = { [lang]: PHRASES_SRC.combos[lang].concat(PHRASES_SRC.words[lang]) };
   const parts = api.players.filter((p) => p.connected).map((p) => p.id);
@@ -40,8 +40,8 @@ function create(api) {
 
   /** Все варианты выглядят одинаково: регистр, пробелы, знаки в конце — ничего не выдаёт автора */
   function pretty(text) {
-    const t = String(text || '').trim().replace(/\s+/g, ' ').replace(/[.!?…,;:]+$/u, '').toLocaleLowerCase(lang === 'en' ? 'en' : 'ru');
-    return t ? t[0].toLocaleUpperCase(lang === 'en' ? 'en' : 'ru') + t.slice(1) : t;
+    const t = String(text || '').trim().replace(/\s+/g, ' ').replace(/[.!?…,;:]+$/u, '').toLocaleLowerCase(lang);
+    return t ? t[0].toLocaleUpperCase(lang) + t.slice(1) : t;
   }
 
   function takePhrase() {

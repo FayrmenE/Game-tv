@@ -22,7 +22,8 @@
   <script src="/js/sound.js"></script>
   <script>
   (function () {
-    var lang = new URLSearchParams(location.search).get('lang') || ((navigator.language || 'ru').slice(0, 2) === 'ru' ? 'ru' : 'en');
+    var nav = (navigator.language || 'ru').slice(0, 2);
+    var lang = new URLSearchParams(location.search).get('lang') || (['ru', 'en', 'fr'].indexOf(nav) >= 0 ? nav : 'en');
     i18n.setLang(lang);
     var t = i18n.t, $ = function (id) { return document.getElementById(id); };
     var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };

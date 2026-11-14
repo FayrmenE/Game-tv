@@ -28,9 +28,22 @@ for (const s of scenes) {
 const ru = Object.keys(I18N.ru), en = Object.keys(I18N.en);
 for (const k of ru) if (!en.includes(k)) errors.push(`en: нет ключа ${k}`);
 for (const k of en) if (!ru.includes(k)) errors.push(`ru: нет ключа ${k}`);
+// Французский: все ключи, кроме удалённой «Телепатии» (для неё есть запасной английский)
+for (const k of ru) if (!(k in I18N.fr) && !/^(tele\.|title\.tele\.|rules\.telepathy|game\.telepathy)/.test(k)) errors.push(`fr: нет ключа ${k}`);
+// Подстановки {name} и т.п. должны совпадать во всех языках
+for (const l of ['en', 'fr']) for (const k of Object.keys(I18N[l])) {
+  const ph = (s) => (String(s).match(/\{\w+\}/g) || []).sort().join();
+  if (I18N.ru[k] != null && ph(I18N.ru[k]) !== ph(I18N[l][k])) errors.push(`${l}: подстановки в ${k} не совпадают с ru`);
+}
+// Подсказки ботов «Чужого» и фразы «Каракулей» — на всех языках
+const PHR = require('../data/phrases.js');
+for (const [id, h] of Object.entries(HINTS)) for (const l of ['ru', 'en', 'fr']) if (!h[l] || h[l].length !== 3) errors.push(`hints ${id}: нет 3 слов ${l}`);
+for (const part of ['combos', 'words']) for (const l of ['ru', 'en', 'fr']) {
+  if (PHR[part][l].length !== PHR[part].ru.length) errors.push(`phrases ${part}.${l}: ${PHR[part][l].length} вместо ${PHR[part].ru.length}`);
+}
 // Словари Крокодила: по 150 слов на уровень, без повторов
 const WORDS = require('../data/words.js');
-for (const l of ['ru', 'en']) {
+for (const l of ['ru', 'en', 'fr']) {
   const all = [];
   for (const lvl of ['easy', 'medium', 'hard']) {
     const list = WORDS[l][lvl];

@@ -1,6 +1,6 @@
 'use strict';
 /*
- * Словари «Крокодила»: ru и en, по 150 слов на уровень.
+ * Словари «Крокодила»: ru, en и fr, по 150 слов на уровень.
  * Лёгкое ×1, среднее ×1.5, сложное ×2. Слова конкретные и рисуемые.
  * Списки ru и en идут параллельно (i-е слово — одно и то же понятие).
  */
@@ -121,4 +121,69 @@ module.exports = {
       "animal trainer", "snake charmer", "genie", "flying carpet", "hut on chicken legs", "storyteller"
     ],
   },
+  fr: {
+    easy: [
+      "chat", "chien", "maison", "soleil", "lune", "étoile", "arbre", "fleur", "poisson", "oiseau", "pomme",
+      "poire", "banane", "voiture", "ballon", "livre", "chaise", "table", "tasse", "cuillère", "fourchette",
+      "couteau", "horloge", "lunettes", "chapeau", "chaussette", "botte", "parapluie", "clé", "porte", "fenêtre",
+      "bateau", "avion", "train", "vélo", "champignon", "carotte", "cœur", "nuage", "pluie", "bonhomme de neige",
+      "sapin", "gâteau", "glace", "pizza", "main", "œil", "nez", "oreille", "dent", "jambe", "serpent",
+      "éléphant", "girafe", "souris", "lapin", "ours", "renard", "canard", "poule", "vache", "cochon", "cheval",
+      "tortue", "escargot", "araignée", "papillon", "abeille", "fourmi", "feuille", "montagne", "arc-en-ciel",
+      "feu", "bougie", "lampe", "téléphone", "télévision", "pont", "drapeau", "couronne", "fusée", "robot",
+      "baleine", "requin", "crabe", "pieuvre", "œuf", "pain", "fromage", "pastèque", "cerise", "fraise", "raisin",
+      "citron", "ananas", "lit", "baignoire", "bouteille", "ballon de baudruche", "cerf-volant", "tambour",
+      "guitare", "trompette", "crayon", "ciseaux", "marteau", "scie", "échelle", "tente", "roue", "ancre",
+      "fer à cheval", "cactus", "palmier", "citrouille", "maïs", "tomate", "concombre", "casserole", "bouilloire",
+      "fer à repasser", "peigne", "brosse à dents", "savon", "serviette", "robe", "t-shirt", "pantalon", "gant",
+      "écharpe", "sac à dos", "sac", "enveloppe", "cadeau", "sifflet", "cloche", "sourire", "hibou", "pingouin",
+      "lion", "tigre", "singe", "grenouille", "crocodile", "hérisson", "coccinelle", "portefeuille", "verre",
+      "assiette", "clôture"
+    ],
+    medium: [
+      "feu rouge", "phare", "hélicoptère", "sous-marin", "tracteur", "pelleteuse", "camion de pompiers",
+      "ambulance", "autobus", "tramway", "navire", "parachute", "montgolfière", "moulin à vent", "puits",
+      "fontaine", "château", "pyramide", "volcan", "île", "cascade", "grotte", "flocon de neige", "éclair",
+      "tornade", "balançoire", "toboggan", "manège", "trampoline", "skateboard", "patins à roulettes",
+      "patins à glace", "skis", "haltères", "gant de boxe", "trophée", "médaille", "coffre au trésor", "pirate",
+      "chevalier", "princesse", "roi", "magicien", "sorcière", "fantôme", "vampire", "sirène", "licorne",
+      "dragon", "dinosaure", "extraterrestre", "astronaute", "clown", "cuisinier", "pompier", "policier",
+      "médecin", "prestidigitateur", "ballerine", "cow-boy", "ninja", "momie", "squelette", "zombie",
+      "microscope", "télescope", "boussole", "globe", "carte au trésor", "loupe", "aimant", "pile", "ampoule",
+      "ventilateur", "aspirateur", "frigo", "micro-ondes", "machine à laver", "grille-pain", "appareil photo",
+      "casque audio", "micro", "manette", "clavier", "ordinateur portable", "réveil", "sablier", "balance",
+      "bouclier", "épée", "arc et flèches", "canon", "boomerang", "lance-pierre", "canne à pêche", "râteau",
+      "pelle", "brouette", "nichoir", "niche", "aquarium", "cage", "toile d’araignée", "ruche", "nid", "paon",
+      "flamant rose", "chameau", "kangourou", "zèbre", "rhinocéros", "hippopotame", "autruche", "méduse",
+      "hippocampe", "panda", "raton laveur", "écureuil", "chauve-souris", "pic-vert", "perroquet", "cygne",
+      "morse", "hamburger", "hot-dog", "sushi", "crêpes", "pop-corn", "beignet", "sucette", "spaghettis",
+      "œuf au plat", "sandwich", "samovar", "matriochka", "violon", "piano", "harpe", "saxophone", "accordéon",
+      "jumelles", "échecs", "locomotive à vapeur", "moto", "luge", "coquillage", "empreinte de patte", "plume",
+      "libellule", "raquette de tennis"
+    ],
+    hard: [
+      "tremblement de terre", "éclipse", "naufrage", "apesanteur", "reflet", "ombre", "somnambule", "jongleur",
+      "funambule", "plongeur", "bûcheron", "apiculteur", "chef d’orchestre", "marionnettiste", "chirurgien",
+      "archéologue", "détective", "mineur", "acrobate", "escrime", "surf", "bobsleigh", "curling", "bras de fer",
+      "tir à la corde", "cache-cache", "saute-mouton", "marelle", "bataille de boules de neige", "pique-nique",
+      "mariage", "fête d’anniversaire", "examen", "concert", "embouteillage", "file d’attente", "escalator",
+      "ascenseur", "métro", "aéroport", "luciole", "caméléon", "porc-épic", "fourmilière", "aurore boréale",
+      "iceberg", "oasis", "mirage", "avalanche", "tsunami", "radar", "satellite", "trou noir", "comète",
+      "rover martien", "téléporteur", "machine à remonter le temps", "soucoupe volante", "éolienne", "barrage",
+      "pendule", "catapulte", "dirigeable", "joute", "labyrinthe", "puzzle", "dominos", "mots croisés", "hoquet",
+      "éternuement", "ronflement", "chatouilles", "chair de poule", "chute de neige", "verglas",
+      "feuilles mortes", "lever de soleil", "coucher de soleil", "pleine lune", "étoile filante",
+      "tempête de sable", "inondation", "sécheresse", "ouragan", "orage", "brouillard", "bateau en bouteille",
+      "marionnette", "lapin sorti du chapeau", "bulles de savon", "feu d’artifice", "cierge magique", "confettis",
+      "piñata", "bal masqué", "grande roue", "montagnes russes", "zoo", "musée", "bibliothèque", "hôpital",
+      "prison", "ferme", "chantier", "forteresse", "gratte-ciel", "tour eiffel", "statue de la liberté",
+      "tour de pise", "sphinx", "grande muraille de chine", "barrière", "passage piéton", "station de lavage",
+      "station-service", "distributeur de billets", "tirelire", "coffre-fort", "braquage", "course-poursuite",
+      "évasion", "éclosion de dinosaure", "atome", "microbe", "radiographie", "cassette", "gramophone",
+      "machine à écrire", "feu de forêt", "grue", "attrape-rêves", "château de cartes", "boule à neige",
+      "château de sable", "coucou suisse", "snowboardeur", "cauchemar", "plombier", "longue-vue", "cuirassé",
+      "orchestre", "ballet", "opéra", "cirque", "dompteur", "charmeur de serpents", "génie de la lampe",
+      "tapis volant", "cabane sur pattes de poulet", "conteur"
+    ]
+  }
 };

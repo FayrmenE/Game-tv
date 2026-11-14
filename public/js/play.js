@@ -237,7 +237,7 @@
     var me = P.me, top = $('top');
     top.classList.remove('hidden');
     var cup = P.cup.find(function (c) { return c.id === me.id; });
-    var sub = esc(t('play.room')) + ': ' + esc(P.code) + (cup && cup.points ? ' · 🏆 ' + cup.points : '');
+    var sub = esc(t('play.room')) + i18n.colon() + esc(P.code) + (cup && cup.points ? ' · 🏆 ' + cup.points : '');
     if (P.phase === 'game' && P.game && P.game.roundNo) sub += ' · ' + esc(t('tv.round', { n: P.game.roundNo }));
     top.innerHTML = U.avatar(me) + '<div class="who">' + esc(me.name) + (me.isHost ? ' 👑' : '') + '<small>' + sub + '</small></div>' +
       '<div class="timer js-timer"></div>';
@@ -307,8 +307,8 @@
           esc(t('game.' + g.id)) + '<small>👥 ' + (g.label || g.min + '–' + g.max) + '</small></button>';
       }).join('') + '</div>';
       var ok = connected >= sel.min && connected <= sel.max;
-      rows += btn('hStart', '▶ ' + t('host.start') + ': ' + t('game.' + sel.id), '', !ok);
-      rows += btn('hRules', '📖 ' + t('host.rules') + ': ' + t('game.' + sel.id), 'sec', !ok);
+      rows += btn('hStart', '▶ ' + t('host.start') + i18n.colon() + t('game.' + sel.id), '', !ok);
+      rows += btn('hRules', '📖 ' + t('host.rules') + i18n.colon() + t('game.' + sel.id), 'sec', !ok);
       if (!ok) rows += '<p>' + esc(t('host.needRange', { min: sel.min, max: sel.max, n: connected })) + '</p>';
       if (sel.id === 'chests') {
         var cs = P.settings, o2 = function (v, cur, label) { return '<option value="' + v + '"' + (String(v) === String(cur || (v === 3 || v === 40 ? v : '')) ? ' selected' : '') + '>' + esc(label) + '</option>'; };
@@ -338,7 +338,7 @@
     }).join('') + '</div>' : '';
     var opt = function (v, cur, label) { return '<option value="' + v + '"' + (String(v) === String(cur) ? ' selected' : '') + '>' + esc(label) + '</option>'; };
     var settings = '<label class="f">' + esc(t('host.lang')) + '</label><select class="t" id="hLang">' +
-      opt('ru', P.settings.lang, t('lang.ru')) + opt('en', P.settings.lang, t('lang.en')) + '</select>' +
+      opt('ru', P.settings.lang, t('lang.ru')) + opt('en', P.settings.lang, t('lang.en')) + opt('fr', P.settings.lang, t('lang.fr')) + '</select>' +
       '<label class="f">' + esc(t('host.pace')) + '</label><select class="t" id="hPace">' +
       opt('fast', P.settings.pace, t('pace.fast')) + opt('normal', P.settings.pace, t('pace.normal')) + opt('long', P.settings.pace, t('pace.long')) + '</select>' +
       '<label class="f">' + esc(t('host.duelTarget')) + '</label><select class="t" id="hDuel">' +
@@ -362,7 +362,7 @@
     panel.querySelectorAll('[data-kick]').forEach(function (b) {
       b.onclick = function () {
         var p = U.playerById(P, b.dataset.kick);
-        if (p && confirm(t('host.kick') + ': ' + p.name + '?')) ctx.host('kick', { playerId: p.id });
+        if (p && confirm(t('host.kick') + i18n.colon() + p.name + '?')) ctx.host('kick', { playerId: p.id });
       };
     });
     if ($('hChR')) {
