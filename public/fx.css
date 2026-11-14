@@ -447,7 +447,8 @@ body.game-words { --accent2: #4cc9f0; background-image: radial-gradient(circle a
 .wd-me { display: flex; justify-content: space-between; align-items: center; background: var(--panel); border-left: 6px solid var(--c); border-radius: 14px; padding: 8px 14px; margin-bottom: 10px; font-size: 18px; }
 .wd-me b { color: var(--c); } .wd-me span { font-weight: 900; font-size: 22px; }
 .wd-pteam { border-left: 6px solid var(--c); padding: 6px 10px; margin: 8px 0; background: var(--panel2); border-radius: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.wd-pteam b { width: 100%; color: var(--c); }
+.wd-pteam b { width: 100%; color: var(--c); display: flex; justify-content: space-between; align-items: center; }
+.wd-join { background: var(--c); color: #fff; border: 0; border-radius: 99px; padding: 6px 12px; font: inherit; font-size: 14px; font-weight: 800; }
 .wd-pteam span, .wd-mv { display: inline-flex; align-items: center; gap: 4px; }
 .wd-pteam .avatar { font-size: 11px; }
 .wd-mv { background: var(--panel); color: var(--ink); border: 0; border-radius: 99px; padding: 6px 10px; font: inherit; font-weight: 700; }

@@ -10,6 +10,7 @@ const fs = require('fs');
 const { pick, shuffle, rankByScore, randInt } = require('../lib/util');
 
 const HINTS = require('../data/hints');
+const SESSION = require('../lib/session');
 const SCENES = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'scenes.json'), 'utf8')).scenes;
 const MIN_PLAYERS = Number(process.env.MIN_PLAYERS) || 3;
 const MAX_PLAYERS = 10;
@@ -71,8 +72,18 @@ function create(api) {
   function startRound(room) {
     const parts = room.players.filter((p) => p.connected).map((p) => p.id);
     if (parts.length < MIN_PLAYERS) return false;
-    const scene = pick(SCENES);
-    const pair = pick(scene.pairs);
+    // пары не повторяются весь вечер; одна и та же сцена — не два раунда подряд
+    const all = SCENES.flatMap((s) => s.pairs.map((pr) => ({ scene: s, pair: pr })));
+    const u = SESSION.used(api.code, 'alien:pairs');
+    const keyOf = (x) => x.scene.id + ':' + x.pair.slice().sort().join('+');
+    let free = all.filter((x) => !u.has(keyOf(x)));
+    if (!free.length) { u.clear(); free = all; }
+    const lastScene = SESSION.used(api.code, 'alien:lastScene');
+    const other = free.filter((x) => !lastScene.has(x.scene.id));
+    const choice = pick(other.length ? other : free);
+    u.add(keyOf(choice));
+    const scene = choice.scene, pair = choice.pair;
+    lastScene.clear(); lastScene.add(scene.id);
     const [itemA, itemB] = Math.random() < 0.5 ? pair : [pair[1], pair[0]];
     const cands = parts.filter((id) => id !== room.lastAlienId);
     const alienId = pick(cands.length ? cands : parts);

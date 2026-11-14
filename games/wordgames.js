@@ -19,7 +19,6 @@ const WB = require('../lib/wordbase');
 const { applyOps } = require('../lib/strokes');
 const { pick, randInt, shuffle } = require('../lib/util');
 
-const USED = new Map();          // комната+язык → Set слов, уже бывших в игре
 const HAT_MODES = ['explain', 'oneword', 'gestures', 'draw'];
 const TEAM_COLORS = ['#ff595e', '#1982c4', '#8ac926', '#ffca3a'];
 const T = { ready: 15, last: 10, review: 12, round: 6, final: 8 };
@@ -29,9 +28,7 @@ function create(api, opts) {
   const S = api.settings;
   const lang = ['en', 'fr'].includes(S.lang) ? S.lang : 'ru';
   const base = WB.words(lang);
-  const usedKey = api.code + ':' + lang;
-  if (!USED.has(usedKey)) USED.set(usedKey, new Set());
-  const used = USED.get(usedKey);
+  const used = require('../lib/session').used(api.code, 'words:' + lang);
   const turnSec = mode === 'alias' ? ([30, 45, 60, 90].includes(S.aliasTime) ? S.aliasTime : 60)
     : ([30, 45, 60, 90].includes(S.hatTime) ? S.hatTime : 45);
   const target = [20, 30, 50, 70].includes(S.aliasTarget) ? S.aliasTarget : 30;
@@ -287,6 +284,13 @@ function create(api, opts) {
         const out = applyOps(G.canvas, data.ops);
         if (out.length) api.toTv('words:ops', { ops: out });
         return;
+      }
+      if (type === 'pick' && G.phase === 'teams') {     // игрок сам переходит в команду
+        const to = data.team | 0, from = teamOf(me);
+        if (from < 0 || to === from || !G.teams[to]) return;
+        G.teams[from] = G.teams[from].filter((x) => x !== me);
+        G.teams[to].push(me);
+        return api.sync();
       }
       if (!c || c.explainer !== me) return;
       if (type === 'go') startTurn();

@@ -601,6 +601,8 @@
       "title.words.explainer": "Лучший объясняющий ({n})",
       "title.words.mime": "Мастер пантомимы ({n})",
       "title.words.artist": "Художник вечера ({n})",
+      "words.p.pickHint": "Нажми «Перейти», чтобы выбрать команду. Хост может переставить кого угодно.",
+      "words.p.join": "Перейти",
       // Новые сцены
       "scene.office": "Офис",
       "scene.park": "Парк",
@@ -1422,6 +1424,8 @@
       "title.words.explainer": "Best explainer ({n})",
       "title.words.mime": "Master of mime ({n})",
       "title.words.artist": "Artist of the night ({n})",
+      "words.p.pickHint": "Tap “Join” to pick your team. The host can move anyone.",
+      "words.p.join": "Join",
       'scene.kitchen': 'Kitchen',
       'scene.beach': 'Beach',
       'scene.station': 'Train station',
@@ -1502,6 +1506,8 @@
 
     fr: {
       'lang.fr': 'Français',
+      "words.p.pickHint": "Touche « Rejoindre » pour choisir ton équipe. L’hôte peut déplacer n’importe qui.",
+      "words.p.join": "Rejoindre",
       "game.explain": "Explique !",
       "game.explain.desc": "Jeu d’équipe : fais deviner un maximum de mots sans les dire",
       "game.hat": "Le Chapeau",

@@ -46,7 +46,7 @@ function create(api, opts) {
   const mode = opts.mode === 'duel' ? 'duel' : 'solo';
   const lang = (['en', 'fr'].includes(api.settings.lang) ? api.settings.lang : 'ru');
   const dict = WORDS[lang];
-  const usedWords = new Set();
+  const usedWords = require('../lib/session').used(api.code, 'croc:' + lang);
   const G = {
     mode, phase: mode === 'duel' ? 'teams' : 'choose',
     participants: api.players.filter((p) => p.connected).map((p) => p.id),

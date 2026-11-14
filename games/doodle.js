@@ -31,7 +31,7 @@ function create(api) {
     sheets: {},          // id -> { phrase, idx, strokes, done, swapped }
     queue: [], cur: null // разбираемые рисунки
   };
-  const used = new Set();
+  const used = require('../lib/session').used(api.code, 'doodle:' + lang);
   let jobs = [];
   const later = (ms, fn) => { const c = api.later(ms, fn); jobs.push(c); return c; };
   const cancelJobs = () => { jobs.forEach((c) => c()); jobs = []; };

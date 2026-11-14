@@ -89,8 +89,10 @@
     var host = P.me && P.me.id === P.hostId;
     var k = 'teams' + lang + JSON.stringify(G.teams) + host;
     var html = '<div class="card"><h2>👥 ' + esc(t('words.ph.teams')) + '</h2>' + (G.myTeam >= 0 ? '<p>' + esc(t('words.p.yourTeam', { team: teamName(G.myTeam) })) + '</p>' : '') +
+      '<p class="hint">' + esc(t('words.p.pickHint')) + '</p>' +
       G.teams.map(function (ids, i) {
-        return '<div class="wd-pteam" style="--c:' + tcol(i) + '"><b>' + esc(teamName(i)) + '</b>' + ids.map(function (id) {
+        return '<div class="wd-pteam" style="--c:' + tcol(i) + '"><b>' + esc(teamName(i)) +
+          (i !== G.myTeam && G.myTeam >= 0 ? ' <button class="wd-join" data-jt="' + i + '">' + esc(t('words.p.join')) + '</button>' : '') + '</b>' + ids.map(function (id) {
           return host ? '<button class="wd-mv" data-mv="' + id + '">' + U.avatar(pl(id)) + esc(pl(id).name) + ' ⇄</button>' : '<span>' + U.avatar(pl(id)) + esc(pl(id).name) + '</span>';
         }).join('') + '</div>';
       }).join('') + '</div>';
@@ -101,6 +103,7 @@
     } else html += msg('⏳', t('words.p.waitTeams'));
     set(k, html, function () {
       el.querySelectorAll('[data-mv]').forEach(function (b) { b.onclick = function () { ctx.host('words:move', { playerId: b.dataset.mv }); }; });
+      el.querySelectorAll('[data-jt]').forEach(function (b) { b.onclick = function () { b.disabled = true; ctx.act('pick', { team: +b.dataset.jt }); }; });
       el.querySelectorAll('[data-n]').forEach(function (b) { b.onclick = function () { ctx.host('words:teams', { n: +b.dataset.n }); }; });
       var s = $('wdStart'); if (s) s.onclick = function () { ctx.host('words:start'); };
     });
