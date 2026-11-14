@@ -8,7 +8,7 @@
   var MODE_ICON = { explain: '🗣️', oneword: '☝️', gestures: '🤸', draw: '🎨' };
 
   function pl(id) { return U.playerById(P, id) || { name: '?', color: '#888' }; }
-  function teamName(i) { return t('words.team.' + i); }
+  function teamName(i) { return (G && G.names && G.names[i]) || t('words.team.' + i); }
   function tcol(i) { return (G.colors || [])[i] || '#888'; }
   function buzz(ms) { try { navigator.vibrate && navigator.vibrate(ms); } catch (e) { /* ignore */ } }
   function msg(emoji, title, sub) {
@@ -87,11 +87,13 @@
 
   function teamsView(lang) {
     var host = P.me && P.me.id === P.hostId;
-    var k = 'teams' + lang + JSON.stringify(G.teams) + host;
+    var k = 'teams' + lang + JSON.stringify(G.teams) + JSON.stringify(G.names) + host;
     var html = '<div class="card"><h2>👥 ' + esc(t('words.ph.teams')) + '</h2>' + (G.myTeam >= 0 ? '<p>' + esc(t('words.p.yourTeam', { team: teamName(G.myTeam) })) + '</p>' : '') +
-      '<p class="hint">' + esc(t('words.p.pickHint')) + '</p>' +
+      '<p class="hint">' + esc(t('words.p.pickHint')) + ' ' + esc(t('words.p.renameHint')) + '</p>' +
       G.teams.map(function (ids, i) {
-        return '<div class="wd-pteam" style="--c:' + tcol(i) + '"><b>' + esc(teamName(i)) +
+        var canEdit = i === G.myTeam || host;
+        return '<div class="wd-pteam" style="--c:' + tcol(i) + '"><b><span>' + esc(teamName(i)) +
+          (canEdit ? ' <button class="wd-ren" data-ren="' + i + '" aria-label="' + esc(t('words.p.rename')) + '">✏️</button>' : '') + '</span>' +
           (i !== G.myTeam && G.myTeam >= 0 ? ' <button class="wd-join" data-jt="' + i + '">' + esc(t('words.p.join')) + '</button>' : '') + '</b>' + ids.map(function (id) {
           return host ? '<button class="wd-mv" data-mv="' + id + '">' + U.avatar(pl(id)) + esc(pl(id).name) + ' ⇄</button>' : '<span>' + U.avatar(pl(id)) + esc(pl(id).name) + '</span>';
         }).join('') + '</div>';
@@ -103,6 +105,22 @@
     } else html += msg('⏳', t('words.p.waitTeams'));
     set(k, html, function () {
       el.querySelectorAll('[data-mv]').forEach(function (b) { b.onclick = function () { ctx.host('words:move', { playerId: b.dataset.mv }); }; });
+      el.querySelectorAll('[data-ren]').forEach(function (b) {
+        b.onclick = function () {
+          var i = +b.dataset.ren, box = b.parentNode;
+          box.innerHTML = '<input class="t wd-nin" maxlength="20" autocomplete="off" placeholder="' + esc(t('words.team.' + i)) + '"><button class="wd-join wd-nok">✓</button>';
+          var inp = box.querySelector('input');
+          inp.value = (G.names && G.names[i]) || '';
+          inp.focus();
+          var save = function () {
+            var v = inp.value;
+            if (i === G.myTeam) ctx.act('rename', { team: i, name: v }); else ctx.host('words:rename', { team: i, name: v });
+            key = null;   // перерисовать с новым названием
+          };
+          box.querySelector('.wd-nok').onclick = save;
+          inp.onkeydown = function (e) { if (e.key === 'Enter') save(); };
+        };
+      });
       el.querySelectorAll('[data-jt]').forEach(function (b) { b.onclick = function () { b.disabled = true; ctx.act('pick', { team: +b.dataset.jt }); }; });
       el.querySelectorAll('[data-n]').forEach(function (b) { b.onclick = function () { ctx.host('words:teams', { n: +b.dataset.n }); }; });
       var s = $('wdStart'); if (s) s.onclick = function () { ctx.host('words:start'); };

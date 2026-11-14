@@ -28,7 +28,11 @@ function create(api, opts) {
   const S = api.settings;
   const lang = ['en', 'fr'].includes(S.lang) ? S.lang : 'ru';
   const base = WB.words(lang);
-  const used = require('../lib/session').used(api.code, 'words:' + lang);
+  const SESSION = require('../lib/session');
+  const used = SESSION.used(api.code, 'words:' + lang);
+  // свои названия команд: помнятся весь вечер (и в «Объясни!», и в «Шляпе»)
+  const names = SESSION.value(api.code, 'words:names', () => []);
+  const cleanName = (s) => String(s || '').replace(/[\u0000-\u001f<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, 20);
   const turnSec = mode === 'alias' ? ([30, 45, 60, 90].includes(S.aliasTime) ? S.aliasTime : 60)
     : ([30, 45, 60, 90].includes(S.hatTime) ? S.hatTime : 45);
   const target = [20, 30, 50, 70].includes(S.aliasTarget) ? S.aliasTarget : 30;
@@ -68,6 +72,12 @@ function create(api, opts) {
     if (from < 0) return null;
     G.teams[from] = G.teams[from].filter((x) => x !== id);
     G.teams[(from + 1) % G.teams.length].push(id);
+    api.sync();
+    return null;
+  }
+  function rename(i, name) {
+    if (i < 0 || i > 3) return null;
+    names[i] = cleanName(name) || null;     // пусто — вернуть стандартное название
     api.sync();
     return null;
   }
@@ -237,7 +247,7 @@ function create(api, opts) {
   }
 
   function finish() {
-    const teams = G.teams.map((ids, i) => ({ key: String(i), name: 'words.team.' + i, color: TEAM_COLORS[i], ids: live(ids), score: G.scores[i] || 0 }))
+    const teams = G.teams.map((ids, i) => ({ key: String(i), name: names[i] || 'words.team.' + i, color: TEAM_COLORS[i], ids: live(ids), score: G.scores[i] || 0 }))
       .filter((t) => t.ids.length);
     const scores = {};
     teams.forEach((t) => t.ids.forEach((id) => { scores[id] = t.score; }));
@@ -258,7 +268,7 @@ function create(api, opts) {
   function common() {
     const c = G.cur;
     const v = {
-      mode, phase: G.phase, teams: G.teams.map(live), colors: TEAM_COLORS, scores: G.scores,
+      mode, phase: G.phase, teams: G.teams.map(live), names: G.teams.map((_, i) => names[i] || null), colors: TEAM_COLORS, scores: G.scores,
       target, turnSec, round: G.round, rounds, roundMode: roundMode(), penalty,
       poolLeft: mode === 'hat' ? (G.phase === 'turn' && c ? c.queue.length : G.pool.length) : null,
       perRound, sameWords: sameWords && roundMode() !== 'draw' && G.round > 1
@@ -285,6 +295,11 @@ function create(api, opts) {
         if (out.length) api.toTv('words:ops', { ops: out });
         return;
       }
+      if (type === 'rename' && G.phase === 'teams') {   // название команды — любой её участник
+        const i = data.team | 0;
+        if (teamOf(me) !== i && api.hostId !== me) return;
+        return rename(i, data.name);
+      }
       if (type === 'pick' && G.phase === 'teams') {     // игрок сам переходит в команду
         const to = data.team | 0, from = teamOf(me);
         if (from < 0 || to === from || !G.teams[to]) return;
@@ -303,6 +318,7 @@ function create(api, opts) {
     host(type, data) {
       if (type === 'words:teams') return resplit(data.n | 0);
       if (type === 'words:move') return move(data.playerId);
+      if (type === 'words:rename' && G.phase === 'teams') return rename(data.team | 0, data.name);
       if (type === 'words:start') return begin();
       if (type === 'words:skipTurn' && G.phase === 'ready') { startTurn(); return null; }
       return null;

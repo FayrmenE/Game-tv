@@ -7,7 +7,7 @@
   var MODE_ICON = { explain: '🗣️', oneword: '☝️', gestures: '🤸', draw: '🎨' };
 
   function pl(id) { return U.playerById(P, id) || { name: '?', color: '#888' }; }
-  function teamName(i) { return t('words.team.' + i); }
+  function teamName(i) { return (G && G.names && G.names[i]) || t('words.team.' + i); }
   function tcol(i) { return (G.colors || [])[i] || '#888'; }
 
   function mount() {

@@ -603,6 +603,8 @@
       "title.words.artist": "Художник вечера ({n})",
       "words.p.pickHint": "Нажми «Перейти», чтобы выбрать команду. Хост может переставить кого угодно.",
       "words.p.join": "Перейти",
+      "words.p.rename": "Переименовать команду",
+      "words.p.renameHint": "✏️ — придумать своё название команды",
       // Новые сцены
       "scene.office": "Офис",
       "scene.park": "Парк",
@@ -1426,6 +1428,8 @@
       "title.words.artist": "Artist of the night ({n})",
       "words.p.pickHint": "Tap “Join” to pick your team. The host can move anyone.",
       "words.p.join": "Join",
+      "words.p.rename": "Rename team",
+      "words.p.renameHint": "✏️ — give your team its own name",
       'scene.kitchen': 'Kitchen',
       'scene.beach': 'Beach',
       'scene.station': 'Train station',
@@ -1506,6 +1510,8 @@
 
     fr: {
       'lang.fr': 'Français',
+      "words.p.rename": "Renommer l’équipe",
+      "words.p.renameHint": "✏️ — donne un nom à ton équipe",
       "words.p.pickHint": "Touche « Rejoindre » pour choisir ton équipe. L’hôte peut déplacer n’importe qui.",
       "words.p.join": "Rejoindre",
       "game.explain": "Explique !",
