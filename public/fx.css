@@ -475,3 +475,8 @@ body.game-words { --accent2: #4cc9f0; background-image: radial-gradient(circle a
 .wd-ritem.ok { background: #1f6f43; } .wd-ritem.no { background: #6b2433; text-decoration: line-through; }
 .wd-ritem:disabled { opacity: 1; }
 @media (max-width: 900px) { .wd-tv { grid-template-columns: 1fr; } }
+
+/* ===================== Телефон: поля ввода крупнее ===================== */
+body.play input.t, body.play textarea.t { font-size: 20px; min-height: 56px; padding: 12px 16px; border-radius: 14px; }
+body.play input.t::placeholder { font-size: 18px; }
+body.play .vote-btn { font-size: 18px; }

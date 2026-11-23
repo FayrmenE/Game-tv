@@ -1,0 +1,124 @@
+/*
+ * Крупнее для телевизора: всё на ТВ читается с дивана (2–4 м).
+ * Подключается последним в tv.html и перекрывает размеры из style/games/fx/responsive.
+ * Базовый размер — от ширины и высоты экрана; галочка «Крупный текст на ТВ» добавляет ещё.
+ */
+body.tv { font-size: clamp(12px, min(1.5vw, 2.7vh), 48px); }
+html.big body.tv { font-size: clamp(14px, min(1.75vw, 3.15vh), 56px); }
+
+/* шапка */
+.tv .phase-title { font-size: 1.65em; }
+.tv .phase-sub { font-size: 1.2em; }
+
+/* полоска игроков внизу и подсказки под ними (Чужой и др.) */
+.tv .strip { gap: .7em; }
+.tv .pcol { flex: 0 1 8.6em; width: 8.6em; }
+.tv .pcol .avatar { font-size: .85em; }
+.tv .pcol .pname { font-size: 1.15em; margin-top: .15em; }
+.tv .pcol .score { font-size: 1em; }
+.tv .pcol .word { font-size: 1.2em; min-height: 1.5em; padding: .12em .3em; border-radius: .45em; }
+.tv .pcol .words { gap: .25em; }
+.tv .sn-score { font-size: 1.5em; }
+
+/* Чужой: сцена — главное, поэтому полоска игроков компактнее */
+body.game-alien .pcol .avatar, body.game-croc .pcol .avatar { font-size: .75em; }
+body.game-alien .pcol .pname, body.game-croc .pcol .pname { font-size: 1.05em; margin-top: .1em; }
+body.game-alien .pcol .score { font-size: .85em; }
+body.game-alien .strip, body.game-croc .strip { padding-top: .2em; padding-bottom: .4em; }
+
+/* Чужой: голосование и раскрытие */
+.tv .vcard { width: 10em; height: 6em; }
+.tv .vcard .front { font-size: 1em; }
+.tv .scoreboard { font-size: 1.2em; }
+
+/* Снайпер: «Поймай: …» — главное на экране */
+.tv .sn-mini { font-size: 2.1em; }
+.tv .sn-tname { font-size: 2.8em; }
+
+/* Крокодил: догадки, буквы, слово */
+.tv .cr-solo { grid-template-columns: 1fr 25em; }
+.tv .cr-side-h { font-size: 1.25em; }
+.tv .cr-bubble { font-size: 1.35em; padding: .3em .7em; }
+.tv .cr-prow { font-size: 1.45em; }
+.tv .cr-mask span { font-size: 1.75em; width: 1.35em; }
+.tv .cr-mask .word { font-size: 2.6em; width: auto; }
+.tv .cr-word { font-size: 4.2em; }
+.tv .cr-artist { font-size: 1.45em; }
+.tv .cr-vtext { font-size: 1.3em; }
+.tv .lane-name { font-size: 1.15em; }
+
+/* Каракули: варианты подписей и прогресс */
+.tv .dd-opt { font-size: 1.85em; padding: .4em .9em; }
+/* много вариантов — чуть меньше, чтобы все влезли и рисунок не уезжал */
+.tv .dd-opts:has(> :nth-child(6)) .dd-opt { font-size: 1.5em; padding: .32em .8em; }
+.tv .dd-opts:has(> :nth-child(8)) .dd-opt { font-size: 1.3em; padding: .28em .7em; }
+.tv .dd-show { grid-template-rows: 100%; min-height: 0; }
+.tv .dd-right { max-height: 100%; overflow: hidden; }
+.tv .dd-opts { gap: .45em; }
+.tv .dd-big { font-size: 2.6em; }
+.tv .dd-sub { font-size: 1.3em; }
+.tv .dd-who { font-size: .7em; }
+.tv .dd-p { width: 8.5em; font-size: 1.15em; }
+.tv .dd-prog { font-size: 1.3em; }
+.tv .center-msg .big { font-size: 2em; }
+
+/* Морской бой: подписи над полями */
+.tv .bs-cap { font-size: 1.3em; }
+.tv .bs-shot { font-size: 1.9em; }
+
+/* Сундуки */
+.tv .ch-tv { grid-template-columns: minmax(18em, 1.2fr) 1.7fr minmax(16em, 1fr); }
+.tv .ch-table h3, .tv .ch-out h3 { font-size: 1.35em; }
+.tv .ch-row { font-size: 1.2em; padding: .3em .5em; }
+.tv .ch-row .ch-c { font-size: 1.35em; }
+.tv .ch-chest { width: 18em; }
+.tv .ch-keeper { font-size: 1.45em; }
+.tv .ch-timer { font-size: 4.4em; }
+.tv .ch-msg { font-size: 1.75em; max-width: 26em; }
+.tv .ch-bid { width: 7em; height: 7.8em; }
+.tv .ch-bid .ch-bn { font-size: 2.4em; }
+.tv .ch-deck { font-size: 1.15em; grid-template-columns: 1fr; gap: .15em; }
+.tv .ch-out h4 { font-size: 1em; }
+.tv .ch-mini { font-size: 1.15em; }
+.tv .ch-stat { font-size: 1.25em; }
+.tv .ch-final h2 { font-size: 2.4em; }
+
+/* Объясни! и Шляпа */
+.tv .wd-tv { grid-template-columns: minmax(18em, 1fr) 2.2fr; }
+.tv .wd-team { font-size: 1.45em; }
+.tv .wd-who { font-size: 2em; }
+.tv .wd-timer { font-size: 7.5em; }
+.tv .wd-hint, .tv .wd-lastw { font-size: 1.8em; }
+.tv .wd-count { font-size: 1.6em; }
+.tv .wd-chips { max-width: 48em; gap: .45em; }
+.tv .wd-chips span { font-size: 1.45em; padding: .2em .75em; }
+.tv .wd-big { font-size: 2.8em; }
+.tv .wd-sub { font-size: 1.45em; }
+.tv .wd-round h2 { font-size: 3em; }
+.tv .wd-round p { font-size: 1.6em; }
+.tv .wd-ready h2 { font-size: 3.4em; }
+.tv .wd-ready p { font-size: 1.6em; }
+.tv .wd-review h2 { font-size: 2.2em; }
+.tv .wd-list { max-width: 52em; }
+.tv .wd-list span { font-size: 1.45em; }
+.tv .wd-final h2 { font-size: 3em; }
+.tv .wd-frow { font-size: 2em; }
+
+/* правила и итоги */
+.tv .title-card { font-size: 1.15em; }
+
+/* меню: QR, 9 игр и до 12 игроков на одном экране — компактная сетка, чтобы всё влезало */
+.tv .lobby { font-size: .86em; gap: 2em; padding: .4em 1.5em; }
+.tv .qr-card img { width: min(40vh, 24em); height: min(40vh, 24em); }
+.tv .game-cards { grid-template-columns: repeat(5, 1fr); gap: .6em; margin: 0 0 .7em; }
+.tv .game-card { padding: .6em .7em; }
+.tv .gc-emoji { font-size: 2.2em; }
+.tv .gc-emoji .gicon { width: 2.3em; height: 2.3em; }
+.tv .game-card.sel .gc-emoji .gicon { width: 2.6em; height: 2.6em; }
+.tv .gc-name { font-size: 1.15em; }
+.tv .gc-desc { min-height: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.tv .lobby-players { gap: .5em; margin: .5em 0; flex-wrap: nowrap; }
+/* до 12 игроков в одну строку: карточки сжимаются, длинные имена — с многоточием */
+.tv .lobby-player { width: auto; flex: 0 1 5.6em; min-width: 0; }
+.tv .lobby-player .avatar { font-size: 1em; }
+.tv .lobby-note { font-size: 1.1em; }
